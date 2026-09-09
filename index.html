@@ -456,7 +456,17 @@ tfoot td{color:var(--ink);font-weight:700;border-top:1px solid var(--gb);backgro
 .md-brands{display:flex;flex-wrap:wrap;gap:0.3rem;}
 .bpill{font-size:0.62rem;background:var(--bg4);color:var(--ink2);padding:0.16rem 0.5rem;border-radius:3px;}
 /* =============== LANDING PAGE =============== */
-.landing{position:fixed;inset:0;z-index:800;overflow-y:auto;background:#F4F7FB;}
+.landing{position:fixed;inset:0;z-index:800;overflow-y:auto;background:#F0F4FA;}
+body:has(#entry.cc-home:not(.hidden)) .deck,
+body:has(#entry.cc-home:not(.hidden)) .tbar,
+body:has(#entry.cc-home:not(.hidden)) .dots,
+body:has(#entry.cc-home:not(.hidden)) .arrs,
+body:has(#entry.cc-home:not(.hidden)) .slidectr,
+body:has(#h1review:not(.hidden)) .deck,
+body:has(#h1review:not(.hidden)) .tbar,
+body:has(#h1review:not(.hidden)) .dots,
+body:has(#h1review:not(.hidden)) .arrs,
+body:has(#h1review:not(.hidden)) .slidectr{display:none !important;}
 .landing.hidden{display:none;}
 /* ---- Entry chooser (V80 / Diwali) ---- */
 .entry-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;margin:2.6rem auto 0;max-width:1120px;width:100%;}
@@ -705,40 +715,43 @@ tfoot td{color:var(--ink);font-weight:700;border-top:1px solid var(--gb);backgro
 .ec-enter{margin-top:2rem;font-size:1.2rem;font-weight:800;color:var(--blue);}
 .entry-card.ec-diwali .ec-enter{color:#b26a00;}
 /* ---- Command Centre home ---- */
-#entry.cc-home{display:flex;flex-direction:column;overflow:auto;background:#F4F7FB;}
+#entry.cc-home{display:flex;flex-direction:column;overflow:hidden;background:#E8EEF7;isolation:isolate;}
 #entry.cc-home.hidden{display:none;}
-.cc-bar{flex:none;height:56px;background:#002B6B;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 1.5rem;z-index:8;}
-.cc-bar-left{display:flex;align-items:center;gap:0.85rem;min-width:0;}
-.cc-mark{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:0.01em;line-height:1;}
-.cc-bar-div{width:1px;height:18px;background:rgba(255,255,255,0.28);flex:none;}
-.cc-bar-title{font-size:0.66rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;opacity:0.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-#entry.cc-home .landing-present{position:static;background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.28);color:#fff;}
+.cc-bar{flex:none;height:58px;background:#001A4A;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 1.75rem;z-index:8;border-bottom:1px solid rgba(255,255,255,0.08);}
+.cc-bar-left{display:flex;align-items:center;gap:0.9rem;min-width:0;}
+.cc-mark{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:1.28rem;letter-spacing:-0.02em;line-height:1;}
+.cc-bar-div{width:1px;height:16px;background:rgba(255,255,255,0.22);flex:none;}
+.cc-bar-title{font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;opacity:0.82;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#entry.cc-home .landing-present{position:static;background:transparent;border:1px solid rgba(255,255,255,0.32);color:#fff;border-radius:8px;padding:0.38rem 0.95rem;letter-spacing:0.12em;text-transform:uppercase;font-size:0.68rem;}
 #entry.cc-home .landing-present:hover{background:#1566C0;border-color:#1566C0;color:#fff;}
-.cc-stage{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;width:100%;max-width:1360px;margin:0 auto;padding:clamp(1.1rem,2.4vh,1.8rem) 1.6rem 1.8rem;}
-.cc-hero{background:linear-gradient(110deg,#002B6B 0%,#0A3F8C 52%,#1566C0 100%);color:#fff;border-radius:16px;padding:clamp(1.15rem,2.2vh,1.7rem) clamp(1.3rem,2vw,2rem);margin-bottom:1.35rem;box-shadow:0 18px 40px rgba(0,43,107,0.22);}
-.cc-kicker{font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;opacity:0.78;margin-bottom:0.45rem;}
-.cc-hero-title{font-family:Sora,Inter,sans-serif;font-size:clamp(1.55rem,2.8vw,2.35rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;text-transform:uppercase;margin:0;}
-.cc-hero-title span{color:#9EC4F5;}
-.cc-hero-sub{margin:0.45rem 0 0;font-size:0.92rem;line-height:1.45;opacity:0.88;max-width:62ch;}
-#entry.cc-home .entry-grid.entry-grid-3{margin:0;max-width:none;width:100%;gap:1.2rem;}
-/* ---- Home KPI tiles: navy header + white body ---- */
-.entry-card.ec-kpi{background:#fff;border:1px solid rgba(0,43,107,0.10);padding:0;overflow:hidden;border-radius:16px;box-shadow:0 12px 32px rgba(0,43,107,0.10);}
-.entry-card.ec-kpi:hover{border-color:#002B6B;box-shadow:0 22px 48px rgba(0,43,107,0.18);transform:translateY(-5px);}
-.entry-card.ec-kpi.ec-review,.entry-card.ec-kpi.ec-v80,.entry-card.ec-kpi.ec-diwali{background:#fff;border-color:rgba(0,43,107,0.10);}
-.entry-card.ec-kpi .ec-head{display:flex;align-items:center;justify-content:space-between;gap:0.8rem;background:#002B6B;color:#fff;padding:1rem 1.25rem;min-height:4.4rem;margin:0;width:100%;border-radius:0;}
-.entry-card.ec-kpi .ec-head-label{font-family:Sora,Inter,sans-serif;font-size:clamp(0.72rem,0.95vw,0.88rem);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;line-height:1.25;margin:0;}
-.entry-card.ec-kpi .ec-icon{flex:none;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;}
-.entry-card.ec-kpi .ec-icon svg{width:18px;height:18px;display:block;}
-.entry-card.ec-kpi .ec-body{display:flex;flex-direction:column;flex:1;padding:1.35rem 1.25rem 1.15rem;background:#fff;}
-.entry-card.ec-kpi .ec-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:0.9rem;flex:1;align-content:center;}
-.entry-card.ec-kpi .ec-kpi-cell{min-width:0;text-align:left;padding:0;background:none;border:0;}
-.entry-card.ec-kpi .ec-kpi-cell + .ec-kpi-cell{border-left:1px solid rgba(11,23,48,0.08);padding-left:0.9rem;}
-.entry-card.ec-kpi .ec-kpi-val{font-family:Sora,Inter,sans-serif;font-size:clamp(1.15rem,1.65vw,1.55rem);font-weight:800;color:#002B6B;line-height:1.1;letter-spacing:-0.03em;white-space:nowrap;}
+.cc-hero-bleed{flex:none;background:linear-gradient(105deg,rgba(0,26,74,0) 40%,rgba(21,102,192,0.22) 100%),repeating-linear-gradient(90deg,rgba(255,255,255,0.035) 0 1px,transparent 1px 72px),repeating-linear-gradient(0deg,rgba(255,255,255,0.03) 0 1px,transparent 1px 72px),linear-gradient(118deg,#001A4A 0%,#002B6B 48%,#0A4A9E 100%);color:#fff;padding:clamp(1.6rem,3.2vh,2.4rem) 0 4.2rem;}
+.cc-hero-inner{width:100%;max-width:1360px;margin:0 auto;padding:0 1.75rem;}
+.cc-kicker{font-size:0.64rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#8FB7EA;margin-bottom:0.55rem;}
+.cc-hero-title{font-family:Sora,Inter,sans-serif;font-size:clamp(1.85rem,3.4vw,2.85rem);font-weight:800;letter-spacing:-0.03em;line-height:1.05;text-transform:uppercase;margin:0;}
+.cc-hero-title span{color:#7EB3F0;}
+.cc-hero-sub{margin:0.55rem 0 0;font-size:1rem;line-height:1.5;color:rgba(255,255,255,0.82);max-width:48ch;font-weight:400;}
+.cc-stage{flex:1;min-height:0;display:flex;flex-direction:column;width:100%;max-width:1360px;margin:-2.6rem auto 0;padding:0 1.75rem 1.8rem;position:relative;z-index:2;}
+#entry.cc-home .entry-grid.entry-grid-3{margin:0;max-width:none;width:100%;gap:1.25rem;flex:1;}
+#entry.cc-home .entry-grid-3 .entry-card.ec-kpi{min-height:100%;height:100%;}
+.entry-card.ec-kpi{background:#fff;border:0;padding:0;overflow:hidden;border-radius:18px;box-shadow:0 18px 50px rgba(0,26,74,0.16);display:flex;flex-direction:column;}
+.entry-card.ec-kpi:hover{border-color:transparent;box-shadow:0 26px 60px rgba(0,26,74,0.24);transform:translateY(-6px);}
+.entry-card.ec-kpi.ec-review,.entry-card.ec-kpi.ec-v80,.entry-card.ec-kpi.ec-diwali{background:#fff;border-color:transparent;}
+.entry-card.ec-kpi .ec-head{display:flex;align-items:center;justify-content:space-between;gap:0.8rem;background:#001A4A;color:#fff;padding:1.15rem 1.4rem;min-height:4.7rem;margin:0;width:100%;border-radius:0;}
+.entry-card.ec-kpi .ec-head-label{font-family:Sora,Inter,sans-serif;font-size:clamp(0.7rem,0.92vw,0.86rem);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;line-height:1.3;margin:0;}
+.entry-card.ec-kpi .ec-icon{flex:none;width:38px;height:38px;border-radius:50%;background:rgba(21,102,192,0.22);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;}
+.entry-card.ec-kpi .ec-icon svg{width:17px;height:17px;display:block;}
+.entry-card.ec-kpi .ec-body{display:flex;flex-direction:column;flex:1;padding:1.55rem 1.4rem 1.25rem;background:#fff;}
+.entry-card.ec-kpi .ec-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;flex:1;align-content:center;}
+.entry-card.ec-kpi .ec-kpi-cell{min-width:0;text-align:left;padding:0 0.85rem 0 0;background:none;border:0;}
+.entry-card.ec-kpi .ec-kpi-cell + .ec-kpi-cell{border-left:1px solid rgba(11,23,48,0.08);padding:0 0.2rem 0 0.95rem;}
+.entry-card.ec-kpi .ec-kpi-val{font-family:Sora,Inter,sans-serif;font-size:clamp(1.2rem,1.85vw,1.72rem);font-weight:800;color:#001A4A;line-height:1.05;letter-spacing:-0.04em;white-space:nowrap;font-variant-numeric:tabular-nums;}
 .entry-card.ec-kpi .ec-kpi-cell:first-child .ec-kpi-val{color:#1566C0;}
-.entry-card.ec-kpi .ec-kpi-lbl{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3);margin-top:0.4rem;line-height:1.25;}
-.entry-card.ec-kpi .ec-enter{margin-top:1.25rem;padding-top:0.85rem;border-top:1px solid rgba(11,23,48,0.08);align-self:stretch;font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#1566C0;}
+.entry-card.ec-kpi .ec-kpi-lbl{font-size:0.56rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B7B9C;margin-top:0.48rem;line-height:1.25;}
+.entry-card.ec-kpi .ec-enter{margin-top:1.4rem;padding:0.7rem 0 0;border-top:1px solid rgba(11,23,48,0.08);align-self:stretch;display:flex;align-items:center;justify-content:space-between;font-size:0.68rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#1566C0;}
+.entry-card.ec-kpi .ec-enter::after{content:"→";width:28px;height:28px;border-radius:50%;border:1px solid rgba(21,102,192,0.28);display:inline-flex;align-items:center;justify-content:center;font-size:0.9rem;letter-spacing:0;}
+.entry-card.ec-kpi:hover .ec-enter::after{background:#1566C0;border-color:#1566C0;color:#fff;}
 .entry-card.ec-kpi.ec-diwali .ec-enter{color:#1566C0;}
-@media(max-width:1100px){.entry-card.ec-kpi .ec-kpi-val{font-size:1.05rem;white-space:normal;}.cc-bar-title{display:none;}}
+@media(max-width:1100px){.entry-card.ec-kpi .ec-kpi-val{font-size:1.08rem;white-space:normal;}.cc-bar-title{display:none;}}
 .sb2grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
 .sb2-card{position:relative;border-radius:18px;padding:2rem 1.7rem;border:1px solid var(--line2);background:var(--bg3);display:flex;flex-direction:column;}
 .sb2-head{display:flex;align-items:center;gap:0.9rem;margin-bottom:1.1rem;}
@@ -3037,12 +3050,14 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
     </div>
     <button class="present-btn landing-present" onclick="togglePresent()"><span>Present</span></button>
   </header>
-  <div class="cc-stage">
-    <div class="cc-hero">
+  <section class="cc-hero-bleed">
+    <div class="cc-hero-inner">
       <div class="cc-kicker">FY26–27 · MarCom</div>
       <h1 class="cc-hero-title">VIVO TAMILNADU <span>2026</span></h1>
       <p class="cc-hero-sub">H1 performance, new product launch, and Diwali execution on one executive board.</p>
     </div>
+  </section>
+  <div class="cc-stage">
     <div class="entry-grid entry-grid-3">
       <div class="entry-card ec-review ec-kpi" onclick="openH1Review()">
         <div class="ec-head">
@@ -3057,7 +3072,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
             <div class="ec-kpi-cell"><div class="ec-kpi-val">6.51 Cr</div><div class="ec-kpi-lbl">Reach</div></div>
             <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;0.22</div><div class="ec-kpi-lbl">CPP</div></div>
           </div>
-          <div class="ec-enter">ENTER &rarr;</div>
+          <div class="ec-enter">Enter module</div>
         </div>
       </div>
       <div class="entry-card ec-v80 ec-kpi" onclick="openV80()">
@@ -3073,7 +3088,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
             <div class="ec-kpi-cell"><div class="ec-kpi-val">1,564</div><div class="ec-kpi-lbl">WODs</div></div>
             <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;1.31 Cr</div><div class="ec-kpi-lbl">Branding Inv</div></div>
           </div>
-          <div class="ec-enter">ENTER &rarr;</div>
+          <div class="ec-enter">Enter module</div>
         </div>
       </div>
       <div class="entry-card ec-diwali ec-kpi" onclick="openDiwali()">
@@ -3089,7 +3104,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
             <div class="ec-kpi-cell"><div class="ec-kpi-val">12</div><div class="ec-kpi-lbl">POSM Matl</div></div>
             <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;41.66 L</div><div class="ec-kpi-lbl">POSM Invest</div></div>
           </div>
-          <div class="ec-enter">ENTER &rarr;</div>
+          <div class="ec-enter">Enter module</div>
         </div>
       </div>
       <!-- HIDDEN CARDS: Merged into unified tiles per SK direction.
