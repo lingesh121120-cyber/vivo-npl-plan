@@ -8,7 +8,7 @@
 <style>
 
 *{box-sizing:border-box;margin:0;padding:0;}
-html,body{height:100%;overflow:hidden;background:#FFFFFF;font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;}
+html,body{height:100%;overflow:hidden;background:#F0F4FB;font-family:"Bahnschrift SemiBold SemiCondensed","Arial Narrow","Space Grotesk",system-ui,sans-serif;}
 /* lift typography on large screens (hero, creator/vendor pages); auto-fit slides self-compensate */
 @media(min-width:1600px){html{font-size:17.5px;}}
 @media(min-width:1900px){html{font-size:19px;}}
@@ -2057,11 +2057,11 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
   <div class="lwrap" style="max-width:1580px;">
     <div class="lbrand">vivo Tamil Nadu &middot; MarCom</div>
     <div class="ltitle">VIVO TAMILNADU<span> 2026</span></div>
-    <div class="entry-grid entry-grid-7">
+    <div class="entry-grid entry-grid-3">
       <div class="entry-card ec-review" onclick="openH1Review()">
-        <div class="ec-tag">H1 &middot; Execution Review</div>
-        <div class="ec-title">MARCOM H1 REVIEW</div>
-        <div class="ec-sub">Marcom H1 review &mdash; expense, reach &amp; CPP across HO &amp; JBP.</div>
+        <div class="ec-tag">H1 &middot; H2</div>
+        <div class="ec-title">H1 REVIEW / H2 DIRECTION</div>
+        <div class="ec-sub">Cost &middot; Project &middot; Audit &middot; Highlights &middot; H2 Direction</div>
         <div style="display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1rem;">
           <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:var(--blue);background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.35rem 0.85rem;">&#128241; HO &amp; JBP</span>
           <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:var(--blue);background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.35rem 0.85rem;">&#128200; Efficiency</span>
@@ -2074,9 +2074,9 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
         <div class="ec-enter">Enter &rarr;</div>
       </div>
       <div class="entry-card ec-v80" onclick="openV80()">
-        <div class="ec-tag">New Product Launch</div>
-        <div class="ec-title">MARCOM NPL PLAN</div>
-        <div class="ec-sub">Three models, one Tamil Nadu launch &mdash; creators, JBP trade &amp; DOP vendors.</div>
+        <div class="ec-tag">NEW PRODUCT LAUNCH</div>
+        <div class="ec-title">NPL</div>
+        <div class="ec-sub">V80 &middot; X Fold 6 &middot; S2 FE</div>
         <div style="display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1rem;">
           <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:var(--blue);background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.35rem 0.85rem;">&#128241; V80</span>
           <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:var(--blue);background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.35rem 0.85rem;">&#128241; X-Fold 6</span>
@@ -2090,9 +2090,9 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
         <div class="ec-enter">Enter &rarr;</div>
       </div>
       <div class="entry-card ec-diwali" onclick="openDiwali()">
-        <div class="ec-tag">Festival Activation</div>
-        <div class="ec-title">Diwali &rsquo;26</div>
-        <div class="ec-sub">One festive push, two engines &mdash; Head Office demand &amp; JBP trade.</div>
+        <div class="ec-tag">FESTIVAL</div>
+        <div class="ec-title">FESTIVAL</div>
+        <div class="ec-sub">Diwali &rsquo;26 &middot; Activation &middot; Branding</div>
         <div style="display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1rem;">
           <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:#b26a00;background:rgba(229,169,59,0.12);border:1px solid var(--gb);border-radius:20px;padding:0.35rem 0.85rem;">&#127968; Head Office</span>
           <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:#b26a00;background:rgba(229,169,59,0.12);border:1px solid var(--gb);border-radius:20px;padding:0.35rem 0.85rem;">&#129309; JBP Trade</span>
@@ -2104,7 +2104,10 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
         </div>
         <div class="ec-enter">Enter &rarr;</div>
       </div>
-      <div class="entry-card ec-diwali" onclick="openDiwaliBranding()">
+      <!-- HIDDEN CARDS: Merged into unified tiles per SK direction.
+           Cards below are preserved. Do not delete.
+           Cards 4-7: ec-diwali(branding), ec-h2, ec-h2branding, ec-nplbranding -->
+      <div class="entry-card ec-diwali" onclick="openDiwaliBranding()" style="display:none;">
         <div class="ec-tag">Festival &middot; Branding (POSM)</div>
         <div class="ec-title">BRANDING &middot; DIWALI &rsquo;26</div>
         <div class="ec-sub">In-store branding plan &mdash; Diwali &rsquo;25 vs &rsquo;26 count, cost &amp; growth.</div>
@@ -2118,7 +2121,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
         </div>
         <div class="ec-enter" style="margin-top:1.4rem;">Enter &rarr;</div>
       </div>
-      <div class="entry-card ec-h2" onclick="openH2()">
+      <div class="entry-card ec-h2" onclick="openH2()" style="display:none;">
         <div class="ec-tag">H2 &middot; Next 6 Months</div>
         <div class="ec-title">MARCOM H2 PLAN</div>
         <div class="ec-sub">The forward plan for the next six months &mdash; by consumer segment.</div>
@@ -2129,7 +2132,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
         </div>
         <div class="ec-enter">Enter &rarr;</div>
       </div>
-      <div class="entry-card ec-review" onclick="openH2Branding()">
+      <div class="entry-card ec-review" onclick="openH2Branding()" style="display:none;">
         <div class="ec-tag">Retail Branding &middot; AOP H2</div>
         <div class="ec-title">BRANDING &middot; H2</div>
         <div class="ec-sub">TN retail branding plan &mdash; X-Zone, store deployment, audit &amp; competition.</div>
@@ -2143,7 +2146,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
         </div>
         <div class="ec-enter" style="margin-top:1.4rem;">Enter &rarr;</div>
       </div>
-      <div class="entry-card ec-review" onclick="openNplBranding()">
+      <div class="entry-card ec-review" onclick="openNplBranding()" style="display:none;">
         <div class="ec-tag">Retail Branding &middot; NPL</div>
         <div class="ec-title">BRANDING &middot; NPL</div>
         <div class="ec-sub">V80 launch branding &mdash; coverage, cost, competition &amp; audit (incl. X Fold 6 &amp; S2 FE).</div>
