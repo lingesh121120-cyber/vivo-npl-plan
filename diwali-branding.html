@@ -80,15 +80,15 @@ h1.title span{color:var(--orange);}
     <div>
       <div class="eyebrow">vivo Tamil Nadu · Branding · Festival</div>
       <h1 class="title">Branding Materials — <span>Diwali &rsquo;26</span></h1>
-      <p class="sub">Every in-store branding item, compared: Previous Year vs This Year. This year we place more of everything.</p>
+      <p class="sub">Every in-store branding item, compared: 2025 vs 2026. This year we place more of everything.</p>
     </div>
     <div class="total-badge">
-      <div class="tb-item"><span class="tb-k">Total · Prev Year</span><span class="tb-v">18,366</span></div>
-      <div class="tb-item"><span class="tb-k">Total · This Year</span><span class="tb-v">19,284</span></div>
+      <div class="tb-item"><span class="tb-k">Total · 2025</span><span class="tb-v">18,366</span></div>
+      <div class="tb-item"><span class="tb-k">Total · 2026</span><span class="tb-v">19,284</span></div>
       <div class="tb-item"><span class="tb-k">Growth</span><span class="tb-v up">+5%</span></div>
     </div>
   </div>
-  <div class="legend"><span><i style="background:#2563EB;"></i>Previous Year (2025)</span><span><i style="background:#E8622A;"></i>This Year (2026)</span></div>
+  <div class="legend"><span><i style="background:#2563EB;"></i>2025</span><span><i style="background:#E8622A;"></i>2026</span></div>
   <div class="mat-grid" id="matGrid"></div>
 </section>
 
@@ -102,9 +102,9 @@ h1.title span{color:var(--orange);}
 
   <div class="p2grid">
     <div class="cost-panel">
-      <div class="cp-t">Total Branding Cost — Previous Year vs This Year</div>
-      <div class="cost-row"><span class="cr-lbl">Previous Year</span><div class="cr-track"><div class="cr-fill prev">₹21,83,728</div></div></div>
-      <div class="cost-row"><span class="cr-lbl">This Year</span><div class="cr-track"><div class="cr-fill curr">₹22,92,915</div></div></div>
+      <div class="cp-t">Total Branding Cost — 2025 vs 2026</div>
+      <div class="cost-row"><span class="cr-lbl">2025</span><div class="cr-track"><div class="cr-fill prev">₹21,83,728</div></div></div>
+      <div class="cost-row"><span class="cr-lbl">2026</span><div class="cr-track"><div class="cr-fill curr">₹22,92,915</div></div></div>
       <div class="cost-inc">▲ Increase +₹1.09 L (+5%) — small cost, much wider store coverage</div>
     </div>
 
@@ -148,8 +148,8 @@ h1.title span{color:var(--orange);}
     var pw=Math.max(prev/max*100,3).toFixed(1), cw=Math.max(curr/max*100,3).toFixed(1);
     return '<div class="mat-card">'+
       '<div class="mat-name">'+name+'<span class="mat-grow">▲ +'+fmt(diff)+' · +'+pct+'%</span></div>'+
-      '<div class="mat-row"><span class="mr-lbl">Prev Year</span><div class="mr-track"><div class="mr-fill prev" style="width:'+pw+'%"></div></div><span class="mr-val">'+fmt(prev)+'</span></div>'+
-      '<div class="mat-row"><span class="mr-lbl">This Year</span><div class="mr-track"><div class="mr-fill curr" style="width:'+cw+'%"></div></div><span class="mr-val">'+fmt(curr)+'</span></div>'+
+      '<div class="mat-row"><span class="mr-lbl">2025</span><div class="mr-track"><div class="mr-fill prev" style="width:'+pw+'%"></div></div><span class="mr-val">'+fmt(prev)+'</span></div>'+
+      '<div class="mat-row"><span class="mr-lbl">2026</span><div class="mr-track"><div class="mr-fill curr" style="width:'+cw+'%"></div></div><span class="mr-val">'+fmt(curr)+'</span></div>'+
     '</div>';
   }).join('');
   document.getElementById('matGrid').innerHTML=html;
