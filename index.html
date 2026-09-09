@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>vivo &middot; Tamil Nadu Launch Plan 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap');
 
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{height:100%;overflow:hidden;background:#F0F4FB;font-family:"Bahnschrift SemiBold SemiCondensed","Arial Narrow","Space Grotesk",system-ui,sans-serif;}
@@ -1367,6 +1370,45 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2branding-panel .mini-stat .ms-l{font-size:0.56rem;letter-spacing:0.04em;text-transform:uppercase;color:#6B7B9C;margin-top:0.3rem;}
 @media(max-width:1000px){.h2branding-panel .pillars,.h2branding-panel .stat-row{grid-template-columns:repeat(2,1fr);}.h2branding-panel .grid-2,.h2branding-panel .grid-3{grid-template-columns:1fr;}}
 /* ========== END H2 DIRECTION ========== */
+
+/* ========== GLOBAL TYPOGRAPHY SYSTEM — PHASE 4 ========== */
+/* Sora @import is at the top of this stylesheet (CSS requires @import first). */
+/* Typography scale */
+.typ-display{font-family:'Sora',system-ui,sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3.2rem);line-height:1.04;letter-spacing:-0.025em;color:#0B1730;}
+.typ-display span{color:#1565C0;}
+.typ-h2{font-family:'Sora',system-ui,sans-serif;font-weight:700;font-size:clamp(1.2rem,2vw,1.6rem);line-height:1.15;letter-spacing:-0.01em;color:#0B1730;}
+.typ-h3{font-family:'Sora',system-ui,sans-serif;font-weight:700;font-size:1rem;line-height:1.25;color:#0B1730;}
+.typ-label{font-size:0.6rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B7B9C;}
+.typ-label-blue{font-size:0.6rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#1565C0;}
+.typ-body{font-size:0.875rem;color:#3D4E73;line-height:1.6;}
+.typ-body-sm{font-size:0.78rem;color:#6B7B9C;line-height:1.5;}
+.typ-kpi-xl{font-family:'Sora',system-ui,sans-serif;font-weight:800;font-size:clamp(2.5rem,5vw,4rem);line-height:0.95;letter-spacing:-0.03em;color:#0D2B6B;}
+.typ-kpi-lg{font-family:'Sora',system-ui,sans-serif;font-weight:800;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1;letter-spacing:-0.02em;color:#0D2B6B;}
+.typ-kpi-blue{color:#1565C0;}
+.typ-kpi-red{color:#DC2626;}
+.typ-kpi-amber{color:#B45309;}
+
+/* Panel title standard */
+.panel-title{font-family:'Sora',system-ui,sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.06em;text-transform:uppercase;color:#0B1730;margin-bottom:0.8rem;}
+
+/* Tab bar upgrade */
+.h1-tab-bar,.h2dir-tab-bar,.npl-tab-bar{background:#FFFFFF;border-bottom:2px solid #F0F4FB;}
+.h1-tab,.h2dir-tab{font-family:'Sora',system-ui,sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;}
+.h1-tab.active,.h2dir-tab.active{color:#0D2B6B;border-bottom-color:#0D2B6B;}
+
+/* Top bar upgrade */
+.s2bar,.npl-tab-bar > .s2bar{background:linear-gradient(90deg,#0D2B6B,#1565C0);}
+.s2title{font-family:'Sora',system-ui,sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;color:#FFFFFF;}
+.kt-back{color:rgba(255,255,255,0.85);font-family:'Sora',system-ui,sans-serif;font-size:0.8rem;font-weight:600;}
+.kt-back:hover{color:#FFFFFF;}
+
+/* Home dashboard title */
+.ltitle{font-family:'Sora',system-ui,sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,3.2rem);letter-spacing:-0.02em;}
+
+/* Entry card body title */
+.ec-body .ec-title{font-family:'Sora',system-ui,sans-serif;font-weight:800;}
+.ec-kpi-num{font-family:'Sora',system-ui,sans-serif;}
+/* ========== END GLOBAL TYPOGRAPHY SYSTEM ========== */
 
 </style>
 </head>
@@ -3127,67 +3169,98 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
       <button class="h1-tab" id="h1-tab-5" onclick="switchH1Tab('page-5',this)">AUDIT ANALYSIS</button>
     </div>
 <section class="page" id="page-1" style="display:flex;">
-  <header>
-    <div class="eyebrow">vivo Tamil Nadu · MarCom · Overall Performance</div>
-    <h1 class="title">H1 Marcom Review <span>2026 - 2027</span></h1>
-    <p class="sub">Total marketing expense, reach and cost-per-person across HO &amp; JBP execution — the complete efficiency picture for the H1 period.</p>
-  </header>
+<header>
+  <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#1565C0;display:flex;align-items:center;gap:0.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:#1565C0;box-shadow:0 0 0 4px rgba(21,101,192,0.18);display:inline-block;"></span>vivo Tamil Nadu · Total Marketing Spend · H1 FY26-27</div>
+  <h1 style="font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.04;letter-spacing:-0.02em;margin:0.6rem 0 0.3rem;color:#0B1730;">FY26-27 H1 — <span style="color:#1565C0;">Cost Analysis</span></h1>
+  <p style="font-size:clamp(0.9rem,1.2vw,1rem);color:#3D4E73;max-width:72ch;line-height:1.5;margin:0;">Combined Branding + MarCom spend across all categories — Apr 2026 to Sep 2026 vs full Last FY (Apr 2025 – Mar 2026).</p>
+</header>
 
-  <!-- PRIMARY KPI CARDS -->
-  <div class="kpis">
-    <div class="kpi">
-      <div class="k-lbl">01 · Overall Expense</div>
-      <div class="k-num">₹1.45 Cr</div>
-      <div class="k-break">
-        <div><span class="bk-k">HO</span><span class="bk-v">₹36.11 L</span></div>
-        <div><span class="bk-k">JBP</span><span class="bk-v">₹1.09 Cr</span></div>
-      </div>
-      <div class="k-foot"><b>83.4%</b> of ₹1.74 Cr budget utilized</div>
+<!-- PRIMARY KPI CARDS -->
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(0.8rem,1.4vw,1.2rem);flex:0 0 auto;">
+
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.2rem,2vw,1.8rem);box-shadow:0 12px 32px rgba(11,23,48,0.06);position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
+    <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;">Current FY H1 Total</div>
+    <div style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#0D2B6B;line-height:1;letter-spacing:-0.02em;margin:0.4rem 0 0.3rem;">₹7.62 Cr</div>
+    <div style="display:flex;gap:1rem;padding-top:0.7rem;border-top:1px dashed rgba(11,23,48,0.10);">
+      <div><div style="font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">Branding</div><div style="font-size:0.9rem;font-weight:700;color:#0B1730;">₹4.86 Cr</div></div>
+      <div><div style="font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">MarCom</div><div style="font-size:0.9rem;font-weight:700;color:#0B1730;">₹2.76 Cr</div></div>
     </div>
-    <div class="kpi">
-      <div class="k-lbl">02 · Overall Reach</div>
-      <div class="k-num blue">6.51 Cr</div>
-      <div class="k-break">
-        <div><span class="bk-k">HO</span><span class="bk-v">3.56 Cr</span></div>
-        <div><span class="bk-k">JBP</span><span class="bk-v">2.95 Cr</span></div>
-      </div>
-      <div class="k-foot">65,054,575 people reached in total</div>
-    </div>
-    <div class="kpi">
-      <div class="k-lbl">03 · Overall CPP</div>
-      <div class="k-num">₹0.22</div>
-      <div class="k-break">
-        <div><span class="bk-k">HO CPP</span><span class="bk-v">₹0.10</span></div>
-        <div><span class="bk-k">JBP CPP</span><span class="bk-v">₹0.37</span></div>
-      </div>
-      <span class="chip">▼ Lower CPP = Better Efficiency</span>
-    </div>
+    <div style="margin-top:0.6rem;font-size:0.75rem;color:#3D4E73;">Apr–Sep 2026 · 6 months</div>
   </div>
 
-  <!-- HO VS JBP COMPARISON -->
-  <div class="panel">
-    <div class="cmp">
-      <div class="cmp-metric">
-        <div class="cm-lbl">Expense</div>
-        <div class="bar-row"><span class="br-tag">HO</span><div class="bar-track"><div class="bar-fill ho" style="width:33%;">₹36.11 L</div></div></div>
-        <div class="bar-row"><span class="br-tag">JBP</span><div class="bar-track"><div class="bar-fill jbp" style="width:100%;">₹1.09 Cr</div></div></div>
-        <div class="cmp-note">JBP = 75.11% of total spend</div>
-      </div>
-      <div class="cmp-metric">
-        <div class="cm-lbl">Reach</div>
-        <div class="bar-row"><span class="br-tag">HO</span><div class="bar-track"><div class="bar-fill ho" style="width:100%;">3.56 Cr</div></div></div>
-        <div class="bar-row"><span class="br-tag">JBP</span><div class="bar-track"><div class="bar-fill jbp" style="width:83%;">2.95 Cr</div></div></div>
-        <div class="cmp-note">HO = 54.69% of total reach</div>
-      </div>
-      <div class="cmp-metric">
-        <div class="cm-lbl">CPP <span style="color:var(--ink-2);text-transform:none;letter-spacing:0;">(lower is better)</span></div>
-        <div class="bar-row"><span class="br-tag">HO</span><div class="bar-track"><div class="bar-fill ho" style="width:27%;">₹0.10</div></div></div>
-        <div class="bar-row"><span class="br-tag">JBP</span><div class="bar-track"><div class="bar-fill jbp" style="width:100%;">₹0.37</div></div></div>
-        <div class="cmp-note">HO is 3.7× more cost-efficient</div>
-      </div>
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.2rem,2vw,1.8rem);box-shadow:0 12px 32px rgba(11,23,48,0.06);position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
+    <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;">Last FY Total</div>
+    <div style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#3D4E73;line-height:1;letter-spacing:-0.02em;margin:0.4rem 0 0.3rem;">₹12.13 Cr</div>
+    <div style="display:flex;gap:1rem;padding-top:0.7rem;border-top:1px dashed rgba(11,23,48,0.10);">
+      <div><div style="font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">Branding</div><div style="font-size:0.9rem;font-weight:700;color:#0B1730;">₹8.87 Cr</div></div>
+      <div><div style="font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">MarCom</div><div style="font-size:0.9rem;font-weight:700;color:#0B1730;">₹3.26 Cr</div></div>
     </div>
+    <div style="margin-top:0.6rem;font-size:0.75rem;color:#3D4E73;">Apr 2025–Mar 2026 · 12 months</div>
   </div>
 
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.2rem,2vw,1.8rem);box-shadow:0 12px 32px rgba(11,23,48,0.06);position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
+    <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;">Sales Value — H1</div>
+    <div style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#0D2B6B;line-height:1;letter-spacing:-0.02em;margin:0.4rem 0 0.3rem;">₹190.5 Cr</div>
+    <div style="display:flex;gap:1rem;padding-top:0.7rem;border-top:1px dashed rgba(11,23,48,0.10);">
+      <div><div style="font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">Last FY</div><div style="font-size:0.9rem;font-weight:700;color:#0B1730;">₹387.7 Cr</div></div>
+    </div>
+    <div style="margin-top:0.6rem;font-size:0.75rem;color:#3D4E73;">Apr–Sep 2026 actual sales</div>
+  </div>
+
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.2rem,2vw,1.8rem);box-shadow:0 12px 32px rgba(11,23,48,0.06);position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#B45309,#D97706);"></div>
+    <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;">Expenses % (Spend/Sales)</div>
+    <div style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#B45309;line-height:1;letter-spacing:-0.02em;margin:0.4rem 0 0.3rem;">0.400%</div>
+    <div style="display:flex;gap:1rem;padding-top:0.7rem;border-top:1px dashed rgba(11,23,48,0.10);">
+      <div><div style="font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">Last FY</div><div style="font-size:0.9rem;font-weight:700;color:#0B1730;">0.313%</div></div>
+      <div><div style="font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#B45309;">▲ +27.9%</div></div>
+    </div>
+    <div style="margin-top:0.6rem;font-size:0.75rem;color:#B45309;font-weight:600;">Spend efficiency declining — needs H2 watch</div>
+  </div>
+
+</div>
+
+<!-- CATEGORY SPEND TABLE -->
+<div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:1.4rem;box-shadow:0 12px 32px rgba(11,23,48,0.05);flex:1;display:flex;flex-direction:column;min-height:0;">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem;flex:0 0 auto;">
+    <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;">CATEGORY-WISE SPEND — CURRENT FY H1 vs LAST FY</div>
+    <div style="font-size:0.7rem;color:#6B7B9C;">Note: Last FY = 12 months · Current FY = 6 months (Apr–Sep 2026)</div>
+  </div>
+  <div style="overflow:auto;flex:1;min-height:0;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.78rem;">
+      <thead>
+        <tr style="background:#F0F4FB;">
+          <th style="text-align:left;padding:0.5rem 0.7rem;font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;border-bottom:2px solid rgba(11,23,48,0.10);">Category</th>
+          <th style="text-align:right;padding:0.5rem 0.7rem;font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;border-bottom:2px solid rgba(11,23,48,0.10);">Last FY (₹)</th>
+          <th style="text-align:right;padding:0.5rem 0.7rem;font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;border-bottom:2px solid rgba(11,23,48,0.10);">Current H1 (₹)</th>
+          <th style="text-align:right;padding:0.5rem 0.7rem;font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;border-bottom:2px solid rgba(11,23,48,0.10);">Dept</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">X Series</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">2,34,92,542</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">1,26,55,744</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding+MarCom</td></tr>
+        <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">V Series</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">4,51,17,249</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">2,08,03,901</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding+MarCom</td></tr>
+        <tr><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Y Series</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">79,53,387</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">20,74,385</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding</td></tr>
+        <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">S Series <span style="font-size:0.6rem;color:#1565C0;font-weight:700;background:rgba(21,101,192,0.08);border-radius:4px;padding:0.1rem 0.3rem;">NEW</span></td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;">—</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">86,70,039</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding+MarCom</td></tr>
+        <tr><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Aadi</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">9,16,893</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">8,44,596</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding</td></tr>
+        <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Diwali <span style="font-size:0.6rem;color:#B45309;font-weight:700;background:rgba(180,83,9,0.08);border-radius:4px;padding:0.1rem 0.3rem;">▲ +44.5%</span></td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">78,66,928</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#B45309;font-weight:700;">1,13,66,781</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding+MarCom</td></tr>
+        <tr><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Christ &amp; New Year</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">89,940</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;">— (Dec/Jan)</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding</td></tr>
+        <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Pongal</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">56,60,524</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;">— (Jan)</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding+MarCom</td></tr>
+        <tr><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Other Campaigns</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">9,28,658</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">6,51,760</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding</td></tr>
+        <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Maintenance &amp; Repair</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">21,58,827</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">18,74,128</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding</td></tr>
+        <tr><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Project</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">92,49,095</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">17,04,420</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding</td></tr>
+        <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Project Rent</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">15,91,200</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">7,60,678</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding</td></tr>
+        <tr><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">MSB</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">20,08,987</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">7,55,836</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding</td></tr>
+        <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Cabinet Material</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">1,26,59,564</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">1,24,64,140</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">Branding</td></tr>
+        <tr><td style="padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:600;">Promotion Material</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;">16,33,476</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#0B1730;font-weight:700;">16,08,078</td><td style="text-align:right;padding:0.4rem 0.7rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#6B7B9C;font-size:0.65rem;">MarCom</td></tr>
+        <tr style="background:#0D2B6B;"><td style="padding:0.55rem 0.7rem;color:#FFFFFF;font-weight:800;font-size:0.82rem;">TOTAL</td><td style="text-align:right;padding:0.55rem 0.7rem;color:rgba(255,255,255,0.75);font-weight:700;">₹12,13,27,270</td><td style="text-align:right;padding:0.55rem 0.7rem;color:#FFFFFF;font-weight:800;">₹7,62,34,486</td><td style="text-align:right;padding:0.55rem 0.7rem;color:rgba(255,255,255,0.6);font-size:0.65rem;">62.8% of Last FY</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top:0.7rem;font-size:0.7rem;color:#6B7B9C;font-style:italic;flex:0 0 auto;">* Christ &amp; New Year and Pongal show ₹0 in Current H1 — these fall in Dec/Jan and are not yet due. S Series had no Last FY base (new category). Diwali H1 spend already exceeds full Last FY — flag for H2 budget watch.</div>
+</div>
 </section>
 
 <section class="page hl" id="page-2">
@@ -3217,6 +3290,66 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
       </div>
     </div>
   </div>
+<!-- MARCOM H1 PERFORMANCE — moved from Cost Analysis -->
+<div style="margin-top:2rem;border-top:1px solid rgba(11,23,48,0.10);padding-top:1.5rem;">
+  <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;margin-bottom:1rem;">MARCOM H1 PERFORMANCE — APR-SEP 2026</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.2rem;">
+    <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;margin-bottom:0.4rem;">01 · OVERALL EXPENSE</div>
+      <div style="font-size:2.8rem;font-weight:800;color:#0D2B6B;line-height:1;letter-spacing:-0.02em;">₹1.45 Cr</div>
+      <div style="display:flex;gap:1.2rem;margin-top:0.8rem;padding-top:0.7rem;border-top:1px dashed rgba(11,23,48,0.10);">
+        <div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">HO</div><div style="font-size:0.95rem;font-weight:700;color:#0B1730;">₹36.11 L</div></div>
+        <div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">JBP</div><div style="font-size:0.95rem;font-weight:700;color:#0B1730;">₹1.09 Cr</div></div>
+      </div>
+      <div style="margin-top:0.7rem;font-size:0.78rem;color:#3D4E73;"><span style="color:#1565C0;font-weight:700;">83.4%</span> of ₹1.74 Cr budget utilized</div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;margin-bottom:0.4rem;">02 · OVERALL REACH</div>
+      <div style="font-size:2.8rem;font-weight:800;color:#1565C0;line-height:1;letter-spacing:-0.02em;">6.51 Cr</div>
+      <div style="display:flex;gap:1.2rem;margin-top:0.8rem;padding-top:0.7rem;border-top:1px dashed rgba(11,23,48,0.10);">
+        <div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">HO</div><div style="font-size:0.95rem;font-weight:700;color:#0B1730;">3.56 Cr</div></div>
+        <div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">JBP</div><div style="font-size:0.95rem;font-weight:700;color:#0B1730;">2.95 Cr</div></div>
+      </div>
+      <div style="margin-top:0.7rem;font-size:0.78rem;color:#3D4E73;">65,054,575 people reached in total</div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;margin-bottom:0.4rem;">03 · OVERALL CPP</div>
+      <div style="font-size:2.8rem;font-weight:800;color:#0D2B6B;line-height:1;letter-spacing:-0.02em;">₹0.22</div>
+      <div style="display:flex;gap:1.2rem;margin-top:0.8rem;padding-top:0.7rem;border-top:1px dashed rgba(11,23,48,0.10);">
+        <div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">HO CPP</div><div style="font-size:0.95rem;font-weight:700;color:#0B1730;">₹0.10</div></div>
+        <div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;">JBP CPP</div><div style="font-size:0.95rem;font-weight:700;color:#0B1730;">₹0.37</div></div>
+      </div>
+      <div style="margin-top:0.7rem;font-size:0.78rem;color:#3D4E73;display:flex;align-items:center;gap:0.4rem;"><span style="background:rgba(21,163,74,0.10);border:1px solid rgba(21,163,74,0.22);border-radius:20px;padding:0.2rem 0.6rem;font-size:0.65rem;font-weight:700;color:#15A34A;">▼ Lower CPP = Better Efficiency</span></div>
+    </div>
+  </div>
+  <!-- HO vs JBP comparison bars -->
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;">
+    <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;margin-bottom:1rem;">HO VS JBP EFFICIENCY</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div>
+        <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;margin-bottom:0.6rem;">EXPENSE</div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;"><span style="font-size:0.7rem;font-weight:600;color:#3D4E73;width:30px;">HO</span><div style="flex:1;height:22px;background:#F0F4FB;border-radius:6px;overflow:hidden;"><div style="width:33%;height:100%;background:linear-gradient(90deg,#0D2B6B,#1565C0);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.4rem;font-size:0.68rem;font-weight:700;color:#fff;">₹36.11L</div></div></div>
+        <div style="display:flex;align-items:center;gap:0.6rem;"><span style="font-size:0.7rem;font-weight:600;color:#3D4E73;width:30px;">JBP</span><div style="flex:1;height:22px;background:#F0F4FB;border-radius:6px;overflow:hidden;"><div style="width:100%;height:100%;background:linear-gradient(90deg,#1E293B,#334155);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.4rem;font-size:0.68rem;font-weight:700;color:#fff;">₹1.09 Cr</div></div></div>
+        <div style="font-size:0.7rem;color:#6B7B9C;margin-top:0.4rem;">JBP = 75.11% of total spend</div>
+      </div>
+      <div>
+        <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;margin-bottom:0.6rem;">REACH</div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;"><span style="font-size:0.7rem;font-weight:600;color:#3D4E73;width:30px;">HO</span><div style="flex:1;height:22px;background:#F0F4FB;border-radius:6px;overflow:hidden;"><div style="width:100%;height:100%;background:linear-gradient(90deg,#0D2B6B,#1565C0);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.4rem;font-size:0.68rem;font-weight:700;color:#fff;">3.56 Cr</div></div></div>
+        <div style="display:flex;align-items:center;gap:0.6rem;"><span style="font-size:0.7rem;font-weight:600;color:#3D4E73;width:30px;">JBP</span><div style="flex:1;height:22px;background:#F0F4FB;border-radius:6px;overflow:hidden;"><div style="width:83%;height:100%;background:linear-gradient(90deg,#1E293B,#334155);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.4rem;font-size:0.68rem;font-weight:700;color:#fff;">2.95 Cr</div></div></div>
+        <div style="font-size:0.7rem;color:#6B7B9C;margin-top:0.4rem;">HO = 54.69% of total reach</div>
+      </div>
+      <div>
+        <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;margin-bottom:0.6rem;">CPP (lower is better)</div>
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;"><span style="font-size:0.7rem;font-weight:600;color:#3D4E73;width:30px;">HO</span><div style="flex:1;height:22px;background:#F0F4FB;border-radius:6px;overflow:hidden;"><div style="width:27%;height:100%;background:linear-gradient(90deg,#0D2B6B,#1565C0);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.4rem;font-size:0.68rem;font-weight:700;color:#fff;">₹0.10</div></div></div>
+        <div style="display:flex;align-items:center;gap:0.6rem;"><span style="font-size:0.7rem;font-weight:600;color:#3D4E73;width:30px;">JBP</span><div style="flex:1;height:22px;background:#F0F4FB;border-radius:6px;overflow:hidden;"><div style="width:100%;height:100%;background:linear-gradient(90deg,#1E293B,#334155);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.4rem;font-size:0.68rem;font-weight:700;color:#fff;">₹0.37</div></div></div>
+        <div style="font-size:0.7rem;color:#6B7B9C;margin-top:0.4rem;">HO is 3.7× more cost-efficient</div>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
 
 <section class="page db" id="page-3">
@@ -3334,84 +3467,99 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 
 <section class="page" id="page-5">
 <header>
-  <div class="eyebrow">vivo Tamil Nadu · Retail Com · Channel One Audit</div>
-  <h1 class="title">Audit Analysis — <span>Key Findings & Action Plan</span></h1>
-  <p class="sub">Channel One Audit — 5 models, 1,849 stores audited. Overall correct WODs: 22.8%. VIVO Zone is the weakest channel across all models.</p>
+  <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#1565C0;display:flex;align-items:center;gap:0.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:#DC2626;box-shadow:0 0 0 4px rgba(220,38,38,0.18);display:inline-block;"></span>vivo Tamil Nadu · Retail Com · Channel One Audit</div>
+  <h1 style="font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.04;letter-spacing:-0.02em;margin:0.6rem 0 0.3rem;color:#0B1730;">Audit Analysis — <span style="color:#DC2626;">Key Findings & Action Plan</span></h1>
+  <p style="font-size:clamp(0.9rem,1.2vw,1rem);color:#3D4E73;max-width:72ch;line-height:1.5;margin:0;">Channel One Audit — 5 models, 1,849 stores. No model reached 50% compliance. VIVO Zone weakest in every model.</p>
 </header>
-<!-- KPI CARDS -->
-<div class="kpis">
-  <div class="kpi">
-    <div class="k-lbl">Stores Audited</div>
-    <div class="k-num blue">1,849</div>
-    <div class="k-break">
-      <div><span class="bk-k">Models</span><span class="bk-v">5</span></div>
-    </div>
-    <div class="k-foot">V60, V70, X300, X300FE, X300 ULTRA</div>
+
+<!-- KPI ROW -->
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;flex:0 0 auto;">
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
+    <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
+    <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;">Stores Audited</div>
+    <div style="font-size:2.2rem;font-weight:800;color:#0D2B6B;line-height:1;margin:0.3rem 0;">1,849</div>
+    <div style="font-size:0.75rem;color:#3D4E73;">5 smartphone models</div>
   </div>
-  <div class="kpi">
-    <div class="k-lbl">Overall Correct WODs</div>
-    <div class="k-num" style="color:#DC2626;">22.8%</div>
-    <div class="k-break">
-      <div><span class="bk-k">Status</span><span class="bk-v">Critical</span></div>
-    </div>
-    <div class="k-foot">No model reached 50% compliance</div>
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
+    <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#DC2626,#EF4444);"></div>
+    <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;">Overall Correct WODs</div>
+    <div style="font-size:2.2rem;font-weight:800;color:#DC2626;line-height:1;margin:0.3rem 0;">22.8%</div>
+    <div style="font-size:0.75rem;color:#DC2626;font-weight:600;">Critical — no model hit 50%</div>
   </div>
-  <div class="kpi">
-    <div class="k-lbl">Weakest Channel</div>
-    <div class="k-num" style="font-size:2rem;color:#B45309;">VIVO Zone</div>
-    <div class="k-break">
-      <div><span class="bk-k">X300 ULTRA</span><span class="bk-v">2.4%</span></div>
-      <div><span class="bk-k">V70</span><span class="bk-v">21.0%</span></div>
-    </div>
-    <div class="k-foot">Weakest in every model audited</div>
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
+    <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#B45309,#D97706);"></div>
+    <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;">Weakest Model</div>
+    <div style="font-size:2.2rem;font-weight:800;color:#B45309;line-height:1;margin:0.3rem 0;">2.4%</div>
+    <div style="font-size:0.75rem;color:#3D4E73;">X300 Ultra compliance</div>
+  </div>
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
+    <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#DC2626,#EF4444);"></div>
+    <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;">Weakest Channel</div>
+    <div style="font-size:1.3rem;font-weight:800;color:#DC2626;line-height:1;margin:0.3rem 0;">VIVO Zone</div>
+    <div style="font-size:0.75rem;color:#3D4E73;">Weakest in every model audited</div>
   </div>
 </div>
-<div class="bottom">
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;flex:0 0 auto;">
+
+  <!-- MODEL COMPLIANCE -->
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
+    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;margin-bottom:0.8rem;">MODEL COMPLIANCE %</div>
+    <div style="display:flex;flex-direction:column;gap:0.5rem;">
+      <div style="display:flex;align-items:center;gap:0.6rem;"><span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">X300 ULTRA</span><div style="flex:1;height:20px;background:#F0F4FB;border-radius:5px;overflow:hidden;"><div style="width:2.4%;height:100%;background:#DC2626;border-radius:5px;display:flex;align-items:center;padding-left:0.3rem;"><span style="font-size:0.65rem;font-weight:700;color:#fff;white-space:nowrap;">2.4%</span></div></div></div>
+      <div style="display:flex;align-items:center;gap:0.6rem;"><span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">V70</span><div style="flex:1;height:20px;background:#F0F4FB;border-radius:5px;overflow:hidden;"><div style="width:21%;height:100%;background:#B45309;border-radius:5px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.3rem;"><span style="font-size:0.65rem;font-weight:700;color:#fff;">21.0%</span></div></div></div>
+      <div style="display:flex;align-items:center;gap:0.6rem;"><span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">X300 FE</span><div style="flex:1;height:20px;background:#F0F4FB;border-radius:5px;overflow:hidden;"><div style="width:22.8%;height:100%;background:#B45309;border-radius:5px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.3rem;"><span style="font-size:0.65rem;font-weight:700;color:#fff;">~23%</span></div></div></div>
+      <div style="display:flex;align-items:center;gap:0.6rem;"><span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">X300</span><div style="flex:1;height:20px;background:#F0F4FB;border-radius:5px;overflow:hidden;"><div style="width:22.8%;height:100%;background:#B45309;border-radius:5px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.3rem;"><span style="font-size:0.65rem;font-weight:700;color:#fff;">~23%</span></div></div></div>
+      <div style="display:flex;align-items:center;gap:0.6rem;"><span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">V60</span><div style="flex:1;height:20px;background:#F0F4FB;border-radius:5px;overflow:hidden;"><div style="width:22.8%;height:100%;background:#1565C0;border-radius:5px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.3rem;"><span style="font-size:0.65rem;font-weight:700;color:#fff;">~23%</span></div></div></div>
+      <div style="font-size:0.65rem;color:#6B7B9C;margin-top:0.3rem;">* X300/X300FE/V60 exact % not in source — shown as overall average. Source: Channel One Audit consolidated report.</div>
+    </div>
+  </div>
+
   <!-- RECURRING FAILURES -->
-  <div class="panel">
-    <div class="panel-h"><span class="ph-t">RECURRING 0% FAILURE CATEGORIES</span></div>
-    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
-      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">1</div>
-      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Prop / Lighting / Table-Top</b> — AIP/DIP/Tent Card, Luminous Table Top, Lighting Panel Insert</div>
-    </div>
-    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
-      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">2</div>
-      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">ISB / Lampcloth / Table Sticker</b> — Recurring 0–50% inshop scores across nearly all models</div>
-    </div>
-    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
-      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">3</div>
-      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Shelf Talker / Dangler / Wobbler</b> — Recurring 0–50% inshop POSM scores across nearly all models</div>
-    </div>
-  </div>
-  <!-- ACTION PLAN -->
-  <div class="panel">
-    <div class="panel-h"><span class="ph-t">KEY IMPROVEMENT ACTIONS</span></div>
-    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
-      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2B54E6,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">1</div>
-      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Mandatory Pre-Audit TL Training</b> — Before every audit round; covers POSM, SOP, photo method and last round's gaps</div>
-    </div>
-    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
-      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2B54E6,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">2</div>
-      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Channel One Score in TL/ME KPI</b> — Audit performance becomes a named line item in the monthly KPI</div>
-    </div>
-    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
-      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2B54E6,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">3</div>
-      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Prioritise VIVO Zone & Recurring Gaps</b> — Corrective focus on weakest channel and repeat 0%-score categories</div>
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
+    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;margin-bottom:0.8rem;">RECURRING 0% FAILURE CATEGORIES</div>
+    <div style="display:flex;flex-direction:column;gap:0.6rem;">
+      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:24px;height:24px;border-radius:6px;background:#DC2626;color:#fff;font-weight:800;font-size:0.7rem;display:flex;align-items:center;justify-content:center;">1</div><div><div style="font-size:0.85rem;font-weight:700;color:#0B1730;">Prop / Lighting / Table-Top</div><div style="font-size:0.72rem;color:#6B7B9C;margin-top:0.15rem;">AIP/DIP/Tent Card · Luminous Table Top · Lighting Panel Insert</div></div></div>
+      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:24px;height:24px;border-radius:6px;background:#DC2626;color:#fff;font-weight:800;font-size:0.7rem;display:flex;align-items:center;justify-content:center;">2</div><div><div style="font-size:0.85rem;font-weight:700;color:#0B1730;">ISB / Lampcloth / Table Sticker</div><div style="font-size:0.72rem;color:#6B7B9C;margin-top:0.15rem;">Recurring 0–50% inshop scores across nearly all models</div></div></div>
+      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:24px;height:24px;border-radius:6px;background:#DC2626;color:#fff;font-weight:800;font-size:0.7rem;display:flex;align-items:center;justify-content:center;">3</div><div><div style="font-size:0.85rem;font-weight:700;color:#0B1730;">Shelf Talker / Dangler / Wobbler</div><div style="font-size:0.72rem;color:#6B7B9C;margin-top:0.15rem;">Recurring 0–50% inshop POSM scores across nearly all models</div></div></div>
     </div>
   </div>
 </div>
-<!-- WORKFLOW -->
-<div class="panel" style="flex:0 0 auto;">
-  <div class="panel-h"><span class="ph-t">IMPROVED AUDIT WORKFLOW</span></div>
-  <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
-    <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;">1 · Pre-Audit Training<br><small style="font-weight:400;color:#6B7B9C;">HO → TL/ME</small></div>
-    <div style="color:#2B54E6;font-weight:800;">→</div>
-    <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;">2 · Field Execution<br><small style="font-weight:400;color:#6B7B9C;">Geo-tagged per SOP</small></div>
-    <div style="color:#2B54E6;font-weight:800;">→</div>
-    <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;">3 · Daily Monitoring<br><small style="font-weight:400;color:#6B7B9C;">ME + HO/State</small></div>
-    <div style="color:#2B54E6;font-weight:800;">→</div>
-    <div style="background:linear-gradient(135deg,#0D47A1,#1976D2);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#fff;">4 · Post-Audit Review<br><small style="font-weight:400;color:rgba(255,255,255,0.75);">BM + ME → KPI</small></div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;flex:1;min-height:0;">
+
+  <!-- ROLE RESPONSIBILITY TABLE -->
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);display:flex;flex-direction:column;">
+    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;margin-bottom:0.8rem;flex:0 0 auto;">ROLE RESPONSIBILITIES</div>
+    <div style="overflow:auto;flex:1;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.75rem;">
+        <thead><tr style="background:#F0F4FB;"><th style="text-align:left;padding:0.4rem 0.6rem;font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;border-bottom:2px solid rgba(11,23,48,0.10);">Role</th><th style="text-align:left;padding:0.4rem 0.6rem;font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;border-bottom:2px solid rgba(11,23,48,0.10);">Responsibility</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);font-weight:700;color:#0D2B6B;vertical-align:top;">TL</td><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;line-height:1.4;">Attends pre-audit training. Executes store audit correctly — geo-tagged, time-stamped photos per SOP.</td></tr>
+          <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);font-weight:700;color:#0D2B6B;vertical-align:top;">ME</td><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;line-height:1.4;">Validates store/TL master data before audit opens. Monitors daily progress and photo quality. Supports TL on-ground.</td></tr>
+          <tr><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);font-weight:700;color:#0D2B6B;vertical-align:top;">BM</td><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;line-height:1.4;">Implements and monitors TL/ME KPI at branch level. Reviews scorecard. Assigns owners to gaps.</td></tr>
+          <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.6rem;font-weight:700;color:#0D2B6B;vertical-align:top;">HO</td><td style="padding:0.4rem 0.6rem;color:#3D4E73;line-height:1.4;">Designs pre-audit training and SOP. Defines checklist and scoring standard. Consolidates reporting. Guides BM on recurring gaps.</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+
+  <!-- IMPLEMENTATION TIMELINE + KPI -->
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);display:flex;flex-direction:column;">
+    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;margin-bottom:0.8rem;flex:0 0 auto;">IMPLEMENTATION TIMELINE</div>
+    <div style="display:flex;flex-direction:column;gap:0.45rem;flex:1;">
+      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#0D2B6B,#1565C0);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">1</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">Before next audit window</div><div style="font-size:0.68rem;color:#6B7B9C;">Finalize SOP · Brief BMs on KPI rollout</div></div></div>
+      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#0D2B6B,#1565C0);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">2</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">1 week before audit opens</div><div style="font-size:0.68rem;color:#6B7B9C;">Conduct pre-audit TL/ME training per model</div></div></div>
+      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#0D2B6B,#1565C0);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">3</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">During audit window (5–7 days)</div><div style="font-size:0.68rem;color:#6B7B9C;">Daily ME monitoring + mid-window HO spot checks</div></div></div>
+      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#0D2B6B,#1565C0);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">4</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">Audit scoring report published</div><div style="font-size:0.68rem;color:#6B7B9C;">BM-led scorecard review · KPI scoring finalized</div></div></div>
+      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#15A34A,#16A34A);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">5</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">Ongoing — each cycle</div><div style="font-size:0.68rem;color:#6B7B9C;">Prior round gap areas built into next training · Continuous improvement</div></div></div>
+    </div>
+    <div style="margin-top:0.8rem;padding:0.7rem;background:#F0F4FB;border-radius:10px;flex:0 0 auto;">
+      <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0D2B6B;margin-bottom:0.3rem;">TL / ME KPI FRAMEWORK</div>
+      <div style="font-size:0.72rem;color:#3D4E73;line-height:1.45;">Channel One Audit score is a <strong>named KPI line item</strong> for TL and ME. Measured on: store-level Correct % achieved + audit coverage within 5–7 day window. Minimum threshold per channel: <strong>70%</strong>. Below threshold triggers automatic escalation.</div>
+    </div>
+  </div>
+
 </div>
 </section>
   </div><!-- end .h1review-panel -->
