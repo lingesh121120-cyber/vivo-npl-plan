@@ -923,6 +923,45 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 @media(max-width:900px){.lgrid{grid-template-columns:repeat(2,1fr);}.nvgrid{grid-template-columns:1fr;}}
 @media(max-width:720px){.kmodal{grid-template-columns:1fr;max-height:94vh;overflow-y:auto;}.km-media{height:180px;}.km-body{max-height:none;overflow:visible;}.as-grid{grid-template-columns:1fr;}.kgrid.g5{grid-template-columns:repeat(2,1fr);}.kgrid.g3{grid-template-columns:1fr;}.engines,.funnel{grid-template-columns:1fr;}.jbp-chips{grid-template-columns:repeat(3,1fr);}}
 
+/* Festival tabs (Step 2 merge) */
+.festival-tab-bar{
+  display:flex;gap:0.5rem;padding:0 2rem;
+  margin-bottom:1rem;flex-shrink:0;
+}
+.festival-tab{
+  font-family:inherit;font-size:0.72rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:#5B6E9A;background:#F0F4FB;
+  border:1px solid rgba(10,22,40,0.10);
+  border-radius:8px;padding:0.5rem 1.2rem;
+  cursor:pointer;transition:all 0.15s;
+  border-bottom:3px solid transparent;
+}
+.festival-tab.active{
+  color:#1565C0;background:#fff;
+  border-bottom:3px solid #1565C0;
+}
+.festival-panel{display:block;}
+.festival-posm-embed{
+  display:flex;height:calc(100vh - 180px);
+  gap:0.5rem;padding:0 2rem;
+}
+.festival-iframe{
+  flex:1;border:none;border-radius:12px;
+  box-shadow:0 4px 18px rgba(10,22,40,0.08);
+}
+.festival-iframe-nav{
+  display:flex;flex-direction:column;
+  gap:0.4rem;justify-content:center;
+}
+.festival-iframe-nav button{
+  font-family:inherit;font-size:0.9rem;
+  background:#F0F4FB;border:1px solid rgba(10,22,40,0.10);
+  border-radius:8px;padding:0.5rem 0.7rem;
+  cursor:pointer;transition:background 0.15s;
+}
+.festival-iframe-nav button:hover{background:#E3EDFF;}
+
 </style>
 </head>
 <body>
@@ -2014,6 +2053,11 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 </div>
 <div class="landing hidden" id="diwali">
   <button class="entry-back" onclick="backToEntry()">&larr; Back</button>
+  <div class="festival-tab-bar">
+    <button class="festival-tab active" id="ftab-activation" onclick="switchFestivalTab('activation')">MARCOM ACTIVATION</button>
+    <button class="festival-tab" id="ftab-posm" onclick="switchFestivalTab('posm')">BRANDING &middot; POSM</button>
+  </div>
+  <div id="festival-panel-activation" class="festival-panel">
   <div class="lwrap">
     <div class="lbrand">FTPL &middot; Tamil Nadu &middot; 2026</div>
     <div class="ltitle">DIWALI<span> &rsquo;26</span></div>
@@ -2049,6 +2093,16 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
           </ul>
         </li>
       </ul>
+    </div>
+  </div>
+  </div>
+  <div id="festival-panel-posm" class="festival-panel" style="display:none;">
+    <div class="festival-posm-embed">
+      <iframe class="festival-iframe" src="diwali-branding.html?v=14" id="festival-posm-frame"></iframe>
+      <div class="festival-iframe-nav">
+        <button onclick="festivalFrameScroll(-1)">&#9650;</button>
+        <button onclick="festivalFrameScroll(1)">&#9660;</button>
+      </div>
     </div>
   </div>
 </div>
@@ -3077,6 +3131,18 @@ function closeH1Review(){document.getElementById('h1review').classList.add('hidd
 function dbFrameScroll(dir){frameSnap('#diwali-branding .h1frame',dir);}
 function openDiwaliBranding(){document.getElementById('entry').classList.add('hidden');document.getElementById('diwali-branding').classList.remove('hidden');setTimeout(fitLanding,20);}
 function closeDiwaliBranding(){document.getElementById('diwali-branding').classList.add('hidden');document.getElementById('entry').classList.remove('hidden');setTimeout(fitLanding,20);}
+function switchFestivalTab(tab){
+  document.getElementById('festival-panel-activation').style.display = tab==='activation' ? 'block' : 'none';
+  document.getElementById('festival-panel-posm').style.display = tab==='posm' ? 'block' : 'none';
+  document.getElementById('ftab-activation').classList.toggle('active', tab==='activation');
+  document.getElementById('ftab-posm').classList.toggle('active', tab==='posm');
+}
+function festivalFrameScroll(dir){
+  var f = document.getElementById('festival-posm-frame');
+  if(f && f.contentWindow){
+    f.contentWindow.scrollBy({top: dir * window.innerHeight * 0.85, behavior:'smooth'});
+  }
+}
 function h2bFrameScroll(dir){frameSnap('#h2-branding .h1frame',dir);}
 function openH2Branding(){document.getElementById('entry').classList.add('hidden');document.getElementById('h2-branding').classList.remove('hidden');setTimeout(fitLanding,20);}
 function closeH2Branding(){document.getElementById('h2-branding').classList.add('hidden');document.getElementById('entry').classList.remove('hidden');setTimeout(fitLanding,20);}
