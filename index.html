@@ -1168,6 +1168,15 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h1review-panel .panel-h{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:1.4rem;flex-wrap:wrap;flex:0 0 auto;}
 .h1review-panel .panel-h .ph-t{font-weight:700;font-size:1.2rem;color:#0B1730;}
 .h1review-panel .panel-h .ph-s{font-size:0.85rem;color:#6B7B9C;}
+.h1review-panel .tbl{width:100%;border-collapse:collapse;font-size:0.8rem;}
+.h1review-panel .tbl th{font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;color:#6B7B9C;text-align:left;padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.10);position:sticky;top:0;background:#FFFFFF;}
+.h1review-panel .tbl td{padding:0.34rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;}
+.h1review-panel .tbl td.b{font-weight:700;color:#0B1730;}
+.h1review-panel .tbl tr.total td{font-weight:800;color:#0B1730;border-top:2px solid rgba(11,23,48,0.10);background:#F3F6FD;}
+.h1review-panel .tbl .g{color:#15A34A;font-weight:700;}
+.h1review-panel .tbl .a{color:#B45309;font-weight:700;}
+.h1review-panel .tbl .r{color:#DC2626;font-weight:700;}
+.h1review-panel .tbl-scroll{overflow:auto;flex:1;min-height:0;}
 .h1review-panel .cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.2vw,2.4rem);}
 .h1review-panel .cmp-metric .cm-lbl{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;margin-bottom:0.8rem;}
 .h1review-panel .bar-row{display:flex;align-items:center;gap:0.7rem;margin-bottom:0.65rem;}
@@ -2710,19 +2719,84 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
   </div>
   </div>
   <div id="npl-panel-huc" class="npl-panel" style="display:none;">
-    <!--
-      PLACEHOLDER: NPL HUC
-      Owner: HUC Team
-      Content needed: HUC NPL plan data
-      Status: Awaiting data from team
-      Instructions: Replace div below with actual content when received.
-      Do not change id="npl-panel-huc" or surrounding structure.
-    -->
-    <div class="npl-placeholder">
-      <div class="npl-ph-icon">📱</div>
-      <div class="npl-ph-label">HUC — HIGH END USER COMMUNICATION</div>
-      <div class="npl-ph-text">Data being prepared by HUC Team.<br>Content will be uploaded here when ready.</div>
+<div style="padding:2rem;max-width:1400px;margin:0 auto;">
+  <div style="margin-bottom:1.5rem;">
+    <div style="font-size:0.72rem;letter-spacing:0.14em;color:#2563EB;text-transform:uppercase;margin-bottom:0.5rem;">vivo Tamil Nadu · HUC · H2 Direction</div>
+    <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:#0B1730;margin:0 0 0.4rem;">HUC H2 Direction — <span style="color:#2563EB;">Oct '26 – Mar '27</span></h2>
+    <p style="font-size:0.95rem;color:#3D4E73;max-width:70ch;line-height:1.5;">Four pillars — College Partnership, IT Park Professional, White-Collar Community, and Vivo Week Contest — building premium brand perception across Tamil Nadu.</p>
+  </div>
+  <!-- 4 PILLAR CARDS -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;">
+    <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#2563EB);"></div>
+      <div style="font-size:1.8rem;margin-bottom:0.5rem;">🎓</div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;margin-bottom:0.3rem;">Pillar 01</div>
+      <div style="font-size:1rem;font-weight:800;color:#0B1730;margin-bottom:0.5rem;">College Partnership</div>
+      <div style="font-size:0.8rem;color:#3D4E73;line-height:1.45;">Convert top colleges into long-term strategic partners — build perception, discover student creators and develop future KOCs.</div>
     </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#2563EB);"></div>
+      <div style="font-size:1.8rem;margin-bottom:0.5rem;">🏢</div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;margin-bottom:0.3rem;">Pillar 02</div>
+      <div style="font-size:1rem;font-weight:800;color:#0B1730;margin-bottom:0.5rem;">IT Park Professional</div>
+      <div style="font-size:0.8rem;color:#3D4E73;line-height:1.45;">10-stage journey from park access to measured perception change. Sep–Feb window. Perception target: 2.8 → 4.2/5.</div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#2563EB);"></div>
+      <div style="font-size:1.8rem;margin-bottom:0.5rem;">👔</div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;margin-bottom:0.3rem;">Pillar 03</div>
+      <div style="font-size:1rem;font-weight:800;color:#0B1730;margin-bottom:0.5rem;">White-Collar Community</div>
+      <div style="font-size:0.8rem;color:#3D4E73;line-height:1.45;">BFSI, Doctors and Founder circles — curated premium experiences. HUC Finance Circle · Professional Circle · Founder Circle.</div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#2563EB);"></div>
+      <div style="font-size:1.8rem;margin-bottom:0.5rem;">🏆</div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;margin-bottom:0.3rem;">Pillar 04</div>
+      <div style="font-size:1rem;font-weight:800;color:#0B1730;margin-bottom:0.5rem;">Vivo Week Contest</div>
+      <div style="font-size:0.8rem;color:#3D4E73;line-height:1.45;">₹10L reward structure. 1,360 winners across Y21, V70FE and X300FE. Instant cashback + voucher fulfillment via UPI/API.</div>
+    </div>
+  </div>
+  <!-- IT PARK PERCEPTION SCORE -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+    <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;margin-bottom:0.8rem;">IT PARK — PERCEPTION SCORE TRAJECTORY</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+        <div style="text-align:center;"><div style="font-size:1.8rem;font-weight:800;color:#DC2626;">2.8</div><div style="font-size:0.65rem;color:#6B7B9C;">Before entry</div></div>
+        <div style="color:#2563EB;font-weight:800;font-size:1.2rem;">→</div>
+        <div style="text-align:center;"><div style="font-size:1.8rem;font-weight:800;color:#B45309;">3.2</div><div style="font-size:0.65rem;color:#6B7B9C;">First experience</div></div>
+        <div style="color:#2563EB;font-weight:800;font-size:1.2rem;">→</div>
+        <div style="text-align:center;"><div style="font-size:1.8rem;font-weight:800;color:#2563EB;">3.8</div><div style="font-size:0.65rem;color:#6B7B9C;">3–4 interactions</div></div>
+        <div style="color:#2563EB;font-weight:800;font-size:1.2rem;">→</div>
+        <div style="text-align:center;"><div style="font-size:1.8rem;font-weight:800;color:#15A34A;">4.2 ↑</div><div style="font-size:0.65rem;color:#6B7B9C;">Long-term</div></div>
+      </div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;margin-bottom:0.8rem;">VIVO WEEK CONTEST — REWARD STRUCTURE</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;">
+        <div style="background:#F3F6FD;border-radius:10px;padding:0.6rem;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#0B1730;">₹10L</div><div style="font-size:0.62rem;color:#6B7B9C;">Total Reward</div></div>
+        <div style="background:#F3F6FD;border-radius:10px;padding:0.6rem;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#2563EB;">1,360</div><div style="font-size:0.62rem;color:#6B7B9C;">Total Winners</div></div>
+        <div style="background:#F3F6FD;border-radius:10px;padding:0.6rem;text-align:center;"><div style="font-size:1.1rem;font-weight:800;color:#0B1730;">3</div><div style="font-size:0.62rem;color:#6B7B9C;">Models</div></div>
+      </div>
+      <div style="font-size:0.78rem;color:#3D4E73;margin-top:0.6rem;line-height:1.4;">Y21 (1,345 winners) · V70FE & X300FE (15 winners · ₹10,000 flat) · Instant cashback via UPI + gift voucher via API</div>
+    </div>
+  </div>
+  <!-- COLLEGE CREATOR FUNNEL -->
+  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
+    <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;margin-bottom:0.8rem;">COLLEGE — STUDENT CREATOR FUNNEL</div>
+    <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
+      <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.5rem 0.8rem;font-size:0.82rem;font-weight:600;color:#0B1730;">Event Students</div>
+      <div style="color:#2563EB;font-weight:800;">▾</div>
+      <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.5rem 0.8rem;font-size:0.82rem;font-weight:600;color:#0B1730;">Engaged Students</div>
+      <div style="color:#2563EB;font-weight:800;">▾</div>
+      <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.5rem 0.8rem;font-size:0.82rem;font-weight:600;color:#0B1730;">Content Creators</div>
+      <div style="color:#2563EB;font-weight:800;">▾</div>
+      <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.5rem 0.8rem;font-size:0.82rem;font-weight:600;color:#0B1730;">High-Potential Creators</div>
+      <div style="color:#2563EB;font-weight:800;">▾</div>
+      <div style="background:linear-gradient(135deg,#0D2B6B,#2563EB);border-radius:10px;padding:0.5rem 0.8rem;font-size:0.82rem;font-weight:600;color:#fff;">Student Creator Pool</div>
+    </div>
+    <div style="font-size:0.75rem;color:#6B7B9C;margin-top:0.6rem;">Selection: content quality · creativity · audience relevance · engagement · consistency · storytelling · campus influence</div>
+  </div>
+</div>
   </div>
 </div>
 <div class="landing hidden" id="diwali">
@@ -3125,43 +3199,161 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 </section>
 
 <section class="page" id="page-4">
-  <div>
-    <div class="eyebrow">vivo Tamil Nadu · Retail Com · Project Analysis</div>
-    <h1 class="title">H1 <span>PROJECT ANALYSIS</span></h1>
+<header>
+  <div class="eyebrow">vivo Tamil Nadu · Retail Com · FY26-27</div>
+  <h1 class="title">Project Analysis — <span>X-Zone Plan</span></h1>
+  <p class="sub">Branch-wise X-Zone completion status as of Sep '26. TN target: 70 zones (25 GT + 45 MT).</p>
+</header>
+<!-- STATE SUMMARY KPIs -->
+<div class="kpis">
+  <div class="kpi">
+    <div class="k-lbl">Overall Target</div>
+    <div class="k-num blue">70</div>
+    <div class="k-break">
+      <div><span class="bk-k">GT</span><span class="bk-v">25</span></div>
+      <div><span class="bk-k">MT</span><span class="bk-v">45</span></div>
+    </div>
+    <div class="k-foot">Tamil Nadu total X-Zone target</div>
   </div>
-  <!--
-    PLACEHOLDER: PROJECT ANALYSIS
-    Owner: Retail Com Team
-    Content needed: H1 project execution data, targets vs actuals, branch-wise performance
-    Status: Awaiting data from team
-    Instructions for Lingesh: Replace the div below with actual content when received.
-    Do not change the section id="page-4" or surrounding structure.
-  -->
-  <div class="placeholder-block">
-    <div class="placeholder-icon">📋</div>
-    <div class="placeholder-label">PROJECT ANALYSIS</div>
-    <div class="placeholder-text">Data being prepared by Retail Com Team.<br>Content will be uploaded here when ready.</div>
+  <div class="kpi">
+    <div class="k-lbl">Completed</div>
+    <div class="k-num" style="color:#15A34A;">10</div>
+    <div class="k-break">
+      <div><span class="bk-k">Done</span><span class="bk-v">14.3%</span></div>
+    </div>
+    <div class="k-foot">Live and operational</div>
   </div>
+  <div class="kpi">
+    <div class="k-lbl">Under Construction</div>
+    <div class="k-num" style="color:#B45309;">4</div>
+    <div class="k-break">
+      <div><span class="bk-k">In Progress</span><span class="bk-v">5.7%</span></div>
+    </div>
+    <div class="k-foot">Work in progress</div>
+  </div>
+</div>
+<!-- BRANCH TABLE -->
+<div class="panel" style="flex:1;">
+  <div class="panel-h">
+    <span class="ph-t">BRANCH-WISE STATUS — AS OF SEP '26</span>
+    <span class="ph-s">57 zones pending · 14 branches</span>
+  </div>
+  <div class="tbl-scroll">
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Branch</th>
+          <th>GT Target</th>
+          <th>MT Target</th>
+          <th>Overall</th>
+          <th>Completed</th>
+          <th>Under Construction</th>
+          <th>Pending</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="b">Coimbatore</td><td>1</td><td>3</td><td>4</td><td class="g">2</td><td>0</td><td class="a">2</td></tr>
+        <tr><td class="b">Erode</td><td>2</td><td>3</td><td>5</td><td class="g">1</td><td>0</td><td class="a">4</td></tr>
+        <tr><td class="b">Madurai</td><td>1</td><td>1</td><td>2</td><td class="g">0</td><td>0</td><td class="a">2</td></tr>
+        <tr><td class="b">MT Chennai</td><td>0</td><td>2</td><td>2</td><td class="g">0</td><td class="a">3</td><td>0</td></tr>
+        <tr><td class="b">North Chennai</td><td>1</td><td>0</td><td>1</td><td class="g">1</td><td>0</td><td>0</td></tr>
+        <tr><td class="b">Pondicherry</td><td>1</td><td>3</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
+        <tr><td class="b">Poorvika Chennai</td><td>0</td><td>11</td><td>11</td><td class="g">0</td><td>0</td><td class="r">11</td></tr>
+        <tr><td class="b">Salem</td><td>4</td><td>3</td><td>7</td><td class="g">1</td><td>0</td><td class="a">6</td></tr>
+        <tr><td class="b">South Chennai</td><td>1</td><td>4</td><td>5</td><td class="g">2</td><td>0</td><td class="a">3</td></tr>
+        <tr><td class="b">Thanjavur</td><td>3</td><td>1</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
+        <tr><td class="b">Tirunelveli</td><td>2</td><td>2</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
+        <tr><td class="b">Trichy</td><td>2</td><td>8</td><td>10</td><td class="g">2</td><td class="a">1</td><td class="a">7</td></tr>
+        <tr><td class="b">Vellore</td><td>5</td><td>4</td><td>9</td><td class="g">0</td><td>0</td><td class="r">9</td></tr>
+        <tr><td class="b">Virudhunagar</td><td>2</td><td>0</td><td>2</td><td class="g">1</td><td>0</td><td class="a">1</td></tr>
+        <tr class="total"><td>OVERALL</td><td>25</td><td>45</td><td>70</td><td>10</td><td>4</td><td>57</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 </section>
 
 <section class="page" id="page-5">
-  <div>
-    <div class="eyebrow">vivo Tamil Nadu · All Teams · Audit Analysis</div>
-    <h1 class="title">H1 <span>AUDIT ANALYSIS</span></h1>
+<header>
+  <div class="eyebrow">vivo Tamil Nadu · Retail Com · Channel One Audit</div>
+  <h1 class="title">Audit Analysis — <span>Key Findings & Action Plan</span></h1>
+  <p class="sub">Channel One Audit — 5 models, 1,849 stores audited. Overall correct WODs: 22.8%. VIVO Zone is the weakest channel across all models.</p>
+</header>
+<!-- KPI CARDS -->
+<div class="kpis">
+  <div class="kpi">
+    <div class="k-lbl">Stores Audited</div>
+    <div class="k-num blue">1,849</div>
+    <div class="k-break">
+      <div><span class="bk-k">Models</span><span class="bk-v">5</span></div>
+    </div>
+    <div class="k-foot">V60, V70, X300, X300FE, X300 ULTRA</div>
   </div>
-  <!--
-    PLACEHOLDER: AUDIT ANALYSIS
-    Owner: Retail Com Team
-    Content needed: H1 audit findings, compliance data, WOD audit results
-    Status: Awaiting data from team
-    Instructions for Lingesh: Replace the div below with actual content when received.
-    Do not change the section id="page-5" or surrounding structure.
-  -->
-  <div class="placeholder-block">
-    <div class="placeholder-icon">🔍</div>
-    <div class="placeholder-label">AUDIT ANALYSIS</div>
-    <div class="placeholder-text">Data being prepared by Retail Com Team.<br>Content will be uploaded here when ready.</div>
+  <div class="kpi">
+    <div class="k-lbl">Overall Correct WODs</div>
+    <div class="k-num" style="color:#DC2626;">22.8%</div>
+    <div class="k-break">
+      <div><span class="bk-k">Status</span><span class="bk-v">Critical</span></div>
+    </div>
+    <div class="k-foot">No model reached 50% compliance</div>
   </div>
+  <div class="kpi">
+    <div class="k-lbl">Weakest Channel</div>
+    <div class="k-num" style="font-size:2rem;color:#B45309;">VIVO Zone</div>
+    <div class="k-break">
+      <div><span class="bk-k">X300 ULTRA</span><span class="bk-v">2.4%</span></div>
+      <div><span class="bk-k">V70</span><span class="bk-v">21.0%</span></div>
+    </div>
+    <div class="k-foot">Weakest in every model audited</div>
+  </div>
+</div>
+<div class="bottom">
+  <!-- RECURRING FAILURES -->
+  <div class="panel">
+    <div class="panel-h"><span class="ph-t">RECURRING 0% FAILURE CATEGORIES</span></div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">1</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Prop / Lighting / Table-Top</b> — AIP/DIP/Tent Card, Luminous Table Top, Lighting Panel Insert</div>
+    </div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">2</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">ISB / Lampcloth / Table Sticker</b> — Recurring 0–50% inshop scores across nearly all models</div>
+    </div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">3</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Shelf Talker / Dangler / Wobbler</b> — Recurring 0–50% inshop POSM scores across nearly all models</div>
+    </div>
+  </div>
+  <!-- ACTION PLAN -->
+  <div class="panel">
+    <div class="panel-h"><span class="ph-t">KEY IMPROVEMENT ACTIONS</span></div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2B54E6,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">1</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Mandatory Pre-Audit TL Training</b> — Before every audit round; covers POSM, SOP, photo method and last round's gaps</div>
+    </div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2B54E6,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">2</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Channel One Score in TL/ME KPI</b> — Audit performance becomes a named line item in the monthly KPI</div>
+    </div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2B54E6,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">3</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Prioritise VIVO Zone & Recurring Gaps</b> — Corrective focus on weakest channel and repeat 0%-score categories</div>
+    </div>
+  </div>
+</div>
+<!-- WORKFLOW -->
+<div class="panel" style="flex:0 0 auto;">
+  <div class="panel-h"><span class="ph-t">IMPROVED AUDIT WORKFLOW</span></div>
+  <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
+    <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;">1 · Pre-Audit Training<br><small style="font-weight:400;color:#6B7B9C;">HO → TL/ME</small></div>
+    <div style="color:#2B54E6;font-weight:800;">→</div>
+    <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;">2 · Field Execution<br><small style="font-weight:400;color:#6B7B9C;">Geo-tagged per SOP</small></div>
+    <div style="color:#2B54E6;font-weight:800;">→</div>
+    <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;">3 · Daily Monitoring<br><small style="font-weight:400;color:#6B7B9C;">ME + HO/State</small></div>
+    <div style="color:#2B54E6;font-weight:800;">→</div>
+    <div style="background:linear-gradient(135deg,#0D47A1,#1976D2);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#fff;">4 · Post-Audit Review<br><small style="font-weight:400;color:rgba(255,255,255,0.75);">BM + ME → KPI</small></div>
+  </div>
+</div>
 </section>
   </div><!-- end .h1review-panel -->
 </div><!-- end #h1review -->
@@ -3175,6 +3367,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
   <div class="h2dir-tab-bar">
     <button class="h2dir-tab active" id="h2dir-tab-1" onclick="switchH2Tab('h2dir-p1',this)">MAJOR ISSUE &amp; DIRECTION</button>
     <button class="h2dir-tab" id="h2dir-tab-2" onclick="switchH2Tab('h2dir-p2',this)">USER STRATEGY &amp; 5H HERO</button>
+    <button class="h2dir-tab" id="h2dir-tab-2b" onclick="switchH2Tab('h2dir-p2b',this)">DIFFERENT USER · DIFFERENT STRATEGY</button>
     <button class="h2dir-tab" id="h2dir-tab-3" onclick="switchH2Tab('h2dir-p3',this)">BRANDING BUILD</button>
     <button class="h2dir-tab" id="h2dir-tab-4" onclick="switchH2Tab('h2dir-p4',this)">BALANCE SCORE CARD</button>
     <button class="h2dir-tab" id="h2dir-tab-5" onclick="switchH2Tab('h2dir-p5',this)">TN RETAIL BRANDING PLAN</button>
@@ -3273,6 +3466,115 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
           <div class="flow-step">Creator</div><div class="flow-arrow">+</div>
           <div class="flow-step">Lifestyle</div><div class="flow-arrow">→</div>
           <div class="flow-step" style="background:linear-gradient(135deg,#2563EB,#3E63FF);color:#fff;border:none;">Business Moment</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2B: DIFFERENT USER · DIFFERENT STRATEGY (from H2 Direction MarCom.html) -->
+    <section class="page" id="h2dir-p2b">
+      <div class="eyebrow">vivo Tamil Nadu · MarCom · H2 Strategy</div>
+      <h1 class="title">Different Users → <span>Different Strategies</span></h1>
+      <p class="sub">H2 strategy built around three distinct user segments — each with its own AIPL priority, communication role, and execution approach.</p>
+      <!-- SEGMENT CARDS -->
+      <div class="grid-3" style="flex:1;min-height:0;">
+        <!-- WHITE COLLAR -->
+        <div class="panel">
+          <div class="panel-t">01 · WHITE COLLAR <span style="margin-left:auto;font-size:0.65rem;font-weight:700;color:#2563EB;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.2rem 0.6rem;">A + I</span></div>
+          <div style="font-size:0.78rem;color:#6B7B9C;margin-bottom:0.8rem;">Professional, digitally active consumers — close to technology, work and lifestyle aspirations.</div>
+          <div style="font-size:0.72rem;font-weight:700;color:#0B1730;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Audience</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;">
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">IT professionals</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Corporate employees</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Managers / executives</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Entrepreneurs</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Doctors</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Premium tech users</span>
+          </div>
+          <div style="font-size:0.72rem;font-weight:700;color:#0B1730;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Formats</div>
+          <div style="font-size:0.8rem;color:#3D4E73;line-height:1.5;margin-bottom:0.8rem;">IT Park DOOH · Chennai OOH · Metro branding · Theatre ads · YouTube · OTT · Social media · KOL/KOC</div>
+          <div style="font-size:0.72rem;font-weight:700;color:#0B1730;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Objective</div>
+          <div style="font-size:0.82rem;color:#3D4E73;line-height:1.45;">Build vivo awareness, relevance and consideration with professionals.</div>
+        </div>
+        <!-- BLUE COLLAR -->
+        <div class="panel">
+          <div class="panel-t">02 · BLUE COLLAR <span style="margin-left:auto;font-size:0.65rem;font-weight:700;color:#0D2B6B;background:rgba(13,43,107,0.08);border:1px solid rgba(13,43,107,0.2);border-radius:20px;padding:0.2rem 0.6rem;">P</span></div>
+          <div style="font-size:0.78rem;color:#6B7B9C;margin-bottom:0.8rem;">Skilled / operational workers + town, semi-urban and rural buyers — driven by offline retail and product experience.</div>
+          <div style="font-size:0.72rem;font-weight:700;color:#0B1730;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Audience</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;">
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Factory workers</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Technicians</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Town / semi-urban</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Rural</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Retail / service</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Field / delivery</span>
+          </div>
+          <div style="font-size:0.72rem;font-weight:700;color:#0B1730;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Formats</div>
+          <div style="font-size:0.8rem;color:#3D4E73;line-height:1.5;margin-bottom:0.8rem;">Canter van · Bus terminal branding · FM campaign · Town OOH · Rural activation · Retail activation · Local KOC</div>
+          <div style="font-size:0.72rem;font-weight:700;color:#0B1730;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Objective</div>
+          <div style="font-size:0.82rem;color:#3D4E73;line-height:1.45;">Drive purchase via stronger town, rural, offline and retail activation.</div>
+        </div>
+        <!-- EXISTING USERS -->
+        <div class="panel">
+          <div class="panel-t">03 · EXISTING USERS <span style="margin-left:auto;font-size:0.65rem;font-weight:700;color:#15A34A;background:rgba(21,163,74,0.08);border:1px solid rgba(21,163,74,0.2);border-radius:20px;padding:0.2rem 0.6rem;">L + P + WOM + KOC</span></div>
+          <div style="font-size:0.78rem;color:#6B7B9C;margin-bottom:0.8rem;">Existing vivo users — turn satisfied owners into repeat buyers and advocates.</div>
+          <div style="font-size:0.72rem;font-weight:700;color:#0B1730;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Channels</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;">
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">WhatsApp</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">CRM</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Service centres</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">KOC</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Communities</span>
+            <span style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.7rem;color:#3D4E73;">Referral</span>
+          </div>
+          <div style="font-size:0.72rem;font-weight:700;color:#0B1730;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">KPIs</div>
+          <div style="font-size:0.8rem;color:#3D4E73;line-height:1.5;margin-bottom:0.8rem;">Registration · Active users · Engagement · Upgrade · Repurchase · Referral · WOM · KOC · UGC · Loyalty</div>
+          <div style="font-size:0.72rem;font-weight:700;color:#0B1730;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Objective</div>
+          <div style="font-size:0.82rem;color:#3D4E73;line-height:1.45;">Strengthen relationships, drive repurchase / upgrade and turn users into advocates.</div>
+        </div>
+      </div>
+      <!-- AIPL FLOW -->
+      <div class="panel" style="flex:0 0 auto;">
+        <div class="panel-t">AIPL FRAMEWORK — HOW EACH SEGMENT MOVES</div>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+          <div style="flex:1;min-width:200px;">
+            <div style="font-size:0.72rem;font-weight:700;color:#2563EB;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">White Collar</div>
+            <div style="display:flex;align-items:center;gap:0.3rem;flex-wrap:wrap;">
+              <span style="background:#2563EB;color:#fff;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">A</span>
+              <span style="color:#2563EB;font-weight:800;">→</span>
+              <span style="background:#2563EB;color:#fff;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">I</span>
+              <span style="color:#6B7B9C;font-weight:800;">→</span>
+              <span style="background:#F3F6FD;color:#6B7B9C;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">P</span>
+              <span style="color:#6B7B9C;font-weight:800;">→</span>
+              <span style="background:#F3F6FD;color:#6B7B9C;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">L</span>
+            </div>
+            <div style="font-size:0.72rem;color:#6B7B9C;margin-top:0.3rem;">H2 Priority: A + I</div>
+          </div>
+          <div style="flex:1;min-width:200px;">
+            <div style="font-size:0.72rem;font-weight:700;color:#0D2B6B;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Blue Collar</div>
+            <div style="display:flex;align-items:center;gap:0.3rem;flex-wrap:wrap;">
+              <span style="background:#F3F6FD;color:#6B7B9C;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">A</span>
+              <span style="color:#6B7B9C;font-weight:800;">→</span>
+              <span style="background:#F3F6FD;color:#6B7B9C;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">I</span>
+              <span style="color:#6B7B9C;font-weight:800;">→</span>
+              <span style="background:#0D2B6B;color:#fff;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">P</span>
+              <span style="color:#6B7B9C;font-weight:800;">→</span>
+              <span style="background:#F3F6FD;color:#6B7B9C;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">L</span>
+            </div>
+            <div style="font-size:0.72rem;color:#6B7B9C;margin-top:0.3rem;">H2 Priority: P</div>
+          </div>
+          <div style="flex:1;min-width:200px;">
+            <div style="font-size:0.72rem;font-weight:700;color:#15A34A;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Existing Users</div>
+            <div style="display:flex;align-items:center;gap:0.3rem;flex-wrap:wrap;">
+              <span style="background:#F3F6FD;color:#6B7B9C;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">A</span>
+              <span style="color:#6B7B9C;font-weight:800;">→</span>
+              <span style="background:#F3F6FD;color:#6B7B9C;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">I</span>
+              <span style="color:#6B7B9C;font-weight:800;">→</span>
+              <span style="background:#15A34A;color:#fff;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">P</span>
+              <span style="color:#6B7B9C;font-weight:800;">→</span>
+              <span style="background:#15A34A;color:#fff;border-radius:6px;padding:0.2rem 0.5rem;font-size:0.75rem;font-weight:700;">L</span>
+            </div>
+            <div style="font-size:0.72rem;color:#6B7B9C;margin-top:0.3rem;">H2 Priority: L + P + WOM + KOC</div>
+          </div>
         </div>
       </div>
     </section>
@@ -3509,33 +3811,43 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 </section>
 
 <section class="page" id="h2dir-p9">
-  <div>
-    <div class="eyebrow">Supply · Competition · 3 Zones</div>
-    <h1 class="title">Supply, Counter-Attack &amp; <span>Zone Focus</span></h1>
-    <p class="sub">Fixing the supply pipeline, defending against competitors, and the priority focus for each of the three TN zones.</p>
-  </div>
-  <div class="grid-2" style="flex:0 0 auto;">
-    <div class="panel">
-      <div class="panel-t">🛠️ Supply &amp; Service Issue</div>
-      <div class="stat-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:0.9rem;">
-        <div class="stat" style="--c:#2563EB;padding:0.6rem 0.9rem;"><div class="s-num" style="font-size:1.45rem;">434</div><div class="s-lbl">Ordered · May '26</div></div>
-        <div class="stat" style="--c:#15A34A;padding:0.6rem 0.9rem;"><div class="s-num" style="font-size:1.45rem;">25</div><div class="s-lbl">Received</div></div>
-        <div class="stat" style="--c:#DC2626;padding:0.6rem 0.9rem;"><div class="s-num" style="font-size:1.45rem;">409</div><div class="s-lbl">Pending</div></div>
-      </div>
-      <div class="ic-grid" style="grid-template-columns:1fr;">
-        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">🧑‍🔧</span><span class="ic-t">Hire 3 Zone Vendors</span></div><div class="ic-d">One owner per zone (Grand Chennai, Central TN, South TN) for all service issues.</div></div>
-        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">📄</span><span class="ic-t">Amend SOP &amp; Buffer Stock</span></div><div class="ic-d">Vendor TAT &amp; costing + branch coordination; buffer stock for new store openings.</div></div>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-t">⚔️ Competitor Counter-Attack</div>
-      <div class="ic-grid" style="grid-template-columns:1fr;">
-        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">🗄️</span><span class="ic-t">Bigger Fixtures</span></div><div class="ic-d">Upgrade to equal/bigger cabinet vs competitors; replace 1yr+ old with <b>4.2 fixture</b>.</div></div>
-        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">🔒</span><span class="ic-t">100% MSB Retention</span></div><div class="ic-d">Old-to-new for vivo; strict action if a vivo MSB is replaced by a competitor.</div></div>
-        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">⚡</span><span class="ic-t">X-Zone First</span></div><div class="ic-d">Plan X-Zones against competition &amp; deploy <b>before</b> them.</div></div>
-      </div>
+<div class="eyebrow">vivo Tamil Nadu · Retail Com · H2 Strategy</div>
+<h1 class="title">Supply, Service & <span>Counter-Attack</span></h1>
+<p class="sub">Three-zone vendor deployment to resolve service gaps. Fixture and MSB upgrade to counter competitor presence across TN.</p>
+<div class="grid-3" style="flex:0 0 auto;">
+  <div class="panel">
+    <div class="panel-t">⚠️ SUPPLY ISSUE</div>
+    <div class="lc"><div class="lc-n">!</div><div class="lc-t"><b>Material 434 ordered May '26</b> — only 25 received as of Sep '26. 409 units still pending from vivo India.</div></div>
+    <div class="lc"><div class="lc-n">!</div><div class="lc-t"><b>Transit damage</b> — material damaged during dispatch from HO warehouse to stores.</div></div>
+    <div class="flow">
+      <div class="flow-step">Discuss new store opening plan</div><div class="flow-arrow">→</div>
+      <div class="flow-step">Buffer stock maintained</div>
     </div>
   </div>
+  <div class="panel">
+    <div class="panel-t">🔧 MAINTENANCE GAP</div>
+    <div class="lc"><div class="lc-n">1</div><div class="lc-t"><b>Alarm kit issue</b> — maintenance required across TN stores</div></div>
+    <div class="lc"><div class="lc-n">2</div><div class="lc-t"><b>MSB Maintenance</b> — upkeep of mobile showcase branding</div></div>
+    <div class="lc"><div class="lc-n">3</div><div class="lc-t"><b>Backwall Maintenance</b> — premium demo experience preservation</div></div>
+    <div class="lc"><div class="lc-n">4</div><div class="lc-t"><b>Experience Cabinet</b> — maintenance for customer demo quality</div></div>
+  </div>
+  <div class="panel">
+    <div class="panel-t">🛡️ COUNTER-ATTACK PLAN</div>
+    <div class="lc"><div class="lc-n">1</div><div class="lc-t"><b>Fixture upgrade</b> — plan cabinet equal to or bigger than competitor size. Replace fixtures older than 1 year with 4.2 fixture.</div></div>
+    <div class="lc"><div class="lc-n">2</div><div class="lc-t"><b>100% MSB old-to-new</b> — strict policy: if old vivo MSB replaced by competitor, strict action against ASM & TL.</div></div>
+    <div class="lc"><div class="lc-n">3</div><div class="lc-t"><b>X-Zone vs Competition</b> — plan X-Zone projects against competition brands, deploy X-Zone before competition.</div></div>
+  </div>
+</div>
+<div class="panel" style="flex:0 0 auto;">
+  <div class="panel-t">ACTION PLAN — 3-ZONE VENDOR DEPLOYMENT</div>
+  <div class="stat-row">
+    <div class="stat" style="--c:#0D2B6B;"><div class="s-num" style="font-size:1.2rem;">Grand Chennai</div><div class="s-lbl">Zone 1 — Dedicated vendor assigned</div></div>
+    <div class="stat" style="--c:#1565C0;"><div class="s-num" style="font-size:1.2rem;">Central TN</div><div class="s-lbl">Zone 2 — Dedicated vendor assigned</div></div>
+    <div class="stat" style="--c:#1976D2;"><div class="s-num" style="font-size:1.2rem;">South TN</div><div class="s-lbl">Zone 3 — Dedicated vendor assigned</div></div>
+    <div class="stat" style="--c:#15A34A;"><div class="s-num" style="font-size:1.2rem;">SOP Amendment</div><div class="s-lbl">TAT + costing + branch-vendor coordination</div></div>
+  </div>
+  <div style="margin-top:0.8rem;font-size:0.82rem;color:#3D4E73;line-height:1.5;">Vendor is solely responsible for any service issue. SOP contains branch coordination process, vendor responsibility, TAT and costing standards.</div>
+</div>
   <div class="panel" style="flex:1;min-height:0;">
     <div class="panel-t">📍 Key Focus for 3 Zones</div>
     <div class="grid-3" style="flex:1;">

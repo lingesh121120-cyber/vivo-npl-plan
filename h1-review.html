@@ -165,6 +165,15 @@ h1.title span{color:var(--blue);}
   font-size:0.9rem;color:var(--ink-2);
   text-align:center;line-height:1.6;
 }
+.tbl{width:100%;border-collapse:collapse;font-size:0.8rem;}
+.tbl th{font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-2);text-align:left;padding:0.4rem 0.6rem;border-bottom:1px solid var(--hair);position:sticky;top:0;background:var(--card);}
+.tbl td{padding:0.34rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:var(--ink-1);}
+.tbl td.b{font-family:var(--font-display);font-weight:700;color:var(--ink-0);}
+.tbl tr.total td{font-family:var(--font-display);font-weight:800;color:var(--ink-0);border-top:2px solid var(--hair);background:var(--card-2);}
+.tbl .g{color:var(--green);font-weight:700;}
+.tbl .a{color:var(--amber);font-weight:700;}
+.tbl .r{color:#DC2626;font-weight:700;}
+.tbl-scroll{overflow:auto;flex:1;min-height:0;}
 </style>
 </head>
 <body>
@@ -309,43 +318,161 @@ h1.title span{color:var(--blue);}
 </section>
 
 <section class="page" id="page-4">
-  <div>
-    <div class="eyebrow">vivo Tamil Nadu · Retail Com · Project Analysis</div>
-    <h1 class="title">H1 <span>PROJECT ANALYSIS</span></h1>
+<header>
+  <div class="eyebrow">vivo Tamil Nadu · Retail Com · FY26-27</div>
+  <h1 class="title">Project Analysis — <span>X-Zone Plan</span></h1>
+  <p class="sub">Branch-wise X-Zone completion status as of Sep '26. TN target: 70 zones (25 GT + 45 MT).</p>
+</header>
+<!-- STATE SUMMARY KPIs -->
+<div class="kpis">
+  <div class="kpi">
+    <div class="k-lbl">Overall Target</div>
+    <div class="k-num blue">70</div>
+    <div class="k-break">
+      <div><span class="bk-k">GT</span><span class="bk-v">25</span></div>
+      <div><span class="bk-k">MT</span><span class="bk-v">45</span></div>
+    </div>
+    <div class="k-foot">Tamil Nadu total X-Zone target</div>
   </div>
-  <!--
-    PLACEHOLDER: PROJECT ANALYSIS
-    Owner: Retail Com Team
-    Content needed: H1 project execution data, targets vs actuals, branch-wise performance
-    Status: Awaiting data from team
-    Instructions for Lingesh: Replace the div below with actual content when received.
-    Do not change the section id="page-4" or surrounding structure.
-  -->
-  <div class="placeholder-block">
-    <div class="placeholder-icon">📋</div>
-    <div class="placeholder-label">PROJECT ANALYSIS</div>
-    <div class="placeholder-text">Data being prepared by Retail Com Team.<br>Content will be uploaded here when ready.</div>
+  <div class="kpi">
+    <div class="k-lbl">Completed</div>
+    <div class="k-num" style="color:#15A34A;">10</div>
+    <div class="k-break">
+      <div><span class="bk-k">Done</span><span class="bk-v">14.3%</span></div>
+    </div>
+    <div class="k-foot">Live and operational</div>
   </div>
+  <div class="kpi">
+    <div class="k-lbl">Under Construction</div>
+    <div class="k-num" style="color:#B45309;">4</div>
+    <div class="k-break">
+      <div><span class="bk-k">In Progress</span><span class="bk-v">5.7%</span></div>
+    </div>
+    <div class="k-foot">Work in progress</div>
+  </div>
+</div>
+<!-- BRANCH TABLE -->
+<div class="panel" style="flex:1;">
+  <div class="panel-h">
+    <span class="ph-t">BRANCH-WISE STATUS — AS OF SEP '26</span>
+    <span class="ph-s">57 zones pending · 14 branches</span>
+  </div>
+  <div class="tbl-scroll">
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Branch</th>
+          <th>GT Target</th>
+          <th>MT Target</th>
+          <th>Overall</th>
+          <th>Completed</th>
+          <th>Under Construction</th>
+          <th>Pending</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="b">Coimbatore</td><td>1</td><td>3</td><td>4</td><td class="g">2</td><td>0</td><td class="a">2</td></tr>
+        <tr><td class="b">Erode</td><td>2</td><td>3</td><td>5</td><td class="g">1</td><td>0</td><td class="a">4</td></tr>
+        <tr><td class="b">Madurai</td><td>1</td><td>1</td><td>2</td><td class="g">0</td><td>0</td><td class="a">2</td></tr>
+        <tr><td class="b">MT Chennai</td><td>0</td><td>2</td><td>2</td><td class="g">0</td><td class="a">3</td><td>0</td></tr>
+        <tr><td class="b">North Chennai</td><td>1</td><td>0</td><td>1</td><td class="g">1</td><td>0</td><td>0</td></tr>
+        <tr><td class="b">Pondicherry</td><td>1</td><td>3</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
+        <tr><td class="b">Poorvika Chennai</td><td>0</td><td>11</td><td>11</td><td class="g">0</td><td>0</td><td class="r">11</td></tr>
+        <tr><td class="b">Salem</td><td>4</td><td>3</td><td>7</td><td class="g">1</td><td>0</td><td class="a">6</td></tr>
+        <tr><td class="b">South Chennai</td><td>1</td><td>4</td><td>5</td><td class="g">2</td><td>0</td><td class="a">3</td></tr>
+        <tr><td class="b">Thanjavur</td><td>3</td><td>1</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
+        <tr><td class="b">Tirunelveli</td><td>2</td><td>2</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
+        <tr><td class="b">Trichy</td><td>2</td><td>8</td><td>10</td><td class="g">2</td><td class="a">1</td><td class="a">7</td></tr>
+        <tr><td class="b">Vellore</td><td>5</td><td>4</td><td>9</td><td class="g">0</td><td>0</td><td class="r">9</td></tr>
+        <tr><td class="b">Virudhunagar</td><td>2</td><td>0</td><td>2</td><td class="g">1</td><td>0</td><td class="a">1</td></tr>
+        <tr class="total"><td>OVERALL</td><td>25</td><td>45</td><td>70</td><td>10</td><td>4</td><td>57</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 </section>
 
 <section class="page" id="page-5">
-  <div>
-    <div class="eyebrow">vivo Tamil Nadu · All Teams · Audit Analysis</div>
-    <h1 class="title">H1 <span>AUDIT ANALYSIS</span></h1>
+<header>
+  <div class="eyebrow">vivo Tamil Nadu · Retail Com · Channel One Audit</div>
+  <h1 class="title">Audit Analysis — <span>Key Findings & Action Plan</span></h1>
+  <p class="sub">Channel One Audit — 5 models, 1,849 stores audited. Overall correct WODs: 22.8%. VIVO Zone is the weakest channel across all models.</p>
+</header>
+<!-- KPI CARDS -->
+<div class="kpis">
+  <div class="kpi">
+    <div class="k-lbl">Stores Audited</div>
+    <div class="k-num blue">1,849</div>
+    <div class="k-break">
+      <div><span class="bk-k">Models</span><span class="bk-v">5</span></div>
+    </div>
+    <div class="k-foot">V60, V70, X300, X300FE, X300 ULTRA</div>
   </div>
-  <!--
-    PLACEHOLDER: AUDIT ANALYSIS
-    Owner: Retail Com Team
-    Content needed: H1 audit findings, compliance data, WOD audit results
-    Status: Awaiting data from team
-    Instructions for Lingesh: Replace the div below with actual content when received.
-    Do not change the section id="page-5" or surrounding structure.
-  -->
-  <div class="placeholder-block">
-    <div class="placeholder-icon">🔍</div>
-    <div class="placeholder-label">AUDIT ANALYSIS</div>
-    <div class="placeholder-text">Data being prepared by Retail Com Team.<br>Content will be uploaded here when ready.</div>
+  <div class="kpi">
+    <div class="k-lbl">Overall Correct WODs</div>
+    <div class="k-num" style="color:#DC2626;">22.8%</div>
+    <div class="k-break">
+      <div><span class="bk-k">Status</span><span class="bk-v">Critical</span></div>
+    </div>
+    <div class="k-foot">No model reached 50% compliance</div>
   </div>
+  <div class="kpi">
+    <div class="k-lbl">Weakest Channel</div>
+    <div class="k-num" style="font-size:2rem;color:#B45309;">VIVO Zone</div>
+    <div class="k-break">
+      <div><span class="bk-k">X300 ULTRA</span><span class="bk-v">2.4%</span></div>
+      <div><span class="bk-k">V70</span><span class="bk-v">21.0%</span></div>
+    </div>
+    <div class="k-foot">Weakest in every model audited</div>
+  </div>
+</div>
+<div class="bottom">
+  <!-- RECURRING FAILURES -->
+  <div class="panel">
+    <div class="panel-h"><span class="ph-t">RECURRING 0% FAILURE CATEGORIES</span></div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">1</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Prop / Lighting / Table-Top</b> — AIP/DIP/Tent Card, Luminous Table Top, Lighting Panel Insert</div>
+    </div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">2</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">ISB / Lampcloth / Table Sticker</b> — Recurring 0–50% inshop scores across nearly all models</div>
+    </div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#DC2626,#EF4444);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">3</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Shelf Talker / Dangler / Wobbler</b> — Recurring 0–50% inshop POSM scores across nearly all models</div>
+    </div>
+  </div>
+  <!-- ACTION PLAN -->
+  <div class="panel">
+    <div class="panel-h"><span class="ph-t">KEY IMPROVEMENT ACTIONS</span></div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2B54E6,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">1</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Mandatory Pre-Audit TL Training</b> — Before every audit round; covers POSM, SOP, photo method and last round's gaps</div>
+    </div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2B54E6,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">2</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Channel One Score in TL/ME KPI</b> — Audit performance becomes a named line item in the monthly KPI</div>
+    </div>
+    <div class="lc" style="display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;">
+      <div style="flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2B54E6,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;">3</div>
+      <div style="font-size:0.98rem;color:#3D4E73;line-height:1.45;"><b style="color:#0B1730;">Prioritise VIVO Zone & Recurring Gaps</b> — Corrective focus on weakest channel and repeat 0%-score categories</div>
+    </div>
+  </div>
+</div>
+<!-- WORKFLOW -->
+<div class="panel" style="flex:0 0 auto;">
+  <div class="panel-h"><span class="ph-t">IMPROVED AUDIT WORKFLOW</span></div>
+  <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;">
+    <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;">1 · Pre-Audit Training<br><small style="font-weight:400;color:#6B7B9C;">HO → TL/ME</small></div>
+    <div style="color:#2B54E6;font-weight:800;">→</div>
+    <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;">2 · Field Execution<br><small style="font-weight:400;color:#6B7B9C;">Geo-tagged per SOP</small></div>
+    <div style="color:#2B54E6;font-weight:800;">→</div>
+    <div style="background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;">3 · Daily Monitoring<br><small style="font-weight:400;color:#6B7B9C;">ME + HO/State</small></div>
+    <div style="color:#2B54E6;font-weight:800;">→</div>
+    <div style="background:linear-gradient(135deg,#0D47A1,#1976D2);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#fff;">4 · Post-Audit Review<br><small style="font-weight:400;color:rgba(255,255,255,0.75);">BM + ME → KPI</small></div>
+  </div>
+</div>
 </section>
 
 <script>
