@@ -835,7 +835,7 @@ body.presenting.in-deck #progbar{opacity:1;}
 .presenting .tbar{display:none;}
 .presenting .deck{top:0;}
 .present-exit{display:none;}
-.presenting .present-exit{display:inline-flex;position:fixed;top:0.9rem;right:1.2rem;z-index:900;align-items:center;gap:0.4rem;font-size:0.72rem;font-weight:700;padding:0.34rem 0.9rem;border-radius:6px;border:1px solid var(--gb);background:var(--gd);color:var(--g2);cursor:pointer;font-family:inherit;opacity:0.55;transition:opacity 0.15s;}
+.presenting .present-exit{display:inline-flex;position:fixed;top:0.9rem;right:9rem;z-index:900;align-items:center;gap:0.4rem;font-size:0.72rem;font-weight:700;padding:0.34rem 0.9rem;border-radius:6px;border:1px solid var(--gb);background:var(--gd);color:var(--g2);cursor:pointer;font-family:inherit;opacity:0.55;transition:opacity 0.15s;}
 .presenting .present-exit:hover{opacity:1;background:var(--g);color:#fff;border-color:var(--g);}
 .presenting .kt-hint{display:none;}
 .presenting .landing-present{display:none;}
@@ -1253,6 +1253,95 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2dir-title{font-size:0.9rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;}
 .h2dir-body{flex:1;display:flex;align-items:center;justify-content:center;color:#6B7B9C;font-size:1rem;}
 /* ========== END H1 REVIEW PANEL ========== */
+/* ========== H2 DIRECTION — SCOPED STYLES ========== */
+.h2branding-panel{--font-display:'Sora',system-ui,sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-mono:'IBM Plex Mono',ui-monospace,monospace;--bg:#EEF3FD;--card:#FFFFFF;--card-2:#F3F6FD;--ink-0:#0B1730;--ink-1:#3D4E73;--ink-2:#6B7B9C;--blue:#2563EB;--blue-2:#3E63FF;--cyan:#1D4ED8;--amber:#B45309;--orange:#E8622A;--green:#15A34A;--red:#DC2626;--hair:rgba(11,23,48,0.10);--glow:rgba(62,99,255,0.16);}
+.h2branding-panel{margin:0;padding:0;background:var(--bg);color:var(--ink-0);font-family:var(--font-body);-webkit-font-smoothing:antialiased;flex:1;display:flex;flex-direction:column;min-height:0;overflow-y:auto;}
+.h2branding-panel .page{height:auto;flex:none;overflow:visible;padding:clamp(1.3rem,2.8vw,2.4rem) clamp(1.4rem,4vw,3.4rem);display:none;flex-direction:column;gap:clamp(0.6rem,1.1vw,1rem);max-width:1520px;margin:0 auto;width:100%;min-height:calc(100vh - 104px);}
+.h2branding-panel .eyebrow{font-size:0.7rem;letter-spacing:0.14em;color:#2563EB;text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;}
+.h2branding-panel .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#2563EB;box-shadow:0 0 0 4px rgba(62,99,255,0.16);}
+.h2branding-panel h1.title{font-weight:800;font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.05;letter-spacing:-0.02em;margin:0.45rem 0 0.3rem;}
+.h2branding-panel h1.title span{color:#2563EB;}
+.h2branding-panel .sub{font-size:clamp(0.88rem,1.2vw,1rem);color:#3D4E73;max-width:74ch;line-height:1.5;margin:0;}
+.h2branding-panel .hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;flex:0 0 auto;}
+.h2branding-panel .kpis{display:grid;gap:clamp(0.8rem,1.4vw,1.2rem);flex:0 0 auto;}
+.h2branding-panel .kpi{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:clamp(0.9rem,1.5vw,1.3rem) clamp(1rem,1.6vw,1.4rem);box-shadow:0 12px 30px rgba(11,23,48,0.05);position:relative;overflow:hidden;}
+.h2branding-panel .kpi::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#2563EB,#3E63FF);}
+.h2branding-panel .kpi .k-num{font-weight:800;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1;color:#0B1730;}
+.h2branding-panel .kpi .k-num.blue{color:#2563EB;}
+.h2branding-panel .kpi .k-lbl{font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;margin-top:0.4rem;}
+.h2branding-panel .kpi .k-note{font-size:0.78rem;color:#3D4E73;margin-top:0.3rem;line-height:1.35;}
+.h2branding-panel .pillars{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(0.8rem,1.4vw,1.1rem);flex:1;min-height:0;}
+.h2branding-panel .pillar{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:clamp(1.1rem,1.7vw,1.5rem);box-shadow:0 10px 26px rgba(11,23,48,0.05);display:flex;flex-direction:column;}
+.h2branding-panel .pillar .pl-num{font-size:0.72rem;color:#6B7B9C;}
+.h2branding-panel .pillar .pl-ic{font-size:2rem;margin:0.5rem 0 0.6rem;}
+.h2branding-panel .pillar .pl-t{font-weight:700;font-size:1.02rem;color:#0B1730;line-height:1.15;margin-bottom:0.5rem;}
+.h2branding-panel .pillar .pl-d{font-size:0.82rem;color:#3D4E73;line-height:1.45;margin-bottom:auto;}
+.h2branding-panel .pillar .pl-tag{margin-top:0.9rem;font-size:0.6rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#2563EB;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.22rem 0.6rem;width:fit-content;}
+.h2branding-panel .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(0.8rem,1.4vw,1.2rem);flex:0 0 auto;}
+.h2branding-panel .stat{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:clamp(1rem,1.6vw,1.4rem);box-shadow:0 10px 26px rgba(11,23,48,0.05);border-left:4px solid var(--c,#2563EB);}
+.h2branding-panel .stat .s-num{font-weight:800;font-size:clamp(1.8rem,3vw,2.5rem);line-height:1;color:#0B1730;}
+.h2branding-panel .stat .s-lbl{font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;margin-top:0.4rem;}
+.h2branding-panel .panel{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.1rem,1.8vw,1.6rem);box-shadow:0 12px 32px rgba(11,23,48,0.05);min-height:0;display:flex;flex-direction:column;}
+.h2branding-panel .panel-t{font-weight:700;font-size:1.02rem;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem;flex:0 0 auto;}
+.h2branding-panel .tbl{width:100%;border-collapse:collapse;font-size:0.8rem;}
+.h2branding-panel .tbl th{font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;color:#6B7B9C;text-align:left;padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.10);position:sticky;top:0;background:#FFFFFF;}
+.h2branding-panel .tbl td{padding:0.34rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;}
+.h2branding-panel .tbl td.b{font-weight:700;color:#0B1730;}
+.h2branding-panel .tbl tr:last-child td{border-bottom:0;}
+.h2branding-panel .tbl tr.total td{font-weight:800;color:#0B1730;border-top:2px solid rgba(11,23,48,0.10);background:#F3F6FD;}
+.h2branding-panel .tbl .g{color:#15A34A;font-weight:700;}
+.h2branding-panel .tbl .a{color:#B45309;font-weight:700;}
+.h2branding-panel .tbl .r{color:#DC2626;font-weight:700;}
+.h2branding-panel .tbl-scroll{overflow:auto;flex:1;min-height:0;}
+.h2branding-panel .timeline{display:flex;gap:0.5rem;flex:0 0 auto;}
+.h2branding-panel .tl-step{flex:1;background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:12px;padding:0.7rem 0.5rem;text-align:center;box-shadow:0 6px 16px rgba(11,23,48,0.04);}
+.h2branding-panel .tl-step .tl-m{font-size:0.62rem;color:#6B7B9C;text-transform:uppercase;letter-spacing:0.05em;}
+.h2branding-panel .tl-step .tl-n{font-weight:800;font-size:1.5rem;color:#2563EB;line-height:1;margin-top:0.3rem;}
+.h2branding-panel .tl-step .tl-k{font-size:0.6rem;color:#6B7B9C;margin-top:0.2rem;}
+.h2branding-panel .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(0.9rem,1.6vw,1.3rem);flex:1;min-height:0;}
+.h2branding-panel .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(0.9rem,1.6vw,1.3rem);flex:1;min-height:0;}
+.h2branding-panel .bar-row{display:flex;align-items:center;gap:0.7rem;margin-bottom:0.55rem;}
+.h2branding-panel .bar-row .br-l{font-weight:700;font-size:0.95rem;color:#0B1730;width:96px;flex:none;}
+.h2branding-panel .bar-track{flex:1;height:20px;background:#F3F6FD;border-radius:6px;overflow:hidden;}
+.h2branding-panel .bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.55rem;font-weight:700;font-size:0.72rem;color:#fff;min-width:34px;}
+.h2branding-panel .lc{display:flex;gap:0.75rem;align-items:flex-start;margin-bottom:0.6rem;}
+.h2branding-panel .lc .lc-n{flex:none;width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#2563EB,#3E63FF);color:#fff;font-weight:700;font-size:0.72rem;display:flex;align-items:center;justify-content:center;}
+.h2branding-panel .lc .lc-t{font-size:0.98rem;color:#3D4E73;line-height:1.45;}
+.h2branding-panel .lc .lc-t b{color:#0B1730;font-weight:700;}
+.h2branding-panel .flow{display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;margin-top:auto;padding-top:0.8rem;}
+.h2branding-panel .flow-step{background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:10px;padding:0.55rem 0.8rem;font-size:0.85rem;font-weight:600;color:#0B1730;}
+.h2branding-panel .flow-arrow{color:#2563EB;font-weight:800;}
+.h2branding-panel .note{font-size:0.94rem;color:#3D4E73;line-height:1.55;}
+.h2branding-panel .note b{color:#0B1730;}
+.h2branding-panel .ic-grid{display:grid;gap:clamp(0.5rem,0.9vw,0.7rem);}
+.h2branding-panel .ic-card{background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:13px;padding:0.7rem 1rem;display:flex;flex-direction:column;gap:0.32rem;justify-content:center;}
+.h2branding-panel .ic-h{display:flex;align-items:center;gap:0.65rem;}
+.h2branding-panel .ic-ic{width:42px;height:42px;border-radius:12px;background:rgba(37,99,235,0.09);border:1px solid rgba(37,99,235,0.18);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex:none;}
+.h2branding-panel .ic-t{font-weight:700;font-size:1.05rem;color:#0B1730;line-height:1.15;}
+.h2branding-panel .ic-d{font-size:0.94rem;color:#3D4E73;line-height:1.42;}
+.h2branding-panel .ic-d b{color:#0B1730;font-weight:700;}
+.h2branding-panel .zone-card{background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:14px;padding:0.85rem 1.05rem;display:flex;flex-direction:column;}
+.h2branding-panel .zone-head{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.45rem;}
+.h2branding-panel .zone-name{font-weight:800;font-size:1.1rem;color:#2563EB;}
+/* H2 Direction tab bar */
+.h2dir-tab-bar{display:flex;gap:0;background:#FFFFFF;border-bottom:1px solid rgba(11,23,48,0.10);padding:0 2rem;flex-shrink:0;overflow-x:auto;height:48px;align-items:flex-end;}
+.h2dir-tab-bar::-webkit-scrollbar{display:none;}
+.h2dir-tab{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;background:transparent;border:none;border-bottom:3px solid transparent;padding:0 1.2rem;height:48px;cursor:pointer;white-space:nowrap;transition:color 0.15s,border-color 0.15s;}
+.h2dir-tab:hover{color:#2563EB;}
+.h2dir-tab.active{color:#2563EB;border-bottom-color:#2563EB;}
+.h2branding-panel .panel-t .pt-badge{font-size:0.6rem;font-weight:700;color:#6B7B9C;background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:20px;padding:0.2rem 0.55rem;text-transform:uppercase;letter-spacing:0.05em;}
+.h2branding-panel .glimpse{border-radius:14px;overflow:hidden;border:1px solid rgba(11,23,48,0.10);box-shadow:0 12px 30px rgba(11,23,48,0.1);flex:1;min-height:0;}
+.h2branding-panel .glimpse img{width:100%;height:100%;object-fit:cover;display:block;}
+.h2branding-panel .ch-card{display:flex;flex-direction:column;}
+.h2branding-panel .ch-head{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.7rem;}
+.h2branding-panel .ch-ic{font-size:1.6rem;}
+.h2branding-panel .ch-name{font-weight:800;font-size:1.15rem;color:#0B1730;}
+.h2branding-panel .mini-stats{display:flex;gap:0.55rem;margin-bottom:0.9rem;}
+.h2branding-panel .mini-stat{flex:1;background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.15);border-radius:11px;padding:0.6rem 0.4rem;text-align:center;}
+.h2branding-panel .mini-stat .ms-n{font-weight:800;font-size:1.5rem;color:#2563EB;line-height:1;}
+.h2branding-panel .mini-stat .ms-l{font-size:0.56rem;letter-spacing:0.04em;text-transform:uppercase;color:#6B7B9C;margin-top:0.3rem;}
+@media(max-width:1000px){.h2branding-panel .pillars,.h2branding-panel .stat-row{grid-template-columns:repeat(2,1fr);}.h2branding-panel .grid-2,.h2branding-panel .grid-3{grid-template-columns:1fr;}}
+/* ========== END H2 DIRECTION ========== */
 
 </style>
 </head>
@@ -3076,14 +3165,389 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 </section>
   </div><!-- end .h1review-panel -->
 </div><!-- end #h1review -->
-<!-- H2 DIRECTION SHELL — full content added in Task 2 -->
 <div id="h2direction">
-  <div class="h2dir-bar">
+  <!-- TOP BAR -->
+  <div class="h2dir-bar" style="flex-shrink:0;">
     <button class="h2dir-back" onclick="closeH2Direction()">&larr; H1 REVIEW</button>
-    <span class="h2dir-title">H2 DIRECTION</span>
+    <span class="h2dir-title">H2 DIRECTION — FY 2026-27</span>
   </div>
-  <div class="h2dir-body">Content coming — Task 2</div>
-</div>
+  <!-- TAB BAR -->
+  <div class="h2dir-tab-bar">
+    <button class="h2dir-tab active" id="h2dir-tab-1" onclick="switchH2Tab('h2dir-p1',this)">MAJOR ISSUE &amp; DIRECTION</button>
+    <button class="h2dir-tab" id="h2dir-tab-2" onclick="switchH2Tab('h2dir-p2',this)">USER STRATEGY &amp; 5H HERO</button>
+    <button class="h2dir-tab" id="h2dir-tab-3" onclick="switchH2Tab('h2dir-p3',this)">BRANDING BUILD</button>
+    <button class="h2dir-tab" id="h2dir-tab-4" onclick="switchH2Tab('h2dir-p4',this)">BALANCE SCORE CARD</button>
+    <button class="h2dir-tab" id="h2dir-tab-5" onclick="switchH2Tab('h2dir-p5',this)">TN RETAIL BRANDING PLAN</button>
+    <button class="h2dir-tab" id="h2dir-tab-6" onclick="switchH2Tab('h2dir-p6',this)">X-ZONE PLAN</button>
+    <button class="h2dir-tab" id="h2dir-tab-7" onclick="switchH2Tab('h2dir-p7',this)">STORE BRANDING</button>
+    <button class="h2dir-tab" id="h2dir-tab-8" onclick="switchH2Tab('h2dir-p8',this)">AUDIT &amp; ACTION</button>
+    <button class="h2dir-tab" id="h2dir-tab-9" onclick="switchH2Tab('h2dir-p9',this)">SUPPLY &amp; COUNTER-ATTACK</button>
+  </div>
+  <!-- CONTENT PANEL -->
+  <div class="h2branding-panel">
+
+    <!-- PAGE 1: MAJOR ISSUE & DIRECTION (from SK sketch page 1) -->
+    <section class="page" id="h2dir-p1" style="display:flex;">
+      <div class="eyebrow">vivo Tamil Nadu · MarCom · H2 Strategy</div>
+      <h1 class="title">Major Issue &amp; <span>Future Direction</span></h1>
+      <p class="sub">Pan-industry price hike creating competitive pressure — H2 response built on ROI-led campaigns, sell-out drive, and execution speed.</p>
+      <div class="grid-2" style="flex:0 0 auto;margin-bottom:1rem;">
+        <div class="panel">
+          <div class="panel-t">① MAJOR ISSUE — PAN INDUSTRY PRICE HIKE</div>
+          <div class="lc"><div class="lc-n">1</div><div class="lc-t"><b>Competitor advantages</b> — price hike across industry giving competitors room to position on value</div></div>
+          <div class="lc"><div class="lc-n">2</div><div class="lc-t"><b>ROI pressure</b> — every rupee must demonstrate cost-effective reach and conversion</div></div>
+          <div class="lc"><div class="lc-n">3</div><div class="lc-t"><b>MT focused campaign planning</b> — modern trade channels need dedicated campaign architecture</div></div>
+          <div class="flow">
+            <div class="flow-step">Price Hike</div><div class="flow-arrow">→</div>
+            <div class="flow-step">Competitor Advantage</div><div class="flow-arrow">→</div>
+            <div class="flow-step">ROI-Based Campaigns</div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-t">② FUTURE DIRECTION</div>
+          <div class="lc"><div class="lc-n">A</div><div class="lc-t"><b>Sell Out Drive</b> — aggressive sell-through focus across all channels</div></div>
+          <div class="lc"><div class="lc-n">B</div><div class="lc-t"><b>Expense Optimise</b> — cost-efficient media mix, eliminate low-ROI spends</div></div>
+          <div class="lc"><div class="lc-n">C</div><div class="lc-t"><b>Additional Business Drive</b> — new revenue streams via accessories, service, and ecosystem</div></div>
+          <div class="lc"><div class="lc-n">D</div><div class="lc-t"><b>IoT Support</b> — expand vivo ecosystem presence in Tamil Nadu retail</div></div>
+          <div class="flow">
+            <div class="flow-step">Sell Out</div><div class="flow-arrow">+</div>
+            <div class="flow-step">Optimise</div><div class="flow-arrow">+</div>
+            <div class="flow-step">New Business</div><div class="flow-arrow">→</div>
+            <div class="flow-step">Growth</div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-t">EXECUTION ENGINE — PBG FRAMEWORK</div>
+        <div class="stat-row">
+          <div class="stat" style="--c:#2563EB;"><div class="s-num">X-Zone</div><div class="s-lbl">Premium Brand Growth</div></div>
+          <div class="stat" style="--c:#15A34A;"><div class="s-num">Mktg 2.0</div><div class="s-lbl">Marketing Evolution</div></div>
+          <div class="stat" style="--c:#B45309;"><div class="s-num">KOL</div><div class="s-lbl">Key Opinion Leaders</div></div>
+          <div class="stat" style="--c:#7C3AED;"><div class="s-num">College BT + IT BT</div><div class="s-lbl">Brand Touch — Youth &amp; Corporate</div></div>
+        </div>
+        <div class="flow" style="margin-top:1rem;">
+          <div class="flow-step">Confidence</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Premium Branding</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Better APAC</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Timely Competitor Counter</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: USER STRATEGY & 5H HERO (from SK sketch pages 2) -->
+    <section class="page" id="h2dir-p2">
+      <div class="eyebrow">vivo Tamil Nadu · MarCom · H2 Strategy</div>
+      <h1 class="title">Different User → <span>Different Strategy</span></h1>
+      <p class="sub">Three user segments — three distinct go-to-market approaches. Aligned with vivo India direction.</p>
+      <div class="grid-3" style="flex:0 0 auto;">
+        <div class="panel">
+          <div class="panel-t">WHITE COLLAR</div>
+          <div class="lc"><div class="lc-n">A</div><div class="lc-t"><b>A+I Audience</b> — Aspiration and Innovation-led messaging</div></div>
+          <div class="lc"><div class="lc-n">B</div><div class="lc-t"><b>Channels:</b> Market Branding, Online, WhatsApp, FM, Campaigns</div></div>
+          <div class="lc"><div class="lc-n">C</div><div class="lc-t"><b>Objective:</b> Brand premium positioning and consideration</div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-t">BLUE COLLAR</div>
+          <div class="lc"><div class="lc-n">A</div><div class="lc-t"><b>P Audience</b> — Price and Performance-led messaging</div></div>
+          <div class="lc"><div class="lc-n">B</div><div class="lc-t"><b>Channels:</b> Rural con town, offline promotion activities</div></div>
+          <div class="lc"><div class="lc-n">C</div><div class="lc-t"><b>Execution:</b> HO Guideline material → Branch execution</div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-t">USER OPERATION</div>
+          <div class="lc"><div class="lc-n">A</div><div class="lc-t"><b>Align with vivo India</b> — Yugi-led national program integration</div></div>
+          <div class="lc"><div class="lc-n">B</div><div class="lc-t"><b>Loyalty Program</b> — retain existing vivo users in TN</div></div>
+          <div class="lc"><div class="lc-n">C</div><div class="lc-t"><b>WOM + KOC</b> — word of mouth and key opinion consumers</div></div>
+        </div>
+      </div>
+      <div class="panel" style="flex:1;">
+        <div class="panel-t">④ 5H HERO FRAMEWORK</div>
+        <div class="stat-row">
+          <div class="stat" style="--c:#2563EB;"><div class="s-num">Consumer</div><div class="s-lbl">How TN consumers are better with vivo</div></div>
+          <div class="stat" style="--c:#15A34A;"><div class="s-num">Product</div><div class="s-lbl">Hero product storytelling</div></div>
+          <div class="stat" style="--c:#B45309;"><div class="s-num">Creator</div><div class="s-lbl">KOL and creator-led content</div></div>
+          <div class="stat" style="--c:#7C3AED;"><div class="s-num">Lifestyle</div><div class="s-lbl">Aspiration and identity content</div></div>
+        </div>
+        <div class="flow" style="margin-top:1rem;">
+          <div class="flow-step">Consumer</div><div class="flow-arrow">+</div>
+          <div class="flow-step">Product</div><div class="flow-arrow">+</div>
+          <div class="flow-step">Creator</div><div class="flow-arrow">+</div>
+          <div class="flow-step">Lifestyle</div><div class="flow-arrow">→</div>
+          <div class="flow-step" style="background:linear-gradient(135deg,#2563EB,#3E63FF);color:#fff;border:none;">Business Moment</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: BRANDING BUILD (from SK sketch page 3) -->
+    <section class="page" id="h2dir-p3">
+      <div class="eyebrow">vivo Tamil Nadu · Retail Com · H2 Strategy</div>
+      <h1 class="title">⑤ Branding <span>Build</span></h1>
+      <p class="sub">New shop and top shop vivo brand build — backed by audit, supply resolution, and competitor defence.</p>
+      <div class="grid-3" style="flex:0 0 auto;">
+        <div class="panel">
+          <div class="panel-t">🏪 NEW SHOP — VIVO BRAND BUILD</div>
+          <div class="lc"><div class="lc-n">1</div><div class="lc-t">Identify new shop opportunities across TN districts</div></div>
+          <div class="lc"><div class="lc-n">2</div><div class="lc-t">Deploy vivo branding material as per HO guidelines</div></div>
+          <div class="lc"><div class="lc-n">3</div><div class="lc-t">SOP-driven execution — 3Bm → Sales force → Direct HO</div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-t">⭐ TOP SHOP — VIVO BRAND BUILD</div>
+          <div class="lc"><div class="lc-n">1</div><div class="lc-t">Upgrade top-performing shops to premium vivo brand standards</div></div>
+          <div class="lc"><div class="lc-n">2</div><div class="lc-t">Regular audit — supply shortage issue and service issue solvance</div></div>
+          <div class="lc"><div class="lc-n">3</div><div class="lc-t">32h usage compliance tracked and enforced</div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-t">🛡️ PREVENTION — COMPETITOR DEFENCE</div>
+          <div class="lc"><div class="lc-n">1</div><div class="lc-t"><b>Competitor presence assessment</b> — district-wise mapping</div></div>
+          <div class="lc"><div class="lc-n">2</div><div class="lc-t"><b>Resist and sustain</b> MBB and vivo Zone presence</div></div>
+          <div class="lc"><div class="lc-n">3</div><div class="lc-t">Proactive counter-deployment where competitor pressure is highest</div></div>
+        </div>
+      </div>
+      <div class="panel" style="flex:1;">
+        <div class="panel-t">EXECUTION FLOW</div>
+        <div class="flow">
+          <div class="flow-step">3Bm Sales Force Policy</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Direct HO</div><div class="flow-arrow">→</div>
+          <div class="flow-step">SOP</div><div class="flow-arrow">→</div>
+          <div class="flow-step">32h Usage</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Audit</div><div class="flow-arrow">→</div>
+          <div class="flow-step">Compliance</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: BALANCE SCORE CARD + CONCLUSION (from SK sketch page 4) -->
+    <section class="page" id="h2dir-p4">
+      <div class="eyebrow">vivo Tamil Nadu · Marketing Dept · H2 Strategy</div>
+      <h1 class="title">⑥ Balance Score Card &amp; <span>Conclusion</span></h1>
+      <p class="sub">Yugendhar to manage Balance Score Card tracking. H2 strategy concludes with three outcomes.</p>
+      <div class="grid-2" style="flex:0 0 auto;">
+        <div class="panel">
+          <div class="panel-t">BALANCE SCORE CARD — YUGENDHAR</div>
+          <div class="lc"><div class="lc-n">1</div><div class="lc-t"><b>Major Issue → Future Direction</b> — tracked quarterly</div></div>
+          <div class="lc"><div class="lc-n">2</div><div class="lc-t"><b>Different User → Different Strategy</b> — segment performance</div></div>
+          <div class="lc"><div class="lc-n">3</div><div class="lc-t"><b>5H Hero</b> — content and campaign effectiveness</div></div>
+          <div class="lc"><div class="lc-n">4</div><div class="lc-t"><b>Branding Build</b> — store coverage and audit scores</div></div>
+          <div class="lc"><div class="lc-n">5</div><div class="lc-t"><b>Balance Score Card</b> — overall department health score</div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-t">H2 CONCLUSION</div>
+          <div class="stat-row" style="grid-template-columns:1fr;gap:0.7rem;">
+            <div class="stat" style="--c:#2563EB;"><div class="s-num" style="font-size:1.2rem;">Strengthen Belief</div><div class="s-lbl">Build trust in vivo brand among TN consumers and trade</div></div>
+            <div class="stat" style="--c:#15A34A;"><div class="s-num" style="font-size:1.2rem;">Grow Steadily</div><div class="s-lbl">Consistent volume and value growth across all districts</div></div>
+            <div class="stat" style="--c:#B45309;"><div class="s-num" style="font-size:1.2rem;">Optimise Operation</div><div class="s-lbl">Leaner execution, better ROI, faster market response</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="page" id="h2dir-p5">
+  <div class="hrow">
+    <div>
+      <div class="eyebrow">vivo Tamil Nadu · Branding · AOP H2 Plan</div>
+      <h1 class="title">TN Retail Branding — <span>H2 Plan</span></h1>
+      <p class="sub">The full-state plan to grow vivo's in-store visibility across Tamil Nadu in H2 — built on five focus areas.</p>
+    </div>
+    <div class="stat-row" style="grid-template-columns:repeat(3,auto);">
+      <div class="stat" style="--c:#2563EB;"><div class="s-num">70</div><div class="s-lbl">X-Zone Target</div></div>
+      <div class="stat" style="--c:#B45309;"><div class="s-num">1,849</div><div class="s-lbl">Stores Audited</div></div>
+      <div class="stat" style="--c:#15A34A;"><div class="s-num">3</div><div class="s-lbl">Zones</div></div>
+    </div>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar"><div class="pl-num">01</div><div class="pl-ic">🏬</div><div class="pl-t">New Store</div><div class="pl-d">Fixture, MSB/OSB &amp; project deployment for every new store across GT, RMT &amp; NMT.</div><div class="pl-tag">Visibility</div></div>
+    <div class="pillar"><div class="pl-num">02</div><div class="pl-ic">⭐</div><div class="pl-t">Top Store</div><div class="pl-d">Upgrade high-selling A+/A/B stores — old-to-new fixtures, MSB &amp; X-Zone projects.</div><div class="pl-tag">Upgrade</div></div>
+    <div class="pillar"><div class="pl-num">03</div><div class="pl-ic">🔍</div><div class="pl-t">Regular Audit</div><div class="pl-d">Channel One audit to fix POSM compliance — currently only 22.8% correct.</div><div class="pl-tag">Compliance</div></div>
+    <div class="pillar"><div class="pl-num">04</div><div class="pl-ic">🛠️</div><div class="pl-t">Supply &amp; Service</div><div class="pl-d">Fix material supply delays &amp; maintenance gaps via zone vendors &amp; buffer stock.</div><div class="pl-tag">Maintenance</div></div>
+    <div class="pillar"><div class="pl-num">05</div><div class="pl-ic">⚔️</div><div class="pl-t">Counter Competition</div><div class="pl-d">Bigger fixtures, 100% MSB retention &amp; X-Zones deployed before competitors.</div><div class="pl-tag">Defend</div></div>
+  </div>
+</section>
+
+<section class="page" id="h2dir-p6">
+  <div>
+    <div class="eyebrow">FY26-27 · X-Zone Rollout</div>
+    <h1 class="title">X-Zone Plan — <span>70 Zones by Feb '26</span></h1>
+    <p class="sub">Premium vivo experience zones across TN. 10 live, 4 under construction — 57 to roll out over 6 months.</p>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat" style="--c:#2563EB;"><div class="s-num">70</div><div class="s-lbl">Overall Target · GT 25 + MT 45</div></div>
+    <div class="stat" style="--c:#15A34A;"><div class="s-num">10</div><div class="s-lbl">Completed</div></div>
+    <div class="stat" style="--c:#B45309;"><div class="s-num">4</div><div class="s-lbl">Under Construction</div></div>
+    <div class="stat" style="--c:#DC2626;"><div class="s-num">57</div><div class="s-lbl">Pending Target</div></div>
+  </div>
+
+  <div class="grid-2" style="grid-template-columns:1.35fr 0.65fr;">
+    <div class="panel">
+      <div class="panel-t">Branch-wise Status <span class="pt-badge">as of Sep '26</span></div>
+      <div class="tbl-scroll">
+        <table class="tbl">
+          <thead><tr><th>Branch</th><th>Target</th><th>Done</th><th>U/C</th><th>Pending</th></tr></thead>
+          <tbody>
+            <tr><td class="b">Coimbatore</td><td>4</td><td class="g">2</td><td>0</td><td class="r">2</td></tr>
+            <tr><td class="b">Erode</td><td>5</td><td class="g">1</td><td>0</td><td class="r">4</td></tr>
+            <tr><td class="b">Madurai</td><td>2</td><td>0</td><td>0</td><td class="r">2</td></tr>
+            <tr><td class="b">MT Chennai</td><td>2</td><td>0</td><td class="a">3</td><td>0</td></tr>
+            <tr><td class="b">North Chennai</td><td>1</td><td class="g">1</td><td>0</td><td>0</td></tr>
+            <tr><td class="b">Pondicherry</td><td>4</td><td>0</td><td>0</td><td class="r">4</td></tr>
+            <tr><td class="b">Poorvika Chennai</td><td>11</td><td>0</td><td>0</td><td class="r">11</td></tr>
+            <tr><td class="b">Salem</td><td>7</td><td class="g">1</td><td>0</td><td class="r">6</td></tr>
+            <tr><td class="b">South Chennai</td><td>5</td><td class="g">2</td><td>0</td><td class="r">3</td></tr>
+            <tr><td class="b">Thanjavur</td><td>4</td><td>0</td><td>0</td><td class="r">4</td></tr>
+            <tr><td class="b">Tirunelveli</td><td>4</td><td>0</td><td>0</td><td class="r">4</td></tr>
+            <tr><td class="b">Trichy</td><td>10</td><td class="g">2</td><td class="a">1</td><td class="r">7</td></tr>
+            <tr><td class="b">Vellore</td><td>9</td><td>0</td><td>0</td><td class="r">9</td></tr>
+            <tr><td class="b">Virudhunagar</td><td>2</td><td class="g">1</td><td>0</td><td class="r">1</td></tr>
+            <tr class="total"><td>OVERALL</td><td>70</td><td>10</td><td>4</td><td>57</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0.9rem;min-height:0;">
+      <div class="panel" style="flex:0 0 auto;">
+        <div class="panel-t">Monthly Rollout · 57 Pending</div>
+        <div class="timeline" style="flex-wrap:wrap;gap:0.5rem;">
+          <div class="tl-step"><div class="tl-m">Sep</div><div class="tl-n">7</div></div>
+          <div class="tl-step"><div class="tl-m">Oct</div><div class="tl-n">10</div></div>
+          <div class="tl-step"><div class="tl-m">Nov</div><div class="tl-n">10</div></div>
+          <div class="tl-step"><div class="tl-m">Dec</div><div class="tl-n">10</div></div>
+          <div class="tl-step"><div class="tl-m">Jan</div><div class="tl-n">10</div></div>
+          <div class="tl-step"><div class="tl-m">Feb</div><div class="tl-n">10</div></div>
+        </div>
+      </div>
+      <div class="glimpse"><img src="assets/h2-glimpse.jpg" alt="vivo X-Zone in store"></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="h2dir-p7">
+  <div>
+    <div class="eyebrow">Deployment · New &amp; Top Stores</div>
+    <h1 class="title">Store Branding — <span>Channel-wise</span></h1>
+    <p class="sub">How we deploy across the three trade channels — with the old-to-new upgrade numbers for each.</p>
+  </div>
+  <div class="grid-3">
+    <div class="panel ch-card">
+      <div class="ch-head"><span class="ch-ic">🏪</span><span class="ch-name">General Trade</span></div>
+      <div class="mini-stats">
+        <div class="mini-stat"><div class="ms-n">70</div><div class="ms-l">Fixture</div></div>
+        <div class="mini-stat"><div class="ms-n">19</div><div class="ms-l">MSB</div></div>
+        <div class="mini-stat"><div class="ms-n">25</div><div class="ms-l">Project</div></div>
+      </div>
+      <div class="ic-grid" style="grid-template-columns:1fr;grid-auto-rows:1fr;gap:0.6rem;flex:1;min-height:0;">
+        <div class="ic-card" style="padding:0.7rem 0.95rem;"><div class="ic-h"><span class="ic-ic">🗄️</span><span class="ic-t">Fixture</span></div><div class="ic-d">Deploy with space check; if no space, approach <b>ISB</b> in 1st location.</div></div>
+        <div class="ic-card" style="padding:0.7rem 0.95rem;"><div class="ic-h"><span class="ic-ic">🪧</span><span class="ic-t">MSB</span></div><div class="ic-d">For chain outlets across TN; if not approved, plan any <b>OSB</b>.</div></div>
+        <div class="ic-card" style="padding:0.7rem 0.95rem;"><div class="ic-h"><span class="ic-ic">⭐</span><span class="ic-t">Focus</span></div><div class="ic-d">Priority on <b>A+, A &amp; B</b> stores.</div></div>
+      </div>
+    </div>
+    <div class="panel ch-card">
+      <div class="ch-head"><span class="ch-ic">🏢</span><span class="ch-name">Regional MT</span></div>
+      <div class="mini-stats">
+        <div class="mini-stat"><div class="ms-n">182</div><div class="ms-l">Fixture</div></div>
+        <div class="mini-stat"><div class="ms-n">13</div><div class="ms-l">MSB</div></div>
+        <div class="mini-stat"><div class="ms-n">45</div><div class="ms-l">Project</div></div>
+      </div>
+      <div class="ic-grid" style="grid-template-columns:1fr;grid-auto-rows:1fr;gap:0.6rem;flex:1;min-height:0;">
+        <div class="ic-card" style="padding:0.7rem 0.95rem;"><div class="ic-h"><span class="ic-ic">🗄️</span><span class="ic-t">Fixture</span></div><div class="ic-d"><b>100% fixture</b> per space; approach <b>ISB</b> in 1st location.</div></div>
+        <div class="ic-card" style="padding:0.7rem 0.95rem;"><div class="ic-h"><span class="ic-ic">🪧</span><span class="ic-t">MSB</span></div><div class="ic-d">Collaboration for new stores; if not allowed, plan <b>OSB</b>.</div></div>
+        <div class="ic-card" style="padding:0.7rem 0.95rem;"><div class="ic-h"><span class="ic-ic">📐</span><span class="ic-t">Project</span></div><div class="ic-d">Plan in the store&rsquo;s <b>1st location</b> area.</div></div>
+      </div>
+    </div>
+    <div class="panel ch-card">
+      <div class="ch-head"><span class="ch-ic">🏙️</span><span class="ch-name">National MT</span></div>
+      <div class="mini-stats">
+        <div class="mini-stat"><div class="ms-n">32</div><div class="ms-l">Fixture</div></div>
+        <div class="mini-stat"><div class="ms-n">OSB</div><div class="ms-l">≥ 1 Planned</div></div>
+        <div class="mini-stat"><div class="ms-n">✓</div><div class="ms-l">X-Zone</div></div>
+      </div>
+      <div class="ic-grid" style="grid-template-columns:1fr;grid-auto-rows:1fr;gap:0.6rem;flex:1;min-height:0;">
+        <div class="ic-card" style="padding:0.7rem 0.95rem;"><div class="ic-h"><span class="ic-ic">🗄️</span><span class="ic-t">Fixture</span></div><div class="ic-d"><b>100% fixture</b> — focus on <b>6ft &amp; above</b>.</div></div>
+        <div class="ic-card" style="padding:0.7rem 0.95rem;"><div class="ic-h"><span class="ic-ic">🖼️</span><span class="ic-t">OSB</span></div><div class="ic-d">Plan at least one (<b>façade branding</b>).</div></div>
+        <div class="ic-card" style="padding:0.7rem 0.95rem;"><div class="ic-h"><span class="ic-ic">📐</span><span class="ic-t">Project</span></div><div class="ic-d">In store&rsquo;s 1st location — a convenient <b>vivo Desk</b> at the entrance.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="h2dir-p8">
+  <div>
+    <div class="eyebrow">Regular Audit · Channel One</div>
+    <h1 class="title">Audit Findings &amp; <span>Action Plan</span></h1>
+    <p class="sub">Consolidated Channel One audit across 5 models &amp; 1,849 stores — only 22.8% of WODs are correct. Here's the fix.</p>
+  </div>
+  <div class="grid-2" style="grid-template-columns:1fr 1fr;">
+    <div class="panel">
+      <div class="panel-t">Key Findings <span class="pt-badge">5 models · 1,849 stores</span></div>
+      <div class="stat-row" style="grid-template-columns:1fr 1fr;margin-bottom:0.9rem;">
+        <div class="stat" style="--c:#DC2626;"><div class="s-num">22.8%</div><div class="s-lbl">Overall Correct WODs</div></div>
+        <div class="stat" style="--c:#B45309;"><div class="s-num">&lt;50%</div><div class="s-lbl">No model reached 50%</div></div>
+      </div>
+      <div class="panel-t" style="font-size:0.95rem;">VIVO Zone — Correct % by Model</div>
+      <div class="bar-row"><span class="br-l">V60</span><div class="bar-track"><div class="bar-fill" style="width:45.9%;background:linear-gradient(90deg,#F2803F,#B45309);">45.9%</div></div></div>
+      <div class="bar-row"><span class="br-l">V70</span><div class="bar-track"><div class="bar-fill" style="width:52.1%;background:linear-gradient(90deg,#3E63FF,#2563EB);">52.1%</div></div></div>
+      <div class="bar-row"><span class="br-l">X300</span><div class="bar-track"><div class="bar-fill" style="width:34%;background:linear-gradient(90deg,#F2803F,#B45309);">34.0%</div></div></div>
+      <div class="bar-row"><span class="br-l">X300FE</span><div class="bar-track"><div class="bar-fill" style="width:21.8%;background:linear-gradient(90deg,#EF6D5A,#DC2626);">21.8%</div></div></div>
+      <div class="bar-row"><span class="br-l">X300 Ultra</span><div class="bar-track"><div class="bar-fill" style="width:9.5%;background:linear-gradient(90deg,#EF6D5A,#DC2626);">9.5%</div></div></div>
+      <div class="note" style="margin-top:0.6rem;"><b>Recurring 0% gaps:</b> Prop/Lighting/Table-Top · ISB/Lampcloth/Sticker · Shelf Talker/Dangler/Wobbler.</div>
+    </div>
+    <div class="panel">
+      <div class="panel-t">Final Action Plan</div>
+      <div class="ic-grid" style="grid-template-columns:1fr;flex:1;">
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🎓</span><span class="ic-t">Pre-Audit TL Training</span></div><div class="ic-d">Before every round — covers POSM, SOP, photo method &amp; last round's gaps.</div></div>
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">📊</span><span class="ic-t">Channel One in TL/ME KPI</span></div><div class="ic-d">Audit performance becomes a <b>named monthly KPI</b> line item.</div></div>
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🎯</span><span class="ic-t">Prioritize VIVO Zone</span></div><div class="ic-d">Corrective focus on the weakest channel &amp; repeat 0% categories.</div></div>
+      </div>
+      <div class="note" style="margin-top:0.6rem;flex:0 0 auto;"><b>Owners:</b> TL executes · ME validates · BM runs the KPI · HO trains &amp; sets the SOP.</div>
+      <div class="flow" style="flex:0 0 auto;">
+        <span class="flow-step">Pre-Audit Training</span><span class="flow-arrow">›</span>
+        <span class="flow-step">Field Execution</span><span class="flow-arrow">›</span>
+        <span class="flow-step">Daily Monitoring</span><span class="flow-arrow">›</span>
+        <span class="flow-step">Post-Audit Review</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="h2dir-p9">
+  <div>
+    <div class="eyebrow">Supply · Competition · 3 Zones</div>
+    <h1 class="title">Supply, Counter-Attack &amp; <span>Zone Focus</span></h1>
+    <p class="sub">Fixing the supply pipeline, defending against competitors, and the priority focus for each of the three TN zones.</p>
+  </div>
+  <div class="grid-2" style="flex:0 0 auto;">
+    <div class="panel">
+      <div class="panel-t">🛠️ Supply &amp; Service Issue</div>
+      <div class="stat-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:0.9rem;">
+        <div class="stat" style="--c:#2563EB;padding:0.6rem 0.9rem;"><div class="s-num" style="font-size:1.45rem;">434</div><div class="s-lbl">Ordered · May '26</div></div>
+        <div class="stat" style="--c:#15A34A;padding:0.6rem 0.9rem;"><div class="s-num" style="font-size:1.45rem;">25</div><div class="s-lbl">Received</div></div>
+        <div class="stat" style="--c:#DC2626;padding:0.6rem 0.9rem;"><div class="s-num" style="font-size:1.45rem;">409</div><div class="s-lbl">Pending</div></div>
+      </div>
+      <div class="ic-grid" style="grid-template-columns:1fr;">
+        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">🧑‍🔧</span><span class="ic-t">Hire 3 Zone Vendors</span></div><div class="ic-d">One owner per zone (Grand Chennai, Central TN, South TN) for all service issues.</div></div>
+        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">📄</span><span class="ic-t">Amend SOP &amp; Buffer Stock</span></div><div class="ic-d">Vendor TAT &amp; costing + branch coordination; buffer stock for new store openings.</div></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-t">⚔️ Competitor Counter-Attack</div>
+      <div class="ic-grid" style="grid-template-columns:1fr;">
+        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">🗄️</span><span class="ic-t">Bigger Fixtures</span></div><div class="ic-d">Upgrade to equal/bigger cabinet vs competitors; replace 1yr+ old with <b>4.2 fixture</b>.</div></div>
+        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">🔒</span><span class="ic-t">100% MSB Retention</span></div><div class="ic-d">Old-to-new for vivo; strict action if a vivo MSB is replaced by a competitor.</div></div>
+        <div class="ic-card" style="padding:0.5rem 0.9rem;"><div class="ic-h"><span class="ic-ic">⚡</span><span class="ic-t">X-Zone First</span></div><div class="ic-d">Plan X-Zones against competition &amp; deploy <b>before</b> them.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="panel" style="flex:1;min-height:0;">
+    <div class="panel-t">📍 Key Focus for 3 Zones</div>
+    <div class="grid-3" style="flex:1;">
+      <div class="zone-card"><div class="zone-head"><span>🌆</span><span class="zone-name">Grand Chennai</span></div><div class="ic-d"><b>Upgrade &amp; new</b> (4.2 fixture). ISB new + MSB on 1st priority. One OSB (façade). <b>Project: recommended.</b></div></div>
+      <div class="zone-card"><div class="zone-head"><span>🏘️</span><span class="zone-name">Central TN</span></div><div class="ic-d">Primary focus on <b>new deployment</b>. ISB, MSB &amp; OSB per branch decision. <b>Project: recommended.</b></div></div>
+      <div class="zone-card"><div class="zone-head"><span>🏝️</span><span class="zone-name">South TN</span></div><div class="ic-d"><b>Upgrade &amp; new</b> (4.2 fixture). ISB new + MSB on 1st priority. One OSB (façade). <b>Project: recommended.</b></div></div>
+    </div>
+  </div>
+</section>
+
+  </div><!-- end .h2branding-panel -->
+</div><!-- end #h2direction -->
 <div class="landing hidden h1deck embed" id="diwali-branding">
     <div class="s2bar">
       <button class="kt-back" onclick="closeDiwaliBranding()"><span class="bk-ar">&larr;</span> Back</button>
@@ -4014,10 +4478,23 @@ function switchH1Tab(pageId,btn){
 }
 function openH2Direction(){
   document.getElementById('h2direction').classList.add('visible');
+  var firstTab=document.getElementById('h2dir-tab-1');
+  switchH2Tab('h2dir-p1',firstTab);
 }
 function closeH2Direction(){
   var el=document.getElementById('h2direction');
   if(el)el.classList.remove('visible');
+}
+function switchH2Tab(pageId,btn){
+  document.querySelectorAll('#h2direction .h2branding-panel .page').forEach(function(p){
+    p.style.display='none';
+  });
+  var target=document.getElementById(pageId);
+  if(target)target.style.display='flex';
+  document.querySelectorAll('#h2direction .h2dir-tab').forEach(function(t){
+    t.classList.remove('active');
+  });
+  if(btn)btn.classList.add('active');
 }
 function dbFrameScroll(dir){frameSnap('#diwali-branding .h1frame',dir);}
 function openDiwaliBranding(){document.getElementById('entry').classList.add('hidden');document.getElementById('diwali-branding').classList.remove('hidden');setTimeout(fitLanding,20);}
