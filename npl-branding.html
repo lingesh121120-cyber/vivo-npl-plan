@@ -120,6 +120,8 @@ h1.title span{color:var(--blue);}
 .prod-head{display:flex;align-items:center;gap:0.7rem;}
 .prod-badge{font-family:var(--font-mono);font-size:0.62rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-2));border-radius:20px;padding:0.25rem 0.7rem;}
 @media(max-width:1000px){.stat-row,.cat-grid{grid-template-columns:repeat(2,1fr);}.grid-2,.grid-3{grid-template-columns:1fr;}.timeline{flex-wrap:wrap;}}
+.au-item{border:1px solid var(--hair);border-left:3px solid var(--blue);border-radius:10px;padding:0.75rem 1rem;font-size:0.98rem;color:var(--ink-0);line-height:1.38;}
+.au-badge{background:rgba(232,98,42,0.08);border:1px solid rgba(232,98,42,0.32);color:#E8622A;font-weight:800;font-size:0.85rem;border-radius:8px;padding:0.35rem 0.8rem;white-space:nowrap;}
 </style>
 </head>
 <body>
@@ -299,37 +301,78 @@ h1.title span{color:var(--blue);}
   </div>
 </section>
 
-<!-- PAGE 4 : EXECUTION & AUDIT -->
+<!-- PAGE 4 : CHANNEL ONE AUDIT -->
 <section class="page" id="npl-p4">
   <div>
-    <div class="eyebrow">Execution · Compliance &amp; Governance</div>
-    <h1 class="title">Retail Guidelines &amp; <span>Audit Plan</span></h1>
-    <p class="sub">How V80 branding is executed correctly in-store, and how 100% of WODs are audited for compliance.</p>
+    <div class="eyebrow">Execution · Channel One Audit</div>
+    <h1 class="title">Channel One Audit — <span>Gaps, Action &amp; Outcome</span></h1>
+    <p class="sub">The key gaps found in Channel One WOD audits, the action plan to close them, and the target outcome.</p>
   </div>
-  <div class="grid-2">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;flex:1;min-height:0;">
     <div class="panel">
-      <div class="panel-t">Retail Execution Guidelines</div>
-      <div class="ic-grid" style="grid-template-columns:1fr 1fr;flex:1;">
-        <div class="ic-card"><div class="ic-h"><span class="ic-ic">📋</span><span class="ic-t">Spec Card</span></div><div class="ic-d">All live demo units must be in the fixture; if unavailable, display <b>dummy units</b>.</div></div>
-        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🧵</span><span class="ic-t">Lampcloth</span></div><div class="ic-d">Convert all <b>V60</b> lampcloth stores to the <b>V70-series</b> lampcloth.</div></div>
-        <div class="ic-card"><div class="ic-h"><span class="ic-ic">💡</span><span class="ic-t">Luminous Tabletop / Floor</span></div><div class="ic-d">Placed in high-visibility outdoor areas; keep <b>dust-free</b> &amp; well maintained.</div></div>
-        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🖼️</span><span class="ic-t">Lit AIP &amp; DIP</span></div><div class="ic-d">Replace existing frames with the <b>new creative</b>.</div></div>
+      <div class="panel-t" style="color:#DC2626;">⚠️ Gaps</div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;flex:1;">
+        <div class="au-item" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.22);">Lack of TL's knowledge</div>
+        <div class="au-item" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.22);">POSM not deployed per guidelines</div>
+        <div class="au-item" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.22);">ME file vs live store data mismatch</div>
       </div>
-      <div class="note" style="margin-top:0.7rem;flex:0 0 auto;"><b>Action:</b> non-compliant branches are escalated to management for strict action.</div>
     </div>
     <div class="panel">
-      <div class="panel-t">V80 Audit Plan <span class="pt-badge">1,564 WODs · 100% coverage</span></div>
-      <div class="ic-grid" style="grid-template-columns:1fr;flex:1;">
-        <div class="ic-card"><div class="ic-h"><span class="ic-ic">👣</span><span class="ic-t">In-Person Audit</span><span class="ic-big">234</span></div><div class="ic-d"><b>4 HO auditors</b>, 58 stores each · 15% mystery-audit coverage.</div></div>
-        <div class="ic-card"><div class="ic-h"><span class="ic-ic">📹</span><span class="ic-t">Video Call Audit</span><span class="ic-big">894</span></div><div class="ic-d"><b>A+ &amp; A WODs</b> audited by 4 persons (branch breakup).</div></div>
-        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🖥️</span><span class="ic-t">Channel One · Online</span><span class="ic-big">1,564</span></div><div class="ic-d">Full V80 WODs online for <b>baseline compliance</b>.</div></div>
+      <div class="panel-t" style="color:#2563EB;">🛠️ Action Plan</div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;flex:1;">
+        <div class="au-item" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2);">Channel One guideline <b>one-pager</b>, issued regularly at audit time</div>
+        <div class="au-item" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2);">Policy implementation for <b>TLs</b> on audit compliance</div>
+        <div class="au-item" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2);">Low coverage &amp; QC results carry a <b>fine / KPI deduction</b></div>
       </div>
-      <div class="flow" style="margin-top:0.6rem;flex:0 0 auto;">
-        <span class="flow-step">100% Coverage</span><span class="flow-arrow">›</span>
-        <span class="flow-step">Gap ID</span><span class="flow-arrow">›</span>
-        <span class="flow-step">Rectification</span><span class="flow-arrow">›</span>
-        <span class="flow-step">Verified Closure</span>
+    </div>
+    <div class="panel">
+      <div class="panel-t" style="color:#15A34A;">🎯 Outcome Target</div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;flex:1;">
+        <div class="au-item" style="border-left-color:#15A34A;background:rgba(21,163,74,0.06);border-color:rgba(21,163,74,0.24);"><b style="color:#15A34A;">100%</b> completion within timeline</div>
+        <div class="au-item" style="border-left-color:#15A34A;background:rgba(21,163,74,0.06);border-color:rgba(21,163,74,0.24);"><b style="color:#15A34A;">100%</b> audit accuracy</div>
+        <div class="au-item" style="border-left-color:#15A34A;background:rgba(21,163,74,0.06);border-color:rgba(21,163,74,0.24);"><b style="color:#15A34A;">100%</b> knowledge for TLs</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 4B : HO BRANDING AUDIT -->
+<section class="page" id="npl-p4b">
+  <div>
+    <div class="eyebrow">Execution · HO Branding Audit</div>
+    <h1 class="title">HO Branding Audit — <span>Major Gaps &amp; Governance</span></h1>
+    <p class="sub">How HO audits V80 retail branding — the major gaps, the SOP to fix them (with grade-wise accountability), and the outcome.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:1rem;flex:1;min-height:0;">
+    <div class="panel" style="flex:0 0 auto;">
+      <div class="panel-t" style="color:#2563EB;">📋 Audit Plan</div>
+      <div class="au-item" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2);font-size:1.05rem;"><b>50 WODs</b> audited per branch by <b>5 HO persons</b> — In-Person &amp; Video-Call audit.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;flex:1;min-height:0;">
+      <div class="panel">
+        <div class="panel-t" style="color:#DC2626;">⚠️ Major Gaps</div>
+        <div style="display:flex;flex-direction:column;gap:0.7rem;flex:1;">
+          <div class="au-item" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.22);">POSM mis-deployment across market</div>
+          <div class="au-item" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.22);"><b>Lamp Cloth:</b> V70 → V80 conversion pending</div>
+          <div class="au-item" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.22);"><b>LIT AIP &amp; DIP:</b> old creative not replaced</div>
+          <div class="au-item" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.22);"><b>Floor Luminous:</b> dust / maintenance gaps</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-t" style="color:#2563EB;">🛠️ Action Plan — SOP</div>
+        <div style="display:flex;flex-direction:column;gap:0.7rem;flex:1;">
+          <div class="au-item" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2);">Flag <b>non-compliant materials</b> immediately</div>
+          <div class="au-item" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2);">SOP applies if <b>unresolved after notification</b></div>
+          <div class="au-item" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2);">Fine / KPI deduction — <b>grade-wise</b>:</div>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.1rem;">
+            <span class="au-badge">RSM 15%</span><span class="au-badge">BM 15%</span><span class="au-badge">TL &amp; VBA 40%</span><span class="au-badge">ME 30%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel" style="flex:0 0 auto;">
+      <div class="panel-t" style="color:#15A34A;">🎯 Outcome</div>
+      <div class="au-item" style="border-left-color:#15A34A;background:rgba(21,163,74,0.06);border-color:rgba(21,163,74,0.24);font-size:1.05rem;">A disciplined, accountable HO audit cycle that keeps V80 retail branding <b>compliant, well-maintained &amp; consistent</b> across all branches.</div>
     </div>
   </div>
 </section>
