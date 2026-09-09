@@ -1487,6 +1487,34 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 /* ========== END H2 DIRECTION ========== */
 
 /* ========== COMMAND CENTRE POLISH — overflow, chrome, alignment ========== */
+.ceo-board{width:100%;max-width:1360px;margin:0 auto;padding:1.15rem 1.5rem 1.5rem;display:flex;flex-direction:column;box-sizing:border-box;}
+.ceo-kicker{font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#1566C0;}
+.ceo-title{font-family:Sora,Inter,sans-serif;font-size:clamp(1.55rem,2.8vw,2.25rem);font-weight:800;color:#002B6B;letter-spacing:-0.03em;text-transform:uppercase;margin:0.28rem 0 0.2rem;line-height:1.1;}
+.ceo-lede{font-size:0.9rem;color:#3D4E73;margin:0 0 1rem;max-width:62ch;line-height:1.45;}
+.ceo-engines{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.9rem;align-items:stretch;}
+.ceo-engines.engines-2 .ceo-engine{min-height:280px;}
+.ceo-engine{background:#fff;border:1px solid rgba(11,23,48,0.08);border-radius:16px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;min-width:0;box-shadow:0 10px 28px rgba(0,26,74,0.08);transition:transform .18s,box-shadow .18s;}
+.ceo-engine:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,26,74,0.14);}
+.ceo-eh{background:#001A4A;color:#fff;padding:0.82rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:0.5rem;}
+.ceo-eh b{font-family:Sora,Inter,sans-serif;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;}
+.ceo-eh span{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.72;white-space:nowrap;}
+.ceo-eb{padding:1rem 1rem 0.95rem;display:flex;flex-direction:column;gap:0.4rem;flex:1;min-width:0;}
+.ceo-hero{font-family:Sora,Inter,sans-serif;font-size:clamp(1.35rem,2vw,1.7rem);font-weight:800;color:#1566C0;letter-spacing:-0.04em;line-height:1;}
+.ceo-sub{font-size:0.76rem;color:#6B7B9C;line-height:1.35;}
+.ceo-rows{display:flex;flex-direction:column;gap:0.32rem;margin-top:auto;padding-top:0.55rem;}
+.ceo-row{display:flex;justify-content:space-between;align-items:center;gap:0.45rem;background:#F4F7FB;border-radius:8px;padding:0.42rem 0.62rem;border:0;width:100%;text-align:left;cursor:pointer;font-family:inherit;}
+.ceo-row:hover{background:#E3ECF8;}
+.ceo-row b{font-size:0.7rem;color:#0B1730;font-weight:700;min-width:0;}
+.ceo-row em{font-style:normal;font-size:0.68rem;font-weight:800;color:#1566C0;white-space:nowrap;}
+@media(max-width:1100px){.ceo-engines{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:640px){.ceo-engines,.ceo-engines.engines-2{grid-template-columns:1fr;}}
+.huc-pillar-grid > div > div:nth-child(2){display:none;}
+#npl-container #landing{display:flex;flex-direction:column;overflow:auto;}
+#npl-container #landing.hidden{display:none;}
+#diwali .festival-panel{overflow:auto;}
+.entry-card.ec-kpi{border:1px solid rgba(11,23,48,0.06);}
+button:focus-visible,.ceo-engine:focus-visible,.entry-card:focus-visible{outline:2px solid #1566C0;outline-offset:2px;}
+::selection{background:rgba(21,102,192,0.18);}
 img,video,iframe,canvas,svg{max-width:100%;}
 .cc-mod-bar{flex:none;height:56px;background:#001A4A;color:#fff;display:flex;align-items:center;gap:0.85rem;padding:0 1.4rem;z-index:12;border-bottom:1px solid rgba(255,255,255,0.08);}
 .cc-mod-back{background:transparent;border:1px solid rgba(255,255,255,0.28);color:#fff;border-radius:6px;padding:0.26rem 0.75rem;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;font-family:inherit;}
@@ -2597,9 +2625,11 @@ img,video,iframe,canvas,svg{max-width:100%;}
 <div class="landing hidden" id="landing">
   <button class="entry-back" onclick="backToEntry()">&larr; Back</button>
   <button class="present-btn landing-present" onclick="togglePresent()"><span id="presentTxt2">&#9974; Present</span></button>
-  <div class="lwrap">
-    <div class="lbrand">FTPL &middot; Tamil Nadu &middot; 2026</div>
-    <div class="ltitle">vivo Tamilnadu<span id="hubLabel"></span></div>
+  <div class="ceo-board">
+    <div class="ceo-kicker">FTPL · Tamil Nadu · Oct 6–30</div>
+    <h1 class="ceo-title">NPL Plan</h1>
+    <span id="hubLabel" hidden></span>
+    <p class="ceo-lede">₹71L MarCom across V80, X-Fold 6 and S2FE. Window Oct 6–30. Store branding sits on Retail Com.</p>
     <div class="lkpis">
       <div class="lkpi g"><b>&#8377;71L</b><span>Total Investment</span></div>
       <div class="lkpi"><b>3</b><span>Models</span></div>
@@ -2609,6 +2639,56 @@ img,video,iframe,canvas,svg{max-width:100%;}
       <div class="lkpi"><b>15</b><span>Campaigns</span></div>
       <div class="lkpi"><b>8</b><span>DOP Vendors</span></div>
     </div>
+    <div class="ceo-engines">
+      <article class="ceo-engine" onclick="enterProduct('v80')">
+        <div class="ceo-eh"><b>vivo V80</b><span>Primary</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;66.4L</div>
+          <div class="ceo-sub">ZEISS Telephoto · MarCom total</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndSlide('v80',5)"><b>HO Activation</b><em>&#8377;10.4L</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndJBP()"><b>JBP Trade Plan</b><em>&#8377;56L</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndKM('v80')"><b>KOL — 3 videos</b><em>&#8377;8L</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndSlide('v80',5)"><b>Social + Unboxing</b><em>&#8377;40K + &#8377;2L</em></button>
+          </div>
+        </div>
+      </article>
+      <article class="ceo-engine" onclick="enterProduct('xfold')">
+        <div class="ceo-eh"><b>X-Fold 6</b><span>Foldable</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;2.3L</div>
+          <div class="ceo-sub">Business Class · MarCom total</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndKM('xfold')"><b>Creator Match</b><em>5 · 8-point</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterProduct('xfold')"><b>Open X-Fold deck</b><em>Enter</em></button>
+          </div>
+        </div>
+      </article>
+      <article class="ceo-engine" onclick="enterProduct('s2fe')">
+        <div class="ceo-eh"><b>S2FE</b><span>Discovery</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;2.3L</div>
+          <div class="ceo-sub">Weekend Exploration · MarCom total</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndKM('s2fe')"><b>Creator Match</b><em>3 · 15-point</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterProduct('s2fe')"><b>Open S2FE deck</b><em>Enter</em></button>
+          </div>
+        </div>
+      </article>
+      <article class="ceo-engine" onclick="enterVendor()">
+        <div class="ceo-eh"><b>DOP Vendors</b><span>Production</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">8</div>
+          <div class="ceo-sub">Vendors scored · 5 films locked</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterVendor()"><b>Vendor scorecard</b><em>Open</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterVendorAlloc()"><b>Work allocation</b><em>5 films</em></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="lwrap" style="display:none;">
     <div class="orgwrap">
       <ul class="orgtree">
         <li>
@@ -3043,9 +3123,10 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <button class="festival-tab" id="ftab-posm" onclick="switchFestivalTab('posm')">BRANDING &middot; POSM</button>
   </div>
   <div id="festival-panel-activation" class="festival-panel">
-  <div class="lwrap">
-    <div class="lbrand">FTPL &middot; Tamil Nadu &middot; 2026</div>
-    <div class="ltitle">DIWALI<span> &rsquo;26</span></div>
+  <div class="ceo-board">
+    <div class="ceo-kicker">FTPL · Tamil Nadu · 2026</div>
+    <h1 class="ceo-title">Diwali ’26</h1>
+    <p class="ceo-lede">₹72L MarCom — HO for emotion, JBP for trade. Store POSM is the other tab.</p>
     <div class="lkpis">
       <div class="lkpi g"><b>&#8377;72L</b><span>Total Activation</span></div>
       <div class="lkpi b"><b>&#8377;18L</b><span>HO Activation</span></div>
@@ -3053,6 +3134,30 @@ img,video,iframe,canvas,svg{max-width:100%;}
       <div class="lkpi"><b>9</b><span>Trade Partners</span></div>
       <div class="lkpi"><b>15</b><span>Campaigns</span></div>
     </div>
+    <div class="ceo-engines engines-2">
+      <article class="ceo-engine" onclick="openDiwaliHO()">
+        <div class="ceo-eh"><b>HO Activation</b><span>2 activities</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;18L</div>
+          <div class="ceo-sub">Emotional video · Consumer contest</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();openDiwaliHO()"><b>Open HO plan</b><em>Enter</em></button>
+          </div>
+        </div>
+      </article>
+      <article class="ceo-engine" onclick="openDiwaliJBP()">
+        <div class="ceo-eh"><b>JBP Trade Plan</b><span>9 partners</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;54L</div>
+          <div class="ceo-sub">15 campaigns · festive trade</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();openDiwaliJBP()"><b>Open JBP plan</b><em>Enter</em></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="lwrap" style="display:none;">
     <div class="orgwrap">
       <ul class="orgtree orgtree-big">
         <li>
@@ -5276,6 +5381,7 @@ function fitLanding(){
     var c=wrap.__lcanvas;
     if(!c){c=document.createElement('div');c.className='lcanvas';while(wrap.firstChild){c.appendChild(wrap.firstChild);}wrap.appendChild(c);wrap.__lcanvas=c;}
     if(page.classList.contains('hidden'))return;
+    if(page.querySelector('.ceo-board'))return;
     c.style.transform='none';c.style.marginBottom='0px';
     var cs=getComputedStyle(wrap);
     var availH=page.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom);
