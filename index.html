@@ -1670,6 +1670,77 @@ img,video,iframe,canvas,svg{max-width:100%;}
 @media(max-width:900px){.orgtree-big .onode{width:min(330px,86vw);min-height:160px;}.orgtree-big .onode.root{min-width:0;width:min(460px,92vw);}}
 .h1review-panel .h1-tab.active,.h2dir-tab.active{color:#fff !important;background:#002B6B;border-color:#002B6B;}
 .npl-tab-bar{background:#001A4A !important;border-bottom:0;}
+/* NPL Retail Com — stack and scroll; do not lock pages to the viewport */
+#npl-panel-retail{
+  flex-direction:column;
+  overflow:hidden;
+  min-height:0;
+}
+#npl-branding.npl-branding-panel{
+  position:relative !important;
+  inset:auto !important;
+  z-index:auto !important;
+  flex:1;
+  min-height:0;
+  width:100%;
+  overflow:auto !important;
+  display:flex;
+  flex-direction:column;
+  background:var(--bg,#EEF3FD);
+}
+#npl-branding.h1deck{overflow:auto !important;}
+#npl-branding .page,
+#npl-branding #npl-p4{
+  height:auto !important;
+  min-height:0 !important;
+  max-width:1360px;
+  width:100%;
+  overflow:visible !important;
+  flex:none;
+  padding:1.15rem 1.5rem 1.6rem;
+  gap:0.85rem;
+  box-sizing:border-box;
+}
+#npl-branding .stat-row,
+#npl-branding .grid-2,
+#npl-branding .grid-3,
+#npl-branding .cmp-grid,
+#npl-branding .dm-grid,
+#npl-branding .ic-grid,
+#npl-branding .ad-kpis,
+#npl-branding .ad-tracks,
+#npl-branding .ad-lower,
+#npl-branding .ad-ct,
+#npl-branding .ad-flow{
+  flex:none;
+  min-height:unset;
+}
+#npl-branding .timeline{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:0.5rem;
+}
+#npl-branding .tl-step{min-width:0;padding:0.7rem 0.55rem;}
+#npl-branding .tl-step .tl-k{overflow-wrap:anywhere;}
+#npl-branding .cmp-name{flex-wrap:wrap;align-items:flex-start;}
+#npl-branding .cmp-val{width:auto;min-width:4.6rem;white-space:nowrap;}
+#npl-branding .panel{min-width:0;}
+#npl-p3 .grid-2{grid-template-columns:minmax(0,1.25fr) minmax(0,0.75fr);}
+#npl-p4 .ad-flow-row{flex-wrap:wrap;}
+#npl-p4 .ad-step{min-width:7.5rem;}
+#npl-branding .arrs{display:none !important;}
+@media(max-width:1200px){
+  #npl-branding .timeline{grid-template-columns:repeat(3,minmax(0,1fr));}
+  #npl-branding .cmp-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  #npl-p3 .grid-2{grid-template-columns:1fr;}
+}
+@media(max-width:720px){
+  #npl-branding .timeline,
+  #npl-branding .cmp-grid,
+  #npl-branding .stat-row,
+  #npl-branding .grid-3,
+  #npl-p4 .ad-kpis{grid-template-columns:1fr;}
+}
 /* ========== END POLISH ========== */
 
 </style>
@@ -2877,32 +2948,32 @@ img,video,iframe,canvas,svg{max-width:100%;}
   <div class="cmp-legend"><span><i style="background:#2563EB;"></i>V70 (previous)</span><span><i style="background:#E8622A;"></i>V80 (this launch)</span></div>
   <div class="cmp-grid">
       <div class="cmp-card">
-        <div class="cmp-name">📱 Dummy<span class="cmp-badge up">▲ +6.6%</span></div>
+        <div class="cmp-name">Dummy<span class="cmp-badge up">▲ +6.6%</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:71%"></div></div><span class="cmp-val">₹22.66 L</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:76%"></div></div><span class="cmp-val">₹24.15 L</span></div>
       </div>
       <div class="cmp-card">
-        <div class="cmp-name">💡 Tabletop & Floor Luminous<span class="cmp-badge up">▲ +9.2%</span></div>
+        <div class="cmp-name">Tabletop &amp; Floor Luminous<span class="cmp-badge up">▲ +9.2%</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:88%"></div></div><span class="cmp-val">₹28.14 L</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:96%"></div></div><span class="cmp-val">₹30.72 L</span></div>
       </div>
       <div class="cmp-card">
-        <div class="cmp-name">🧵 Lampcloth<span class="cmp-badge down">▼ −4.7%</span></div>
+        <div class="cmp-name">Lampcloth<span class="cmp-badge down">▼ −4.7%</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:36%"></div></div><span class="cmp-val">₹11.55 L</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:35%"></div></div><span class="cmp-val">₹11.01 L</span></div>
       </div>
       <div class="cmp-card">
-        <div class="cmp-name">📦 Domestic Material<span class="cmp-badge up">▲ +3.3%</span></div>
+        <div class="cmp-name">Domestic Material<span class="cmp-badge up">▲ +3.3%</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:63%"></div></div><span class="cmp-val">₹20.01 L</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:65%"></div></div><span class="cmp-val">₹20.68 L</span></div>
       </div>
       <div class="cmp-card">
-        <div class="cmp-name">🪧 ISB & OSB<span class="cmp-badge down">▼ −3%</span></div>
+        <div class="cmp-name">ISB &amp; OSB<span class="cmp-badge down">▼ −3%</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:100%"></div></div><span class="cmp-val">₹31.86 L</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:97%"></div></div><span class="cmp-val">₹30.9 L</span></div>
       </div>
       <div class="cmp-card">
-        <div class="cmp-name">🏷️ POSM<span class="cmp-badge down">▼ −21%</span></div>
+        <div class="cmp-name">POSM<span class="cmp-badge down">▼ −21%</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:55%"></div></div><span class="cmp-val">₹17.66 L</span></div>
         <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:44%"></div></div><span class="cmp-val">₹14 L</span></div>
       </div>
@@ -5434,8 +5505,11 @@ function showLanding(){closeModal();document.querySelectorAll('.kmpage.open').fo
 function openV80(){document.getElementById('entry').classList.add('hidden');document.getElementById('diwali').classList.add('hidden');document.getElementById('npl-container').classList.remove('hidden');document.getElementById('landing').classList.remove('hidden');setTimeout(fitLanding,20);}
 function switchNPLTab(tab){
   ['marcom','retail','huc'].forEach(function(t){
-    document.getElementById('npl-panel-'+t).style.display = t===tab ? 'block' : 'none';
-    document.getElementById('npl-tab-'+t).classList.toggle('active', t===tab);
+    var panel=document.getElementById('npl-panel-'+t);
+    var shown=t===tab;
+    if(t==='retail') panel.style.display=shown?'flex':'none';
+    else panel.style.display=shown?'block':'none';
+    document.getElementById('npl-tab-'+t).classList.toggle('active', shown);
   });
   if(tab==='marcom'){
     document.getElementById('landing').classList.remove('hidden');
