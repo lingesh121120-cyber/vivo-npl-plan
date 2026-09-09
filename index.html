@@ -1227,8 +1227,8 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 }
 /* ========== H1 REVIEW PANEL — SCOPED STYLES ========== */
 .h1review-panel{flex:1;display:flex;flex-direction:column;min-height:0;}
-.h1review-panel .h1-tab-bar{display:flex;gap:0.4rem;background:#fff;border-bottom:1px solid rgba(11,23,48,0.10);padding:0.65rem 1.5rem;flex-shrink:0;overflow-x:auto;height:auto;align-items:center;}
-.h1review-panel .h1-tab-bar::-webkit-scrollbar{display:none;}
+.h1review-panel .h1-tab-bar{display:flex;gap:0.4rem;background:transparent;border-bottom:0;padding:0.55rem 0.4rem;flex:1;min-width:0;overflow-x:auto;overflow-y:hidden;height:auto;align-items:center;flex-wrap:nowrap;scroll-padding-inline:12px;scrollbar-width:none;}
+.h1review-panel .h1-tab-bar::-webkit-scrollbar{display:none;height:0;}
 .h1review-panel .h1-tab{font-family:Inter,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;background:transparent;border:1px solid transparent;border-radius:999px;padding:0.42rem 0.9rem;height:auto;cursor:pointer;white-space:nowrap;transition:color 0.15s,background 0.15s,border-color 0.15s;}
 .h1review-panel .h1-tab:hover{color:#1566C0;background:rgba(21,102,192,0.08);}
 .h1review-panel .h1-tab.active{color:#fff;background:#002B6B;border-color:#002B6B;}
@@ -1467,8 +1467,8 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2branding-panel .zone-head{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.45rem;}
 .h2branding-panel .zone-name{font-weight:800;font-size:1.1rem;color:#2563EB;}
 /* H2 Direction tab bar */
-.h2dir-tab-bar{display:flex;gap:0.35rem;background:#fff;border-bottom:1px solid rgba(11,23,48,0.10);padding:0.55rem 1.4rem;flex-shrink:0;overflow-x:auto;height:auto;align-items:center;}
-.h2dir-tab-bar::-webkit-scrollbar{display:none;}
+.h2dir-tab-bar{display:flex;gap:0.35rem;background:transparent;border-bottom:0;padding:0.55rem 0.4rem;flex:1;min-width:0;overflow-x:auto;overflow-y:hidden;height:auto;align-items:center;flex-wrap:nowrap;scroll-padding-inline:12px;scrollbar-width:none;}
+.h2dir-tab-bar::-webkit-scrollbar{display:none;height:0;}
 .h2dir-tab{font-size:0.64rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;background:transparent;border:1px solid transparent;border-radius:999px;padding:0.4rem 0.8rem;height:auto;cursor:pointer;white-space:nowrap;transition:color 0.15s,background 0.15s;}
 .h2dir-tab:hover{color:#1566C0;background:rgba(21,102,192,0.08);}
 .h2dir-tab.active{color:#fff;background:#002B6B;border-color:#002B6B;}
@@ -1544,8 +1544,18 @@ img,video,iframe,canvas,svg{max-width:100%;}
 }
 .h2branding-panel .kpi,.h2branding-panel .panel,.h2branding-panel .stat,.h2branding-panel .pillar{min-width:0;overflow:hidden;}
 .h2branding-panel .k-num,.h2branding-panel .s-num{overflow-wrap:anywhere;}
-.h2dir-tab-bar{min-width:0;flex-wrap:wrap;overflow-x:visible;row-gap:0.4rem;}
-.h2dir-tab{flex:none;}
+.cc-tab-rail{display:flex;align-items:stretch;flex:none;min-width:0;background:#fff;border-bottom:1px solid rgba(11,23,48,0.10);position:relative;}
+.cc-tab-chev{flex:none;width:42px;border:0;background:#F4F7FB;color:#002B6B;font-size:1.55rem;font-weight:700;line-height:1;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;z-index:2;border-left:1px solid rgba(11,23,48,0.08);border-right:1px solid rgba(11,23,48,0.08);}
+.cc-tab-chev:hover{background:#1566C0;color:#fff;}
+.cc-tab-chev:disabled{opacity:0.28;cursor:default;background:#F4F7FB;color:#002B6B;}
+.cc-tab-rail.no-overflow .cc-tab-chev{visibility:hidden;}
+.cc-tab-rail::before,.cc-tab-rail::after{content:"";position:absolute;top:0;bottom:0;width:32px;pointer-events:none;z-index:1;opacity:0;transition:opacity .15s;}
+.cc-tab-rail::before{left:38px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0));}
+.cc-tab-rail::after{right:38px;background:linear-gradient(270deg,#fff,rgba(255,255,255,0));}
+.cc-tab-rail.can-left::before,.cc-tab-rail.can-right::after{opacity:1;}
+.h1review-panel .cc-tab-rail{flex-shrink:0;}
+.h2dir-tab-bar,.h1review-panel .h1-tab-bar{flex-wrap:nowrap !important;overflow-x:auto !important;overflow-y:hidden !important;}
+.h2dir-tab,.h1review-panel .h1-tab{flex:none;}
 #npl-container #landing .lkpis{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));width:100%;max-width:1320px;gap:0.7rem;margin-left:auto;margin-right:auto;}
 #npl-container #landing .lkpi{min-width:0;padding:1rem 0.65rem;}
 #npl-container #landing .lkpi b{font-size:clamp(1.1rem,1.7vw,1.65rem);white-space:normal;}
@@ -3301,12 +3311,16 @@ img,video,iframe,canvas,svg{max-width:100%;}
   <!-- H1 CONTENT PANEL -->
   <div class="h1review-panel">
     <!-- TAB BAR -->
-    <div class="h1-tab-bar">
+    <div class="cc-tab-rail" id="h1-tab-rail">
+      <button type="button" class="cc-tab-chev" data-rail="h1-tab-scroller" data-dir="-1" aria-label="Scroll tabs left">&#8249;</button>
+      <div class="h1-tab-bar" id="h1-tab-scroller">
       <button class="h1-tab active" id="h1-tab-1" onclick="switchH1Tab('page-1',this)">FY26-27 H1 — COST ANALYSIS</button>
       <button class="h1-tab" id="h1-tab-2" onclick="switchH1Tab('page-2',this)">H1 HIGHLIGHTS</button>
       <button class="h1-tab" id="h1-tab-3" onclick="switchH1Tab('page-3',this)">KOL DATABASE</button>
       <button class="h1-tab" id="h1-tab-4" onclick="switchH1Tab('page-4',this)">PROJECT ANALYSIS</button>
       <button class="h1-tab" id="h1-tab-5" onclick="switchH1Tab('page-5',this)">AUDIT ANALYSIS</button>
+      </div>
+      <button type="button" class="cc-tab-chev" data-rail="h1-tab-scroller" data-dir="1" aria-label="Scroll tabs right">&#8250;</button>
     </div>
 <section class="page" id="page-1" style="display:flex;">
   <header>
@@ -3611,7 +3625,9 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <span class="h2dir-title">H2 DIRECTION — FY 2026-27</span>
   </div>
   <!-- TAB BAR -->
-  <div class="h2dir-tab-bar">
+  <div class="cc-tab-rail" id="h2dir-tab-rail">
+    <button type="button" class="cc-tab-chev" data-rail="h2dir-tab-scroller" data-dir="-1" aria-label="Scroll tabs left">&#8249;</button>
+    <div class="h2dir-tab-bar" id="h2dir-tab-scroller">
     <button class="h2dir-tab active" id="h2dir-tab-1" onclick="switchH2Tab('h2dir-p1',this)">MAJOR ISSUE &amp; DIRECTION</button>
     <button class="h2dir-tab" id="h2dir-tab-2" onclick="switchH2Tab('h2dir-p2',this)">USER STRATEGY &amp; 5H HERO</button>
     <button class="h2dir-tab" id="h2dir-tab-2b" onclick="switchH2Tab('h2dir-p2b',this)">DIFFERENT USER · DIFFERENT STRATEGY</button>
@@ -3622,6 +3638,8 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <button class="h2dir-tab" id="h2dir-tab-7" onclick="switchH2Tab('h2dir-p7',this)">STORE BRANDING</button>
     <button class="h2dir-tab" id="h2dir-tab-8" onclick="switchH2Tab('h2dir-p8',this)">AUDIT &amp; ACTION</button>
     <button class="h2dir-tab" id="h2dir-tab-9" onclick="switchH2Tab('h2dir-p9',this)">SUPPLY &amp; COUNTER-ATTACK</button>
+    </div>
+    <button type="button" class="cc-tab-chev" data-rail="h2dir-tab-scroller" data-dir="1" aria-label="Scroll tabs right">&#8250;</button>
   </div>
   <!-- CONTENT PANEL -->
   <div class="h2branding-panel">
@@ -5016,6 +5034,7 @@ function openH1Review(){
   el.style.display='flex';
   var firstTab=document.getElementById('h1-tab-1');
   switchH1Tab('page-1',firstTab);
+  setTimeout(function(){syncTabRail(document.getElementById('h1-tab-scroller'));},40);
 }
 function closeH1Review(){
   var el=document.getElementById('h1review');
@@ -5023,6 +5042,60 @@ function closeH1Review(){
   el.style.display='none';
   closeH2Direction();
   document.getElementById('entry').classList.remove('hidden');
+}
+function syncTabRail(scroller){
+  if(!scroller)return;
+  var rail=scroller.closest('.cc-tab-rail');
+  if(!rail)return;
+  var max=Math.max(0,scroller.scrollWidth-scroller.clientWidth);
+  var x=scroller.scrollLeft;
+  rail.classList.toggle('no-overflow',max<=2);
+  rail.classList.toggle('can-left',x>2);
+  rail.classList.toggle('can-right',x<max-2);
+  rail.querySelectorAll('.cc-tab-chev').forEach(function(btn){
+    var dir=Number(btn.getAttribute('data-dir'));
+    btn.disabled=max<=2||(dir<0&&x<=2)||(dir>0&&x>=max-2);
+  });
+}
+function scrollTabIntoRail(btn){
+  if(!btn)return;
+  var rail=btn.parentElement;
+  if(!rail)return;
+  var pad=16;
+  var left=btn.offsetLeft-pad;
+  var right=btn.offsetLeft+btn.offsetWidth+pad;
+  var sl=rail.scrollLeft;
+  var vis=sl+rail.clientWidth;
+  if(left<sl)rail.scrollTo({left:Math.max(0,left),behavior:'smooth'});
+  else if(right>vis)rail.scrollTo({left:right-rail.clientWidth,behavior:'smooth'});
+  setTimeout(function(){syncTabRail(rail);},280);
+}
+function bindTabRails(){
+  document.querySelectorAll('.cc-tab-rail .cc-tab-chev').forEach(function(btn){
+    if(btn.dataset.bound)return;
+    btn.dataset.bound='1';
+    btn.addEventListener('click',function(){
+      var scroller=document.getElementById(btn.getAttribute('data-rail'));
+      if(!scroller)return;
+      var step=Math.max(240,Math.round(scroller.clientWidth*0.62));
+      scroller.scrollBy({left:Number(btn.getAttribute('data-dir'))*step,behavior:'smooth'});
+    });
+  });
+  document.querySelectorAll('.cc-tab-rail [id$="-scroller"]').forEach(function(scroller){
+    if(scroller.dataset.bound)return;
+    scroller.dataset.bound='1';
+    scroller.addEventListener('scroll',function(){syncTabRail(scroller);},{passive:true});
+    scroller.addEventListener('wheel',function(e){
+      if(Math.abs(e.deltaY)>Math.abs(e.deltaX) && !e.shiftKey){
+        scroller.scrollLeft+=e.deltaY;
+        e.preventDefault();
+      }
+    },{passive:false});
+    syncTabRail(scroller);
+  });
+  window.addEventListener('resize',function(){
+    document.querySelectorAll('.cc-tab-rail [id$="-scroller"]').forEach(syncTabRail);
+  });
 }
 function switchH1Tab(pageId,btn){
   document.querySelectorAll('.h1review-panel .page').forEach(function(p){
@@ -5034,11 +5107,14 @@ function switchH1Tab(pageId,btn){
     t.classList.remove('active');
   });
   if(btn)btn.classList.add('active');
+  scrollTabIntoRail(btn);
+  syncTabRail(document.getElementById('h1-tab-scroller'));
 }
 function openH2Direction(){
   document.getElementById('h2direction').classList.add('visible');
   var firstTab=document.getElementById('h2dir-tab-1');
   switchH2Tab('h2dir-p1',firstTab);
+  setTimeout(function(){syncTabRail(document.getElementById('h2dir-tab-scroller'));},40);
 }
 function closeH2Direction(){
   var el=document.getElementById('h2direction');
@@ -5054,6 +5130,8 @@ function switchH2Tab(pageId,btn){
     t.classList.remove('active');
   });
   if(btn)btn.classList.add('active');
+  scrollTabIntoRail(btn);
+  syncTabRail(document.getElementById('h2dir-tab-scroller'));
 }
 function dbFrameScroll(dir){frameSnap('#diwali-branding .h1frame',dir);}
 function openDiwaliBranding(){document.getElementById('entry').classList.add('hidden');document.getElementById('diwali-branding').classList.remove('hidden');setTimeout(fitLanding,20);}
@@ -5213,10 +5291,10 @@ function fitLanding(){
 }
 var fitT;function fitDeckSoon(){clearTimeout(fitT);fitT=setTimeout(function(){fitDeck();fitLanding();},90);}
 window.addEventListener('resize',fitDeckSoon);
-window.addEventListener('load',function(){setTimeout(function(){fitDeck();fitLanding();},120);});
+window.addEventListener('load',function(){setTimeout(function(){fitDeck();fitLanding();bindTabRails();},120);});
 
 buildDots();updateCtr();['v80','xfold','s2fe'].forEach(initObs);
-setTimeout(function(){fitDeck();fitLanding();},180);
+setTimeout(function(){fitDeck();fitLanding();bindTabRails();},180);
 
 </script>
 
