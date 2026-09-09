@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>vivo &middot; Tamil Nadu Launch Plan 2026</title>
+<title>vivo Tamil Nadu · Marketing Command Centre 2026–27</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,16 +12,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap');
 
 *{box-sizing:border-box;margin:0;padding:0;}
-html,body{height:100%;overflow:hidden;background:#F0F4FB;font-family:"Bahnschrift SemiBold SemiCondensed","Arial Narrow","Space Grotesk",system-ui,sans-serif;}
+html,body{height:100%;overflow:hidden;background:#F4F7FB;font-family:Inter,"Space Grotesk",system-ui,sans-serif;}
 /* lift typography on large screens (hero, creator/vendor pages); auto-fit slides self-compensate */
 @media(min-width:1600px){html{font-size:17.5px;}}
 @media(min-width:1900px){html{font-size:19px;}}
 @media(min-width:2400px){html{font-size:21px;}}
 :root{
-  --g:#2563EB;--g2:#1D4ED8;--gd:rgba(37,99,235,0.07);--gb:rgba(37,99,235,0.28);
-  --ink:#0A0F1A;--ink2:rgba(10,15,26,0.82);--ink3:rgba(10,15,26,0.60);
+  --navy:#002B6B;--g:#1566C0;--g2:#0D47A1;--gd:rgba(21,102,192,0.08);--gb:rgba(21,102,192,0.28);
+  --ink:#0A1628;--ink2:rgba(10,22,40,0.82);--ink3:rgba(10,22,40,0.58);
   --line:rgba(11,18,32,0.09);--line2:rgba(11,18,32,0.15);
-  --bg:#FFFFFF;--bg2:#F5F8FD;--bg3:#F2F6FC;--bg4:#E7EFFA;--blue:#2563EB;
+  --bg:#FFFFFF;--bg2:#F4F7FB;--bg3:#F2F6FC;--bg4:#E7EFFA;--blue:#1566C0;
 }
 .tbar{position:fixed;top:0;left:0;right:0;height:48px;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--line2);display:flex;align-items:center;padding:0 2.5rem;gap:0.4rem;z-index:400;}
 .tbrand{font-size:0.68rem;font-weight:700;color:var(--ink3);letter-spacing:0.22em;text-transform:uppercase;margin-right:2rem;}
@@ -459,12 +459,53 @@ tfoot td{color:var(--ink);font-weight:700;border-top:1px solid var(--gb);backgro
 .md-brands{display:flex;flex-wrap:wrap;gap:0.3rem;}
 .bpill{font-size:0.62rem;background:var(--bg4);color:var(--ink2);padding:0.16rem 0.5rem;border-radius:3px;}
 /* =============== LANDING PAGE =============== */
-.landing{position:fixed;inset:0;z-index:800;overflow-y:auto;background:radial-gradient(ellipse at 50% -15%,rgba(37,99,235,0.10),transparent 55%),var(--bg);}
+.landing{position:fixed;inset:0;z-index:800;overflow-y:auto;background:#F0F4FA;}
+body:has(#entry.cc-home:not(.hidden)) > .deck,
+body:has(#entry.cc-home:not(.hidden)) > .tbar,
+body:has(#entry.cc-home:not(.hidden)) > .dots,
+body:has(#entry.cc-home:not(.hidden)) > .arrs,
+body:has(#entry.cc-home:not(.hidden)) > .slidectr,
+body:has(#h1review:not(.hidden)) > .deck,
+body:has(#h1review:not(.hidden)) > .tbar,
+body:has(#h1review:not(.hidden)) > .dots,
+body:has(#h1review:not(.hidden)) > .arrs,
+body:has(#h1review:not(.hidden)) > .slidectr,
+body:has(#npl-container:not(.hidden)) > .deck,
+body:has(#npl-container:not(.hidden)) > .tbar,
+body:has(#npl-container:not(.hidden)) > .dots,
+body:has(#npl-container:not(.hidden)) > .arrs,
+body:has(#npl-container:not(.hidden)) > .slidectr,
+body:has(#diwali:not(.hidden)) > .deck,
+body:has(#diwali:not(.hidden)) > .tbar,
+body:has(#diwali:not(.hidden)) > .dots,
+body:has(#diwali:not(.hidden)) > .arrs,
+body:has(#diwali:not(.hidden)) > .slidectr,
+body:has(#h2direction.visible) > .deck,
+body:has(#h2direction.visible) > .tbar,
+body:has(#h2direction.visible) > .dots,
+body:has(#h2direction.visible) > .arrs,
+body:has(#h2direction.visible) > .slidectr,
+body:has(#h2plan:not(.hidden)) > .deck,
+body:has(#h2plan:not(.hidden)) > .tbar,
+body:has(#h2plan:not(.hidden)) > .dots,
+body:has(#h2plan:not(.hidden)) > .arrs,
+body:has(#h2plan:not(.hidden)) > .slidectr,
+body:has(#diwali-branding:not(.hidden)) > .deck,
+body:has(#diwali-branding:not(.hidden)) > .tbar,
+body:has(#diwali-branding:not(.hidden)) > .dots,
+body:has(#diwali-branding:not(.hidden)) > .arrs,
+body:has(#diwali-branding:not(.hidden)) > .slidectr,
+body:has(#h2-branding:not(.hidden)) > .deck,
+body:has(#h2-branding:not(.hidden)) > .tbar,
+body:has(#h2-branding:not(.hidden)) > .dots,
+body:has(#h2-branding:not(.hidden)) > .arrs,
+body:has(#h2-branding:not(.hidden)) > .slidectr{display:none !important;}
 .landing.hidden{display:none;}
 /* ---- Entry chooser (V80 / Diwali) ---- */
 .entry-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;margin:2.6rem auto 0;max-width:1120px;width:100%;}
-.entry-grid.entry-grid-3{grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1340px;}
+.entry-grid.entry-grid-3{grid-template-columns:repeat(3,1fr);gap:1.4rem;max-width:1340px;}
 .entry-grid-3 .entry-card{padding:2.4rem 2rem;min-height:clamp(300px,50vh,440px);}
+.entry-grid-3 .entry-card.ec-kpi{padding:0;min-height:0;}
 .entry-grid-3 .ec-title{font-size:clamp(2rem,3vw,2.9rem);}
 .entry-grid-3 .ec-sub{font-size:1rem;}
 @media(max-width:900px){.entry-grid.entry-grid-3{grid-template-columns:1fr;}}
@@ -635,7 +676,13 @@ tfoot td{color:var(--ink);font-weight:700;border-top:1px solid var(--gb);backgro
 .entry-card.ec-review:hover{border-color:#1565C0;}
 .entry-card.ec-review .ec-tag{color:#FFFFFF;border-color:transparent;}
 /* ---- H1 Review · S2 Execution Summary ---- */
-#h1review{background:radial-gradient(ellipse at 50% -10%,rgba(37,99,235,0.08),transparent 55%),var(--bg);}
+#h1review{background:#F4F7FB;}
+#h1review > .s2bar{background:#002B6B;border-bottom:0;color:#fff;padding:0 1.4rem;height:56px;align-items:center;}
+#h1review > .s2bar .s2title{color:#fff;font-family:Sora,Inter,sans-serif;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;}
+#h1review > .s2bar .kt-back{background:transparent;border-color:rgba(255,255,255,0.28);color:#fff;}
+#h1review > .s2bar .kt-back:hover{background:#1566C0;border-color:#1566C0;color:#fff;}
+#h1review .h2-dir-btn{background:#1566C0;border-radius:8px;letter-spacing:0.1em;}
+#h1review .h2-dir-btn:hover{background:#0D47A1;}
 .s2bar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,0.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line2);display:flex;align-items:center;gap:1rem;padding:0.75rem 2rem;}
 .s2bar .s2title{font-size:0.9rem;font-weight:800;color:var(--ink);white-space:nowrap;}
 .s2bar .s2meta{font-size:0.72rem;color:var(--ink3);}
@@ -716,6 +763,46 @@ tfoot td{color:var(--ink);font-weight:700;border-top:1px solid var(--gb);backgro
 .ec-sub{font-size:1.15rem;color:var(--ink2);line-height:1.7;margin-bottom:auto;max-width:34ch;}
 .ec-enter{margin-top:2rem;font-size:1.2rem;font-weight:800;color:var(--blue);}
 .entry-card.ec-diwali .ec-enter{color:#b26a00;}
+/* ---- Command Centre home ---- */
+#entry.cc-home{display:flex;flex-direction:column;overflow:hidden;background:#E8EEF7;isolation:isolate;}
+#entry.cc-home.hidden{display:none;}
+.cc-bar{flex:none;height:58px;background:#001A4A;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 1.75rem;z-index:8;border-bottom:1px solid rgba(255,255,255,0.08);}
+.cc-bar-left{display:flex;align-items:center;gap:0.9rem;min-width:0;}
+.cc-mark{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:1.28rem;letter-spacing:-0.02em;line-height:1;}
+.cc-bar-div{width:1px;height:16px;background:rgba(255,255,255,0.22);flex:none;}
+.cc-bar-title{font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;opacity:0.82;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#entry.cc-home .landing-present{position:static;background:transparent;border:1px solid rgba(255,255,255,0.32);color:#fff;border-radius:8px;padding:0.38rem 0.95rem;letter-spacing:0.12em;text-transform:uppercase;font-size:0.68rem;}
+#entry.cc-home .landing-present:hover{background:#1566C0;border-color:#1566C0;color:#fff;}
+.cc-hero-bleed{flex:none;background:linear-gradient(105deg,rgba(0,26,74,0) 40%,rgba(21,102,192,0.22) 100%),repeating-linear-gradient(90deg,rgba(255,255,255,0.035) 0 1px,transparent 1px 72px),repeating-linear-gradient(0deg,rgba(255,255,255,0.03) 0 1px,transparent 1px 72px),linear-gradient(118deg,#001A4A 0%,#002B6B 48%,#0A4A9E 100%);color:#fff;padding:clamp(1.6rem,3.2vh,2.4rem) 0 4.2rem;}
+.cc-hero-inner{width:100%;max-width:1360px;margin:0 auto;padding:0 1.75rem;}
+.cc-kicker{font-size:0.64rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#8FB7EA;margin-bottom:0.55rem;}
+.cc-hero-title{font-family:Sora,Inter,sans-serif;font-size:clamp(1.85rem,3.4vw,2.85rem);font-weight:800;letter-spacing:-0.03em;line-height:1.05;text-transform:uppercase;margin:0;}
+.cc-hero-title span{color:#7EB3F0;}
+.cc-hero-sub{margin:0.55rem 0 0;font-size:1rem;line-height:1.5;color:rgba(255,255,255,0.82);max-width:48ch;font-weight:400;}
+.cc-stage{flex:1;min-height:0;display:flex;flex-direction:column;width:100%;max-width:1360px;margin:-2.6rem auto 0;padding:0 1.75rem 1.8rem;position:relative;z-index:2;}
+#entry.cc-home .entry-grid.entry-grid-3{margin:0;max-width:none;width:100%;gap:1.25rem;flex:1;}
+#entry.cc-home .entry-grid-3 .entry-card.ec-kpi{min-height:100%;height:100%;}
+.entry-card.ec-kpi{background:#fff;border:0;padding:0;overflow:hidden;border-radius:18px;box-shadow:0 18px 50px rgba(0,26,74,0.16);display:flex;flex-direction:column;}
+.entry-card.ec-kpi:hover{border-color:transparent;box-shadow:0 26px 60px rgba(0,26,74,0.24);transform:translateY(-6px);}
+.entry-card.ec-kpi.ec-review,.entry-card.ec-kpi.ec-v80,.entry-card.ec-kpi.ec-diwali{background:#fff;border-color:transparent;}
+.entry-card.ec-kpi .ec-head{display:flex;align-items:center;justify-content:space-between;gap:0.8rem;background:#001A4A;color:#fff;padding:1.15rem 1.4rem;min-height:4.7rem;margin:0;width:100%;border-radius:0;}
+.entry-card.ec-kpi .ec-head-label{font-family:Sora,Inter,sans-serif;font-size:clamp(0.7rem,0.92vw,0.86rem);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;line-height:1.3;margin:0;}
+.entry-card.ec-kpi .ec-icon{flex:none;width:38px;height:38px;border-radius:50%;background:rgba(21,102,192,0.22);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;}
+.entry-card.ec-kpi .ec-icon svg{width:17px;height:17px;display:block;}
+.entry-card.ec-kpi .ec-body{display:flex;flex-direction:column;flex:1;padding:1.55rem 1.4rem 1.25rem;background:#fff;}
+.entry-card.ec-kpi .ec-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;flex:1;align-content:center;}
+.entry-card.ec-kpi .ec-kpi-cell{min-width:0;text-align:left;padding:0 0.85rem 0 0;background:none;border:0;}
+.entry-card.ec-kpi .ec-kpi-cell + .ec-kpi-cell{border-left:1px solid rgba(11,23,48,0.08);padding:0 0.2rem 0 0.95rem;}
+.entry-card.ec-kpi .ec-kpi-val{font-family:Sora,Inter,sans-serif;font-size:clamp(1.02rem,1.55vw,1.62rem);font-weight:800;color:#001A4A;line-height:1.12;letter-spacing:-0.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;}
+.entry-card.ec-kpi .ec-kpi-cell:first-child .ec-kpi-val{color:#1566C0;}
+.entry-card.ec-kpi .ec-kpi-lbl{font-size:0.56rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B7B9C;margin-top:0.48rem;line-height:1.25;}
+.entry-card.ec-kpi .ec-enter{margin-top:1.4rem;padding:0.7rem 0 0;border-top:1px solid rgba(11,23,48,0.08);align-self:stretch;display:flex;align-items:center;justify-content:space-between;font-size:0.68rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#1566C0;}
+.entry-card.ec-kpi .ec-enter::after{content:"→";width:28px;height:28px;border-radius:50%;border:1px solid rgba(21,102,192,0.28);display:inline-flex;align-items:center;justify-content:center;font-size:0.9rem;letter-spacing:0;}
+.entry-card.ec-kpi:hover .ec-enter::after{background:#1566C0;border-color:#1566C0;color:#fff;}
+.entry-card.ec-kpi.ec-diwali .ec-enter{color:#1566C0;}
+.entry-card.ec-kpi.ec-diwali:hover{border-color:transparent;box-shadow:0 26px 60px rgba(0,26,74,0.24);}
+@media(max-width:1280px){.entry-card.ec-kpi .ec-kpi-val{font-size:clamp(0.92rem,1.35vw,1.2rem);white-space:normal;overflow:visible;text-overflow:unset;}}
+@media(max-width:1100px){.cc-bar-title{display:none;}}
 .sb2grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
 .sb2-card{position:relative;border-radius:18px;padding:2rem 1.7rem;border:1px solid var(--line2);background:var(--bg3);display:flex;flex-direction:column;}
 .sb2-head{display:flex;align-items:center;gap:0.9rem;margin-bottom:1.1rem;}
@@ -1159,11 +1246,40 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 }
 /* ========== H1 REVIEW PANEL — SCOPED STYLES ========== */
 .h1review-panel{flex:1;display:flex;flex-direction:column;min-height:0;}
-.h1review-panel .h1-tab-bar{display:flex;gap:0;background:#FFFFFF;border-bottom:1px solid rgba(11,23,48,0.10);padding:0 2rem;flex-shrink:0;overflow-x:auto;height:48px;align-items:flex-end;}
-.h1review-panel .h1-tab-bar::-webkit-scrollbar{display:none;}
-.h1review-panel .h1-tab{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;background:transparent;border:none;border-bottom:3px solid transparent;padding:0 1.2rem;height:48px;cursor:pointer;white-space:nowrap;transition:color 0.15s,border-color 0.15s;}
-.h1review-panel .h1-tab:hover{color:#2B54E6;}
-.h1review-panel .h1-tab.active{color:#2B54E6;border-bottom-color:#2B54E6;}
+.h1review-panel .h1-tab-bar{display:flex;gap:0.4rem;background:transparent;border-bottom:0;padding:0.55rem 0.4rem;flex:1;min-width:0;overflow-x:auto;overflow-y:hidden;height:auto;align-items:center;flex-wrap:nowrap;scroll-padding-inline:12px;scrollbar-width:none;}
+.h1review-panel .h1-tab-bar::-webkit-scrollbar{display:none;height:0;}
+.h1review-panel .h1-tab{font-family:Inter,sans-serif;font-size:0.66rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;background:transparent;border:1px solid transparent;border-radius:999px;padding:0.42rem 0.9rem;height:auto;cursor:pointer;white-space:nowrap;transition:color 0.15s,background 0.15s,border-color 0.15s;}
+.h1review-panel .h1-tab:hover{color:#1566C0;background:rgba(21,102,192,0.08);}
+.h1review-panel .h1-tab.active{color:#fff;background:#002B6B;border-color:#002B6B;}
+.h1review-panel .page{flex:1;min-height:0;overflow-y:auto;height:auto;padding:clamp(1.2rem,2.6vw,2.2rem) clamp(1.4rem,3.2vw,2.8rem);display:none;flex-direction:column;gap:clamp(0.9rem,1.6vw,1.4rem);max-width:1480px;margin:0 auto;width:100%;font-family:Inter,system-ui,sans-serif;}
+.h1review-panel .eyebrow{font-size:0.68rem;letter-spacing:0.14em;color:#1566C0;text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;}
+.h1review-panel .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#1566C0;box-shadow:0 0 0 4px rgba(21,102,192,0.18);}
+.h1review-panel h1.title{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:clamp(1.55rem,3.2vw,2.35rem);line-height:1.08;letter-spacing:-0.02em;margin:0.45rem 0 0.3rem;color:#002B6B;}
+.h1review-panel h1.title span{color:#1566C0;}
+.h1review-panel .kpi .k-num{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1;letter-spacing:-0.03em;margin:0.45rem 0 0.15rem;color:#002B6B;}
+.h1review-panel .kpi .k-num.blue{color:#1566C0;}
+.h1review-panel .kpi::after{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:#002B6B;}
+.h1review-panel .kpi .k-foot b{color:#1566C0;font-weight:700;}
+.h1review-panel .bar-fill.ho{background:#1566C0;}
+.h1review-panel .bar-fill.jbp{background:#002B6B;}
+.h1review-panel .util-fill{height:100%;width:83.4%;background:#1566C0;border-radius:8px;}
+.h1review-panel .k-meter{height:6px;background:#E8EEF8;border-radius:99px;margin-top:0.85rem;overflow:hidden;}
+.h1review-panel .k-meter span{display:block;height:100%;background:#1566C0;border-radius:99px;}
+.h1review-panel .k-meter.crit span{background:#DC2626;}
+.h1review-panel .k-meter.ok span{background:#15A34A;}
+.h1review-panel .k-meter.warn span{background:#B45309;}
+.h1review-panel .tbl-scroll{overflow:auto;flex:1;min-height:280px;}
+#page-4 .panel{min-height:0;flex:1;}
+#page-4 .tbl-scroll{min-height:320px;}
+.h1review-panel .hl-split{display:grid;grid-template-columns:0.9fr 1.1fr;gap:clamp(1rem,2vw,1.8rem);align-items:start;flex:1;}
+.h1review-panel .hl-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:0.7rem;align-content:start;}
+.h1review-panel .hl-card{padding:0.55rem 0.7rem;}
+.h1review-panel .kdb-pill .kp-ic{display:none;}
+.h1review-panel .gcard .g-ic{display:none;}
+.h1review-panel .kdb-pill .kp-num{font-family:Sora,Inter,sans-serif;color:#1566C0;}
+.h1review-panel .gcard .g-ct{font-family:Sora,Inter,sans-serif;}
+.h1review-panel .gcard .g-bar span{background:#1566C0;}
+.h1review-panel .hp-title small{color:#1566C0;}
 .h1review-panel .page{flex:1;min-height:0;overflow-y:auto;height:auto;padding:clamp(1.6rem,3.4vw,3rem) clamp(1.4rem,4vw,4rem);display:none;flex-direction:column;gap:clamp(1.1rem,2vw,1.8rem);max-width:1480px;margin:0 auto;width:100%;}
 .h1review-panel .eyebrow{font-size:0.72rem;letter-spacing:0.14em;color:#2B54E6;text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;}
 .h1review-panel .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#2B54E6;box-shadow:0 0 0 4px rgba(62,99,255,0.20);}
@@ -1270,19 +1386,37 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h1review-panel .placeholder-icon{font-size:3rem;}
 .h1review-panel .placeholder-label{font-weight:800;font-size:1.2rem;letter-spacing:0.1em;text-transform:uppercase;color:#3D4E73;}
 .h1review-panel .placeholder-text{font-size:0.9rem;color:#6B7B9C;text-align:center;line-height:1.6;}
+.h1review-panel .eyebrow{color:#1566C0;}
+.h1review-panel .eyebrow::before{background:#1566C0;box-shadow:0 0 0 4px rgba(21,102,192,0.18);}
+.h1review-panel h1.title{font-family:Sora,Inter,sans-serif;color:#002B6B;}
+.h1review-panel h1.title span{color:#1566C0;}
+.h1review-panel .kpi::after{background:#002B6B;}
+.h1review-panel .kpi .k-num{font-family:Sora,Inter,sans-serif;color:#002B6B;font-size:clamp(2.15rem,3.6vw,3.1rem);}
+.h1review-panel .kpi .k-num.blue{color:#1566C0;}
+.h1review-panel .kpi .k-foot b{color:#1566C0;}
+.h1review-panel .bar-fill.ho{background:#1566C0;}
+.h1review-panel .bar-fill.jbp{background:#002B6B;}
+.h1review-panel .util-fill{background:#1566C0;}
+.h1review-panel .tbl-scroll{min-height:280px;}
+.h1review-panel .hl-split{align-items:start;}
+.h1review-panel .kdb-pill .kp-ic,.h1review-panel .gcard .g-ic{display:none;}
+.h1review-panel .kdb-pill .kp-num,.h1review-panel .gcard .g-ct{font-family:Sora,Inter,sans-serif;}
+.h1review-panel .kdb-pill .kp-num{color:#1566C0;}
+.h1review-panel .gcard .g-bar span{background:#1566C0;}
+#page-4 .tbl-scroll{min-height:340px;}
 /* H2 Direction toggle button in s2bar */
 .h2-dir-btn{margin-left:auto;background:linear-gradient(135deg,#0D47A1,#1976D2);color:#fff;border:none;border-radius:8px;padding:0.4rem 1.1rem;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;}
 .h2-dir-btn:hover{background:linear-gradient(135deg,#1976D2,#1E88E5);}
 /* H2 Direction shell */
 #h2direction{display:none;position:fixed;inset:0;background:#F0F4FB;z-index:900;flex-direction:column;}
 #h2direction.visible{display:flex;}
-.h2dir-bar{display:flex;align-items:center;gap:1rem;padding:0 1.5rem;height:56px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.08);flex-shrink:0;}
-.h2dir-back{background:none;border:none;font-size:0.85rem;font-weight:700;color:#0D47A1;cursor:pointer;letter-spacing:0.05em;}
-.h2dir-title{font-size:0.9rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;}
+.h2dir-bar{display:flex;align-items:center;gap:1rem;padding:0 1.5rem;height:56px;background:#002B6B;border-bottom:0;flex-shrink:0;}
+.h2dir-back{background:none;border:1px solid rgba(255,255,255,0.28);border-radius:6px;padding:0.26rem 0.7rem;font-size:0.72rem;font-weight:700;color:#fff;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;}
+.h2dir-title{font-family:Sora,Inter,sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;}
 .h2dir-body{flex:1;display:flex;align-items:center;justify-content:center;color:#6B7B9C;font-size:1rem;}
 /* ========== END H1 REVIEW PANEL ========== */
 /* ========== H2 DIRECTION — SCOPED STYLES ========== */
-.h2branding-panel{--font-display:'Sora',system-ui,sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-mono:'IBM Plex Mono',ui-monospace,monospace;--bg:#EEF3FD;--card:#FFFFFF;--card-2:#F3F6FD;--ink-0:#0B1730;--ink-1:#3D4E73;--ink-2:#6B7B9C;--blue:#2563EB;--blue-2:#3E63FF;--cyan:#1D4ED8;--amber:#B45309;--orange:#E8622A;--green:#15A34A;--red:#DC2626;--hair:rgba(11,23,48,0.10);--glow:rgba(62,99,255,0.16);}
+.h2branding-panel{--font-display:'Sora',system-ui,sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-mono:'IBM Plex Mono',ui-monospace,monospace;--bg:#F4F7FB;--card:#FFFFFF;--card-2:#F3F6FD;--ink-0:#0B1730;--ink-1:#3D4E73;--ink-2:#6B7B9C;--blue:#1566C0;--blue-2:#1566C0;--cyan:#0D47A1;--amber:#B45309;--orange:#E8622A;--green:#15A34A;--red:#DC2626;--hair:rgba(11,23,48,0.10);--glow:rgba(21,102,192,0.16);}
 .h2branding-panel{margin:0;padding:0;background:var(--bg);color:var(--ink-0);font-family:var(--font-body);-webkit-font-smoothing:antialiased;flex:1;display:flex;flex-direction:column;min-height:0;overflow-y:auto;}
 .h2branding-panel .page{height:auto;flex:none;overflow:visible;padding:clamp(1.3rem,2.8vw,2.4rem) clamp(1.4rem,4vw,3.4rem);display:none;flex-direction:column;gap:clamp(0.6rem,1.1vw,1rem);max-width:1520px;margin:0 auto;width:100%;min-height:calc(100vh - 104px);}
 .h2branding-panel .eyebrow{font-size:0.7rem;letter-spacing:0.14em;color:#2563EB;text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;}
@@ -1352,11 +1486,11 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2branding-panel .zone-head{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.45rem;}
 .h2branding-panel .zone-name{font-weight:800;font-size:1.1rem;color:#2563EB;}
 /* H2 Direction tab bar */
-.h2dir-tab-bar{display:flex;gap:0;background:#FFFFFF;border-bottom:1px solid rgba(11,23,48,0.10);padding:0 2rem;flex-shrink:0;overflow-x:auto;height:48px;align-items:flex-end;}
-.h2dir-tab-bar::-webkit-scrollbar{display:none;}
-.h2dir-tab{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;background:transparent;border:none;border-bottom:3px solid transparent;padding:0 1.2rem;height:48px;cursor:pointer;white-space:nowrap;transition:color 0.15s,border-color 0.15s;}
-.h2dir-tab:hover{color:#2563EB;}
-.h2dir-tab.active{color:#2563EB;border-bottom-color:#2563EB;}
+.h2dir-tab-bar{display:flex;gap:0.35rem;background:transparent;border-bottom:0;padding:0.55rem 0.4rem;flex:1;min-width:0;overflow-x:auto;overflow-y:hidden;height:auto;align-items:center;flex-wrap:nowrap;scroll-padding-inline:12px;scrollbar-width:none;}
+.h2dir-tab-bar::-webkit-scrollbar{display:none;height:0;}
+.h2dir-tab{font-size:0.64rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;background:transparent;border:1px solid transparent;border-radius:999px;padding:0.4rem 0.8rem;height:auto;cursor:pointer;white-space:nowrap;transition:color 0.15s,background 0.15s;}
+.h2dir-tab:hover{color:#1566C0;background:rgba(21,102,192,0.08);}
+.h2dir-tab.active{color:#fff;background:#002B6B;border-color:#002B6B;}
 .h2branding-panel .panel-t .pt-badge{font-size:0.6rem;font-weight:700;color:#6B7B9C;background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:20px;padding:0.2rem 0.55rem;text-transform:uppercase;letter-spacing:0.05em;}
 .h2branding-panel .glimpse{border-radius:14px;overflow:hidden;border:1px solid rgba(11,23,48,0.10);box-shadow:0 12px 30px rgba(11,23,48,0.1);flex:1;min-height:0;}
 .h2branding-panel .glimpse img{width:100%;height:100%;object-fit:cover;display:block;}
@@ -1409,6 +1543,134 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .ec-body .ec-title{font-family:'Sora',system-ui,sans-serif;font-weight:800;}
 .ec-kpi-num{font-family:'Sora',system-ui,sans-serif;}
 /* ========== END GLOBAL TYPOGRAPHY SYSTEM ========== */
+/* ========== COMMAND CENTRE POLISH — overflow, chrome, alignment ========== */
+.ceo-board{width:100%;max-width:1360px;margin:0 auto;padding:1.15rem 1.5rem 1.5rem;display:flex;flex-direction:column;box-sizing:border-box;}
+.ceo-kicker{font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#1566C0;}
+.ceo-title{font-family:Sora,Inter,sans-serif;font-size:clamp(1.55rem,2.8vw,2.25rem);font-weight:800;color:#002B6B;letter-spacing:-0.03em;text-transform:uppercase;margin:0.28rem 0 0.2rem;line-height:1.1;}
+.ceo-lede{font-size:0.9rem;color:#3D4E73;margin:0 0 1rem;max-width:62ch;line-height:1.45;}
+.ceo-engines{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.9rem;align-items:stretch;}
+.ceo-engines.engines-2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:920px;width:100%;margin:0 auto;}
+.ceo-engines.engines-2 .ceo-engine{min-height:280px;}
+.ceo-engine{background:#fff;border:1px solid rgba(11,23,48,0.08);border-radius:16px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;min-width:0;box-shadow:0 10px 28px rgba(0,26,74,0.08);transition:transform .18s,box-shadow .18s;}
+.ceo-engine:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,26,74,0.14);}
+.ceo-eh{background:#001A4A;color:#fff;padding:0.82rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:0.5rem;}
+.ceo-eh b{font-family:Sora,Inter,sans-serif;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;}
+.ceo-eh span{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.72;white-space:nowrap;}
+.ceo-eb{padding:1rem 1rem 0.95rem;display:flex;flex-direction:column;gap:0.4rem;flex:1;min-width:0;}
+.ceo-hero{font-family:Sora,Inter,sans-serif;font-size:clamp(1.35rem,2vw,1.7rem);font-weight:800;color:#1566C0;letter-spacing:-0.04em;line-height:1;}
+.ceo-sub{font-size:0.76rem;color:#6B7B9C;line-height:1.35;}
+.ceo-rows{display:flex;flex-direction:column;gap:0.32rem;margin-top:auto;padding-top:0.55rem;}
+.ceo-row{display:flex;justify-content:space-between;align-items:center;gap:0.45rem;background:#F4F7FB;border-radius:8px;padding:0.42rem 0.62rem;border:0;width:100%;text-align:left;cursor:pointer;font-family:inherit;}
+.ceo-row:hover{background:#E3ECF8;}
+.ceo-row b{font-size:0.7rem;color:#0B1730;font-weight:700;min-width:0;}
+.ceo-row em{font-style:normal;font-size:0.68rem;font-weight:800;color:#1566C0;white-space:nowrap;}
+@media(max-width:1100px){.ceo-engines{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:640px){.ceo-engines,.ceo-engines.engines-2{grid-template-columns:1fr;}}
+.huc-pillar-grid > div > div:nth-child(2){display:none;}
+#npl-container #landing{display:flex;flex-direction:column;overflow:auto;}
+#npl-container #landing.hidden{display:none;}
+#diwali .festival-panel{overflow:auto;}
+.entry-card.ec-kpi{border:1px solid rgba(11,23,48,0.06);}
+button:focus-visible,.ceo-engine:focus-visible,.entry-card:focus-visible{outline:2px solid #1566C0;outline-offset:2px;}
+::selection{background:rgba(21,102,192,0.18);}
+img,video,iframe,canvas,svg{max-width:100%;}
+.cc-mod-bar{flex:none;height:56px;background:#001A4A;color:#fff;display:flex;align-items:center;gap:0.85rem;padding:0 1.4rem;z-index:12;border-bottom:1px solid rgba(255,255,255,0.08);}
+.cc-mod-back{background:transparent;border:1px solid rgba(255,255,255,0.28);color:#fff;border-radius:6px;padding:0.26rem 0.75rem;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;font-family:inherit;}
+.cc-mod-back:hover{background:#1566C0;border-color:#1566C0;}
+.cc-mod-mark{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:-0.02em;}
+.cc-mod-title{font-family:Sora,Inter,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:0.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#npl-container #landing>.entry-back,#npl-container #landing>.landing-present{display:none !important;}
+#npl-container{background:#E8EEF7;}
+.npl-tab-bar{height:56px;align-items:center;gap:0.35rem;background:#001A4A;border-bottom:0;padding:0 1.4rem;}
+.npl-back-btn{color:#fff;border-bottom:0;height:auto;padding:0.26rem 0.75rem;border:1px solid rgba(255,255,255,0.28);border-radius:6px;letter-spacing:0.1em;}
+.npl-back-btn:hover{color:#fff;background:#1566C0;border-color:#1566C0;}
+.npl-tab{color:rgba(255,255,255,0.62);height:auto;padding:0.4rem 0.9rem;border:1px solid transparent;border-radius:999px;border-bottom:1px solid transparent;}
+.npl-tab:hover{color:#fff;background:rgba(255,255,255,0.08);}
+.npl-tab.active{color:#fff;background:#1566C0;border-color:#1566C0;border-bottom-color:#1566C0;}
+#npl-container .npl-panel>.landing{overflow-x:hidden;min-height:0;}
+#npl-container #landing .lwrap{padding-top:clamp(1.4rem,3vh,2.4rem);justify-content:flex-start;}
+#npl-container #landing .ltitle{font-family:Sora,Inter,sans-serif;color:#002B6B;font-size:clamp(1.7rem,3.4vw,2.6rem);}
+#npl-container #landing .lbrand{color:#1566C0;}
+.orgwrap{max-width:100%;overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;}
+.onode{min-width:0;}
+.onode .on-t,.onode .on-s{overflow-wrap:anywhere;word-break:break-word;}
+.lkpis{max-width:100%;justify-content:center;}
+.lkpi{min-width:0;}
+.lkpi b{overflow-wrap:anywhere;}
+#diwali{display:flex;flex-direction:column;overflow:hidden;background:#E8EEF7;}
+#diwali.hidden{display:none;}
+#diwali .festival-tab-bar{padding:0.55rem 1.4rem;margin:0;background:#fff;border-bottom:1px solid rgba(11,23,48,0.10);gap:0.35rem;align-items:center;}
+#diwali .festival-tab{background:transparent;border:1px solid transparent;border-radius:999px;color:#6B7B9C;padding:0.4rem 0.95rem;}
+#diwali .festival-tab.active{color:#fff;background:#002B6B;border-color:#002B6B;border-bottom:1px solid #002B6B;}
+#diwali .festival-panel{height:auto;flex:1;min-height:0;}
+#diwali #festival-panel-activation .lwrap{padding-top:clamp(1.2rem,2.4vh,2rem);justify-content:flex-start;}
+#diwali .ltitle{font-family:Sora,Inter,sans-serif;color:#002B6B;font-size:clamp(1.7rem,3.4vw,2.6rem);}
+#diwali .lbrand{color:#1566C0;}
+.festival-posm-panel .page{height:auto;min-height:calc(100vh - 118px);}
+.festival-posm-panel .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#1566C0;box-shadow:0 0 0 4px rgba(21,102,192,0.18);display:inline-block;}
+.festival-posm-panel h1.title span{color:#1566C0;}
+.festival-posm-nav{z-index:40;}
+.npl-branding-panel .page{height:auto;min-height:calc(100vh - 56px);}
+.huc-pillar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-bottom:1.5rem;}
+.huc-score-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-bottom:1.5rem;}
+@media(max-width:1100px){.huc-pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.huc-score-grid{grid-template-columns:1fr;}}
+@media(max-width:640px){.huc-pillar-grid{grid-template-columns:1fr;}}
+.h1review-panel .kpi,.h1review-panel .panel,.h1review-panel .hl-card,.h1review-panel .gcard,.h1review-panel .kdb-pill{min-width:0;overflow:hidden;}
+.h1review-panel .k-num{overflow-wrap:anywhere;}
+.h1review-panel .kpis{grid-template-columns:repeat(3,minmax(0,1fr));}
+.h1review-panel .bar-track{overflow:hidden;}
+.h1review-panel .bar-fill{min-width:4.6rem;padding-left:0.45rem;font-size:0.7rem;}
+.h1review-panel .hl-split{min-width:0;}
+.h1review-panel .kdb-genres{grid-template-columns:repeat(7,minmax(0,1fr));}
+@media(max-width:1100px){
+  .h1review-panel .kpis{grid-template-columns:1fr;}
+  .h1review-panel .hl-split{grid-template-columns:1fr;}
+  .h1review-panel .kdb-genres{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .h1review-panel .kdb-band{grid-template-columns:1fr;}
+}
+.h2branding-panel .kpi,.h2branding-panel .panel,.h2branding-panel .stat,.h2branding-panel .pillar{min-width:0;overflow:hidden;}
+.h2branding-panel .k-num,.h2branding-panel .s-num{overflow-wrap:anywhere;}
+.cc-tab-rail{display:flex;align-items:stretch;flex:none;min-width:0;background:#fff;border-bottom:1px solid rgba(11,23,48,0.10);position:relative;}
+.cc-tab-chev{flex:none;width:42px;border:0;background:#F4F7FB;color:#002B6B;font-size:1.55rem;font-weight:700;line-height:1;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;z-index:2;border-left:1px solid rgba(11,23,48,0.08);border-right:1px solid rgba(11,23,48,0.08);}
+.cc-tab-chev:hover{background:#1566C0;color:#fff;}
+.cc-tab-chev:disabled{opacity:0.28;cursor:default;background:#F4F7FB;color:#002B6B;}
+.cc-tab-rail.no-overflow .cc-tab-chev{visibility:hidden;}
+.cc-tab-rail::before,.cc-tab-rail::after{content:"";position:absolute;top:0;bottom:0;width:32px;pointer-events:none;z-index:1;opacity:0;transition:opacity .15s;}
+.cc-tab-rail::before{left:38px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0));}
+.cc-tab-rail::after{right:38px;background:linear-gradient(270deg,#fff,rgba(255,255,255,0));}
+.cc-tab-rail.can-left::before,.cc-tab-rail.can-right::after{opacity:1;}
+.h1review-panel .cc-tab-rail{flex-shrink:0;}
+.h2dir-tab-bar,.h1review-panel .h1-tab-bar{flex-wrap:nowrap !important;overflow-x:auto !important;overflow-y:hidden !important;}
+.h2dir-tab,.h1review-panel .h1-tab{flex:none;}
+#npl-container #landing .lkpis{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));width:100%;max-width:1320px;gap:0.7rem;margin-left:auto;margin-right:auto;}
+#npl-container #landing .lkpi{min-width:0;padding:1rem 0.65rem;}
+#npl-container #landing .lkpi b{font-size:clamp(1.1rem,1.7vw,1.65rem);white-space:normal;}
+#diwali .lkpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));width:100%;max-width:1080px;gap:0.7rem;margin-left:auto;margin-right:auto;}
+#diwali .lkpi{min-width:0;padding:1rem 0.75rem;}
+#diwali .lkpi b{font-size:clamp(1.15rem,1.8vw,1.7rem);white-space:normal;}
+.festival-posm-panel .eyebrow{color:#1566C0;}
+.onode .on-b{padding:0.28rem 0.7rem;line-height:1.2;}
+.lkpi b{white-space:normal;}
+@media(max-width:1100px){
+  #npl-container #landing .lkpis{grid-template-columns:repeat(4,minmax(0,1fr));}
+  #diwali .lkpis{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+.festival-posm-panel .mat-grid{grid-template-columns:repeat(4,minmax(0,1fr));min-width:0;}
+.festival-posm-panel .mat-card,.festival-posm-panel .plan-card{min-width:0;overflow:hidden;}
+.festival-posm-panel .head-row{min-width:0;}
+.festival-posm-panel .total-badge{flex-wrap:wrap;}
+.npl-branding-panel .stat .s-num{overflow-wrap:anywhere;}
+.cc-home .entry-grid.entry-grid-3{align-items:stretch;min-width:0;}
+.cc-home .entry-card.ec-kpi{min-width:0;}
+.entry-card.ec-kpi .ec-head-label{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.entry-card.ec-kpi .ec-kpi-lbl{overflow-wrap:anywhere;}
+#h2plan .h2s-flow-step{white-space:normal;}
+#h2plan .h2s-card{min-width:0;overflow:hidden;}
+.pc-ic{display:none;}
+@media(max-width:900px){.orgtree-big .onode{width:min(330px,86vw);min-height:160px;}.orgtree-big .onode.root{min-width:0;width:min(460px,92vw);}}
+.h1review-panel .h1-tab.active,.h2dir-tab.active{color:#fff !important;background:#002B6B;border-color:#002B6B;}
+.npl-tab-bar{background:#001A4A !important;border-bottom:0;}
+/* ========== END POLISH ========== */
 
 </style>
 </head>
@@ -2423,9 +2685,11 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 <div class="landing hidden" id="landing">
   <button class="entry-back" onclick="backToEntry()">&larr; Back</button>
   <button class="present-btn landing-present" onclick="togglePresent()"><span id="presentTxt2">&#9974; Present</span></button>
-  <div class="lwrap">
-    <div class="lbrand">FTPL &middot; Tamil Nadu &middot; 2026</div>
-    <div class="ltitle">vivo Tamilnadu<span id="hubLabel"></span></div>
+  <div class="ceo-board">
+    <div class="ceo-kicker">FTPL · Tamil Nadu · Oct 6–30</div>
+    <h1 class="ceo-title">NPL Plan</h1>
+    <span id="hubLabel" hidden></span>
+    <p class="ceo-lede">₹71L MarCom across V80, X-Fold 6 and S2FE. Window Oct 6–30. Store branding sits on Retail Com.</p>
     <div class="lkpis">
       <div class="lkpi g"><b>&#8377;71L</b><span>Total Investment</span></div>
       <div class="lkpi"><b>3</b><span>Models</span></div>
@@ -2435,6 +2699,56 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
       <div class="lkpi"><b>15</b><span>Campaigns</span></div>
       <div class="lkpi"><b>8</b><span>DOP Vendors</span></div>
     </div>
+    <div class="ceo-engines">
+      <article class="ceo-engine" onclick="enterProduct('v80')">
+        <div class="ceo-eh"><b>vivo V80</b><span>Primary</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;66.4L</div>
+          <div class="ceo-sub">ZEISS Telephoto · MarCom total</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndSlide('v80',5)"><b>HO Activation</b><em>&#8377;10.4L</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndJBP()"><b>JBP Trade Plan</b><em>&#8377;56L</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndKM('v80')"><b>KOL — 3 videos</b><em>&#8377;8L</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndSlide('v80',5)"><b>Social + Unboxing</b><em>&#8377;40K + &#8377;2L</em></button>
+          </div>
+        </div>
+      </article>
+      <article class="ceo-engine" onclick="enterProduct('xfold')">
+        <div class="ceo-eh"><b>X-Fold 6</b><span>Foldable</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;2.3L</div>
+          <div class="ceo-sub">Business Class · MarCom total</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndKM('xfold')"><b>Creator Match</b><em>5 · 8-point</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterProduct('xfold')"><b>Open X-Fold deck</b><em>Enter</em></button>
+          </div>
+        </div>
+      </article>
+      <article class="ceo-engine" onclick="enterProduct('s2fe')">
+        <div class="ceo-eh"><b>S2FE</b><span>Discovery</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;2.3L</div>
+          <div class="ceo-sub">Weekend Exploration · MarCom total</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterAndKM('s2fe')"><b>Creator Match</b><em>3 · 15-point</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterProduct('s2fe')"><b>Open S2FE deck</b><em>Enter</em></button>
+          </div>
+        </div>
+      </article>
+      <article class="ceo-engine" onclick="enterVendor()">
+        <div class="ceo-eh"><b>DOP Vendors</b><span>Production</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">8</div>
+          <div class="ceo-sub">Vendors scored · 5 films locked</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterVendor()"><b>Vendor scorecard</b><em>Open</em></button>
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();enterVendorAlloc()"><b>Work allocation</b><em>5 films</em></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="lwrap" style="display:none;">
     <div class="orgwrap">
       <ul class="orgtree">
         <li>
@@ -2784,7 +3098,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
     <p style="font-size:0.95rem;color:#3D4E73;max-width:70ch;line-height:1.5;">Four pillars — College Partnership, IT Park Professional, White-Collar Community, and Vivo Week Contest — building premium brand perception across Tamil Nadu.</p>
   </div>
   <!-- 4 PILLAR CARDS -->
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;">
+  <div class="huc-pillar-grid">
     <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);position:relative;overflow:hidden;">
       <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#2563EB);"></div>
       <div style="font-size:1.8rem;margin-bottom:0.5rem;">🎓</div>
@@ -2815,7 +3129,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
     </div>
   </div>
   <!-- IT PARK PERCEPTION SCORE -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+  <div class="huc-score-grid">
     <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
       <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;margin-bottom:0.8rem;">IT PARK — PERCEPTION SCORE TRAJECTORY</div>
       <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
@@ -2858,15 +3172,21 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
   </div>
 </div>
 <div class="landing hidden" id="diwali">
-  <button class="entry-back" onclick="backToEntry()">&larr; Back</button>
+  <header class="cc-mod-bar">
+    <button type="button" class="cc-mod-back" onclick="backToEntry()">&larr; Back</button>
+    <span class="cc-mod-mark">vivo</span>
+    <span class="cc-bar-div"></span>
+    <span class="cc-mod-title">Festival — Diwali ’26</span>
+  </header>
   <div class="festival-tab-bar">
     <button class="festival-tab active" id="ftab-activation" onclick="switchFestivalTab('activation')">MARCOM ACTIVATION</button>
     <button class="festival-tab" id="ftab-posm" onclick="switchFestivalTab('posm')">BRANDING &middot; POSM</button>
   </div>
   <div id="festival-panel-activation" class="festival-panel">
-  <div class="lwrap">
-    <div class="lbrand">FTPL &middot; Tamil Nadu &middot; 2026</div>
-    <div class="ltitle">DIWALI<span> &rsquo;26</span></div>
+  <div class="ceo-board">
+    <div class="ceo-kicker">FTPL · Tamil Nadu · 2026</div>
+    <h1 class="ceo-title">Diwali ’26</h1>
+    <p class="ceo-lede">₹72L MarCom — HO for emotion, JBP for trade. Store POSM is the other tab.</p>
     <div class="lkpis">
       <div class="lkpi g"><b>&#8377;72L</b><span>Total Activation</span></div>
       <div class="lkpi b"><b>&#8377;18L</b><span>HO Activation</span></div>
@@ -2874,6 +3194,30 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
       <div class="lkpi"><b>9</b><span>Trade Partners</span></div>
       <div class="lkpi"><b>15</b><span>Campaigns</span></div>
     </div>
+    <div class="ceo-engines engines-2">
+      <article class="ceo-engine" onclick="openDiwaliHO()">
+        <div class="ceo-eh"><b>HO Activation</b><span>2 activities</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;18L</div>
+          <div class="ceo-sub">Emotional video · Consumer contest</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();openDiwaliHO()"><b>Open HO plan</b><em>Enter</em></button>
+          </div>
+        </div>
+      </article>
+      <article class="ceo-engine" onclick="openDiwaliJBP()">
+        <div class="ceo-eh"><b>JBP Trade Plan</b><span>9 partners</span></div>
+        <div class="ceo-eb">
+          <div class="ceo-hero">&#8377;54L</div>
+          <div class="ceo-sub">15 campaigns · festive trade</div>
+          <div class="ceo-rows">
+            <button type="button" class="ceo-row" onclick="event.stopPropagation();openDiwaliJBP()"><b>Open JBP plan</b><em>Enter</em></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="lwrap" style="display:none;">
     <div class="orgwrap">
       <ul class="orgtree orgtree-big">
         <li>
@@ -2997,99 +3341,70 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
   </div>
   </div>
 </div>
-<div class="landing" id="entry">
-  <button class="present-btn landing-present" onclick="togglePresent()"><span>&#9974; Present</span></button>
-  <div class="lwrap" style="max-width:1580px;">
-    <div class="lbrand">vivo Tamil Nadu &middot; MarCom</div>
-    <div class="ltitle">VIVO TAMILNADU<span> 2026</span></div>
+<div class="landing cc-home" id="entry">
+  <header class="cc-bar">
+    <div class="cc-bar-left">
+      <span class="cc-mark">vivo</span>
+      <span class="cc-bar-div"></span>
+      <span class="cc-bar-title">Tamil Nadu 2026–27 · Marketing Command Centre</span>
+    </div>
+    <button class="present-btn landing-present" onclick="togglePresent()"><span>Present</span></button>
+  </header>
+  <section class="cc-hero-bleed">
+    <div class="cc-hero-inner">
+      <div class="cc-kicker">FY26–27 · MarCom</div>
+      <h1 class="cc-hero-title">VIVO TAMILNADU <span>2026</span></h1>
+      <p class="cc-hero-sub">H1 performance, new product launch, and Diwali execution on one executive board.</p>
+    </div>
+  </section>
+  <div class="cc-stage">
     <div class="entry-grid entry-grid-3">
-      <!-- TILE 1: H1 REVIEW / H2 DIRECTION -->
-      <div class="entry-card ec-review" onclick="openH1Review()">
-        <div class="ec-header">
-          <div class="ec-header-icon">📊</div>
-          <div class="ec-header-meta">
-            <div class="ec-header-cat">Performance Audit</div>
-            <div class="ec-header-label">H1 REVIEW / H2 DIRECTION</div>
+      <div class="entry-card ec-review ec-kpi" onclick="openH1Review()">
+        <div class="ec-head">
+          <div class="ec-head-label">H1 REVIEW / H2 DIRECTION</div>
+          <div class="ec-icon" aria-hidden="true" title="Performance Audit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M8 13v4M12 11v6M16 15v2"/></svg>
           </div>
         </div>
         <div class="ec-body">
-          <div class="ec-title">H1 REVIEW / H2 DIRECTION</div>
-          <div class="ec-sub">Cost · Project · Audit · Highlights · H2 Direction</div>
-          <div class="ec-kpi-row">
-            <div class="ec-kpi">
-              <div class="ec-kpi-num">₹1.45 Cr</div>
-              <div class="ec-kpi-lbl">H1 Spend</div>
-            </div>
-            <div class="ec-kpi">
-              <div class="ec-kpi-num">6.51 Cr</div>
-              <div class="ec-kpi-lbl">Reach</div>
-            </div>
-            <div class="ec-kpi">
-              <div class="ec-kpi-num">₹0.22</div>
-              <div class="ec-kpi-lbl">CPP</div>
-            </div>
+          <div class="ec-kpis">
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;1.45 Cr</div><div class="ec-kpi-lbl">H1 Spend</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">6.51 Cr</div><div class="ec-kpi-lbl">Reach</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;0.22</div><div class="ec-kpi-lbl">CPP</div></div>
           </div>
-          <div class="ec-enter">Enter →</div>
+          <div class="ec-enter">Enter module</div>
         </div>
       </div>
-
-      <!-- TILE 2: NPL -->
-      <div class="entry-card ec-v80" onclick="openV80()">
-        <div class="ec-header">
-          <div class="ec-header-icon">🚀</div>
-          <div class="ec-header-meta">
-            <div class="ec-header-cat">New Product Launch</div>
-            <div class="ec-header-label">NPL — V80 · X FOLD 6 · S2FE</div>
+      <div class="entry-card ec-v80 ec-kpi" onclick="openV80()">
+        <div class="ec-head">
+          <div class="ec-head-label">NEW PRODUCT LAUNCH</div>
+          <div class="ec-icon" aria-hidden="true" title="Rocket">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c.8-2.4 2.6-4.6 5.4-6.3 2.6-1.6 5.5-2.2 7.6-2.2.2 2.1-.4 5-2.1 7.6C14.2 16.9 12 18.7 9.6 19.5l-1.8-2.7L5 15z"/><path d="M9.5 14.5 5 19"/><circle cx="15.2" cy="8.8" r="1.2" fill="#fff" stroke="none"/></svg>
           </div>
         </div>
         <div class="ec-body">
-          <div class="ec-title">NPL</div>
-          <div class="ec-sub">V80 · X Fold 6 · S2 FE</div>
-          <div class="ec-kpi-row">
-            <div class="ec-kpi">
-              <div class="ec-kpi-num">₹66.4L</div>
-              <div class="ec-kpi-lbl">V80 Budget</div>
-            </div>
-            <div class="ec-kpi">
-              <div class="ec-kpi-num">1,564</div>
-              <div class="ec-kpi-lbl">WODs</div>
-            </div>
-            <div class="ec-kpi">
-              <div class="ec-kpi-num">₹1.31 Cr</div>
-              <div class="ec-kpi-lbl">Branding Inv</div>
-            </div>
+          <div class="ec-kpis">
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;66.4 L</div><div class="ec-kpi-lbl">V80 Budget</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">1,564</div><div class="ec-kpi-lbl">WODs</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;1.31 Cr</div><div class="ec-kpi-lbl">Branding Inv</div></div>
           </div>
-          <div class="ec-enter">Enter →</div>
+          <div class="ec-enter">Enter module</div>
         </div>
       </div>
-
-      <!-- TILE 3: FESTIVAL -->
-      <div class="entry-card ec-diwali" onclick="openDiwali()">
-        <div class="ec-header">
-          <div class="ec-header-icon">✨</div>
-          <div class="ec-header-meta">
-            <div class="ec-header-cat">Festival Season</div>
-            <div class="ec-header-label">FESTIVAL — DIWALI '26</div>
+      <div class="entry-card ec-diwali ec-kpi" onclick="openDiwali()">
+        <div class="ec-head">
+          <div class="ec-head-label">FESTIVAL &mdash; DIWALI &rsquo;26</div>
+          <div class="ec-icon" aria-hidden="true" title="Star">
+            <svg viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"><path d="m12 3.2 2.4 5.1 5.6.7-4.1 3.9 1.1 5.5L12 16.6 7 18.4l1.1-5.5L4 9l5.6-.7L12 3.2z"/></svg>
           </div>
         </div>
         <div class="ec-body">
-          <div class="ec-title">FESTIVAL — DIWALI '26</div>
-          <div class="ec-sub">Diwali '26 · Activation · Branding</div>
-          <div class="ec-kpi-row">
-            <div class="ec-kpi">
-              <div class="ec-kpi-num">₹72L</div>
-              <div class="ec-kpi-lbl">MarCom</div>
-            </div>
-            <div class="ec-kpi">
-              <div class="ec-kpi-num">12</div>
-              <div class="ec-kpi-lbl">POSM Matl</div>
-            </div>
-            <div class="ec-kpi">
-              <div class="ec-kpi-num">₹41.66L</div>
-              <div class="ec-kpi-lbl">POSM Invest</div>
-            </div>
+          <div class="ec-kpis">
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;72 L</div><div class="ec-kpi-lbl">MarCom</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">12</div><div class="ec-kpi-lbl">POSM Matl</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;41.66 L</div><div class="ec-kpi-lbl">POSM Invest</div></div>
           </div>
-          <div class="ec-enter">Enter →</div>
+          <div class="ec-enter">Enter module</div>
         </div>
       </div>
       <!-- HIDDEN CARDS: Merged into unified tiles per SK direction.
@@ -3161,12 +3476,16 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
   <!-- H1 CONTENT PANEL -->
   <div class="h1review-panel">
     <!-- TAB BAR -->
-    <div class="h1-tab-bar">
+    <div class="cc-tab-rail" id="h1-tab-rail">
+      <button type="button" class="cc-tab-chev" data-rail="h1-tab-scroller" data-dir="-1" aria-label="Scroll tabs left">&#8249;</button>
+      <div class="h1-tab-bar" id="h1-tab-scroller">
       <button class="h1-tab active" id="h1-tab-1" onclick="switchH1Tab('page-1',this)">FY26-27 H1 — COST ANALYSIS</button>
       <button class="h1-tab" id="h1-tab-2" onclick="switchH1Tab('page-2',this)">H1 HIGHLIGHTS</button>
       <button class="h1-tab" id="h1-tab-3" onclick="switchH1Tab('page-3',this)">KOL DATABASE</button>
       <button class="h1-tab" id="h1-tab-4" onclick="switchH1Tab('page-4',this)">PROJECT ANALYSIS</button>
       <button class="h1-tab" id="h1-tab-5" onclick="switchH1Tab('page-5',this)">AUDIT ANALYSIS</button>
+      </div>
+      <button type="button" class="cc-tab-chev" data-rail="h1-tab-scroller" data-dir="1" aria-label="Scroll tabs right">&#8250;</button>
     </div>
 <section class="page" id="page-1" style="display:flex;">
 <header>
@@ -3495,33 +3814,33 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
   </header>
 
   <div class="kdb-band">
-    <div class="kdb-pill"><span class="kp-ic">🤝</span><span class="kp-num">200+</span><span class="kp-lbl">KOL Database<small>Vetted TN creators, ready to activate</small></span></div>
-    <div class="kdb-pill"><span class="kp-ic">📺</span><span class="kp-num">20+</span><span class="kp-lbl">Media Channels<small>Digital &amp; regional amplification</small></span></div>
-    <div class="kdb-pill"><span class="kp-ic">🗂️</span><span class="kp-num">21</span><span class="kp-lbl">Genres Mapped<small>253 creators sorted by content genre</small></span></div>
+    <div class="kdb-pill"><span class="kp-num">200+</span><span class="kp-lbl">KOL Database<small>Vetted TN creators, ready to activate</small></span></div>
+    <div class="kdb-pill"><span class="kp-num">20+</span><span class="kp-lbl">Media Channels<small>Digital &amp; regional amplification</small></span></div>
+    <div class="kdb-pill"><span class="kp-num">21</span><span class="kp-lbl">Genres Mapped<small>253 creators sorted by content genre</small></span></div>
   </div>
 
   <div class="kdb-genres">
-    <div class="gcard"><div class="g-ic">✨</div><div class="g-ct">50</div><div class="g-nm">Lifestyle</div><div class="g-bar"><span style="width:100%"></span></div></div>
-    <div class="gcard"><div class="g-ic">⭐</div><div class="g-ct">44</div><div class="g-nm">Celebrity</div><div class="g-bar"><span style="width:88%"></span></div></div>
-    <div class="gcard"><div class="g-ic">📸</div><div class="g-ct">25</div><div class="g-nm">Model</div><div class="g-bar"><span style="width:50%"></span></div></div>
-    <div class="gcard"><div class="g-ic">📱</div><div class="g-ct">21</div><div class="g-nm">Tech &amp; Gadgets</div><div class="g-bar"><span style="width:42%"></span></div></div>
-    <div class="gcard"><div class="g-ic">✈️</div><div class="g-ct">21</div><div class="g-nm">Travel</div><div class="g-bar"><span style="width:42%"></span></div></div>
-    <div class="gcard"><div class="g-ic">🎬</div><div class="g-ct">19</div><div class="g-nm">Entertainment</div><div class="g-bar"><span style="width:38%"></span></div></div>
-    <div class="gcard"><div class="g-ic">💑</div><div class="g-ct">10</div><div class="g-nm">Couple</div><div class="g-bar"><span style="width:20%"></span></div></div>
-    <div class="gcard"><div class="g-ic">👗</div><div class="g-ct">9</div><div class="g-nm">Fashion</div><div class="g-bar"><span style="width:18%"></span></div></div>
-    <div class="gcard"><div class="g-ic">🎭</div><div class="g-ct">9</div><div class="g-nm">Acting</div><div class="g-bar"><span style="width:18%"></span></div></div>
-    <div class="gcard"><div class="g-ic">🍽️</div><div class="g-ct">8</div><div class="g-nm">Food</div><div class="g-bar"><span style="width:16%"></span></div></div>
-    <div class="gcard"><div class="g-ic">💄</div><div class="g-ct">6</div><div class="g-nm">Fashion &amp; Beauty</div><div class="g-bar"><span style="width:12%"></span></div></div>
-    <div class="gcard"><div class="g-ic">😂</div><div class="g-ct">6</div><div class="g-nm">Comedy</div><div class="g-bar"><span style="width:12%"></span></div></div>
-    <div class="gcard"><div class="g-ic">🎨</div><div class="g-ct">4</div><div class="g-nm">Art</div><div class="g-bar"><span style="width:8%"></span></div></div>
-    <div class="gcard"><div class="g-ic">👩‍🎤</div><div class="g-ct">4</div><div class="g-nm">Actress</div><div class="g-bar"><span style="width:8%"></span></div></div>
-    <div class="gcard"><div class="g-ic">💻</div><div class="g-ct">3</div><div class="g-nm">Tech</div><div class="g-bar"><span style="width:6%"></span></div></div>
-    <div class="gcard"><div class="g-ic">🖌️</div><div class="g-ct">3</div><div class="g-nm">Artist</div><div class="g-bar"><span style="width:6%"></span></div></div>
-    <div class="gcard"><div class="g-ic">🕺</div><div class="g-ct">3</div><div class="g-nm">Dancer</div><div class="g-bar"><span style="width:6%"></span></div></div>
-    <div class="gcard"><div class="g-ic">💼</div><div class="g-ct">2</div><div class="g-nm">Entrepreneurship</div><div class="g-bar"><span style="width:4%"></span></div></div>
-    <div class="gcard"><div class="g-ic">💅</div><div class="g-ct">2</div><div class="g-nm">Beauty</div><div class="g-bar"><span style="width:4%"></span></div></div>
-    <div class="gcard"><div class="g-ic">🎥</div><div class="g-ct">2</div><div class="g-nm">Actor</div><div class="g-bar"><span style="width:4%"></span></div></div>
-    <div class="gcard"><div class="g-ic">🎤</div><div class="g-ct">2</div><div class="g-nm">Anchor</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ct">50</div><div class="g-nm">Lifestyle</div><div class="g-bar"><span style="width:100%"></span></div></div>
+    <div class="gcard"><div class="g-ct">44</div><div class="g-nm">Celebrity</div><div class="g-bar"><span style="width:88%"></span></div></div>
+    <div class="gcard"><div class="g-ct">25</div><div class="g-nm">Model</div><div class="g-bar"><span style="width:50%"></span></div></div>
+    <div class="gcard"><div class="g-ct">21</div><div class="g-nm">Tech &amp; Gadgets</div><div class="g-bar"><span style="width:42%"></span></div></div>
+    <div class="gcard"><div class="g-ct">21</div><div class="g-nm">Travel</div><div class="g-bar"><span style="width:42%"></span></div></div>
+    <div class="gcard"><div class="g-ct">19</div><div class="g-nm">Entertainment</div><div class="g-bar"><span style="width:38%"></span></div></div>
+    <div class="gcard"><div class="g-ct">10</div><div class="g-nm">Couple</div><div class="g-bar"><span style="width:20%"></span></div></div>
+    <div class="gcard"><div class="g-ct">9</div><div class="g-nm">Fashion</div><div class="g-bar"><span style="width:18%"></span></div></div>
+    <div class="gcard"><div class="g-ct">9</div><div class="g-nm">Acting</div><div class="g-bar"><span style="width:18%"></span></div></div>
+    <div class="gcard"><div class="g-ct">8</div><div class="g-nm">Food</div><div class="g-bar"><span style="width:16%"></span></div></div>
+    <div class="gcard"><div class="g-ct">6</div><div class="g-nm">Fashion &amp; Beauty</div><div class="g-bar"><span style="width:12%"></span></div></div>
+    <div class="gcard"><div class="g-ct">6</div><div class="g-nm">Comedy</div><div class="g-bar"><span style="width:12%"></span></div></div>
+    <div class="gcard"><div class="g-ct">4</div><div class="g-nm">Art</div><div class="g-bar"><span style="width:8%"></span></div></div>
+    <div class="gcard"><div class="g-ct">4</div><div class="g-nm">Actress</div><div class="g-bar"><span style="width:8%"></span></div></div>
+    <div class="gcard"><div class="g-ct">3</div><div class="g-nm">Tech</div><div class="g-bar"><span style="width:6%"></span></div></div>
+    <div class="gcard"><div class="g-ct">3</div><div class="g-nm">Artist</div><div class="g-bar"><span style="width:6%"></span></div></div>
+    <div class="gcard"><div class="g-ct">3</div><div class="g-nm">Dancer</div><div class="g-bar"><span style="width:6%"></span></div></div>
+    <div class="gcard"><div class="g-ct">2</div><div class="g-nm">Entrepreneurship</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ct">2</div><div class="g-nm">Beauty</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ct">2</div><div class="g-nm">Actor</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ct">2</div><div class="g-nm">Anchor</div><div class="g-bar"><span style="width:4%"></span></div></div>
   </div>
 </section>
 
@@ -3549,6 +3868,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
       <div><span class="bk-k">Done</span><span class="bk-v">14.3%</span></div>
     </div>
     <div class="k-foot">Live and operational</div>
+    <div class="k-meter ok"><span style="width:14.3%"></span></div>
   </div>
   <div class="kpi">
     <div class="k-lbl">Under Construction</div>
@@ -3557,6 +3877,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
       <div><span class="bk-k">In Progress</span><span class="bk-v">5.7%</span></div>
     </div>
     <div class="k-foot">Work in progress</div>
+    <div class="k-meter warn"><span style="width:5.7%"></span></div>
   </div>
 </div>
 <!-- BRANCH TABLE -->
@@ -3736,7 +4057,9 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
     <span class="h2dir-title">H2 DIRECTION — FY 2026-27</span>
   </div>
   <!-- TAB BAR -->
-  <div class="h2dir-tab-bar">
+  <div class="cc-tab-rail" id="h2dir-tab-rail">
+    <button type="button" class="cc-tab-chev" data-rail="h2dir-tab-scroller" data-dir="-1" aria-label="Scroll tabs left">&#8249;</button>
+    <div class="h2dir-tab-bar" id="h2dir-tab-scroller">
     <button class="h2dir-tab active" id="h2dir-tab-1" onclick="switchH2Tab('h2dir-p1',this)">MAJOR ISSUE &amp; DIRECTION</button>
     <button class="h2dir-tab" id="h2dir-tab-2" onclick="switchH2Tab('h2dir-p2',this)">USER STRATEGY &amp; 5H HERO</button>
     <button class="h2dir-tab" id="h2dir-tab-2b" onclick="switchH2Tab('h2dir-p2b',this)">DIFFERENT USER · DIFFERENT STRATEGY</button>
@@ -3747,6 +4070,8 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
     <button class="h2dir-tab" id="h2dir-tab-7" onclick="switchH2Tab('h2dir-p7',this)">STORE BRANDING</button>
     <button class="h2dir-tab" id="h2dir-tab-8" onclick="switchH2Tab('h2dir-p8',this)">AUDIT &amp; ACTION</button>
     <button class="h2dir-tab" id="h2dir-tab-9" onclick="switchH2Tab('h2dir-p9',this)">SUPPLY &amp; COUNTER-ATTACK</button>
+    </div>
+    <button type="button" class="cc-tab-chev" data-rail="h2dir-tab-scroller" data-dir="1" aria-label="Scroll tabs right">&#8250;</button>
   </div>
   <!-- CONTENT PANEL -->
   <div class="h2branding-panel">
@@ -5141,6 +5466,7 @@ function openH1Review(){
   el.style.display='flex';
   var firstTab=document.getElementById('h1-tab-1');
   switchH1Tab('page-1',firstTab);
+  setTimeout(function(){syncTabRail(document.getElementById('h1-tab-scroller'));},40);
 }
 function closeH1Review(){
   var el=document.getElementById('h1review');
@@ -5148,6 +5474,60 @@ function closeH1Review(){
   el.style.display='none';
   closeH2Direction();
   document.getElementById('entry').classList.remove('hidden');
+}
+function syncTabRail(scroller){
+  if(!scroller)return;
+  var rail=scroller.closest('.cc-tab-rail');
+  if(!rail)return;
+  var max=Math.max(0,scroller.scrollWidth-scroller.clientWidth);
+  var x=scroller.scrollLeft;
+  rail.classList.toggle('no-overflow',max<=2);
+  rail.classList.toggle('can-left',x>2);
+  rail.classList.toggle('can-right',x<max-2);
+  rail.querySelectorAll('.cc-tab-chev').forEach(function(btn){
+    var dir=Number(btn.getAttribute('data-dir'));
+    btn.disabled=max<=2||(dir<0&&x<=2)||(dir>0&&x>=max-2);
+  });
+}
+function scrollTabIntoRail(btn){
+  if(!btn)return;
+  var rail=btn.parentElement;
+  if(!rail)return;
+  var pad=16;
+  var left=btn.offsetLeft-pad;
+  var right=btn.offsetLeft+btn.offsetWidth+pad;
+  var sl=rail.scrollLeft;
+  var vis=sl+rail.clientWidth;
+  if(left<sl)rail.scrollTo({left:Math.max(0,left),behavior:'smooth'});
+  else if(right>vis)rail.scrollTo({left:right-rail.clientWidth,behavior:'smooth'});
+  setTimeout(function(){syncTabRail(rail);},280);
+}
+function bindTabRails(){
+  document.querySelectorAll('.cc-tab-rail .cc-tab-chev').forEach(function(btn){
+    if(btn.dataset.bound)return;
+    btn.dataset.bound='1';
+    btn.addEventListener('click',function(){
+      var scroller=document.getElementById(btn.getAttribute('data-rail'));
+      if(!scroller)return;
+      var step=Math.max(240,Math.round(scroller.clientWidth*0.62));
+      scroller.scrollBy({left:Number(btn.getAttribute('data-dir'))*step,behavior:'smooth'});
+    });
+  });
+  document.querySelectorAll('.cc-tab-rail [id$="-scroller"]').forEach(function(scroller){
+    if(scroller.dataset.bound)return;
+    scroller.dataset.bound='1';
+    scroller.addEventListener('scroll',function(){syncTabRail(scroller);},{passive:true});
+    scroller.addEventListener('wheel',function(e){
+      if(Math.abs(e.deltaY)>Math.abs(e.deltaX) && !e.shiftKey){
+        scroller.scrollLeft+=e.deltaY;
+        e.preventDefault();
+      }
+    },{passive:false});
+    syncTabRail(scroller);
+  });
+  window.addEventListener('resize',function(){
+    document.querySelectorAll('.cc-tab-rail [id$="-scroller"]').forEach(syncTabRail);
+  });
 }
 function switchH1Tab(pageId,btn){
   document.querySelectorAll('.h1review-panel .page').forEach(function(p){
@@ -5159,11 +5539,14 @@ function switchH1Tab(pageId,btn){
     t.classList.remove('active');
   });
   if(btn)btn.classList.add('active');
+  scrollTabIntoRail(btn);
+  syncTabRail(document.getElementById('h1-tab-scroller'));
 }
 function openH2Direction(){
   document.getElementById('h2direction').classList.add('visible');
   var firstTab=document.getElementById('h2dir-tab-1');
   switchH2Tab('h2dir-p1',firstTab);
+  setTimeout(function(){syncTabRail(document.getElementById('h2dir-tab-scroller'));},40);
 }
 function closeH2Direction(){
   var el=document.getElementById('h2direction');
@@ -5179,6 +5562,8 @@ function switchH2Tab(pageId,btn){
     t.classList.remove('active');
   });
   if(btn)btn.classList.add('active');
+  scrollTabIntoRail(btn);
+  syncTabRail(document.getElementById('h2dir-tab-scroller'));
 }
 function dbFrameScroll(dir){frameSnap('#diwali-branding .h1frame',dir);}
 function openDiwaliBranding(){document.getElementById('entry').classList.add('hidden');document.getElementById('diwali-branding').classList.remove('hidden');setTimeout(fitLanding,20);}
@@ -5323,6 +5708,7 @@ function fitLanding(){
     var c=wrap.__lcanvas;
     if(!c){c=document.createElement('div');c.className='lcanvas';while(wrap.firstChild){c.appendChild(wrap.firstChild);}wrap.appendChild(c);wrap.__lcanvas=c;}
     if(page.classList.contains('hidden'))return;
+    if(page.querySelector('.ceo-board'))return;
     c.style.transform='none';c.style.marginBottom='0px';
     var cs=getComputedStyle(wrap);
     var availH=page.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom);
@@ -5338,10 +5724,10 @@ function fitLanding(){
 }
 var fitT;function fitDeckSoon(){clearTimeout(fitT);fitT=setTimeout(function(){fitDeck();fitLanding();},90);}
 window.addEventListener('resize',fitDeckSoon);
-window.addEventListener('load',function(){setTimeout(function(){fitDeck();fitLanding();},120);});
+window.addEventListener('load',function(){setTimeout(function(){fitDeck();fitLanding();bindTabRails();},120);});
 
 buildDots();updateCtr();['v80','xfold','s2fe'].forEach(initObs);
-setTimeout(function(){fitDeck();fitLanding();},180);
+setTimeout(function(){fitDeck();fitLanding();bindTabRails();},180);
 
 </script>
 
