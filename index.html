@@ -462,6 +462,7 @@ tfoot td{color:var(--ink);font-weight:700;border-top:1px solid var(--gb);backgro
 .entry-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;margin:2.6rem auto 0;max-width:1120px;width:100%;}
 .entry-grid.entry-grid-3{grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1340px;}
 .entry-grid-3 .entry-card{padding:2.4rem 2rem;min-height:clamp(300px,50vh,440px);}
+.entry-grid-3 .entry-card.ec-kpi{padding:0;min-height:clamp(320px,48vh,420px);}
 .entry-grid-3 .ec-title{font-size:clamp(2rem,3vw,2.9rem);}
 .entry-grid-3 .ec-sub{font-size:1rem;}
 @media(max-width:900px){.entry-grid.entry-grid-3{grid-template-columns:1fr;}}
@@ -697,6 +698,22 @@ tfoot td{color:var(--ink);font-weight:700;border-top:1px solid var(--gb);backgro
 .ec-sub{font-size:1.15rem;color:var(--ink2);line-height:1.7;margin-bottom:auto;max-width:34ch;}
 .ec-enter{margin-top:2rem;font-size:1.2rem;font-weight:800;color:var(--blue);}
 .entry-card.ec-diwali .ec-enter{color:#b26a00;}
+/* ---- Home KPI tiles: navy header + white body ---- */
+.entry-card.ec-kpi{background:#fff;border:1px solid rgba(11,23,48,0.12);padding:0;overflow:hidden;box-shadow:0 10px 28px rgba(11,23,48,0.08);}
+.entry-card.ec-kpi:hover{border-color:#0B1730;box-shadow:0 22px 48px rgba(11,23,48,0.18);}
+.entry-card.ec-kpi.ec-review,.entry-card.ec-kpi.ec-v80,.entry-card.ec-kpi.ec-diwali{background:#fff;}
+.entry-card.ec-kpi .ec-head{display:flex;align-items:center;justify-content:space-between;gap:0.8rem;background:#0B1730;color:#fff;padding:1.15rem 1.35rem;min-height:4.6rem;}
+.entry-card.ec-kpi .ec-head-label{font-size:clamp(0.78rem,1.05vw,0.95rem);font-weight:800;letter-spacing:0.08em;text-transform:uppercase;line-height:1.25;margin:0;}
+.entry-card.ec-kpi .ec-icon{flex:none;width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);display:flex;align-items:center;justify-content:center;}
+.entry-card.ec-kpi .ec-icon svg{width:20px;height:20px;display:block;}
+.entry-card.ec-kpi .ec-body{display:flex;flex-direction:column;flex:1;padding:1.35rem 1.35rem 1.2rem;background:#fff;}
+.entry-card.ec-kpi .ec-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:0.55rem;flex:1;align-content:center;}
+.entry-card.ec-kpi .ec-kpi-cell{min-width:0;text-align:left;}
+.entry-card.ec-kpi .ec-kpi-val{font-size:clamp(1.05rem,1.7vw,1.45rem);font-weight:800;color:#0B1730;line-height:1.1;letter-spacing:-0.02em;white-space:nowrap;}
+.entry-card.ec-kpi .ec-kpi-lbl{font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-top:0.38rem;line-height:1.25;}
+.entry-card.ec-kpi .ec-enter{margin-top:1.15rem;align-self:flex-start;font-size:0.82rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#0B1730;}
+.entry-card.ec-kpi.ec-diwali .ec-enter{color:#0B1730;}
+@media(max-width:1100px){.entry-card.ec-kpi .ec-kpi-val{font-size:1.05rem;white-space:normal;}}
 .sb2grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
 .sb2-card{position:relative;border-radius:18px;padding:2rem 1.7rem;border:1px solid var(--line2);background:var(--bg3);display:flex;flex-direction:column;}
 .sb2-head{display:flex;align-items:center;gap:0.9rem;margin-bottom:1.1rem;}
@@ -2945,51 +2962,53 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
     <div class="lbrand">vivo Tamil Nadu &middot; MarCom</div>
     <div class="ltitle">VIVO TAMILNADU<span> 2026</span></div>
     <div class="entry-grid entry-grid-3">
-      <div class="entry-card ec-review" onclick="openH1Review()">
-        <div class="ec-tag">H1 &middot; H2</div>
-        <div class="ec-title">H1 REVIEW / H2 DIRECTION</div>
-        <div class="ec-sub">Cost &middot; Project &middot; Audit &middot; Highlights &middot; H2 Direction</div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1rem;">
-          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:var(--blue);background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.35rem 0.85rem;">&#128241; HO &amp; JBP</span>
-          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:var(--blue);background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.35rem 0.85rem;">&#128200; Efficiency</span>
+      <div class="entry-card ec-review ec-kpi" onclick="openH1Review()">
+        <div class="ec-head">
+          <div class="ec-head-label">H1 REVIEW / H2 DIRECTION</div>
+          <div class="ec-icon" aria-hidden="true" title="Performance Audit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M8 13v4M12 11v6M16 15v2"/></svg>
+          </div>
         </div>
-        <div style="display:flex;gap:0.9rem;margin-top:1.4rem;margin-bottom:auto;">
-          <div style="flex:1;background:rgba(37,99,235,0.07);border:1px solid rgba(37,99,235,0.18);border-radius:10px;padding:0.8rem 0.85rem;"><div style="font-size:1.25rem;font-weight:800;color:var(--blue);line-height:1;">&#8377;1.45 Cr</div><div style="font-size:0.56rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink3);margin-top:0.3rem;">Expense</div></div>
-          <div style="flex:1;background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:0.8rem 0.85rem;"><div style="font-size:1.25rem;font-weight:800;color:var(--ink);line-height:1;">6.51 Cr</div><div style="font-size:0.56rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink3);margin-top:0.3rem;">Reach</div></div>
-          <div style="flex:1;background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:0.8rem 0.85rem;"><div style="font-size:1.25rem;font-weight:800;color:var(--ink);line-height:1;">&#8377;0.22</div><div style="font-size:0.56rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink3);margin-top:0.3rem;">CPP</div></div>
+        <div class="ec-body">
+          <div class="ec-kpis">
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;1.45 Cr</div><div class="ec-kpi-lbl">H1 Spend</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">6.51 Cr</div><div class="ec-kpi-lbl">Reach</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;0.22</div><div class="ec-kpi-lbl">CPP</div></div>
+          </div>
+          <div class="ec-enter">ENTER &rarr;</div>
         </div>
-        <div class="ec-enter">Enter &rarr;</div>
       </div>
-      <div class="entry-card ec-v80" onclick="openV80()">
-        <div class="ec-tag">NEW PRODUCT LAUNCH</div>
-        <div class="ec-title">NPL</div>
-        <div class="ec-sub">V80 &middot; X Fold 6 &middot; S2 FE</div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1rem;">
-          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:var(--blue);background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.35rem 0.85rem;">&#128241; V80</span>
-          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:var(--blue);background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.35rem 0.85rem;">&#128241; X-Fold 6</span>
-          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:var(--blue);background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:20px;padding:0.35rem 0.85rem;">&#128241; S2FE</span>
+      <div class="entry-card ec-v80 ec-kpi" onclick="openV80()">
+        <div class="ec-head">
+          <div class="ec-head-label">NEW PRODUCT LAUNCH</div>
+          <div class="ec-icon" aria-hidden="true" title="Rocket">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c.8-2.4 2.6-4.6 5.4-6.3 2.6-1.6 5.5-2.2 7.6-2.2.2 2.1-.4 5-2.1 7.6C14.2 16.9 12 18.7 9.6 19.5l-1.8-2.7L5 15z"/><path d="M9.5 14.5 5 19"/><circle cx="15.2" cy="8.8" r="1.2" fill="#fff" stroke="none"/></svg>
+          </div>
         </div>
-        <div style="display:flex;gap:1.1rem;margin-top:1.4rem;margin-bottom:auto;">
-          <div style="flex:1;background:rgba(37,99,235,0.07);border:1px solid rgba(37,99,235,0.18);border-radius:10px;padding:0.8rem 1rem;"><div style="font-size:1.35rem;font-weight:800;color:var(--blue);line-height:1;">&#8377;66.4L</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-top:0.3rem;">Total Investment</div></div>
-          <div style="flex:1;background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:0.8rem 1rem;"><div style="font-size:1.35rem;font-weight:800;color:var(--ink);line-height:1;">9</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-top:0.3rem;">JBP Partners</div></div>
-          <div style="flex:1;background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:0.8rem 1rem;"><div style="font-size:1.35rem;font-weight:800;color:var(--ink);line-height:1;">11</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-top:0.3rem;">Creators Vetted</div></div>
+        <div class="ec-body">
+          <div class="ec-kpis">
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;66.4 L</div><div class="ec-kpi-lbl">V80 Budget</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">1,564</div><div class="ec-kpi-lbl">WODs</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;1.31 Cr</div><div class="ec-kpi-lbl">Branding Inv</div></div>
+          </div>
+          <div class="ec-enter">ENTER &rarr;</div>
         </div>
-        <div class="ec-enter">Enter &rarr;</div>
       </div>
-      <div class="entry-card ec-diwali" onclick="openDiwali()">
-        <div class="ec-tag">FESTIVAL</div>
-        <div class="ec-title">FESTIVAL</div>
-        <div class="ec-sub">Diwali &rsquo;26 &middot; Activation &middot; Branding</div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1rem;">
-          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:#b26a00;background:rgba(229,169,59,0.12);border:1px solid var(--gb);border-radius:20px;padding:0.35rem 0.85rem;">&#127968; Head Office</span>
-          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:700;color:#b26a00;background:rgba(229,169,59,0.12);border:1px solid var(--gb);border-radius:20px;padding:0.35rem 0.85rem;">&#129309; JBP Trade</span>
+      <div class="entry-card ec-diwali ec-kpi" onclick="openDiwali()">
+        <div class="ec-head">
+          <div class="ec-head-label">FESTIVAL &mdash; DIWALI &rsquo;26</div>
+          <div class="ec-icon" aria-hidden="true" title="Star">
+            <svg viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"><path d="m12 3.2 2.4 5.1 5.6.7-4.1 3.9 1.1 5.5L12 16.6 7 18.4l1.1-5.5L4 9l5.6-.7L12 3.2z"/></svg>
+          </div>
         </div>
-        <div style="display:flex;gap:1.1rem;margin-top:1.4rem;margin-bottom:auto;">
-          <div style="flex:1;background:rgba(229,169,59,0.1);border:1px solid var(--gb);border-radius:10px;padding:0.8rem 1rem;"><div style="font-size:1.35rem;font-weight:800;color:#b26a00;line-height:1;">&#8377;72L</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-top:0.3rem;">Total Activation</div></div>
-          <div style="flex:1;background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:0.8rem 1rem;"><div style="font-size:1.35rem;font-weight:800;color:var(--ink);line-height:1;">9</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-top:0.3rem;">JBP Partners</div></div>
-          <div style="flex:1;background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:0.8rem 1rem;"><div style="font-size:1.35rem;font-weight:800;color:var(--ink);line-height:1;">2</div><div style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);margin-top:0.3rem;">HO Activities</div></div>
+        <div class="ec-body">
+          <div class="ec-kpis">
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;72 L</div><div class="ec-kpi-lbl">MarCom</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">12</div><div class="ec-kpi-lbl">POSM Matl</div></div>
+            <div class="ec-kpi-cell"><div class="ec-kpi-val">&#8377;41.66 L</div><div class="ec-kpi-lbl">POSM Invest</div></div>
+          </div>
+          <div class="ec-enter">ENTER &rarr;</div>
         </div>
-        <div class="ec-enter">Enter &rarr;</div>
       </div>
       <!-- HIDDEN CARDS: Merged into unified tiles per SK direction.
            Cards below are preserved. Do not delete.
