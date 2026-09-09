@@ -457,16 +457,46 @@ tfoot td{color:var(--ink);font-weight:700;border-top:1px solid var(--gb);backgro
 .bpill{font-size:0.62rem;background:var(--bg4);color:var(--ink2);padding:0.16rem 0.5rem;border-radius:3px;}
 /* =============== LANDING PAGE =============== */
 .landing{position:fixed;inset:0;z-index:800;overflow-y:auto;background:#F0F4FA;}
-body:has(#entry.cc-home:not(.hidden)) .deck,
-body:has(#entry.cc-home:not(.hidden)) .tbar,
-body:has(#entry.cc-home:not(.hidden)) .dots,
-body:has(#entry.cc-home:not(.hidden)) .arrs,
-body:has(#entry.cc-home:not(.hidden)) .slidectr,
-body:has(#h1review:not(.hidden)) .deck,
-body:has(#h1review:not(.hidden)) .tbar,
-body:has(#h1review:not(.hidden)) .dots,
-body:has(#h1review:not(.hidden)) .arrs,
-body:has(#h1review:not(.hidden)) .slidectr{display:none !important;}
+body:has(#entry.cc-home:not(.hidden)) > .deck,
+body:has(#entry.cc-home:not(.hidden)) > .tbar,
+body:has(#entry.cc-home:not(.hidden)) > .dots,
+body:has(#entry.cc-home:not(.hidden)) > .arrs,
+body:has(#entry.cc-home:not(.hidden)) > .slidectr,
+body:has(#h1review:not(.hidden)) > .deck,
+body:has(#h1review:not(.hidden)) > .tbar,
+body:has(#h1review:not(.hidden)) > .dots,
+body:has(#h1review:not(.hidden)) > .arrs,
+body:has(#h1review:not(.hidden)) > .slidectr,
+body:has(#npl-container:not(.hidden)) > .deck,
+body:has(#npl-container:not(.hidden)) > .tbar,
+body:has(#npl-container:not(.hidden)) > .dots,
+body:has(#npl-container:not(.hidden)) > .arrs,
+body:has(#npl-container:not(.hidden)) > .slidectr,
+body:has(#diwali:not(.hidden)) > .deck,
+body:has(#diwali:not(.hidden)) > .tbar,
+body:has(#diwali:not(.hidden)) > .dots,
+body:has(#diwali:not(.hidden)) > .arrs,
+body:has(#diwali:not(.hidden)) > .slidectr,
+body:has(#h2direction.visible) > .deck,
+body:has(#h2direction.visible) > .tbar,
+body:has(#h2direction.visible) > .dots,
+body:has(#h2direction.visible) > .arrs,
+body:has(#h2direction.visible) > .slidectr,
+body:has(#h2plan:not(.hidden)) > .deck,
+body:has(#h2plan:not(.hidden)) > .tbar,
+body:has(#h2plan:not(.hidden)) > .dots,
+body:has(#h2plan:not(.hidden)) > .arrs,
+body:has(#h2plan:not(.hidden)) > .slidectr,
+body:has(#diwali-branding:not(.hidden)) > .deck,
+body:has(#diwali-branding:not(.hidden)) > .tbar,
+body:has(#diwali-branding:not(.hidden)) > .dots,
+body:has(#diwali-branding:not(.hidden)) > .arrs,
+body:has(#diwali-branding:not(.hidden)) > .slidectr,
+body:has(#h2-branding:not(.hidden)) > .deck,
+body:has(#h2-branding:not(.hidden)) > .tbar,
+body:has(#h2-branding:not(.hidden)) > .dots,
+body:has(#h2-branding:not(.hidden)) > .arrs,
+body:has(#h2-branding:not(.hidden)) > .slidectr{display:none !important;}
 .landing.hidden{display:none;}
 /* ---- Entry chooser (V80 / Diwali) ---- */
 .entry-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;margin:2.6rem auto 0;max-width:1120px;width:100%;}
@@ -744,14 +774,16 @@ body:has(#h1review:not(.hidden)) .slidectr{display:none !important;}
 .entry-card.ec-kpi .ec-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;flex:1;align-content:center;}
 .entry-card.ec-kpi .ec-kpi-cell{min-width:0;text-align:left;padding:0 0.85rem 0 0;background:none;border:0;}
 .entry-card.ec-kpi .ec-kpi-cell + .ec-kpi-cell{border-left:1px solid rgba(11,23,48,0.08);padding:0 0.2rem 0 0.95rem;}
-.entry-card.ec-kpi .ec-kpi-val{font-family:Sora,Inter,sans-serif;font-size:clamp(1.2rem,1.85vw,1.72rem);font-weight:800;color:#001A4A;line-height:1.05;letter-spacing:-0.04em;white-space:nowrap;font-variant-numeric:tabular-nums;}
+.entry-card.ec-kpi .ec-kpi-val{font-family:Sora,Inter,sans-serif;font-size:clamp(1.02rem,1.55vw,1.62rem);font-weight:800;color:#001A4A;line-height:1.12;letter-spacing:-0.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;}
 .entry-card.ec-kpi .ec-kpi-cell:first-child .ec-kpi-val{color:#1566C0;}
 .entry-card.ec-kpi .ec-kpi-lbl{font-size:0.56rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B7B9C;margin-top:0.48rem;line-height:1.25;}
 .entry-card.ec-kpi .ec-enter{margin-top:1.4rem;padding:0.7rem 0 0;border-top:1px solid rgba(11,23,48,0.08);align-self:stretch;display:flex;align-items:center;justify-content:space-between;font-size:0.68rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#1566C0;}
 .entry-card.ec-kpi .ec-enter::after{content:"→";width:28px;height:28px;border-radius:50%;border:1px solid rgba(21,102,192,0.28);display:inline-flex;align-items:center;justify-content:center;font-size:0.9rem;letter-spacing:0;}
 .entry-card.ec-kpi:hover .ec-enter::after{background:#1566C0;border-color:#1566C0;color:#fff;}
 .entry-card.ec-kpi.ec-diwali .ec-enter{color:#1566C0;}
-@media(max-width:1100px){.entry-card.ec-kpi .ec-kpi-val{font-size:1.08rem;white-space:normal;}.cc-bar-title{display:none;}}
+.entry-card.ec-kpi.ec-diwali:hover{border-color:transparent;box-shadow:0 26px 60px rgba(0,26,74,0.24);}
+@media(max-width:1280px){.entry-card.ec-kpi .ec-kpi-val{font-size:clamp(0.92rem,1.35vw,1.2rem);white-space:normal;overflow:visible;text-overflow:unset;}}
+@media(max-width:1100px){.cc-bar-title{display:none;}}
 .sb2grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
 .sb2-card{position:relative;border-radius:18px;padding:2rem 1.7rem;border:1px solid var(--line2);background:var(--bg3);display:flex;flex-direction:column;}
 .sb2-head{display:flex;align-items:center;gap:0.9rem;margin-bottom:1.1rem;}
@@ -1453,6 +1485,80 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2branding-panel .mini-stat .ms-l{font-size:0.56rem;letter-spacing:0.04em;text-transform:uppercase;color:#6B7B9C;margin-top:0.3rem;}
 @media(max-width:1000px){.h2branding-panel .pillars,.h2branding-panel .stat-row{grid-template-columns:repeat(2,1fr);}.h2branding-panel .grid-2,.h2branding-panel .grid-3{grid-template-columns:1fr;}}
 /* ========== END H2 DIRECTION ========== */
+
+/* ========== COMMAND CENTRE POLISH — overflow, chrome, alignment ========== */
+img,video,iframe,canvas,svg{max-width:100%;}
+.cc-mod-bar{flex:none;height:56px;background:#001A4A;color:#fff;display:flex;align-items:center;gap:0.85rem;padding:0 1.4rem;z-index:12;border-bottom:1px solid rgba(255,255,255,0.08);}
+.cc-mod-back{background:transparent;border:1px solid rgba(255,255,255,0.28);color:#fff;border-radius:6px;padding:0.26rem 0.75rem;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;font-family:inherit;}
+.cc-mod-back:hover{background:#1566C0;border-color:#1566C0;}
+.cc-mod-mark{font-family:Sora,Inter,sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:-0.02em;}
+.cc-mod-title{font-family:Sora,Inter,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:0.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#npl-container #landing>.entry-back,#npl-container #landing>.landing-present{display:none !important;}
+#npl-container{background:#E8EEF7;}
+.npl-tab-bar{height:56px;align-items:center;gap:0.35rem;background:#001A4A;border-bottom:0;padding:0 1.4rem;}
+.npl-back-btn{color:#fff;border-bottom:0;height:auto;padding:0.26rem 0.75rem;border:1px solid rgba(255,255,255,0.28);border-radius:6px;letter-spacing:0.1em;}
+.npl-back-btn:hover{color:#fff;background:#1566C0;border-color:#1566C0;}
+.npl-tab{color:rgba(255,255,255,0.62);height:auto;padding:0.4rem 0.9rem;border:1px solid transparent;border-radius:999px;border-bottom:1px solid transparent;}
+.npl-tab:hover{color:#fff;background:rgba(255,255,255,0.08);}
+.npl-tab.active{color:#fff;background:#1566C0;border-color:#1566C0;border-bottom-color:#1566C0;}
+#npl-container .npl-panel>.landing{overflow-x:hidden;min-height:0;}
+#npl-container #landing .lwrap{padding-top:clamp(1.4rem,3vh,2.4rem);justify-content:flex-start;}
+#npl-container #landing .ltitle{font-family:Sora,Inter,sans-serif;color:#002B6B;font-size:clamp(1.7rem,3.4vw,2.6rem);}
+#npl-container #landing .lbrand{color:#1566C0;}
+.orgwrap{max-width:100%;overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;}
+.onode{min-width:0;}
+.onode .on-t,.onode .on-s{overflow-wrap:anywhere;word-break:break-word;}
+.lkpis{max-width:100%;justify-content:center;}
+.lkpi{min-width:0;}
+.lkpi b{overflow-wrap:anywhere;}
+#diwali{display:flex;flex-direction:column;overflow:hidden;background:#E8EEF7;}
+#diwali.hidden{display:none;}
+#diwali .festival-tab-bar{padding:0.55rem 1.4rem;margin:0;background:#fff;border-bottom:1px solid rgba(11,23,48,0.10);gap:0.35rem;align-items:center;}
+#diwali .festival-tab{background:transparent;border:1px solid transparent;border-radius:999px;color:#6B7B9C;padding:0.4rem 0.95rem;}
+#diwali .festival-tab.active{color:#fff;background:#002B6B;border-color:#002B6B;border-bottom:1px solid #002B6B;}
+#diwali .festival-panel{height:auto;flex:1;min-height:0;}
+#diwali #festival-panel-activation .lwrap{padding-top:clamp(1.2rem,2.4vh,2rem);justify-content:flex-start;}
+#diwali .ltitle{font-family:Sora,Inter,sans-serif;color:#002B6B;font-size:clamp(1.7rem,3.4vw,2.6rem);}
+#diwali .lbrand{color:#1566C0;}
+.festival-posm-panel .page{height:auto;min-height:calc(100vh - 118px);}
+.festival-posm-panel .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#1566C0;box-shadow:0 0 0 4px rgba(21,102,192,0.18);display:inline-block;}
+.festival-posm-panel h1.title span{color:#1566C0;}
+.festival-posm-nav{z-index:40;}
+.npl-branding-panel .page{height:auto;min-height:calc(100vh - 56px);}
+.huc-pillar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-bottom:1.5rem;}
+.huc-score-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-bottom:1.5rem;}
+@media(max-width:1100px){.huc-pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.huc-score-grid{grid-template-columns:1fr;}}
+@media(max-width:640px){.huc-pillar-grid{grid-template-columns:1fr;}}
+.h1review-panel .kpi,.h1review-panel .panel,.h1review-panel .hl-card,.h1review-panel .gcard,.h1review-panel .kdb-pill{min-width:0;overflow:hidden;}
+.h1review-panel .k-num{overflow-wrap:anywhere;}
+.h1review-panel .kpis{grid-template-columns:repeat(3,minmax(0,1fr));}
+.h1review-panel .bar-track{overflow:hidden;}
+.h1review-panel .bar-fill{min-width:4.6rem;padding-left:0.45rem;font-size:0.7rem;}
+.h1review-panel .hl-split{min-width:0;}
+.h1review-panel .kdb-genres{grid-template-columns:repeat(7,minmax(0,1fr));}
+@media(max-width:1100px){
+  .h1review-panel .kpis{grid-template-columns:1fr;}
+  .h1review-panel .hl-split{grid-template-columns:1fr;}
+  .h1review-panel .kdb-genres{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .h1review-panel .kdb-band{grid-template-columns:1fr;}
+}
+.h2branding-panel .kpi,.h2branding-panel .panel,.h2branding-panel .stat,.h2branding-panel .pillar{min-width:0;overflow:hidden;}
+.h2branding-panel .k-num,.h2branding-panel .s-num{overflow-wrap:anywhere;}
+.h2dir-tab-bar{min-width:0;}
+.festival-posm-panel .mat-grid{grid-template-columns:repeat(4,minmax(0,1fr));min-width:0;}
+.festival-posm-panel .mat-card,.festival-posm-panel .plan-card{min-width:0;overflow:hidden;}
+.festival-posm-panel .head-row{min-width:0;}
+.festival-posm-panel .total-badge{flex-wrap:wrap;}
+.npl-branding-panel .stat .s-num{overflow-wrap:anywhere;}
+.cc-home .entry-grid.entry-grid-3{align-items:stretch;min-width:0;}
+.cc-home .entry-card.ec-kpi{min-width:0;}
+.entry-card.ec-kpi .ec-head-label{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.entry-card.ec-kpi .ec-kpi-lbl{overflow-wrap:anywhere;}
+#h2plan .h2s-flow-step{white-space:normal;}
+#h2plan .h2s-card{min-width:0;overflow:hidden;}
+.pc-ic{display:none;}
+@media(max-width:900px){.orgtree-big .onode{width:min(330px,86vw);min-height:160px;}.orgtree-big .onode.root{min-width:0;width:min(460px,92vw);}}
+/* ========== END POLISH ========== */
 
 </style>
 </head>
@@ -2828,7 +2934,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
     <p style="font-size:0.95rem;color:#3D4E73;max-width:70ch;line-height:1.5;">Four pillars — College Partnership, IT Park Professional, White-Collar Community, and Vivo Week Contest — building premium brand perception across Tamil Nadu.</p>
   </div>
   <!-- 4 PILLAR CARDS -->
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem;">
+  <div class="huc-pillar-grid">
     <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);position:relative;overflow:hidden;">
       <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#2563EB);"></div>
       <div style="font-size:1.8rem;margin-bottom:0.5rem;">🎓</div>
@@ -2859,7 +2965,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
     </div>
   </div>
   <!-- IT PARK PERCEPTION SCORE -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+  <div class="huc-score-grid">
     <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
       <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;margin-bottom:0.8rem;">IT PARK — PERCEPTION SCORE TRAJECTORY</div>
       <div style="display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;">
@@ -2902,7 +3008,12 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
   </div>
 </div>
 <div class="landing hidden" id="diwali">
-  <button class="entry-back" onclick="backToEntry()">&larr; Back</button>
+  <header class="cc-mod-bar">
+    <button type="button" class="cc-mod-back" onclick="backToEntry()">&larr; Back</button>
+    <span class="cc-mod-mark">vivo</span>
+    <span class="cc-bar-div"></span>
+    <span class="cc-mod-title">Festival — Diwali ’26</span>
+  </header>
   <div class="festival-tab-bar">
     <button class="festival-tab active" id="ftab-activation" onclick="switchFestivalTab('activation')">MARCOM ACTIVATION</button>
     <button class="festival-tab" id="ftab-posm" onclick="switchFestivalTab('posm')">BRANDING &middot; POSM</button>
