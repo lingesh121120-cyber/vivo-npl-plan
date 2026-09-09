@@ -1544,7 +1544,21 @@ img,video,iframe,canvas,svg{max-width:100%;}
 }
 .h2branding-panel .kpi,.h2branding-panel .panel,.h2branding-panel .stat,.h2branding-panel .pillar{min-width:0;overflow:hidden;}
 .h2branding-panel .k-num,.h2branding-panel .s-num{overflow-wrap:anywhere;}
-.h2dir-tab-bar{min-width:0;}
+.h2dir-tab-bar{min-width:0;flex-wrap:wrap;overflow-x:visible;row-gap:0.4rem;}
+.h2dir-tab{flex:none;}
+#npl-container #landing .lkpis{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));width:100%;max-width:1320px;gap:0.7rem;margin-left:auto;margin-right:auto;}
+#npl-container #landing .lkpi{min-width:0;padding:1rem 0.65rem;}
+#npl-container #landing .lkpi b{font-size:clamp(1.1rem,1.7vw,1.65rem);white-space:normal;}
+#diwali .lkpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));width:100%;max-width:1080px;gap:0.7rem;margin-left:auto;margin-right:auto;}
+#diwali .lkpi{min-width:0;padding:1rem 0.75rem;}
+#diwali .lkpi b{font-size:clamp(1.15rem,1.8vw,1.7rem);white-space:normal;}
+.festival-posm-panel .eyebrow{color:#1566C0;}
+.onode .on-b{padding:0.28rem 0.7rem;line-height:1.2;}
+.lkpi b{white-space:normal;}
+@media(max-width:1100px){
+  #npl-container #landing .lkpis{grid-template-columns:repeat(4,minmax(0,1fr));}
+  #diwali .lkpis{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
 .festival-posm-panel .mat-grid{grid-template-columns:repeat(4,minmax(0,1fr));min-width:0;}
 .festival-posm-panel .mat-card,.festival-posm-panel .plan-card{min-width:0;overflow:hidden;}
 .festival-posm-panel .head-row{min-width:0;}
