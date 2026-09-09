@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Branding · NPL Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-display:'Sora',system-ui,sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --bg:#EEF3FD;--card:#FFFFFF;--card-2:#F3F6FD;
+  --ink-0:#0B1730;--ink-1:#3D4E73;--ink-2:#6B7B9C;
+  --blue:#2563EB;--blue-2:#3E63FF;--cyan:#1D4ED8;--amber:#B45309;--orange:#E8622A;
+  --green:#15A34A;--red:#DC2626;--hair:rgba(11,23,48,0.10);--glow:rgba(62,99,255,0.16);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink-0);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
+body{scroll-snap-type:y mandatory;}
+.page{height:100vh;overflow:hidden;padding:clamp(1.3rem,2.8vw,2.4rem) clamp(1.4rem,4vw,3.4rem);scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;gap:clamp(0.8rem,1.5vw,1.3rem);max-width:1520px;margin:0 auto;}
+.eyebrow{font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.14em;color:var(--blue);text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px var(--glow);}
+h1.title{font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.05;letter-spacing:-0.02em;margin:0.45rem 0 0.3rem;}
+h1.title span{color:var(--blue);}
+.sub{font-size:clamp(0.88rem,1.2vw,1rem);color:var(--ink-1);max-width:74ch;line-height:1.5;margin:0;}
+.hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;flex:0 0 auto;}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(0.8rem,1.4vw,1.2rem);flex:0 0 auto;}
+.stat{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:clamp(1rem,1.6vw,1.4rem);box-shadow:0 10px 26px rgba(11,23,48,0.05);border-left:4px solid var(--c,#2563EB);}
+.stat .s-num{font-family:var(--font-display);font-weight:800;font-size:clamp(1.8rem,3vw,2.5rem);line-height:1;color:var(--ink-0);}
+.stat .s-sub{font-size:0.75rem;color:var(--ink-2);margin-top:0.25rem;}
+.stat .s-lbl{font-family:var(--font-mono);font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-2);margin-top:0.4rem;}
+.updown{font-family:var(--font-mono);font-weight:700;font-size:0.72rem;}
+.up{color:var(--green);}.down{color:var(--red);}
+.panel{background:var(--card);border:1px solid var(--hair);border-radius:18px;padding:clamp(1.1rem,1.8vw,1.6rem);box-shadow:0 12px 32px rgba(11,23,48,0.05);min-height:0;display:flex;flex-direction:column;}
+.panel-t{font-family:var(--font-display);font-weight:700;font-size:1.02rem;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem;flex:0 0 auto;}
+.panel-t .pt-badge{font-family:var(--font-mono);font-size:0.6rem;font-weight:700;color:var(--ink-2);background:var(--card-2);border:1px solid var(--hair);border-radius:20px;padding:0.2rem 0.55rem;text-transform:uppercase;letter-spacing:0.05em;}
+.tbl{width:100%;border-collapse:collapse;font-size:0.8rem;}
+.tbl th{font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-2);text-align:left;padding:0.4rem 0.6rem;border-bottom:1px solid var(--hair);position:sticky;top:0;background:var(--card);}
+.tbl td{padding:0.28rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:var(--ink-1);}
+.tbl td.b{font-family:var(--font-display);font-weight:700;color:var(--ink-0);}
+.tbl td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.tbl th.num{text-align:right;}
+.tbl tr.total td{font-family:var(--font-display);font-weight:800;color:var(--ink-0);border-top:2px solid var(--hair);background:var(--card-2);}
+.tbl .g{color:var(--green);font-weight:700;}.tbl .a{color:var(--amber);font-weight:700;}.tbl .r{color:var(--red);font-weight:700;}
+.tbl-scroll{overflow:auto;flex:1;min-height:0;}
+.timeline{display:flex;gap:0.5rem;flex:0 0 auto;}
+.tl-step{flex:1;background:var(--card);border:1px solid var(--hair);border-radius:12px;padding:0.75rem 0.6rem;box-shadow:0 6px 16px rgba(11,23,48,0.04);position:relative;}
+.tl-step.hot{border-color:var(--blue);background:linear-gradient(160deg,rgba(37,99,235,0.08),var(--card));}
+.tl-step .tl-d{font-family:var(--font-display);font-weight:800;font-size:0.95rem;color:var(--blue);}
+.tl-step .tl-k{font-size:0.66rem;color:var(--ink-1);margin-top:0.3rem;line-height:1.3;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(0.9rem,1.6vw,1.3rem);flex:1;min-height:0;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(0.9rem,1.6vw,1.3rem);flex:1;min-height:0;}
+/* category cards */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(0.8rem,1.4vw,1.1rem);flex:0 0 auto;}
+.cat-card{background:var(--card);border:1px solid var(--hair);border-radius:13px;padding:0.65rem 0.9rem;box-shadow:0 8px 20px rgba(11,23,48,0.04);display:flex;flex-direction:column;gap:0.15rem;position:relative;overflow:hidden;}
+.cat-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--blue),var(--blue-2));}
+.cat-card .cc-n{font-family:var(--font-mono);font-size:0.6rem;color:var(--ink-2);}
+.cat-card .cc-t{font-family:var(--font-display);font-weight:700;font-size:0.88rem;color:var(--ink-0);line-height:1.15;}
+.cat-card .cc-row{display:flex;justify-content:space-between;align-items:baseline;margin-top:0.35rem;}
+.cat-card .cc-cov{font-size:0.78rem;color:var(--ink-1);}
+.cat-card .cc-cov b{color:var(--ink-0);font-weight:700;}
+.cat-card .cc-cost{font-family:var(--font-display);font-weight:800;font-size:1.1rem;color:var(--blue);}
+/* comparison cards (V70 vs V80) */
+.cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(0.7rem,1.2vw,1rem);flex:1;min-height:0;align-content:stretch;}
+.cmp-legend{display:flex;gap:1.2rem;font-size:0.8rem;color:var(--ink-1);flex:0 0 auto;}
+.cmp-legend span{display:inline-flex;align-items:center;gap:0.4rem;}
+.cmp-legend i{width:12px;height:12px;border-radius:3px;display:inline-block;}
+.cmp-card{background:var(--card);border:1px solid var(--hair);border-radius:13px;padding:0.85rem 1rem;box-shadow:0 8px 20px rgba(11,23,48,0.04);display:flex;flex-direction:column;justify-content:center;gap:0.55rem;}
+.cmp-name{font-family:var(--font-display);font-weight:700;font-size:0.92rem;color:var(--ink-0);line-height:1.15;display:flex;align-items:center;justify-content:space-between;gap:0.5rem;}
+.cmp-badge{font-family:var(--font-mono);font-size:0.62rem;font-weight:700;border-radius:20px;padding:0.14rem 0.5rem;white-space:nowrap;}
+.cmp-badge.up{color:var(--amber);background:rgba(180,83,9,0.10);border:1px solid rgba(180,83,9,0.2);}
+.cmp-badge.down{color:var(--green);background:rgba(21,163,74,0.10);border:1px solid rgba(21,163,74,0.2);}
+.cmp-badge.flat{color:var(--ink-2);background:var(--card-2);border:1px solid var(--hair);}
+.cmp-row{display:flex;align-items:center;gap:0.55rem;}
+.cmp-lbl{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.03em;text-transform:uppercase;color:var(--ink-2);width:32px;flex:none;}
+.cmp-track{flex:1;height:16px;background:var(--card-2);border-radius:5px;overflow:hidden;}
+.cmp-fill{height:100%;border-radius:5px;min-width:4%;}
+.cmp-fill.v70{background:linear-gradient(90deg,#7FA0FF,#2563EB);}
+.cmp-fill.v80{background:linear-gradient(90deg,#F2803F,#E8622A);}
+.cmp-val{font-family:var(--font-display);font-weight:700;font-size:0.8rem;color:var(--ink-0);width:60px;text-align:right;flex:none;}
+.cmp-total{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.cmp-total .ct-l{font-family:var(--font-display);font-weight:700;font-size:1rem;}
+.cmp-total .ct-r{display:flex;align-items:center;gap:0.8rem;font-family:var(--font-display);font-weight:800;font-size:1.3rem;}
+.cmp-total .ct-r .old{color:var(--ink-2);font-size:1rem;}
+.cmp-total .ct-r .arw{color:var(--ink-2);}
+/* domestic material cards */
+.dm-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(0.55rem,1vw,0.7rem);flex:1;min-height:0;align-content:start;overflow:auto;}
+.dm-card{background:var(--card);border:1px solid var(--hair);border-radius:12px;padding:0.62rem 0.85rem;box-shadow:0 6px 16px rgba(11,23,48,0.04);display:flex;flex-direction:column;}
+.dm-card.overall{background:linear-gradient(160deg,rgba(37,99,235,0.08),var(--card));border-color:rgba(37,99,235,0.28);}
+.dm-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.3rem;}
+.dm-num{font-family:var(--font-mono);font-size:0.72rem;font-weight:600;color:var(--ink-2);letter-spacing:0.03em;}
+.dm-cost{font-family:var(--font-display);font-weight:800;font-size:0.92rem;color:var(--blue);}
+.dm-title{font-family:var(--font-display);font-weight:700;font-size:0.9rem;color:var(--ink-0);line-height:1.15;display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.18rem;}
+.dm-new{font-family:var(--font-mono);font-size:0.54rem;font-weight:700;letter-spacing:0.04em;color:var(--green);background:rgba(21,163,74,0.1);border:1px solid rgba(21,163,74,0.22);border-radius:20px;padding:0.08rem 0.42rem;}
+.dm-desc{font-size:0.73rem;color:var(--ink-2);}
+/* info cards (guidelines / audit / product details) */
+.ic-grid{display:grid;gap:clamp(0.7rem,1.2vw,1rem);}
+.ic-card{background:var(--card-2);border:1px solid var(--hair);border-radius:14px;padding:1.05rem 1.25rem;display:flex;flex-direction:column;gap:0.55rem;justify-content:center;}
+.ic-h{display:flex;align-items:center;gap:0.75rem;}
+.ic-ic{width:48px;height:48px;border-radius:13px;background:rgba(37,99,235,0.09);border:1px solid rgba(37,99,235,0.18);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex:none;}
+.ic-t{font-family:var(--font-display);font-weight:700;font-size:1.18rem;color:var(--ink-0);line-height:1.15;}
+.ic-big{font-family:var(--font-display);font-weight:800;font-size:2.1rem;color:var(--blue);margin-left:auto;line-height:1;}
+.ic-d{font-size:1.02rem;color:var(--ink-1);line-height:1.5;}
+.ic-d b{color:var(--ink-0);font-weight:700;}
+/* vs bars */
+.vs-row{display:flex;align-items:center;gap:0.7rem;margin-bottom:0.6rem;}
+.vs-row .vs-l{font-family:var(--font-display);font-weight:700;font-size:0.85rem;width:120px;flex:none;display:flex;align-items:center;gap:0.4rem;}
+.vs-track{flex:1;height:28px;background:var(--card-2);border-radius:7px;overflow:hidden;}
+.vs-fill{height:100%;border-radius:7px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.7rem;font-family:var(--font-display);font-weight:800;font-size:0.85rem;color:#fff;}
+.lc{display:flex;gap:0.7rem;align-items:flex-start;margin-bottom:0.55rem;}
+.lc .lc-n{flex:none;width:23px;height:23px;border-radius:7px;background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;font-family:var(--font-display);font-weight:700;font-size:0.7rem;display:flex;align-items:center;justify-content:center;}
+.lc .lc-t{font-size:0.83rem;color:var(--ink-1);line-height:1.4;}
+.lc .lc-t b{color:var(--ink-0);font-weight:700;}
+.flow{display:flex;align-items:center;gap:0.35rem;flex-wrap:wrap;margin-top:auto;padding-top:0.7rem;}
+.flow-step{background:var(--card-2);border:1px solid var(--hair);border-radius:9px;padding:0.5rem 0.75rem;font-size:0.82rem;font-weight:600;color:var(--ink-0);}
+.flow-arrow{color:var(--blue);font-weight:800;}
+.note{font-size:0.92rem;color:var(--ink-1);line-height:1.55;}
+.note b{color:var(--ink-0);}
+.prod-head{display:flex;align-items:center;gap:0.7rem;}
+.prod-badge{font-family:var(--font-mono);font-size:0.62rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-2));border-radius:20px;padding:0.25rem 0.7rem;}
+@media(max-width:1000px){.stat-row,.cat-grid{grid-template-columns:repeat(2,1fr);}.grid-2,.grid-3{grid-template-columns:1fr;}.timeline{flex-wrap:wrap;}}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 : EXECUTIVE SUMMARY -->
+<section class="page" id="npl-p1">
+  <div>
+    <div class="eyebrow">vivo Tamil Nadu · MarCom · NPL Branding</div>
+    <h1 class="title">V80 Launch Branding — <span>At a Glance</span></h1>
+    <p class="sub">The new product launch (NPL) branding plan for V80 — smarter store coverage, premium visibility, and a small cost rise for wider V-Series reach.</p>
+  </div>
+
+  <div class="stat-row" style="grid-template-columns:repeat(3,1fr);">
+    <div class="stat" style="--c:#2563EB;"><div class="s-num">1,564</div><div class="s-sub">vs 2,254 in V70 &nbsp;<span class="updown down">▼ -30.6%</span></div><div class="s-lbl">V80 Store Coverage (WODs)</div></div>
+    <div class="stat" style="--c:#15A34A;"><div class="s-num">₹1.35 Cr</div><div class="s-sub">vs ₹1.32 Cr in V70 &nbsp;<span class="updown up">▲ +2.5%</span></div><div class="s-lbl">Total Branding Investment</div></div>
+    <div class="stat" style="--c:#B45309;"><div class="s-num">−690</div><div class="s-sub">fewer stores &nbsp;<span class="updown down">-30.6%</span></div><div class="s-lbl">Coverage Rationalised</div></div>
+  </div>
+
+  <div class="panel" style="flex:0 0 auto;">
+    <div class="panel-t">Retail Branding Timeline — V80 Launch</div>
+    <div class="timeline">
+      <div class="tl-step"><div class="tl-d">16 Sep</div><div class="tl-k">Creative Sharing</div></div>
+      <div class="tl-step"><div class="tl-d">20–30 Sep</div><div class="tl-k">ISB &amp; Domestic material changeover start</div></div>
+      <div class="tl-step"><div class="tl-d">2–7 Oct</div><div class="tl-k">Soft POSM deployment start</div></div>
+      <div class="tl-step"><div class="tl-d">5 Oct</div><div class="tl-k">Offer-led POSM deployment</div></div>
+      <div class="tl-step hot"><div class="tl-d">6 Oct</div><div class="tl-k">★ V80 Launch Day</div></div>
+      <div class="tl-step"><div class="tl-d">15 Oct</div><div class="tl-k">Super Day &amp; self audit by states</div></div>
+    </div>
+  </div>
+
+  <div class="grid-3" style="flex:1;">
+    <div class="panel" style="justify-content:center;">
+      <div class="ic-h" style="margin-bottom:0.7rem;"><span class="ic-ic">📉</span><span class="ic-t">WOD Coverage</span></div>
+      <div class="ic-d">V80 branding across <b>1,564 WODs</b> vs 2,254 for V70 — a <b>30.6% reduction</b>, driven by price-range variations and the S-Series relaunch.</div>
+    </div>
+    <div class="panel" style="justify-content:center;">
+      <div class="ic-h" style="margin-bottom:0.7rem;"><span class="ic-ic">📦</span><span class="ic-t">Domestic Materials</span></div>
+      <div class="ic-d">Despite the lower WOD count, domestic material orders were placed <b>before WOD confirmation</b>, in line with vivo India guidelines.</div>
+    </div>
+    <div class="panel" style="justify-content:center;">
+      <div class="ic-h" style="margin-bottom:0.7rem;"><span class="ic-ic">💰</span><span class="ic-t">Branding Cost</span></div>
+      <div class="ic-d">Total <b>₹1.35 Cr</b> — 2.5% higher than V70. The rise covers the <b>full V-Series WOD network</b>, not only V80 WODs.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2 : CATEGORY PLAN & COST -->
+<section class="page" id="npl-p2">
+  <div>
+    <div class="eyebrow">V80 · Category Plan &amp; Cost</div>
+    <h1 class="title">6 Branding Categories — <span>Coverage &amp; Cost</span></h1>
+    <p class="sub">Where the ₹1.35 Cr goes, by category, and how it compares with V70.</p>
+  </div>
+
+  <div class="cmp-legend"><span><i style="background:#2563EB;"></i>V70 (previous)</span><span><i style="background:#E8622A;"></i>V80 (this launch)</span></div>
+  <div class="cmp-grid">
+      <div class="cmp-card">
+        <div class="cmp-name">📱 Dummy<span class="cmp-badge up">▲ +6.6%</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:71%"></div></div><span class="cmp-val">₹22.66 L</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:76%"></div></div><span class="cmp-val">₹24.15 L</span></div>
+      </div>
+      <div class="cmp-card">
+        <div class="cmp-name">💡 Tabletop & Floor Luminous<span class="cmp-badge up">▲ +9.2%</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:88%"></div></div><span class="cmp-val">₹28.14 L</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:96%"></div></div><span class="cmp-val">₹30.72 L</span></div>
+      </div>
+      <div class="cmp-card">
+        <div class="cmp-name">🧵 Lampcloth<span class="cmp-badge down">▼ −4.7%</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:36%"></div></div><span class="cmp-val">₹11.55 L</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:35%"></div></div><span class="cmp-val">₹11.01 L</span></div>
+      </div>
+      <div class="cmp-card">
+        <div class="cmp-name">📦 Domestic Material<span class="cmp-badge up">▲ +3.3%</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:63%"></div></div><span class="cmp-val">₹20.01 L</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:65%"></div></div><span class="cmp-val">₹20.68 L</span></div>
+      </div>
+      <div class="cmp-card">
+        <div class="cmp-name">🪧 ISB & OSB<span class="cmp-badge down">▼ −3%</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:100%"></div></div><span class="cmp-val">₹31.86 L</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:97%"></div></div><span class="cmp-val">₹30.9 L</span></div>
+      </div>
+      <div class="cmp-card">
+        <div class="cmp-name">🏷️ POSM<span class="cmp-badge flat">■ 0%</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track"><div class="cmp-fill v70" style="width:55%"></div></div><span class="cmp-val">₹17.66 L</span></div>
+        <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track"><div class="cmp-fill v80" style="width:55%"></div></div><span class="cmp-val">₹17.66 L</span></div>
+      </div>
+  </div>
+  <div class="panel cmp-total" style="flex:0 0 auto;">
+    <span class="ct-l">Total Branding Cost</span>
+    <span class="ct-r"><span class="old">₹1.32 Cr</span><span class="arw">→</span><span style="color:var(--blue);">₹1.35 Cr</span><span class="cmp-badge up">▲ +2.5%</span></span>
+  </div>
+</section>
+
+<!-- PAGE 3 : COVERAGE & COMPETITION -->
+<section class="page" id="npl-p3">
+  <div>
+    <div class="eyebrow">V80 · Coverage &amp; Competition</div>
+    <h1 class="title">Material Coverage &amp; <span>vs Oppo</span></h1>
+    <p class="sub">The domestic material mix, in-shop coverage, and how V80 leads Oppo Reno 16 on in-shop visibility.</p>
+  </div>
+
+  <div class="grid-2" style="grid-template-columns:1.25fr 0.75fr;">
+    <div class="panel">
+      <div class="panel-t">Domestic Material — V80 <span class="pt-badge">1,340 WODs · ₹20.68 L</span></div>
+      <div class="dm-grid">
+        <div class="dm-card">
+          <div class="dm-top"><span class="dm-num">01</span><span class="dm-cost">₹21,000</span></div>
+          <div class="dm-title">Poly Poster <span class="dm-new">NEW</span></div>
+          <div class="dm-desc">150 WODs covered</div>
+        </div>
+        <div class="dm-card">
+          <div class="dm-top"><span class="dm-num">02</span><span class="dm-cost">₹30,000</span></div>
+          <div class="dm-title">Glass Door Sticker</div>
+          <div class="dm-desc">150 WODs covered</div>
+        </div>
+        <div class="dm-card">
+          <div class="dm-top"><span class="dm-num">03</span><span class="dm-cost">₹4,62,000</span></div>
+          <div class="dm-title">MDF Standee</div>
+          <div class="dm-desc">330 WODs covered</div>
+        </div>
+        <div class="dm-card">
+          <div class="dm-top"><span class="dm-num">04</span><span class="dm-cost">₹1,70,000</span></div>
+          <div class="dm-title">4K Video Prop <span class="dm-new">NEW</span></div>
+          <div class="dm-desc">170 WODs covered</div>
+        </div>
+        <div class="dm-card">
+          <div class="dm-top"><span class="dm-num">05</span><span class="dm-cost">₹12,73,500</span></div>
+          <div class="dm-title">Shelf Talker</div>
+          <div class="dm-desc">1,340 WODs covered</div>
+        </div>
+        <div class="dm-card">
+          <div class="dm-top"><span class="dm-num">06</span><span class="dm-cost">₹78,000</span></div>
+          <div class="dm-title">Lit Acrylic Info Panel</div>
+          <div class="dm-desc">65 WODs covered</div>
+        </div>
+        <div class="dm-card">
+          <div class="dm-top"><span class="dm-num">07</span><span class="dm-cost">₹33,750</span></div>
+          <div class="dm-title">Non-Lit AIP</div>
+          <div class="dm-desc">75 WODs covered</div>
+        </div>
+        <div class="dm-card overall">
+          <div class="dm-top"><span class="dm-num">TOTAL</span><span class="dm-cost">₹20.68 L</span></div>
+          <div class="dm-title">Overall Coverage</div>
+          <div class="dm-desc">1,340 WODs · 7 materials</div>
+        </div>
+      </div>
+      <div class="note" style="margin-top:0.5rem;">vs V70: <b>1,900 WODs → 1,340 (−29%)</b>, cost +3.3%. Adds Poly Poster &amp; 4K Video Prop; drops Lenticular Poster, Easel Standee, Table-Top &amp; Big Standee.</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:0.9rem;min-height:0;">
+      <div class="panel" style="flex:0 0 auto;gap:0.6rem;">
+        <div class="panel-t" style="margin:0;">ISB &amp; OSB Coverage <span class="pt-badge">V70 vs V80 · WODs</span></div>
+        <div class="cmp-card" style="padding:0.6rem 0.8rem;">
+          <div class="cmp-name" style="font-size:0.85rem;">ISB &amp; OSB<span class="cmp-badge up">▼ −4%</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track" style="height:14px;"><div class="cmp-fill v70" style="width:76%"></div></div><span class="cmp-val">576</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track" style="height:14px;"><div class="cmp-fill v80" style="width:73%"></div></div><span class="cmp-val">555</span></div>
+        </div>
+        <div class="cmp-card" style="padding:0.6rem 0.8rem;">
+          <div class="cmp-name" style="font-size:0.85rem;">Cladding<span class="cmp-badge flat">■ 0%</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track" style="height:14px;"><div class="cmp-fill v70" style="width:6%"></div></div><span class="cmp-val">22</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track" style="height:14px;"><div class="cmp-fill v80" style="width:6%"></div></div><span class="cmp-val">22</span></div>
+        </div>
+        <div class="cmp-card" style="padding:0.6rem 0.8rem;">
+          <div class="cmp-name" style="font-size:0.85rem;">Arch<span class="cmp-badge up">▼ −9%</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">V70</span><div class="cmp-track" style="height:14px;"><div class="cmp-fill v70" style="width:33%"></div></div><span class="cmp-val">251</span></div>
+          <div class="cmp-row"><span class="cmp-lbl">V80</span><div class="cmp-track" style="height:14px;"><div class="cmp-fill v80" style="width:30%"></div></div><span class="cmp-val">228</span></div>
+        </div>
+      </div>
+      <div class="panel" style="flex:1;">
+        <div class="panel-t">🆚 ISB &amp; OSB — vivo vs Oppo</div>
+        <div class="vs-row"><span class="vs-l">🔵 vivo V80</span><div class="vs-track"><div class="vs-fill" style="width:100%;background:linear-gradient(90deg,var(--blue-2),var(--blue));">555</div></div></div>
+        <div class="vs-row"><span class="vs-l">🟢 Oppo Reno 16</span><div class="vs-track"><div class="vs-fill" style="width:70.5%;background:linear-gradient(90deg,#4ade80,#15A34A);">391</div></div></div>
+        <div class="note" style="margin-top:auto;text-align:center;"><b style="color:var(--green);font-size:1.15rem;">+41.9%</b> · vivo leads by <b>164 WODs</b> — reinforcing V80's premium visibility.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 4 : EXECUTION & AUDIT -->
+<section class="page" id="npl-p4">
+  <div>
+    <div class="eyebrow">Execution · Compliance &amp; Governance</div>
+    <h1 class="title">Retail Guidelines &amp; <span>Audit Plan</span></h1>
+    <p class="sub">How V80 branding is executed correctly in-store, and how 100% of WODs are audited for compliance.</p>
+  </div>
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-t">Retail Execution Guidelines</div>
+      <div class="ic-grid" style="grid-template-columns:1fr 1fr;flex:1;">
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">📋</span><span class="ic-t">Spec Card</span></div><div class="ic-d">All live demo units must be in the fixture; if unavailable, display <b>dummy units</b>.</div></div>
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🧵</span><span class="ic-t">Lampcloth</span></div><div class="ic-d">Convert all <b>V60</b> lampcloth stores to the <b>V70-series</b> lampcloth.</div></div>
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">💡</span><span class="ic-t">Luminous Tabletop / Floor</span></div><div class="ic-d">Placed in high-visibility outdoor areas; keep <b>dust-free</b> &amp; well maintained.</div></div>
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🖼️</span><span class="ic-t">Lit AIP &amp; DIP</span></div><div class="ic-d">Replace existing frames with the <b>new creative</b>.</div></div>
+      </div>
+      <div class="note" style="margin-top:0.7rem;flex:0 0 auto;"><b>Action:</b> non-compliant branches are escalated to management for strict action.</div>
+    </div>
+    <div class="panel">
+      <div class="panel-t">V80 Audit Plan <span class="pt-badge">1,564 WODs · 100% coverage</span></div>
+      <div class="ic-grid" style="grid-template-columns:1fr;flex:1;">
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">👣</span><span class="ic-t">In-Person Audit</span><span class="ic-big">234</span></div><div class="ic-d"><b>4 HO auditors</b>, 58 stores each · 15% mystery-audit coverage.</div></div>
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">📹</span><span class="ic-t">Video Call Audit</span><span class="ic-big">894</span></div><div class="ic-d"><b>A+ &amp; A WODs</b> audited by 4 persons (branch breakup).</div></div>
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🖥️</span><span class="ic-t">Channel One · Online</span><span class="ic-big">1,564</span></div><div class="ic-d">Full V80 WODs online for <b>baseline compliance</b>.</div></div>
+      </div>
+      <div class="flow" style="margin-top:0.6rem;flex:0 0 auto;">
+        <span class="flow-step">100% Coverage</span><span class="flow-arrow">›</span>
+        <span class="flow-step">Gap ID</span><span class="flow-arrow">›</span>
+        <span class="flow-step">Rectification</span><span class="flow-arrow">›</span>
+        <span class="flow-step">Verified Closure</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 5 : X FOLD 6 & S2 FE -->
+<section class="page" id="npl-p5">
+  <div>
+    <div class="eyebrow">Other Launches · X Fold 6 &amp; S2 FE</div>
+    <h1 class="title">X Fold 6 &amp; <span>S2 FE Branding</span></h1>
+    <p class="sub">Two more launches in the NPL window — a lean premium plan for X Fold 6, and early dummy coverage for S2 FE.</p>
+  </div>
+  <div class="grid-2">
+    <div class="panel">
+      <div class="prod-head" style="margin-bottom:0.8rem;"><span class="prod-badge">X Fold 6</span><span class="panel-t" style="margin:0;">Premium Foldable</span></div>
+      <div class="stat-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:0.85rem;flex:0 0 auto;">
+        <div class="stat" style="--c:#2563EB;padding:0.8rem 1rem;"><div class="s-num" style="font-size:1.7rem;">80</div><div class="s-lbl">WODs · vs 101</div></div>
+        <div class="stat" style="--c:#15A34A;padding:0.8rem 1rem;"><div class="s-num" style="font-size:1.7rem;">₹2.5 L</div><div class="s-lbl">Cost · vs ₹4.7 L</div></div>
+        <div class="stat" style="--c:#15A34A;padding:0.8rem 1rem;"><div class="s-num" style="font-size:1.7rem;">−47%</div><div class="s-lbl">Saving</div></div>
+      </div>
+      <div class="ic-grid" style="grid-template-columns:1fr;flex:1;">
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🖼️</span><span class="ic-t">Materials</span></div><div class="ic-d"><b>Poly Posters</b> where placement is allowed; remaining WODs covered with <b>Shelf Talkers</b>.</div></div>
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">🔧</span><span class="ic-t">48 Selected WODs</span></div><div class="ic-d">Replace <b>35 brackets</b> &amp; <b>22 floor luminous</b>; add <b>15 brackets</b> &amp; <b>3 floor luminous</b>.</div></div>
+      </div>
+      <div class="note" style="margin-top:0.6rem;flex:0 0 auto;">Savings from lower WOD coverage (post price increase) &amp; efficient reuse of existing materials.</div>
+    </div>
+    <div class="panel">
+      <div class="prod-head" style="margin-bottom:0.8rem;"><span class="prod-badge">S2 FE</span><span class="panel-t" style="margin:0;">Fan Edition</span></div>
+      <div class="stat-row" style="grid-template-columns:repeat(2,1fr);margin-bottom:0.85rem;flex:0 0 auto;">
+        <div class="stat" style="--c:#2563EB;"><div class="s-num">2,000+</div><div class="s-lbl">WOD Coverage Planned</div></div>
+        <div class="stat" style="--c:#B45309;"><div class="s-num">2,340</div><div class="s-lbl">Dummy Units Ordered</div></div>
+      </div>
+      <div class="ic-grid" style="grid-template-columns:1fr;flex:1;">
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">📍</span><span class="ic-t">WOD Coverage</span></div><div class="ic-d">Branding planned across <b>2,000+ WODs</b> for S2 FE.</div></div>
+        <div class="ic-card"><div class="ic-h"><span class="ic-ic">📦</span><span class="ic-t">Material Status</span></div><div class="ic-d">Per vivo India guidelines, only <b>dummy units</b> ordered so far (2,340).</div></div>
+      </div>
+      <div class="note" style="margin-top:0.6rem;flex:0 0 auto;">Full material plan to follow after WOD confirmation, in line with the launch calendar.</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

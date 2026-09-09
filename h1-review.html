@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcom H1 Review 2026 - 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-display:'Sora',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --bg:#EEF3FD; --card:#FFFFFF; --card-2:#F3F6FD;
+  --ink-0:#0B1730; --ink-1:#3D4E73; --ink-2:#6B7B9C;
+  --blue:#2B54E6; --blue-2:#3E63FF; --cyan:#1D4ED8;
+  --green:#15A34A; --amber:#B45309;
+  --hair:rgba(11,23,48,0.10); --glow:rgba(62,99,255,0.20);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink-0);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
+body{scroll-snap-type:y mandatory;}
+.page{height:100vh;overflow:hidden;padding:clamp(1.6rem,3.4vw,3rem) clamp(1.4rem,4vw,4rem);scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;gap:clamp(1.1rem,2vw,1.8rem);max-width:1480px;margin:0 auto;}
+/* header */
+.eyebrow{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.14em;color:var(--blue);text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px var(--glow);}
+h1.title{font-family:var(--font-display);font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.04;letter-spacing:-0.02em;margin:0.7rem 0 0.4rem;}
+h1.title span{color:var(--blue);}
+.sub{font-size:clamp(0.95rem,1.3vw,1.1rem);color:var(--ink-1);max-width:64ch;line-height:1.5;margin:0;}
+/* primary KPI cards */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,1.6vw,1.5rem);flex:0 0 auto;}
+.kpi{position:relative;background:var(--card);border:1px solid var(--hair);border-radius:20px;padding:clamp(1.6rem,2.4vw,2.4rem);box-shadow:0 16px 44px rgba(11,23,48,0.06);overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
+.kpi::after{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--blue),var(--blue-2));}
+.kpi .k-lbl{font-family:var(--font-mono);font-size:0.74rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-2);}
+.kpi .k-num{font-family:var(--font-display);font-weight:800;font-size:clamp(2.8rem,5vw,4.2rem);line-height:1;letter-spacing:-0.02em;margin:0.55rem 0 0.2rem;color:var(--ink-0);}
+.kpi .k-num.blue{color:var(--blue);}
+.kpi .k-break{display:flex;gap:1.4rem;margin-top:1rem;padding-top:0.9rem;border-top:1px dashed var(--hair);}
+.kpi .k-break div{display:flex;flex-direction:column;gap:0.15rem;}
+.kpi .k-break .bk-k{font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.08em;color:var(--ink-2);text-transform:uppercase;}
+.kpi .k-break .bk-v{font-family:var(--font-display);font-weight:700;font-size:1.02rem;color:var(--ink-0);}
+.kpi .k-foot{margin-top:0.95rem;font-size:0.82rem;color:var(--ink-1);}
+.kpi .k-foot b{color:var(--blue);font-weight:700;}
+.chip{display:inline-flex;align-items:center;gap:0.35rem;font-family:var(--font-mono);font-size:0.66rem;font-weight:600;letter-spacing:0.05em;color:var(--green);background:rgba(21,163,74,0.10);border:1px solid rgba(21,163,74,0.22);border-radius:20px;padding:0.28rem 0.7rem;margin-top:0.9rem;}
+/* comparison */
+.panel{background:var(--card);border:1px solid var(--hair);border-radius:20px;padding:clamp(1.6rem,2.4vw,2.4rem);box-shadow:0 16px 44px rgba(11,23,48,0.05);flex:1;display:flex;flex-direction:column;min-height:0;}
+.panel .cmp{flex:1;align-content:center;}
+.panel-h{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:1.4rem;flex-wrap:wrap;flex:0 0 auto;}
+.panel-h .ph-t{font-family:var(--font-display);font-weight:700;font-size:1.2rem;color:var(--ink-0);}
+.panel-h .ph-s{font-size:0.85rem;color:var(--ink-2);}
+.cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.2vw,2.4rem);}
+.cmp-metric .cm-lbl{font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:0.8rem;}
+.bar-row{display:flex;align-items:center;gap:0.7rem;margin-bottom:0.65rem;}
+.bar-row .br-tag{font-family:var(--font-mono);font-size:0.72rem;font-weight:600;color:var(--ink-1);width:34px;flex:none;}
+.bar-track{flex:1;height:26px;background:var(--card-2);border-radius:7px;overflow:hidden;position:relative;}
+.bar-fill{height:100%;border-radius:7px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.6rem;font-family:var(--font-display);font-weight:700;font-size:0.78rem;color:#fff;white-space:nowrap;}
+.bar-fill.ho{background:linear-gradient(90deg,var(--blue),var(--blue-2));}
+.bar-fill.jbp{background:linear-gradient(90deg,#1E293B,#334155);}
+.cmp-note{margin-top:0.4rem;font-size:0.75rem;color:var(--ink-2);}
+/* bottom row */
+.bottom{display:grid;grid-template-columns:1.15fr 0.85fr;gap:clamp(1rem,1.6vw,1.5rem);}
+.msg{background:linear-gradient(135deg,#0B1730,#1E2A52);color:#EAF0FF;border-radius:20px;padding:clamp(1.4rem,2vw,2rem);position:relative;overflow:hidden;}
+.msg::before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%);}
+.msg .m-lbl{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:#8FA6E8;}
+.msg .m-txt{font-family:var(--font-display);font-weight:600;font-size:clamp(1rem,1.5vw,1.28rem);line-height:1.5;margin-top:0.7rem;}
+.msg .m-txt b{color:#7FA0FF;font-weight:800;}
+.budget{background:var(--card);border:1px solid var(--hair);border-radius:20px;padding:clamp(1.4rem,2vw,2rem);box-shadow:0 16px 44px rgba(11,23,48,0.05);display:flex;flex-direction:column;}
+.budget .b-lbl{font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-2);}
+.budget .b-num{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3vw,2.6rem);line-height:1;margin:0.4rem 0 0.1rem;color:var(--ink-0);}
+.budget .b-sub{font-size:0.82rem;color:var(--ink-1);}
+.util-track{height:12px;background:var(--card-2);border-radius:8px;margin:1rem 0 0.7rem;overflow:hidden;}
+.util-fill{height:100%;width:83.4%;background:linear-gradient(90deg,var(--blue),var(--blue-2));border-radius:8px;}
+.util-legend{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-2);}
+.util-legend b{color:var(--ink-0);}
+.b-rem{margin-top:auto;padding-top:1rem;font-size:0.85rem;color:var(--ink-1);}
+.b-rem b{color:var(--amber);font-weight:700;font-family:var(--font-display);}
+/* PAGE 2 — HIGHLIGHTS */
+.hl-split{display:grid;grid-template-columns:0.92fr 1.08fr;gap:clamp(1.2rem,2.4vw,2.4rem);align-items:center;flex:1;}
+.hl-video{background:#050B18;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 50px rgba(11,23,48,0.16);}
+.hl-video video{width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;display:block;background:#000;}
+.hl-video .hv-cap{padding:0.75rem 1.1rem;font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.09em;color:#9DB2EC;text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;background:#0B1730;}
+.hl-video .hv-cap::before{content:"";width:7px;height:7px;border-radius:50%;background:#15A34A;box-shadow:0 0 0 3px rgba(21,163,74,0.28);}
+.hl-points{display:flex;flex-direction:column;min-height:0;}
+.hp-title{font-family:var(--font-display);font-weight:700;font-size:1.08rem;color:var(--ink-0);margin-bottom:0.2rem;}
+.hp-title small{display:block;font-family:var(--font-mono);font-weight:500;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:0.35rem;}
+.hl-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:0.85rem;align-content:start;}
+.hl-card{background:var(--card);border:1px solid var(--hair);border-radius:13px;padding:0.72rem 0.85rem;box-shadow:0 6px 16px rgba(11,23,48,0.04);display:flex;flex-direction:column;}
+.hc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.4rem;}
+.hc-num{font-family:var(--font-mono);font-size:0.74rem;font-weight:600;color:var(--ink-2);letter-spacing:0.03em;}
+.hc-badge{font-family:var(--font-mono);font-size:0.6rem;font-weight:700;letter-spacing:0.06em;color:var(--green);display:inline-flex;align-items:center;gap:0.25rem;}
+.hc-title{font-family:var(--font-display);font-weight:700;font-size:0.9rem;color:var(--ink-0);line-height:1.18;margin-bottom:0.22rem;}
+.hc-desc{font-size:0.73rem;color:var(--ink-2);line-height:1.34;}
+/* PAGE 3 — KOL DATABASE */
+.db-stats{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,2vw,1.8rem);flex:1;min-height:0;}
+.db-stat{position:relative;border-radius:22px;padding:clamp(1.6rem,2.6vw,2.6rem);overflow:hidden;display:flex;flex-direction:column;justify-content:center;box-shadow:0 20px 50px rgba(11,23,48,0.08);}
+.db-stat.kol{background:var(--card-2);border:1px solid var(--hair);color:var(--ink-0);}
+.db-stat.media{background:var(--card);border:1px solid var(--hair);color:var(--ink-0);}
+.db-stat .ds-glow{position:absolute;right:-70px;top:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%);pointer-events:none;}
+.db-stat .ds-ic{font-size:2.2rem;margin-bottom:0.6rem;}
+.db-stat .ds-from{display:inline-flex;align-items:center;gap:0.45rem;font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.3rem 0.7rem;border-radius:20px;width:fit-content;margin-bottom:0.9rem;}
+.db-stat.kol .ds-from{background:rgba(43,84,230,0.08);color:var(--blue);border:1px solid rgba(43,84,230,0.2);}
+.db-stat.media .ds-from{background:rgba(43,84,230,0.08);color:var(--blue);border:1px solid rgba(43,84,230,0.2);}
+.db-stat .ds-num{font-family:var(--font-display);font-weight:800;font-size:clamp(3.6rem,8vw,6rem);line-height:0.95;letter-spacing:-0.03em;}
+.db-stat.kol .ds-num{color:var(--ink-0);}
+.db-stat.media .ds-num{color:var(--blue);}
+.db-stat .ds-lbl{font-family:var(--font-mono);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin-top:0.5rem;opacity:0.9;}
+.db-stat .ds-desc{font-size:0.95rem;line-height:1.5;margin-top:0.7rem;max-width:34ch;}
+.db-stat.kol .ds-desc{color:var(--ink-1);}
+.db-stat.media .ds-desc{color:var(--ink-1);}
+.db-unlocks{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(0.7rem,1.2vw,1rem);flex:0 0 auto;}
+.db-chip{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:0.9rem 1.05rem;box-shadow:0 8px 20px rgba(11,23,48,0.04);}
+.db-chip .dc-ic{font-size:1.15rem;}
+.db-chip .dc-t{font-family:var(--font-display);font-weight:700;font-size:0.9rem;color:var(--ink-0);margin-top:0.35rem;}
+.db-chip .dc-s{font-size:0.74rem;color:var(--ink-2);line-height:1.35;margin-top:0.2rem;}
+/* KOL genre breakdown */
+.kdb-band{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(0.8rem,1.4vw,1.2rem);flex:0 0 auto;}
+.kdb-pill{display:flex;align-items:center;gap:0.9rem;background:var(--card-2);border:1px solid var(--hair);border-radius:16px;padding:0.85rem 1.2rem;box-shadow:0 8px 20px rgba(11,23,48,0.05);}
+.kdb-pill .kp-ic{font-size:1.8rem;line-height:1;}
+.kdb-pill .kp-num{font-family:var(--font-display);font-weight:800;font-size:clamp(1.8rem,3.2vw,2.6rem);color:var(--blue);line-height:0.95;letter-spacing:-0.02em;}
+.kdb-pill .kp-lbl{display:flex;flex-direction:column;font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-0);font-weight:700;}
+.kdb-pill .kp-lbl small{font-family:var(--font-body);text-transform:none;letter-spacing:0;font-weight:400;font-size:0.74rem;color:var(--ink-2);margin-top:0.22rem;line-height:1.3;}
+.kdb-genres{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(0.5rem,0.9vw,0.75rem);flex:1;min-height:0;}
+.gcard{background:var(--card);border:1px solid var(--hair);border-radius:13px;padding:0.7rem 0.75rem 0.6rem;display:flex;flex-direction:column;box-shadow:0 6px 16px rgba(11,23,48,0.04);position:relative;overflow:hidden;}
+.gcard .g-ic{font-size:1.05rem;line-height:1;}
+.gcard .g-ct{font-family:var(--font-display);font-weight:800;font-size:clamp(1.35rem,2.3vw,1.85rem);color:var(--ink-0);line-height:1;margin-top:0.3rem;}
+.gcard .g-nm{font-size:0.72rem;color:var(--ink-1);font-weight:600;margin-top:0.15rem;line-height:1.2;flex:1;}
+.gcard .g-bar{height:4px;border-radius:3px;background:var(--card-2);margin-top:0.45rem;overflow:hidden;}
+.gcard .g-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),#3E63FF);border-radius:3px;}
+@media(max-width:900px){.kpis,.cmp{grid-template-columns:1fr;}.bottom{grid-template-columns:1fr;}.hl-split{grid-template-columns:1fr;}.db-stats{grid-template-columns:1fr;}.db-unlocks{grid-template-columns:1fr 1fr;}.kdb-band{grid-template-columns:1fr;}.kdb-genres{grid-template-columns:repeat(3,1fr);}}
+</style>
+</head>
+<body>
+
+<section class="page" id="page-1">
+  <header>
+    <div class="eyebrow">vivo Tamil Nadu · MarCom · Overall Performance</div>
+    <h1 class="title">H1 Marcom Review <span>2026 - 2027</span></h1>
+    <p class="sub">Total marketing expense, reach and cost-per-person across HO &amp; JBP execution — the complete efficiency picture for the H1 period.</p>
+  </header>
+
+  <!-- PRIMARY KPI CARDS -->
+  <div class="kpis">
+    <div class="kpi">
+      <div class="k-lbl">01 · Overall Expense</div>
+      <div class="k-num">₹1.45 Cr</div>
+      <div class="k-break">
+        <div><span class="bk-k">HO</span><span class="bk-v">₹36.11 L</span></div>
+        <div><span class="bk-k">JBP</span><span class="bk-v">₹1.09 Cr</span></div>
+      </div>
+      <div class="k-foot"><b>83.4%</b> of ₹1.74 Cr budget utilized</div>
+    </div>
+    <div class="kpi">
+      <div class="k-lbl">02 · Overall Reach</div>
+      <div class="k-num blue">6.51 Cr</div>
+      <div class="k-break">
+        <div><span class="bk-k">HO</span><span class="bk-v">3.56 Cr</span></div>
+        <div><span class="bk-k">JBP</span><span class="bk-v">2.95 Cr</span></div>
+      </div>
+      <div class="k-foot">65,054,575 people reached in total</div>
+    </div>
+    <div class="kpi">
+      <div class="k-lbl">03 · Overall CPP</div>
+      <div class="k-num">₹0.22</div>
+      <div class="k-break">
+        <div><span class="bk-k">HO CPP</span><span class="bk-v">₹0.10</span></div>
+        <div><span class="bk-k">JBP CPP</span><span class="bk-v">₹0.37</span></div>
+      </div>
+      <span class="chip">▼ Lower CPP = Better Efficiency</span>
+    </div>
+  </div>
+
+  <!-- HO VS JBP COMPARISON -->
+  <div class="panel">
+    <div class="cmp">
+      <div class="cmp-metric">
+        <div class="cm-lbl">Expense</div>
+        <div class="bar-row"><span class="br-tag">HO</span><div class="bar-track"><div class="bar-fill ho" style="width:33%;">₹36.11 L</div></div></div>
+        <div class="bar-row"><span class="br-tag">JBP</span><div class="bar-track"><div class="bar-fill jbp" style="width:100%;">₹1.09 Cr</div></div></div>
+        <div class="cmp-note">JBP = 75.11% of total spend</div>
+      </div>
+      <div class="cmp-metric">
+        <div class="cm-lbl">Reach</div>
+        <div class="bar-row"><span class="br-tag">HO</span><div class="bar-track"><div class="bar-fill ho" style="width:100%;">3.56 Cr</div></div></div>
+        <div class="bar-row"><span class="br-tag">JBP</span><div class="bar-track"><div class="bar-fill jbp" style="width:83%;">2.95 Cr</div></div></div>
+        <div class="cmp-note">HO = 54.69% of total reach</div>
+      </div>
+      <div class="cmp-metric">
+        <div class="cm-lbl">CPP <span style="color:var(--ink-2);text-transform:none;letter-spacing:0;">(lower is better)</span></div>
+        <div class="bar-row"><span class="br-tag">HO</span><div class="bar-track"><div class="bar-fill ho" style="width:27%;">₹0.10</div></div></div>
+        <div class="bar-row"><span class="br-tag">JBP</span><div class="bar-track"><div class="bar-fill jbp" style="width:100%;">₹0.37</div></div></div>
+        <div class="cmp-note">HO is 3.7× more cost-efficient</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="page hl" id="page-2">
+  <header>
+    <div class="eyebrow">vivo Tamil Nadu · MarCom · Highlights</div>
+    <h1 class="title">Highlights of the <span>Period</span></h1>
+    <p class="sub">From underperforming output to ad-grade, premium execution — the shift that defined the S2 campaign.</p>
+  </header>
+  <div class="hl-split">
+    <div class="hl-video">
+      <video src="assets/h1-highlights.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+      <div class="hv-cap">Current best execution · playing muted</div>
+    </div>
+    <div class="hl-points">
+      <div class="hp-title"><small>What We Changed</small>10 Key Improvements</div>
+      <div class="hl-grid">
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">01</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Quality over Quantity</div><div class="hc-desc">Fewer, higher-impact deliverables</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">02</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Premium Camera Gear</div><div class="hc-desc">Shot on Red Komodo for cinematic output</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">03</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Efficient Vendor Sourcing</div><div class="hc-desc">Better execution partners at optimized cost</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">04</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Standardized KOL SOP</div><div class="hc-desc">Structured selection, briefing &amp; production</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">05</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Theme-Driven Concepting</div><div class="hc-desc">Storyboards aligned to the narrative pre-shoot</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">06</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Location Recce</div><div class="hc-desc">On-site visits to ensure premium visual quality</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">07</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Micro-Managed Production</div><div class="hc-desc">Every element curated for a premium look &amp; feel</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">08</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Models over Influencers</div><div class="hc-desc">Reduced talent cost, ad-grade output</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">09</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Natural Product Integration</div><div class="hc-desc">Product woven organically into the story</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">10</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Zero Supers</div><div class="hc-desc">No text overlays; the story alone sells the value</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page db" id="page-3">
+  <header>
+    <div class="eyebrow">vivo Tamil Nadu · MarCom · KOL Database</div>
+    <h1 class="title">A Living <span>KOL Database</span></h1>
+    <p class="sub">Built from zero into a ready-to-activate network — vetted creators and media partners we can mobilise on day one, backed by real, trusted relationships.</p>
+  </header>
+
+  <div class="kdb-band">
+    <div class="kdb-pill"><span class="kp-ic">🤝</span><span class="kp-num">200+</span><span class="kp-lbl">KOL Database<small>Vetted TN creators, ready to activate</small></span></div>
+    <div class="kdb-pill"><span class="kp-ic">📺</span><span class="kp-num">20+</span><span class="kp-lbl">Media Channels<small>Digital &amp; regional amplification</small></span></div>
+    <div class="kdb-pill"><span class="kp-ic">🗂️</span><span class="kp-num">21</span><span class="kp-lbl">Genres Mapped<small>253 creators sorted by content genre</small></span></div>
+  </div>
+
+  <div class="kdb-genres">
+    <div class="gcard"><div class="g-ic">✨</div><div class="g-ct">50</div><div class="g-nm">Lifestyle</div><div class="g-bar"><span style="width:100%"></span></div></div>
+    <div class="gcard"><div class="g-ic">⭐</div><div class="g-ct">44</div><div class="g-nm">Celebrity</div><div class="g-bar"><span style="width:88%"></span></div></div>
+    <div class="gcard"><div class="g-ic">📸</div><div class="g-ct">25</div><div class="g-nm">Model</div><div class="g-bar"><span style="width:50%"></span></div></div>
+    <div class="gcard"><div class="g-ic">📱</div><div class="g-ct">21</div><div class="g-nm">Tech &amp; Gadgets</div><div class="g-bar"><span style="width:42%"></span></div></div>
+    <div class="gcard"><div class="g-ic">✈️</div><div class="g-ct">21</div><div class="g-nm">Travel</div><div class="g-bar"><span style="width:42%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎬</div><div class="g-ct">19</div><div class="g-nm">Entertainment</div><div class="g-bar"><span style="width:38%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💑</div><div class="g-ct">10</div><div class="g-nm">Couple</div><div class="g-bar"><span style="width:20%"></span></div></div>
+    <div class="gcard"><div class="g-ic">👗</div><div class="g-ct">9</div><div class="g-nm">Fashion</div><div class="g-bar"><span style="width:18%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎭</div><div class="g-ct">9</div><div class="g-nm">Acting</div><div class="g-bar"><span style="width:18%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🍽️</div><div class="g-ct">8</div><div class="g-nm">Food</div><div class="g-bar"><span style="width:16%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💄</div><div class="g-ct">6</div><div class="g-nm">Fashion &amp; Beauty</div><div class="g-bar"><span style="width:12%"></span></div></div>
+    <div class="gcard"><div class="g-ic">😂</div><div class="g-ct">6</div><div class="g-nm">Comedy</div><div class="g-bar"><span style="width:12%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎨</div><div class="g-ct">4</div><div class="g-nm">Art</div><div class="g-bar"><span style="width:8%"></span></div></div>
+    <div class="gcard"><div class="g-ic">👩‍🎤</div><div class="g-ct">4</div><div class="g-nm">Actress</div><div class="g-bar"><span style="width:8%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💻</div><div class="g-ct">3</div><div class="g-nm">Tech</div><div class="g-bar"><span style="width:6%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🖌️</div><div class="g-ct">3</div><div class="g-nm">Artist</div><div class="g-bar"><span style="width:6%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🕺</div><div class="g-ct">3</div><div class="g-nm">Dancer</div><div class="g-bar"><span style="width:6%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💼</div><div class="g-ct">2</div><div class="g-nm">Entrepreneurship</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💅</div><div class="g-ct">2</div><div class="g-nm">Beauty</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎥</div><div class="g-ct">2</div><div class="g-nm">Actor</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎤</div><div class="g-ct">2</div><div class="g-nm">Anchor</div><div class="g-bar"><span style="width:4%"></span></div></div>
+  </div>
+</section>
+
+</body>
+</html>
