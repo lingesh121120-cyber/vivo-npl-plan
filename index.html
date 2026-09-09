@@ -1138,6 +1138,121 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
   right:1.5rem;
   z-index:900;
 }
+/* ========== H1 REVIEW PANEL — SCOPED STYLES ========== */
+.h1review-panel{flex:1;display:flex;flex-direction:column;min-height:0;}
+.h1review-panel .h1-tab-bar{display:flex;gap:0;background:#FFFFFF;border-bottom:1px solid rgba(11,23,48,0.10);padding:0 2rem;flex-shrink:0;overflow-x:auto;height:48px;align-items:flex-end;}
+.h1review-panel .h1-tab-bar::-webkit-scrollbar{display:none;}
+.h1review-panel .h1-tab{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;background:transparent;border:none;border-bottom:3px solid transparent;padding:0 1.2rem;height:48px;cursor:pointer;white-space:nowrap;transition:color 0.15s,border-color 0.15s;}
+.h1review-panel .h1-tab:hover{color:#2B54E6;}
+.h1review-panel .h1-tab.active{color:#2B54E6;border-bottom-color:#2B54E6;}
+.h1review-panel .page{flex:1;min-height:0;overflow-y:auto;height:auto;padding:clamp(1.6rem,3.4vw,3rem) clamp(1.4rem,4vw,4rem);display:none;flex-direction:column;gap:clamp(1.1rem,2vw,1.8rem);max-width:1480px;margin:0 auto;width:100%;}
+.h1review-panel .eyebrow{font-size:0.72rem;letter-spacing:0.14em;color:#2B54E6;text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;}
+.h1review-panel .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#2B54E6;box-shadow:0 0 0 4px rgba(62,99,255,0.20);}
+.h1review-panel h1.title{font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.04;letter-spacing:-0.02em;margin:0.7rem 0 0.4rem;}
+.h1review-panel h1.title span{color:#2B54E6;}
+.h1review-panel .sub{font-size:clamp(0.95rem,1.3vw,1.1rem);color:#3D4E73;max-width:64ch;line-height:1.5;margin:0;}
+.h1review-panel .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,1.6vw,1.5rem);flex:0 0 auto;}
+.h1review-panel .kpi{position:relative;background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:20px;padding:clamp(1.6rem,2.4vw,2.4rem);box-shadow:0 16px 44px rgba(11,23,48,0.06);overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
+.h1review-panel .kpi::after{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#2B54E6,#3E63FF);}
+.h1review-panel .kpi .k-lbl{font-size:0.74rem;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;}
+.h1review-panel .kpi .k-num{font-weight:800;font-size:clamp(2.8rem,5vw,4.2rem);line-height:1;letter-spacing:-0.02em;margin:0.55rem 0 0.2rem;color:#0B1730;}
+.h1review-panel .kpi .k-num.blue{color:#2B54E6;}
+.h1review-panel .kpi .k-break{display:flex;gap:1.4rem;margin-top:1rem;padding-top:0.9rem;border-top:1px dashed rgba(11,23,48,0.10);}
+.h1review-panel .kpi .k-break div{display:flex;flex-direction:column;gap:0.15rem;}
+.h1review-panel .kpi .k-break .bk-k{font-size:0.66rem;letter-spacing:0.08em;color:#6B7B9C;text-transform:uppercase;}
+.h1review-panel .kpi .k-break .bk-v{font-weight:700;font-size:1.02rem;color:#0B1730;}
+.h1review-panel .kpi .k-foot{margin-top:0.95rem;font-size:0.82rem;color:#3D4E73;}
+.h1review-panel .kpi .k-foot b{color:#2B54E6;font-weight:700;}
+.h1review-panel .chip{display:inline-flex;align-items:center;gap:0.35rem;font-size:0.66rem;font-weight:600;letter-spacing:0.05em;color:#15A34A;background:rgba(21,163,74,0.10);border:1px solid rgba(21,163,74,0.22);border-radius:20px;padding:0.28rem 0.7rem;margin-top:0.9rem;}
+.h1review-panel .panel{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:20px;padding:clamp(1.6rem,2.4vw,2.4rem);box-shadow:0 16px 44px rgba(11,23,48,0.05);flex:1;display:flex;flex-direction:column;min-height:0;}
+.h1review-panel .panel-h{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:1.4rem;flex-wrap:wrap;flex:0 0 auto;}
+.h1review-panel .panel-h .ph-t{font-weight:700;font-size:1.2rem;color:#0B1730;}
+.h1review-panel .panel-h .ph-s{font-size:0.85rem;color:#6B7B9C;}
+.h1review-panel .cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.2vw,2.4rem);}
+.h1review-panel .cmp-metric .cm-lbl{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;margin-bottom:0.8rem;}
+.h1review-panel .bar-row{display:flex;align-items:center;gap:0.7rem;margin-bottom:0.65rem;}
+.h1review-panel .bar-row .br-tag{font-size:0.72rem;font-weight:600;color:#3D4E73;width:34px;flex:none;}
+.h1review-panel .bar-track{flex:1;height:26px;background:#F3F6FD;border-radius:7px;overflow:hidden;position:relative;}
+.h1review-panel .bar-fill{height:100%;border-radius:7px;display:flex;align-items:center;justify-content:flex-end;padding-right:0.6rem;font-weight:700;font-size:0.78rem;color:#fff;white-space:nowrap;}
+.h1review-panel .bar-fill.ho{background:linear-gradient(90deg,#2B54E6,#3E63FF);}
+.h1review-panel .bar-fill.jbp{background:linear-gradient(90deg,#1E293B,#334155);}
+.h1review-panel .cmp-note{margin-top:0.4rem;font-size:0.75rem;color:#6B7B9C;}
+.h1review-panel .bottom{display:grid;grid-template-columns:1.15fr 0.85fr;gap:clamp(1rem,1.6vw,1.5rem);}
+.h1review-panel .msg{background:linear-gradient(135deg,#0B1730,#1E2A52);color:#EAF0FF;border-radius:20px;padding:clamp(1.4rem,2vw,2rem);position:relative;overflow:hidden;}
+.h1review-panel .msg::before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(62,99,255,0.20),transparent 70%);}
+.h1review-panel .msg .m-lbl{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:#8FA6E8;}
+.h1review-panel .msg .m-txt{font-weight:600;font-size:clamp(1rem,1.5vw,1.28rem);line-height:1.5;margin-top:0.7rem;}
+.h1review-panel .msg .m-txt b{color:#7FA0FF;font-weight:800;}
+.h1review-panel .budget{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:20px;padding:clamp(1.4rem,2vw,2rem);box-shadow:0 16px 44px rgba(11,23,48,0.05);display:flex;flex-direction:column;}
+.h1review-panel .budget .b-lbl{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;}
+.h1review-panel .budget .b-num{font-weight:800;font-size:clamp(2rem,3vw,2.6rem);line-height:1;margin:0.4rem 0 0.1rem;color:#0B1730;}
+.h1review-panel .budget .b-sub{font-size:0.82rem;color:#3D4E73;}
+.h1review-panel .util-track{height:12px;background:#F3F6FD;border-radius:8px;margin:1rem 0 0.7rem;overflow:hidden;}
+.h1review-panel .util-fill{height:100%;width:83.4%;background:linear-gradient(90deg,#2B54E6,#3E63FF);border-radius:8px;}
+.h1review-panel .util-legend{display:flex;justify-content:space-between;font-size:0.7rem;color:#6B7B9C;}
+.h1review-panel .util-legend b{color:#0B1730;}
+.h1review-panel .b-rem{margin-top:auto;padding-top:1rem;font-size:0.85rem;color:#3D4E73;}
+.h1review-panel .b-rem b{color:#B45309;font-weight:700;}
+.h1review-panel .hl-split{display:grid;grid-template-columns:0.92fr 1.08fr;gap:clamp(1.2rem,2.4vw,2.4rem);align-items:center;flex:1;}
+.h1review-panel .hl-video{background:#050B18;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 50px rgba(11,23,48,0.16);}
+.h1review-panel .hl-video video{width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;display:block;background:#000;}
+.h1review-panel .hl-video .hv-cap{padding:0.75rem 1.1rem;font-size:0.7rem;letter-spacing:0.09em;color:#9DB2EC;text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;background:#0B1730;}
+.h1review-panel .hl-video .hv-cap::before{content:"";width:7px;height:7px;border-radius:50%;background:#15A34A;box-shadow:0 0 0 3px rgba(21,163,74,0.28);}
+.h1review-panel .hl-points{display:flex;flex-direction:column;min-height:0;}
+.h1review-panel .hp-title{font-weight:700;font-size:1.08rem;color:#0B1730;margin-bottom:0.2rem;}
+.h1review-panel .hp-title small{display:block;font-weight:500;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:#2B54E6;margin-bottom:0.35rem;}
+.h1review-panel .hl-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:0.85rem;align-content:start;}
+.h1review-panel .hl-card{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:13px;padding:0.72rem 0.85rem;box-shadow:0 6px 16px rgba(11,23,48,0.04);display:flex;flex-direction:column;}
+.h1review-panel .hc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.4rem;}
+.h1review-panel .hc-num{font-size:0.74rem;font-weight:600;color:#6B7B9C;letter-spacing:0.03em;}
+.h1review-panel .hc-badge{font-size:0.6rem;font-weight:700;letter-spacing:0.06em;color:#15A34A;display:inline-flex;align-items:center;gap:0.25rem;}
+.h1review-panel .hc-title{font-weight:700;font-size:0.9rem;color:#0B1730;line-height:1.18;margin-bottom:0.22rem;}
+.h1review-panel .hc-desc{font-size:0.73rem;color:#6B7B9C;line-height:1.34;}
+.h1review-panel .db-stats{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,2vw,1.8rem);flex:1;min-height:0;}
+.h1review-panel .db-stat{position:relative;border-radius:22px;padding:clamp(1.6rem,2.6vw,2.6rem);overflow:hidden;display:flex;flex-direction:column;justify-content:center;box-shadow:0 20px 50px rgba(11,23,48,0.08);}
+.h1review-panel .db-stat.kol{background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);color:#0B1730;}
+.h1review-panel .db-stat.media{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);color:#0B1730;}
+.h1review-panel .db-stat .ds-glow{position:absolute;right:-70px;top:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(62,99,255,0.20),transparent 70%);pointer-events:none;}
+.h1review-panel .db-stat .ds-ic{font-size:2.2rem;margin-bottom:0.6rem;}
+.h1review-panel .db-stat .ds-from{display:inline-flex;align-items:center;gap:0.45rem;font-size:0.66rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.3rem 0.7rem;border-radius:20px;width:fit-content;margin-bottom:0.9rem;background:rgba(43,84,230,0.08);color:#2B54E6;border:1px solid rgba(43,84,230,0.2);}
+.h1review-panel .db-stat .ds-num{font-weight:800;font-size:clamp(3.6rem,8vw,6rem);line-height:0.95;letter-spacing:-0.03em;}
+.h1review-panel .db-stat.kol .ds-num{color:#0B1730;}
+.h1review-panel .db-stat.media .ds-num{color:#2B54E6;}
+.h1review-panel .db-stat .ds-lbl{font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;margin-top:0.5rem;opacity:0.9;}
+.h1review-panel .db-stat .ds-desc{font-size:0.95rem;line-height:1.5;margin-top:0.7rem;max-width:34ch;color:#3D4E73;}
+.h1review-panel .db-unlocks{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(0.7rem,1.2vw,1rem);flex:0 0 auto;}
+.h1review-panel .db-chip{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:14px;padding:0.9rem 1.05rem;box-shadow:0 8px 20px rgba(11,23,48,0.04);}
+.h1review-panel .db-chip .dc-ic{font-size:1.15rem;}
+.h1review-panel .db-chip .dc-t{font-weight:700;font-size:0.9rem;color:#0B1730;margin-top:0.35rem;}
+.h1review-panel .db-chip .dc-s{font-size:0.74rem;color:#6B7B9C;line-height:1.35;margin-top:0.2rem;}
+.h1review-panel .kdb-band{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(0.8rem,1.4vw,1.2rem);flex:0 0 auto;}
+.h1review-panel .kdb-pill{display:flex;align-items:center;gap:0.9rem;background:#F3F6FD;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:0.85rem 1.2rem;box-shadow:0 8px 20px rgba(11,23,48,0.05);}
+.h1review-panel .kdb-pill .kp-ic{font-size:1.8rem;line-height:1;}
+.h1review-panel .kdb-pill .kp-num{font-weight:800;font-size:clamp(1.8rem,3.2vw,2.6rem);color:#2B54E6;line-height:0.95;letter-spacing:-0.02em;}
+.h1review-panel .kdb-pill .kp-lbl{display:flex;flex-direction:column;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#0B1730;font-weight:700;}
+.h1review-panel .kdb-pill .kp-lbl small{text-transform:none;letter-spacing:0;font-weight:400;font-size:0.74rem;color:#6B7B9C;margin-top:0.22rem;line-height:1.3;}
+.h1review-panel .kdb-genres{display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(0.5rem,0.9vw,0.75rem);flex:1;min-height:0;}
+.h1review-panel .gcard{background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:13px;padding:0.7rem 0.75rem 0.6rem;display:flex;flex-direction:column;box-shadow:0 6px 16px rgba(11,23,48,0.04);position:relative;overflow:hidden;}
+.h1review-panel .gcard .g-ic{font-size:1.05rem;line-height:1;}
+.h1review-panel .gcard .g-ct{font-weight:800;font-size:clamp(1.35rem,2.3vw,1.85rem);color:#0B1730;line-height:1;margin-top:0.3rem;}
+.h1review-panel .gcard .g-nm{font-size:0.72rem;color:#3D4E73;font-weight:600;margin-top:0.15rem;line-height:1.2;flex:1;}
+.h1review-panel .gcard .g-bar{height:4px;border-radius:3px;background:#F3F6FD;margin-top:0.45rem;overflow:hidden;}
+.h1review-panel .gcard .g-bar span{display:block;height:100%;background:linear-gradient(90deg,#2B54E6,#3E63FF);border-radius:3px;}
+.h1review-panel .placeholder-block{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;}
+.h1review-panel .placeholder-icon{font-size:3rem;}
+.h1review-panel .placeholder-label{font-weight:800;font-size:1.2rem;letter-spacing:0.1em;text-transform:uppercase;color:#3D4E73;}
+.h1review-panel .placeholder-text{font-size:0.9rem;color:#6B7B9C;text-align:center;line-height:1.6;}
+/* H2 Direction toggle button in s2bar */
+.h2-dir-btn{margin-left:auto;background:linear-gradient(135deg,#0D47A1,#1976D2);color:#fff;border:none;border-radius:8px;padding:0.4rem 1.1rem;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;}
+.h2-dir-btn:hover{background:linear-gradient(135deg,#1976D2,#1E88E5);}
+/* H2 Direction shell */
+#h2direction{display:none;position:fixed;inset:0;background:#F0F4FB;z-index:900;flex-direction:column;}
+#h2direction.visible{display:flex;}
+.h2dir-bar{display:flex;align-items:center;gap:1rem;padding:0 1.5rem;height:56px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.08);flex-shrink:0;}
+.h2dir-back{background:none;border:none;font-size:0.85rem;font-weight:700;color:#0D47A1;cursor:pointer;letter-spacing:0.05em;}
+.h2dir-title{font-size:0.9rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;}
+.h2dir-body{flex:1;display:flex;align-items:center;justify-content:center;color:#6B7B9C;font-size:1rem;}
+/* ========== END H1 REVIEW PANEL ========== */
 
 </style>
 </head>
@@ -2772,18 +2887,203 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
     </div>
   </div>
 </div>
-<div class="landing hidden h1deck embed" id="h1review">
-    <div class="s2bar">
-      <button class="kt-back" onclick="closeH1Review()"><span class="bk-ar">&larr;</span> Back</button>
-      <span class="s2title">vivo S2 Series &middot; Execution Summary</span>
-      <span class="s2meta">vivo Tamil Nadu &middot; MarCom &middot; H1 Review</span>
-      <button class="present-btn" style="margin-left:auto;" onclick="togglePresent()"><span>&#9974; Present</span></button>
-    </div>
-    <div class="swrap h1-embed" id="wrap-h1"><iframe class="h1frame" src="h1-review.html?v=10" title="Marcom H1 Review 2026 - 2027"></iframe></div>
-    <div class="dots" id="h1dots"></div>
-    <div class="slidectr" id="h1ctr">1 / 12</div>
-    <div class="arrs"><button class="arr" onclick="h1frameScroll(-1)">&#8593;</button><button class="arr" onclick="h1frameScroll(1)">&#8595;</button></div>
+<div class="landing hidden" id="h1review" style="display:none;flex-direction:column;height:100vh;overflow:hidden;">
+  <!-- TOP BAR -->
+  <div class="s2bar" style="flex-shrink:0;">
+    <button class="kt-back" onclick="closeH1Review()"><span class="bk-ar">&larr;</span> BACK</button>
+    <span class="s2title">H1 REVIEW</span>
+    <button class="h2-dir-btn" onclick="openH2Direction()">H2 DIRECTION &rarr;</button>
   </div>
+  <!-- H1 CONTENT PANEL -->
+  <div class="h1review-panel">
+    <!-- TAB BAR -->
+    <div class="h1-tab-bar">
+      <button class="h1-tab active" id="h1-tab-1" onclick="switchH1Tab('page-1',this)">FY26-27 H1 — COST ANALYSIS</button>
+      <button class="h1-tab" id="h1-tab-2" onclick="switchH1Tab('page-2',this)">H1 HIGHLIGHTS</button>
+      <button class="h1-tab" id="h1-tab-3" onclick="switchH1Tab('page-3',this)">KOL DATABASE</button>
+      <button class="h1-tab" id="h1-tab-4" onclick="switchH1Tab('page-4',this)">PROJECT ANALYSIS</button>
+      <button class="h1-tab" id="h1-tab-5" onclick="switchH1Tab('page-5',this)">AUDIT ANALYSIS</button>
+    </div>
+<section class="page" id="page-1" style="display:flex;">
+  <header>
+    <div class="eyebrow">vivo Tamil Nadu · MarCom · Overall Performance</div>
+    <h1 class="title">H1 Marcom Review <span>2026 - 2027</span></h1>
+    <p class="sub">Total marketing expense, reach and cost-per-person across HO &amp; JBP execution — the complete efficiency picture for the H1 period.</p>
+  </header>
+
+  <!-- PRIMARY KPI CARDS -->
+  <div class="kpis">
+    <div class="kpi">
+      <div class="k-lbl">01 · Overall Expense</div>
+      <div class="k-num">₹1.45 Cr</div>
+      <div class="k-break">
+        <div><span class="bk-k">HO</span><span class="bk-v">₹36.11 L</span></div>
+        <div><span class="bk-k">JBP</span><span class="bk-v">₹1.09 Cr</span></div>
+      </div>
+      <div class="k-foot"><b>83.4%</b> of ₹1.74 Cr budget utilized</div>
+    </div>
+    <div class="kpi">
+      <div class="k-lbl">02 · Overall Reach</div>
+      <div class="k-num blue">6.51 Cr</div>
+      <div class="k-break">
+        <div><span class="bk-k">HO</span><span class="bk-v">3.56 Cr</span></div>
+        <div><span class="bk-k">JBP</span><span class="bk-v">2.95 Cr</span></div>
+      </div>
+      <div class="k-foot">65,054,575 people reached in total</div>
+    </div>
+    <div class="kpi">
+      <div class="k-lbl">03 · Overall CPP</div>
+      <div class="k-num">₹0.22</div>
+      <div class="k-break">
+        <div><span class="bk-k">HO CPP</span><span class="bk-v">₹0.10</span></div>
+        <div><span class="bk-k">JBP CPP</span><span class="bk-v">₹0.37</span></div>
+      </div>
+      <span class="chip">▼ Lower CPP = Better Efficiency</span>
+    </div>
+  </div>
+
+  <!-- HO VS JBP COMPARISON -->
+  <div class="panel">
+    <div class="cmp">
+      <div class="cmp-metric">
+        <div class="cm-lbl">Expense</div>
+        <div class="bar-row"><span class="br-tag">HO</span><div class="bar-track"><div class="bar-fill ho" style="width:33%;">₹36.11 L</div></div></div>
+        <div class="bar-row"><span class="br-tag">JBP</span><div class="bar-track"><div class="bar-fill jbp" style="width:100%;">₹1.09 Cr</div></div></div>
+        <div class="cmp-note">JBP = 75.11% of total spend</div>
+      </div>
+      <div class="cmp-metric">
+        <div class="cm-lbl">Reach</div>
+        <div class="bar-row"><span class="br-tag">HO</span><div class="bar-track"><div class="bar-fill ho" style="width:100%;">3.56 Cr</div></div></div>
+        <div class="bar-row"><span class="br-tag">JBP</span><div class="bar-track"><div class="bar-fill jbp" style="width:83%;">2.95 Cr</div></div></div>
+        <div class="cmp-note">HO = 54.69% of total reach</div>
+      </div>
+      <div class="cmp-metric">
+        <div class="cm-lbl">CPP <span style="color:var(--ink-2);text-transform:none;letter-spacing:0;">(lower is better)</span></div>
+        <div class="bar-row"><span class="br-tag">HO</span><div class="bar-track"><div class="bar-fill ho" style="width:27%;">₹0.10</div></div></div>
+        <div class="bar-row"><span class="br-tag">JBP</span><div class="bar-track"><div class="bar-fill jbp" style="width:100%;">₹0.37</div></div></div>
+        <div class="cmp-note">HO is 3.7× more cost-efficient</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="page hl" id="page-2">
+  <header>
+    <div class="eyebrow">vivo Tamil Nadu · MarCom · Highlights</div>
+    <h1 class="title">Highlights of the <span>Period</span></h1>
+    <p class="sub">From underperforming output to ad-grade, premium execution — the shift that defined the S2 campaign.</p>
+  </header>
+  <div class="hl-split">
+    <div class="hl-video">
+      <video src="assets/h1-highlights.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+      <div class="hv-cap">Current best execution · playing muted</div>
+    </div>
+    <div class="hl-points">
+      <div class="hp-title"><small>What We Changed</small>10 Key Improvements</div>
+      <div class="hl-grid">
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">01</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Quality over Quantity</div><div class="hc-desc">Fewer, higher-impact deliverables</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">02</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Premium Camera Gear</div><div class="hc-desc">Shot on Red Komodo for cinematic output</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">03</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Efficient Vendor Sourcing</div><div class="hc-desc">Better execution partners at optimized cost</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">04</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Standardized KOL SOP</div><div class="hc-desc">Structured selection, briefing &amp; production</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">05</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Theme-Driven Concepting</div><div class="hc-desc">Storyboards aligned to the narrative pre-shoot</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">06</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Location Recce</div><div class="hc-desc">On-site visits to ensure premium visual quality</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">07</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Micro-Managed Production</div><div class="hc-desc">Every element curated for a premium look &amp; feel</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">08</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Models over Influencers</div><div class="hc-desc">Reduced talent cost, ad-grade output</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">09</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Natural Product Integration</div><div class="hc-desc">Product woven organically into the story</div></div>
+        <div class="hl-card"><div class="hc-top"><span class="hc-num">10</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Zero Supers</div><div class="hc-desc">No text overlays; the story alone sells the value</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page db" id="page-3">
+  <header>
+    <div class="eyebrow">vivo Tamil Nadu · MarCom · KOL Database</div>
+    <h1 class="title">A Living <span>KOL Database</span></h1>
+    <p class="sub">Built from zero into a ready-to-activate network — vetted creators and media partners we can mobilise on day one, backed by real, trusted relationships.</p>
+  </header>
+
+  <div class="kdb-band">
+    <div class="kdb-pill"><span class="kp-ic">🤝</span><span class="kp-num">200+</span><span class="kp-lbl">KOL Database<small>Vetted TN creators, ready to activate</small></span></div>
+    <div class="kdb-pill"><span class="kp-ic">📺</span><span class="kp-num">20+</span><span class="kp-lbl">Media Channels<small>Digital &amp; regional amplification</small></span></div>
+    <div class="kdb-pill"><span class="kp-ic">🗂️</span><span class="kp-num">21</span><span class="kp-lbl">Genres Mapped<small>253 creators sorted by content genre</small></span></div>
+  </div>
+
+  <div class="kdb-genres">
+    <div class="gcard"><div class="g-ic">✨</div><div class="g-ct">50</div><div class="g-nm">Lifestyle</div><div class="g-bar"><span style="width:100%"></span></div></div>
+    <div class="gcard"><div class="g-ic">⭐</div><div class="g-ct">44</div><div class="g-nm">Celebrity</div><div class="g-bar"><span style="width:88%"></span></div></div>
+    <div class="gcard"><div class="g-ic">📸</div><div class="g-ct">25</div><div class="g-nm">Model</div><div class="g-bar"><span style="width:50%"></span></div></div>
+    <div class="gcard"><div class="g-ic">📱</div><div class="g-ct">21</div><div class="g-nm">Tech &amp; Gadgets</div><div class="g-bar"><span style="width:42%"></span></div></div>
+    <div class="gcard"><div class="g-ic">✈️</div><div class="g-ct">21</div><div class="g-nm">Travel</div><div class="g-bar"><span style="width:42%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎬</div><div class="g-ct">19</div><div class="g-nm">Entertainment</div><div class="g-bar"><span style="width:38%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💑</div><div class="g-ct">10</div><div class="g-nm">Couple</div><div class="g-bar"><span style="width:20%"></span></div></div>
+    <div class="gcard"><div class="g-ic">👗</div><div class="g-ct">9</div><div class="g-nm">Fashion</div><div class="g-bar"><span style="width:18%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎭</div><div class="g-ct">9</div><div class="g-nm">Acting</div><div class="g-bar"><span style="width:18%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🍽️</div><div class="g-ct">8</div><div class="g-nm">Food</div><div class="g-bar"><span style="width:16%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💄</div><div class="g-ct">6</div><div class="g-nm">Fashion &amp; Beauty</div><div class="g-bar"><span style="width:12%"></span></div></div>
+    <div class="gcard"><div class="g-ic">😂</div><div class="g-ct">6</div><div class="g-nm">Comedy</div><div class="g-bar"><span style="width:12%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎨</div><div class="g-ct">4</div><div class="g-nm">Art</div><div class="g-bar"><span style="width:8%"></span></div></div>
+    <div class="gcard"><div class="g-ic">👩‍🎤</div><div class="g-ct">4</div><div class="g-nm">Actress</div><div class="g-bar"><span style="width:8%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💻</div><div class="g-ct">3</div><div class="g-nm">Tech</div><div class="g-bar"><span style="width:6%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🖌️</div><div class="g-ct">3</div><div class="g-nm">Artist</div><div class="g-bar"><span style="width:6%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🕺</div><div class="g-ct">3</div><div class="g-nm">Dancer</div><div class="g-bar"><span style="width:6%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💼</div><div class="g-ct">2</div><div class="g-nm">Entrepreneurship</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ic">💅</div><div class="g-ct">2</div><div class="g-nm">Beauty</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎥</div><div class="g-ct">2</div><div class="g-nm">Actor</div><div class="g-bar"><span style="width:4%"></span></div></div>
+    <div class="gcard"><div class="g-ic">🎤</div><div class="g-ct">2</div><div class="g-nm">Anchor</div><div class="g-bar"><span style="width:4%"></span></div></div>
+  </div>
+</section>
+
+<section class="page" id="page-4">
+  <div>
+    <div class="eyebrow">vivo Tamil Nadu · Retail Com · Project Analysis</div>
+    <h1 class="title">H1 <span>PROJECT ANALYSIS</span></h1>
+  </div>
+  <!--
+    PLACEHOLDER: PROJECT ANALYSIS
+    Owner: Retail Com Team
+    Content needed: H1 project execution data, targets vs actuals, branch-wise performance
+    Status: Awaiting data from team
+    Instructions for Lingesh: Replace the div below with actual content when received.
+    Do not change the section id="page-4" or surrounding structure.
+  -->
+  <div class="placeholder-block">
+    <div class="placeholder-icon">📋</div>
+    <div class="placeholder-label">PROJECT ANALYSIS</div>
+    <div class="placeholder-text">Data being prepared by Retail Com Team.<br>Content will be uploaded here when ready.</div>
+  </div>
+</section>
+
+<section class="page" id="page-5">
+  <div>
+    <div class="eyebrow">vivo Tamil Nadu · All Teams · Audit Analysis</div>
+    <h1 class="title">H1 <span>AUDIT ANALYSIS</span></h1>
+  </div>
+  <!--
+    PLACEHOLDER: AUDIT ANALYSIS
+    Owner: Retail Com Team
+    Content needed: H1 audit findings, compliance data, WOD audit results
+    Status: Awaiting data from team
+    Instructions for Lingesh: Replace the div below with actual content when received.
+    Do not change the section id="page-5" or surrounding structure.
+  -->
+  <div class="placeholder-block">
+    <div class="placeholder-icon">🔍</div>
+    <div class="placeholder-label">AUDIT ANALYSIS</div>
+    <div class="placeholder-text">Data being prepared by Retail Com Team.<br>Content will be uploaded here when ready.</div>
+  </div>
+</section>
+  </div><!-- end .h1review-panel -->
+</div><!-- end #h1review -->
+<!-- H2 DIRECTION SHELL — full content added in Task 2 -->
+<div id="h2direction">
+  <div class="h2dir-bar">
+    <button class="h2dir-back" onclick="closeH2Direction()">&larr; H1 REVIEW</button>
+    <span class="h2dir-title">H2 DIRECTION</span>
+  </div>
+  <div class="h2dir-body">Content coming — Task 2</div>
+</div>
 <div class="landing hidden h1deck embed" id="diwali-branding">
     <div class="s2bar">
       <button class="kt-back" onclick="closeDiwaliBranding()"><span class="bk-ar">&larr;</span> Back</button>
@@ -3679,15 +3979,46 @@ function switchNPLTab(tab){
 function openDiwali(){document.getElementById('entry').classList.add('hidden');document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('diwali').classList.remove('hidden');setTimeout(fitLanding,20);}
 function backToEntry(){closeModal();document.querySelectorAll('.kmpage.open').forEach(function(p){p.classList.remove('open');});document.getElementById('landing').classList.add('hidden');document.getElementById('diwali').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('homebtn').classList.remove('show');document.body.classList.remove('in-deck');document.getElementById('entry').classList.remove('hidden');setTimeout(fitLanding,20);}
 var h1I=0,h1N=0,h1obsDone=false;
-function h1build(){var w=document.getElementById('wrap-h1');if(!w)return;var s=w.querySelectorAll('.slide');h1N=s.length;var d=document.getElementById('h1dots');if(d){d.innerHTML='';for(var i=0;i<h1N;i++){var b=document.createElement('button');b.className='dot'+(i===0?' on':'');(function(x){b.onclick=function(){h1scrollTo(x);};})(i);d.appendChild(b);}}h1setCtr();if(!h1obsDone){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>=0.5){h1I=parseInt(e.target.getAttribute('data-i'));h1updateDots();h1setCtr();}});},{root:w,threshold:0.5});s.forEach(function(x){o.observe(x);});h1obsDone=true;}}
+function h1build(){/* deprecated — H1 now native inline */}
 function h1setCtr(){var c=document.getElementById('h1ctr');if(c)c.textContent=(h1I+1)+' / '+h1N;}
 function h1updateDots(){var d=document.getElementById('h1dots');if(d)d.querySelectorAll('.dot').forEach(function(x,i){x.classList.toggle('on',i===h1I);});}
 function h1scrollTo(i){var w=document.getElementById('wrap-h1');var s=w.querySelectorAll('.slide');if(s[i]){try{w.scrollTo({top:i*w.clientHeight,behavior:'smooth'});}catch(e){}setTimeout(function(){w.scrollTop=i*w.clientHeight;},260);h1I=i;h1updateDots();h1setCtr();}}
 function h1nav(dir){var n=h1I+dir;if(n<0||n>h1N-1)return;h1scrollTo(n);}
 function frameSnap(sel,dir){var f=document.querySelector(sel);if(!f)return;try{var w=f.contentWindow;var d=w.document,de=d.documentElement,bd=d.body;var vh=w.innerHeight||f.clientHeight||400;var top=w.scrollY||de.scrollTop||bd.scrollTop||0;var sh=Math.max(de.scrollHeight,bd?bd.scrollHeight:0);var cur=Math.round(top/vh);var last=Math.max(0,Math.round(sh/vh)-1);var next=Math.min(last,Math.max(0,cur+dir));w.scrollTo({top:next*vh,left:0,behavior:'smooth'});}catch(e){var w2=f.contentWindow,vh2=(w2&&w2.innerHeight)||f.clientHeight||400;try{w2.scrollBy({top:dir*vh2,left:0,behavior:'smooth'});}catch(e2){}}}
 function h1frameScroll(dir){frameSnap('#h1review .h1frame',dir);}
-function openH1Review(){document.getElementById('entry').classList.add('hidden');document.getElementById('h1review').classList.remove('hidden');h1build();h1I=0;var w=document.getElementById('wrap-h1');if(w)w.scrollTop=0;h1updateDots();h1setCtr();setTimeout(fitDeck,50);}
-function closeH1Review(){document.getElementById('h1review').classList.add('hidden');document.getElementById('entry').classList.remove('hidden');setTimeout(fitLanding,20);}
+function openH1Review(){
+  document.getElementById('entry').classList.add('hidden');
+  var el=document.getElementById('h1review');
+  el.classList.remove('hidden');
+  el.style.display='flex';
+  var firstTab=document.getElementById('h1-tab-1');
+  switchH1Tab('page-1',firstTab);
+}
+function closeH1Review(){
+  var el=document.getElementById('h1review');
+  el.classList.add('hidden');
+  el.style.display='none';
+  closeH2Direction();
+  document.getElementById('entry').classList.remove('hidden');
+}
+function switchH1Tab(pageId,btn){
+  document.querySelectorAll('.h1review-panel .page').forEach(function(p){
+    p.style.display='none';
+  });
+  var target=document.getElementById(pageId);
+  if(target)target.style.display='flex';
+  document.querySelectorAll('#h1review .h1-tab').forEach(function(t){
+    t.classList.remove('active');
+  });
+  if(btn)btn.classList.add('active');
+}
+function openH2Direction(){
+  document.getElementById('h2direction').classList.add('visible');
+}
+function closeH2Direction(){
+  var el=document.getElementById('h2direction');
+  if(el)el.classList.remove('visible');
+}
 function dbFrameScroll(dir){frameSnap('#diwali-branding .h1frame',dir);}
 function openDiwaliBranding(){document.getElementById('entry').classList.add('hidden');document.getElementById('diwali-branding').classList.remove('hidden');setTimeout(fitLanding,20);}
 function closeDiwaliBranding(){document.getElementById('diwali-branding').classList.add('hidden');document.getElementById('entry').classList.remove('hidden');setTimeout(fitLanding,20);}
