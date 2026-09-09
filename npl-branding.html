@@ -127,6 +127,102 @@ h1.title span{color:var(--blue);}
 .au-lbl{font-size:0.64rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;margin:0.65rem 0 0.4rem;}
 .au-lbl:first-child{margin-top:0;}
 .au-col{display:flex;flex-direction:column;gap:0.4rem;}
+
+/* ===== Executive Audit Dashboard (npl-p4) ===== */
+#npl-p4{--zh:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",var(--font-body);
+  --amb:#D97706;--amb-s:rgba(217,119,6,0.09);--red-s:rgba(220,38,38,0.07);--blu-s:rgba(37,99,235,0.06);--grn-s:rgba(21,163,74,0.07);
+  height:auto !important;min-height:100vh;overflow:visible !important;gap:1rem;padding-top:clamp(1.4rem,3vw,2.4rem);padding-bottom:clamp(2rem,4vw,3rem);}
+#npl-p4 .ad-zh{font-family:var(--zh);font-weight:400;color:var(--ink-2);}
+#npl-p4 .ad-sub{font-size:clamp(0.9rem,1.2vw,1.02rem);color:var(--ink-1);margin:0.15rem 0 0;}
+#npl-p4 .ad-sub .ad-zh{font-size:0.86rem;margin-left:0.5rem;}
+/* KPI strip */
+#npl-p4 .ad-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0.9rem;flex:0 0 auto;}
+#npl-p4 .ad-kpi{background:var(--card);border:1px solid var(--hair);border-left:4px solid var(--c,#2563EB);border-radius:16px;padding:1rem 1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);}
+#npl-p4 .ad-kpi .k-num{font-family:var(--font-display);font-weight:800;font-size:clamp(1.7rem,2.8vw,2.4rem);line-height:1;color:var(--c,#2563EB);}
+#npl-p4 .ad-kpi .k-en{font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-2);margin-top:0.5rem;font-weight:700;}
+#npl-p4 .ad-kpi .k-zh{font-family:var(--zh);font-size:0.82rem;color:var(--ink-1);margin-top:0.15rem;}
+/* Process flow */
+#npl-p4 .ad-flow{background:var(--card);border:1px solid var(--hair);border-radius:18px;box-shadow:0 12px 32px rgba(11,23,48,0.05);padding:1.15rem 1.3rem;flex:0 0 auto;}
+#npl-p4 .ad-flow-t{font-family:var(--font-mono);font-size:0.64rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-2);font-weight:700;margin-bottom:0.85rem;}
+#npl-p4 .ad-flow-row{display:flex;align-items:stretch;gap:0.4rem;}
+#npl-p4 .ad-step{flex:1;display:flex;flex-direction:column;gap:0.3rem;background:var(--blu-s);border:1px solid rgba(37,99,235,0.16);border-radius:13px;padding:0.75rem 0.7rem;position:relative;}
+#npl-p4 .ad-step.is-end{background:var(--grn-s);border-color:rgba(21,163,74,0.22);}
+#npl-p4 .ad-step .st-top{display:flex;align-items:center;gap:0.4rem;}
+#npl-p4 .ad-step .st-n{font-family:var(--font-mono);font-size:0.62rem;font-weight:700;color:var(--blue);background:#fff;border:1px solid rgba(37,99,235,0.25);border-radius:20px;padding:0.05rem 0.4rem;}
+#npl-p4 .ad-step.is-end .st-n{color:var(--green);border-color:rgba(21,163,74,0.3);}
+#npl-p4 .ad-step .st-ic{width:18px;height:18px;color:var(--blue);}
+#npl-p4 .ad-step.is-end .st-ic{color:var(--green);}
+#npl-p4 .ad-step .st-en{font-family:var(--font-display);font-weight:800;font-size:0.82rem;color:var(--ink-0);line-height:1.1;}
+#npl-p4 .ad-step .st-zh{font-family:var(--zh);font-size:0.78rem;color:var(--ink-1);}
+#npl-p4 .ad-step .st-d{font-size:0.68rem;color:var(--ink-2);line-height:1.3;}
+#npl-p4 .ad-fa{display:flex;align-items:center;color:var(--ink-2);font-size:1rem;flex:0 0 auto;}
+/* Tracks */
+#npl-p4 .ad-tracks{display:grid;grid-template-columns:1fr 1fr;gap:1rem;flex:0 0 auto;}
+#npl-p4 .ad-track{background:var(--card);border:1px solid var(--hair);border-radius:18px;box-shadow:0 12px 32px rgba(11,23,48,0.05);padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:0.55rem;}
+#npl-p4 .ad-track-h{display:flex;align-items:center;gap:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--hair);}
+#npl-p4 .ad-track-h .th-ic{width:26px;height:26px;color:var(--blue);}
+#npl-p4 .ad-track-h .th-en{font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--ink-0);line-height:1.05;}
+#npl-p4 .ad-track-h .th-zh{font-family:var(--zh);font-size:0.8rem;color:var(--ink-1);}
+#npl-p4 .ad-lbl{display:flex;align-items:baseline;gap:0.5rem;margin-top:0.15rem;}
+#npl-p4 .ad-lbl .l-en{font-family:var(--font-mono);font-size:0.64rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;}
+#npl-p4 .ad-lbl .l-zh{font-family:var(--zh);font-size:0.74rem;color:var(--ink-2);}
+#npl-p4 .ad-lbl.red .l-en{color:var(--red);}#npl-p4 .ad-lbl.blue .l-en{color:var(--blue);}#npl-p4 .ad-lbl.green .l-en{color:var(--green);}#npl-p4 .ad-lbl.amber .l-en{color:var(--amb);}
+#npl-p4 .ad-items{display:flex;flex-direction:column;gap:0.4rem;}
+#npl-p4 .ad-it{display:flex;gap:0.6rem;align-items:flex-start;border-radius:10px;padding:0.5rem 0.7rem;border:1px solid var(--hair);transition:transform .12s,box-shadow .12s;}
+#npl-p4 .ad-it:hover{transform:translateX(2px);box-shadow:0 6px 16px rgba(11,23,48,0.06);}
+#npl-p4 .ad-it .it-dot{width:9px;height:9px;border-radius:50%;margin-top:0.35rem;flex:0 0 auto;}
+#npl-p4 .ad-it .it-n{font-family:var(--font-mono);font-size:0.62rem;font-weight:700;color:var(--ink-2);margin-top:0.12rem;flex:0 0 auto;}
+#npl-p4 .ad-it .it-en{font-family:var(--font-display);font-weight:700;font-size:0.82rem;color:var(--ink-0);line-height:1.18;}
+#npl-p4 .ad-it .it-zh{font-family:var(--zh);font-size:0.76rem;color:var(--ink-1);line-height:1.25;margin-top:0.1rem;}
+#npl-p4 .ad-it.red{background:var(--red-s);border-color:rgba(220,38,38,0.18);}#npl-p4 .ad-it.red .it-dot{background:var(--red);}
+#npl-p4 .ad-it.amber{background:var(--amb-s);border-color:rgba(217,119,6,0.2);}#npl-p4 .ad-it.amber .it-dot{background:var(--amb);}
+#npl-p4 .ad-it.blue{background:var(--blu-s);border-color:rgba(37,99,235,0.16);}#npl-p4 .ad-it.blue .it-dot{background:var(--blue);}
+#npl-p4 .ad-it.green{background:var(--grn-s);border-color:rgba(21,163,74,0.2);}#npl-p4 .ad-it.green .it-dot{background:var(--green);}
+#npl-p4 .ad-plan{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;}
+#npl-p4 .ad-plan .pl{background:var(--blu-s);border:1px solid rgba(37,99,235,0.16);border-radius:10px;padding:0.55rem 0.6rem;text-align:center;}
+#npl-p4 .ad-plan .pl-n{font-family:var(--font-display);font-weight:800;font-size:1.05rem;color:var(--blue);line-height:1;}
+#npl-p4 .ad-plan .pl-en{font-size:0.64rem;color:var(--ink-2);text-transform:uppercase;letter-spacing:0.04em;margin-top:0.25rem;font-weight:700;font-family:var(--font-mono);}
+#npl-p4 .ad-plan .pl-zh{font-family:var(--zh);font-size:0.68rem;color:var(--ink-1);margin-top:0.1rem;}
+/* SOP + grade row */
+#npl-p4 .ad-lower{display:grid;grid-template-columns:1.6fr 1fr;gap:1rem;flex:0 0 auto;}
+#npl-p4 .ad-card{background:var(--card);border:1px solid var(--hair);border-radius:18px;box-shadow:0 12px 32px rgba(11,23,48,0.05);padding:1.1rem 1.25rem;}
+#npl-p4 .ad-sop{display:flex;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-top:0.7rem;}
+#npl-p4 .ad-sop-step{flex:1;min-width:96px;background:var(--card-2);border:1px solid var(--hair);border-radius:11px;padding:0.55rem 0.6rem;text-align:center;}
+#npl-p4 .ad-sop-step.warn{background:var(--amb-s);border-color:rgba(217,119,6,0.22);}
+#npl-p4 .ad-sop-step.crit{background:var(--red-s);border-color:rgba(220,38,38,0.2);}
+#npl-p4 .ad-sop-step .ss-en{font-family:var(--font-display);font-weight:700;font-size:0.72rem;color:var(--ink-0);line-height:1.12;}
+#npl-p4 .ad-sop-step .ss-zh{font-family:var(--zh);font-size:0.68rem;color:var(--ink-1);margin-top:0.1rem;}
+#npl-p4 .ad-sop .ad-fa{font-size:0.85rem;min-width:0;}
+#npl-p4 .ad-grade{display:flex;flex-direction:column;gap:0.45rem;margin-top:0.7rem;}
+#npl-p4 .ad-grade .gr{display:flex;align-items:center;gap:0.6rem;}
+#npl-p4 .ad-grade .gr-l{font-family:var(--font-display);font-weight:700;font-size:0.78rem;color:var(--ink-0);width:78px;flex:0 0 auto;}
+#npl-p4 .ad-grade .gr-track{flex:1;height:20px;background:var(--card-2);border-radius:6px;overflow:hidden;}
+#npl-p4 .ad-grade .gr-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#F2803F,#E8622A);display:flex;align-items:center;justify-content:flex-end;padding-right:0.5rem;color:#fff;font-family:var(--font-display);font-weight:800;font-size:0.72rem;}
+/* current -> target */
+#npl-p4 .ad-ct{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:stretch;flex:0 0 auto;}
+#npl-p4 .ad-ct-col{background:var(--card);border:1px solid var(--hair);border-radius:18px;box-shadow:0 12px 32px rgba(11,23,48,0.05);padding:1.05rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;}
+#npl-p4 .ad-ct-col.cur{border-top:4px solid var(--red);}
+#npl-p4 .ad-ct-col.tgt{border-top:4px solid var(--green);}
+#npl-p4 .ad-ct-mid{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.4rem;color:var(--blue);}
+#npl-p4 .ad-ct-mid .cm-ar{font-size:1.8rem;line-height:1;}
+#npl-p4 .ad-ct-mid .cm-en{font-family:var(--font-display);font-weight:800;font-size:0.8rem;color:var(--ink-0);text-align:center;}
+#npl-p4 .ad-ct-mid .cm-zh{font-family:var(--zh);font-size:0.72rem;color:var(--ink-1);}
+#npl-p4 .ad-cti{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--ink-0);}
+#npl-p4 .ad-cti .ci-dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto;}
+#npl-p4 .ad-ct-col.cur .ci-dot{background:var(--red);}#npl-p4 .ad-ct-col.tgt .ci-dot{background:var(--green);}
+/* takeaway */
+#npl-p4 .ad-take{background:linear-gradient(135deg,#0B1730,#12213f);border-radius:20px;padding:1.4rem 1.6rem;color:#fff;flex:0 0 auto;box-shadow:0 16px 40px rgba(11,23,48,0.18);}
+#npl-p4 .ad-take .tk-head{display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem;font-family:var(--font-display);font-weight:800;font-size:clamp(0.95rem,1.5vw,1.25rem);letter-spacing:0.01em;}
+#npl-p4 .ad-take .tk-head .tk-chip{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:0.2rem 0.7rem;}
+#npl-p4 .ad-take .tk-head .tk-chip.end{background:var(--green);border-color:var(--green);}
+#npl-p4 .ad-take .tk-ar{color:rgba(255,255,255,0.5);}
+#npl-p4 .ad-take .tk-zh{font-family:var(--zh);font-size:0.9rem;color:rgba(255,255,255,0.8);margin-top:0.6rem;}
+#npl-p4 .ad-take .tk-out{margin-top:1rem;padding-top:0.9rem;border-top:1px solid rgba(255,255,255,0.16);}
+#npl-p4 .ad-take .tk-out .to-l{font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.55);}
+#npl-p4 .ad-take .tk-out .to-en{font-size:0.95rem;line-height:1.5;margin-top:0.3rem;}
+#npl-p4 .ad-take .tk-out .to-zh{font-family:var(--zh);font-size:0.9rem;line-height:1.6;color:rgba(255,255,255,0.82);margin-top:0.4rem;}
+@media(max-width:1000px){#npl-p4 .ad-kpis{grid-template-columns:repeat(2,1fr);}#npl-p4 .ad-flow-row{flex-wrap:wrap;}#npl-p4 .ad-tracks,#npl-p4 .ad-lower,#npl-p4 .ad-ct{grid-template-columns:1fr;}#npl-p4 .ad-ct-mid{flex-direction:row;}}
+
 </style>
 </head>
 <body>
@@ -306,60 +402,55 @@ h1.title span{color:var(--blue);}
   </div>
 </section>
 
-<!-- PAGE 4 : BRANDING AUDIT (Channel One + HO) -->
+<!-- PAGE 4 : EXECUTIVE AUDIT DASHBOARD -->
 <section class="page" id="npl-p4">
   <div>
-    <div class="eyebrow">Execution &middot; Branding Audit &amp; Governance</div>
-    <h1 class="title">Branding Audit &mdash; <span>Channel One &amp; HO Governance</span></h1>
-    <p class="sub">Two audit tracks that keep V80 branding compliant &mdash; Channel One WOD audits and HO branding governance.</p>
+    <div class="eyebrow">Execution &middot; Branding Audit &amp; Governance &nbsp;<span class="ad-zh" style="color:var(--ink-2);font-size:0.66rem;">执行 &middot; 品牌审核与管理</span></div>
+    <h1 class="title">Branding Audit <span>Channel One &amp; HO Governance</span></h1>
+    <p class="ad-sub">V80 Branding Compliance &amp; Governance <span class="ad-zh">V80品牌合规与管理</span></p>
   </div>
-  <div class="grid-2" style="flex:1;min-height:0;">
-    <div class="panel">
-      <div class="panel-t">🖥️ Channel One Audit</div>
-      <div class="au-lbl" style="color:#DC2626;">⚠️ Gaps</div>
-      <div class="au-col">
-        <div class="au-item au-sm" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.05);">Lack of TL&rsquo;s knowledge</div>
-        <div class="au-item au-sm" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.05);">POSM not deployed per guidelines</div>
-        <div class="au-item au-sm" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.05);">ME file vs live-store data mismatch</div>
-      </div>
-      <div class="au-lbl" style="color:#2563EB;">🛠️ Action Plan</div>
-      <div class="au-col">
-        <div class="au-item au-sm" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.05);">Channel One guideline <b>one-pager</b> at audit time</div>
-        <div class="au-item au-sm" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.05);">Policy implementation for <b>TLs</b> on compliance</div>
-        <div class="au-item au-sm" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.05);">Low coverage / QC &rarr; <b>fine / KPI deduction</b></div>
-      </div>
-      <div class="au-lbl" style="color:#15A34A;">🎯 Outcome Target</div>
-      <div class="au-col">
-        <div class="au-item au-sm" style="border-left-color:#15A34A;background:rgba(21,163,74,0.06);border-color:rgba(21,163,74,0.06);"><b style="color:#15A34A;">100%</b> completion within timeline</div>
-        <div class="au-item au-sm" style="border-left-color:#15A34A;background:rgba(21,163,74,0.06);border-color:rgba(21,163,74,0.06);"><b style="color:#15A34A;">100%</b> audit accuracy</div>
-        <div class="au-item au-sm" style="border-left-color:#15A34A;background:rgba(21,163,74,0.06);border-color:rgba(21,163,74,0.06);"><b style="color:#15A34A;">100%</b> knowledge for TLs</div>
-      </div>
+  <div class="ad-kpis">
+    <div class="ad-kpi" style="--c:#2563EB;"><div class="k-num">2</div><div class="k-en">Audit Tracks</div><div class="k-zh">审核轨道</div></div>
+    <div class="ad-kpi" style="--c:#DC2626;"><div class="k-num">7</div><div class="k-en">Total Gaps</div><div class="k-zh">发现问题</div></div>
+    <div class="ad-kpi" style="--c:#15A34A;"><div class="k-num">100%</div><div class="k-en">Compliance Target</div><div class="k-zh">合规目标</div></div>
+    <div class="ad-kpi" style="--c:#D97706;"><div class="k-num">Immediate</div><div class="k-en">Action Required</div><div class="k-zh">立即整改</div></div>
+  </div>
+  <div class="ad-flow">
+    <div class="ad-flow-t">Audit Governance Process &middot; <span class="ad-zh">审核治理流程</span></div>
+    <div class="ad-flow-row">
+      <div class="ad-step"><div class="st-top"><span class="st-n">01</span><svg class="st-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6a1 1 0 0 1 1 1v1h1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h1V4a1 1 0 0 1 1-1Z"/><path d="M9 13l2 2 4-4"/></svg></div><div class="st-en">Audit</div><div class="st-zh">审核</div><div class="st-d">Check branding execution</div></div><span class="ad-fa">&rarr;</span><div class="ad-step"><div class="st-top"><span class="st-n">02</span><svg class="st-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v5"/><path d="M12 18h.01"/></svg></div><div class="st-en">Gap Identified</div><div class="st-zh">发现问题</div><div class="st-d">Identify non-compliance</div></div><span class="ad-fa">&rarr;</span><div class="ad-step"><div class="st-top"><span class="st-n">03</span><svg class="st-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.3-.6-.6-2.3 2.4-2.6Z"/></svg></div><div class="st-en">Corrective Action</div><div class="st-zh">整改行动</div><div class="st-d">Fix &amp; enforce SOP</div></div><span class="ad-fa">&rarr;</span><div class="ad-step"><div class="st-top"><span class="st-n">04</span><svg class="st-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/><path d="M9 12l2 2 4-4"/></svg></div><div class="st-en">Re-Audit</div><div class="st-zh">复审</div><div class="st-d">Verify correction</div></div><span class="ad-fa">&rarr;</span><div class="ad-step is-end"><div class="st-top"><span class="st-n">05</span><svg class="st-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></div><div class="st-en">100% Compliance</div><div class="st-zh">合规</div><div class="st-d">Achieve 100% standard</div></div>
     </div>
-    <div class="panel">
-      <div class="panel-t">🏢 HO Branding Audit</div>
-      <div class="au-lbl" style="color:#2563EB;">📋 Audit Plan</div>
-      <div class="au-col">
-        <div class="au-item au-sm" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.05);"><b>50 WODs</b> / branch &middot; <b>5 HO persons</b> &middot; In-Person &amp; Video-Call</div>
-      </div>
-      <div class="au-lbl" style="color:#DC2626;">⚠️ Major Gaps</div>
-      <div class="au-col">
-        <div class="au-item au-sm" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.05);">POSM mis-deployment across market</div>
-        <div class="au-item au-sm" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.05);"><b>Lamp Cloth:</b> V70 &rarr; V80 conversion pending</div>
-        <div class="au-item au-sm" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.05);"><b>LIT AIP &amp; DIP:</b> old creative not replaced</div>
-        <div class="au-item au-sm" style="border-left-color:#DC2626;background:rgba(220,38,38,0.05);border-color:rgba(220,38,38,0.05);"><b>Floor Luminous:</b> dust / maintenance gaps</div>
-      </div>
-      <div class="au-lbl" style="color:#2563EB;">🛠️ Action Plan &mdash; SOP</div>
-      <div class="au-col">
-        <div class="au-item au-sm" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.05);">Flag <b>non-compliant materials</b> immediately</div>
-        <div class="au-item au-sm" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.05);">SOP applies if <b>unresolved after notification</b></div>
-        <div class="au-item au-sm" style="border-left-color:#2563EB;background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.05);">Fine / KPI deduction &mdash; <b>grade-wise:</b></div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.1rem;"><span class="au-badge au-sm">RSM 15%</span><span class="au-badge au-sm">BM 15%</span><span class="au-badge au-sm">TL &amp; VBA 40%</span><span class="au-badge au-sm">ME 30%</span></div>
-      </div>
-      <div class="au-lbl" style="color:#15A34A;">🎯 Outcome</div>
-      <div class="au-col">
-        <div class="au-item au-sm" style="border-left-color:#15A34A;background:rgba(21,163,74,0.06);border-color:rgba(21,163,74,0.06);">Disciplined, accountable HO audit cycle &mdash; V80 branding <b>compliant, maintained &amp; consistent</b> across all branches.</div>
-      </div>
+  </div>
+  <div class="ad-tracks">
+    <div class="ad-track">
+      <div class="ad-track-h"><svg class="th-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1-4H5L4 9Z"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9"/><path d="M9 20v-6h6v6"/></svg><div><div class="th-en">Channel One Audit</div><div class="th-zh ad-zh">Channel One审核</div></div></div>
+      <div class="ad-lbl red"><span class="l-en">3 Gaps</span><span class="l-zh">3项问题</span></div>      <div class="ad-items"><div class="ad-it red"><span class="it-dot"></span><span class="it-n">01</span><div><div class="it-en">TL Knowledge Gap</div><div class="it-zh ad-zh">TL知识不足</div></div></div><div class="ad-it red"><span class="it-dot"></span><span class="it-n">02</span><div><div class="it-en">POSM Not Deployed</div><div class="it-zh ad-zh">POSM未按规范部署</div></div></div><div class="ad-it red"><span class="it-dot"></span><span class="it-n">03</span><div><div class="it-en">ME File &ne; Live-Store Data</div><div class="it-zh ad-zh">ME文件与门店实际数据不一致</div></div></div></div>
+      <div class="ad-lbl blue"><span class="l-en">Corrective Action</span><span class="l-zh">整改行动</span></div>      <div class="ad-items"><div class="ad-it blue"><span class="it-dot"></span><span class="it-n">01</span><div><div class="it-en">Channel One Guideline One-Pager</div><div class="it-zh ad-zh">Channel One审核指南</div></div></div><div class="ad-it blue"><span class="it-dot"></span><span class="it-n">02</span><div><div class="it-en">TL Compliance Policy</div><div class="it-zh ad-zh">TL合规执行政策</div></div></div><div class="ad-it blue"><span class="it-dot"></span><span class="it-n">03</span><div><div class="it-en">Low Coverage / QC &rarr; Fine / KPI Deduction</div><div class="it-zh ad-zh">低覆盖 / QC &rarr; 罚款 / KPI扣分</div></div></div></div>
+      <div class="ad-lbl green"><span class="l-en">Target</span><span class="l-zh">目标</span></div>      <div class="ad-items"><div class="ad-it green"><span class="it-dot"></span><div><div class="it-en">100% Completion</div><div class="it-zh ad-zh">100%完成</div></div></div><div class="ad-it green"><span class="it-dot"></span><div><div class="it-en">100% Audit Accuracy</div><div class="it-zh ad-zh">100%审核准确率</div></div></div><div class="ad-it green"><span class="it-dot"></span><div><div class="it-en">100% TL Knowledge</div><div class="it-zh ad-zh">100% TL知识掌握</div></div></div></div>
     </div>
+    <div class="ad-track">
+      <div class="ad-track-h"><svg class="th-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16"/><path d="M15 9h4a1 1 0 0 1 1 1v11"/><path d="M8 8h.01M11 8h.01M8 12h.01M11 8h.01M8 16h.01M11 12h.01M11 16h.01"/></svg><div><div class="th-en">HO Branding Audit</div><div class="th-zh ad-zh">总部品牌审核</div></div></div>
+      <div class="ad-lbl blue"><span class="l-en">Audit Plan</span><span class="l-zh">审核计划</span></div>      <div class="ad-plan"><div class="pl"><div class="pl-n">50</div><div class="pl-en">WODs / Branch</div><div class="pl-zh ad-zh">每分公司50个WOD</div></div><div class="pl"><div class="pl-n">5</div><div class="pl-en">HO Persons</div><div class="pl-zh ad-zh">5名总部人员</div></div><div class="pl"><div class="pl-n">2</div><div class="pl-en">Audit Modes</div><div class="pl-zh ad-zh">现场 + 视频审核</div></div></div>
+      <div class="ad-lbl red"><span class="l-en">4 Major Gaps</span><span class="l-zh">4项主要问题</span></div>      <div class="ad-items"><div class="ad-it red"><span class="it-dot"></span><span class="it-n">1</span><div><div class="it-en">POSM Mis-Deployment</div><div class="it-zh ad-zh">POSM部署错误</div></div></div><div class="ad-it amber"><span class="it-dot"></span><span class="it-n">2</span><div><div class="it-en">Lamp Cloth: V70 &rarr; V80 Conversion Pending</div><div class="it-zh ad-zh">灯箱布：V70 &rarr; V80转换待完成</div></div></div><div class="ad-it amber"><span class="it-dot"></span><span class="it-n">3</span><div><div class="it-en">LIT AIP &amp; DIP: Old Creative Not Replaced</div><div class="it-zh ad-zh">旧创意物料未更换</div></div></div><div class="ad-it amber"><span class="it-dot"></span><span class="it-n">4</span><div><div class="it-en">Floor Luminous: Dust / Maintenance Gap</div><div class="it-zh ad-zh">地面灯箱：灰尘 / 维护问题</div></div></div></div>
+    </div>
+  </div>
+  <div class="ad-lower">
+    <div class="ad-card">
+      <div class="ad-lbl amber"><span class="l-en">SOP Enforcement</span><span class="l-zh">SOP执行机制</span></div>      <div class="ad-sop"><div class="ad-sop-step crit"><div class="ss-en">Non-Compliant</div><div class="ss-zh ad-zh">发现不合规</div></div><span class="ad-fa">&rarr;</span><div class="ad-sop-step"><div class="ss-en">Immediate Flag</div><div class="ss-zh ad-zh">立即标记</div></div><span class="ad-fa">&rarr;</span><div class="ad-sop-step"><div class="ss-en">Notification</div><div class="ss-zh ad-zh">通知整改</div></div><span class="ad-fa">&rarr;</span><div class="ad-sop-step warn"><div class="ss-en">Unresolved?</div><div class="ss-zh ad-zh">仍未解决？</div></div><span class="ad-fa">&rarr;</span><div class="ad-sop-step crit"><div class="ss-en">SOP Action &rarr; Fine / KPI</div><div class="ss-zh ad-zh">执行SOP &rarr; 罚款 / KPI扣分</div></div></div>
+    </div>
+    <div class="ad-card">
+      <div class="ad-lbl amber"><span class="l-en">KPI Deduction</span><span class="l-zh">KPI扣分机制</span></div>      <div class="ad-grade"><div class="gr"><span class="gr-l">RSM</span><div class="gr-track"><div class="gr-fill" style="width:15%;">15%</div></div></div><div class="gr"><span class="gr-l">BM</span><div class="gr-track"><div class="gr-fill" style="width:15%;">15%</div></div></div><div class="gr"><span class="gr-l">TL &amp; VBA</span><div class="gr-track"><div class="gr-fill" style="width:40%;">40%</div></div></div><div class="gr"><span class="gr-l">ME</span><div class="gr-track"><div class="gr-fill" style="width:30%;">30%</div></div></div></div>
+    </div>
+  </div>
+  <div class="ad-ct">
+    <div class="ad-ct-col cur"><div class="ad-lbl red"><span class="l-en">Current State</span><span class="l-zh">当前状态</span></div><div class="ad-cti"><span class="ci-dot"></span>Knowledge gaps / 知识不足</div><div class="ad-cti"><span class="ci-dot"></span>POSM gaps / POSM问题</div><div class="ad-cti"><span class="ci-dot"></span>Old creatives / 旧物料</div><div class="ad-cti"><span class="ci-dot"></span>Maintenance gaps / 维护不足</div><div class="ad-cti"><span class="ci-dot"></span>Data mismatch / 数据不一致</div></div>
+    <div class="ad-ct-mid"><span class="cm-ar">&rarr;</span><div class="cm-en">Corrective Action</div><div class="cm-zh ad-zh">整改行动</div></div>
+    <div class="ad-ct-col tgt"><div class="ad-lbl green"><span class="l-en">Target State</span><span class="l-zh">目标状态</span></div><div class="ad-cti"><span class="ci-dot"></span>100% audit completion / 100%完成</div><div class="ad-cti"><span class="ci-dot"></span>100% audit accuracy / 100%准确率</div><div class="ad-cti"><span class="ci-dot"></span>100% TL knowledge / TL全掌握</div><div class="ad-cti"><span class="ci-dot"></span>V80 branding compliant / V80合规</div><div class="ad-cti"><span class="ci-dot"></span>Consistent execution / 一致执行</div></div>
+  </div>
+  <div class="ad-take">
+    <div class="tk-head"><span class="tk-chip">7 Gaps</span><span class="tk-ar">&rarr;</span><span class="tk-chip">Corrective Action</span><span class="tk-ar">&rarr;</span><span class="tk-chip">Re-Audit</span><span class="tk-ar">&rarr;</span><span class="tk-chip end">100% Compliance</span></div>
+    <div class="tk-zh">发现7项问题 &rarr; 执行整改 &rarr; 复审 &rarr; 实现100%品牌合规</div>
+    <div class="tk-out"><div class="to-l">Final Outcome &middot; 最终结果</div><div class="to-en">Disciplined, accountable HO audit cycle — V80 branding compliant, maintained &amp; consistent across all branches.</div><div class="to-zh">建立有纪律、有责任的总部审核机制，确保V80品牌在所有分公司保持合规、一致和持续执行。</div></div>
   </div>
 </section>
 
