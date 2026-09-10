@@ -1533,7 +1533,7 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2x-tile b{display:block;font-size:0.92rem;color:#0B1730;margin-bottom:0.2rem;}
 .h2x-tile span{font-size:0.74rem;color:#3D4E73;line-height:1.35;}
 .h2x-chiprow{display:flex;flex-wrap:wrap;gap:0.32rem;margin-top:0.45rem;}
-.h2x-chip{font-size:0.66rem;font-weight:600;color:#3D4E73;background:#fff;border:1px solid rgba(11,23,48,0.1);border-radius:99px;padding:0.16rem 0.5rem;}
+.h2x-chip{font-size:0.66rem;font-weight:600;color:#3D4E73;background:#fff;border:1px solid rgba(11,23,48,0.1);border-radius:99px;padding:0.16rem 0.5rem;max-width:100%;white-space:normal;line-height:1.3;}
 .h2x-seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.75rem;}
 .h2x-segcard{background:#fff;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1rem 1.05rem;display:flex;flex-direction:column;gap:0.45rem;box-shadow:0 8px 20px rgba(11,23,48,0.04);min-width:0;}
 .h2x-segcard .badge{align-self:flex-start;font-size:0.62rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;border-radius:99px;padding:0.2rem 0.55rem;}
@@ -4378,65 +4378,32 @@ img,video,iframe,canvas,svg{max-width:100%;}
           <div class="h2x-band" style="margin-top:0.75rem;"><div><div class="l" style="font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:#9DB2EC;">Must-do</div><div class="n" style="font-size:1.05rem;color:#93C5FD;">MT-focused</div></div><div class="t"><b>Modern trade gets its own campaign architecture.</b> Not a GT plan stretched onto MT.</div></div>
         </div>
         <div class="h2x-card">
-<div class="section-label" style="font-size:0.62rem;font-weight:700;letter-spacing:0.13em;color:#6B7B9C;text-transform:uppercase;margin-bottom:6px;">FUTURE DIRECTION</div>
-<div style="font-size:0.72rem;color:#6B7B9C;text-align:right;margin-bottom:16px;">Sell-out · Expense optimum · Additional business · Execution speed-up</div>
-<!-- SELL-OUT DRIVE -->
-<div style="background:#F7F9FC;border-radius:12px;padding:18px 20px;margin-bottom:12px;">
-  <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.12em;color:#1565C0;text-transform:uppercase;margin-bottom:4px;">A · SELL-OUT DRIVE</div>
-  <div style="font-size:0.92rem;font-weight:700;color:#0B1730;margin-bottom:10px;">Build confidence — trade, partners, consumers</div>
-  <div style="display:flex;flex-direction:column;gap:8px;">
-    <div style="padding-left:12px;border-left:3px solid #1565C0;">
-      <div style="font-size:0.78rem;font-weight:700;color:#0B1730;margin-bottom:3px;">Premium branding in retail outlets</div>
-      <div style="font-size:0.73rem;color:#3D4E73;line-height:1.5;">Backed by PBG project · Retail hygiene focus · Enhanced service support from HO</div>
-    </div>
-    <div style="padding-left:12px;border-left:3px solid #1565C0;">
-      <div style="font-size:0.78rem;font-weight:700;color:#0B1730;margin-bottom:3px;">Better APAC coordination</div>
-      <div style="font-size:0.73rem;color:#3D4E73;line-height:1.5;">Proper timeline-followed campaign execution · Regular presence per product focus</div>
-    </div>
-    <div style="padding-left:12px;border-left:3px solid #1565C0;">
-      <div style="font-size:0.78rem;font-weight:700;color:#0B1730;margin-bottom:3px;">Timely competitor counter-measure</div>
-      <div style="font-size:0.73rem;color:#3D4E73;line-height:1.5;">Visit market · Understand market · Plan immediate counter · Execute best-in-class</div>
-    </div>
-  </div>
-</div>
-<!-- EXPENSE OPTIMISATION -->
-<div style="background:#F7F9FC;border-radius:12px;padding:18px 20px;margin-bottom:12px;">
-  <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.12em;color:#1565C0;text-transform:uppercase;margin-bottom:4px;">B · EXPENSE OPTIMISATION</div>
-  <div style="font-size:0.92rem;font-weight:700;color:#0B1730;margin-bottom:10px;">Benchmark every rupee — cut what cannot prove itself</div>
-  <div style="padding-left:12px;border-left:3px solid #1565C0;">
-    <div style="font-size:0.73rem;color:#3D4E73;line-height:1.6;">Analyse past campaigns → frame benchmark per execution type from HO · Every future activity compared against the benchmark · Below benchmark: analyse and improve · Otherwise: plan an alternative</div>
-  </div>
-</div>
-<!-- ADDITIONAL BUSINESS -->
-<div style="background:#F7F9FC;border-radius:12px;padding:18px 20px;margin-bottom:12px;">
-  <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.12em;color:#1565C0;text-transform:uppercase;margin-bottom:4px;">C · ADDITIONAL BUSINESS</div>
-  <div style="font-size:0.92rem;font-weight:700;color:#0B1730;margin-bottom:10px;">IoT + targeted campaigns</div>
-  <div style="display:flex;flex-direction:column;gap:6px;">
-    <div style="padding-left:12px;border-left:3px solid #1565C0;">
-      <div style="font-size:0.73rem;color:#3D4E73;line-height:1.5;">IoT support aligned to market standards</div>
-    </div>
-    <div style="padding-left:12px;border-left:3px solid #1565C0;">
-      <div style="font-size:0.73rem;color:#3D4E73;line-height:1.5;">Targeted audience-oriented campaigns per segment</div>
-    </div>
-  </div>
-</div>
-<!-- STRATEGIC EXECUTION SPEED-UP -->
-<div style="background:#0B1730;border-radius:12px;padding:18px 20px;">
-  <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.12em;color:#90AAD4;text-transform:uppercase;margin-bottom:4px;">D · STRATEGIC WORK EXECUTION SPEED-UP</div>
-  <div style="font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:12px;">PBG + fast timelines</div>
-  <div style="display:flex;flex-direction:column;gap:8px;">
-    <div style="padding-left:12px;border-left:3px solid #4A90D9;">
-      <div style="font-size:0.75rem;font-weight:700;color:#90AAD4;margin-bottom:4px;">PBG PROJECTS</div>
-      <div style="font-size:0.72rem;color:#C5D4E8;line-height:1.6;">X-Zone &amp; Special projects — aligned to annual targets · KOL Breakthrough · White-Collar Breakthrough · College Breakthrough · Each with a defined long-term goal and clear achievement definition</div>
-    </div>
-    <div style="padding-left:12px;border-left:3px solid #4A90D9;">
-      <div style="font-size:0.72rem;color:#C5D4E8;line-height:1.5;">Define what Premium Breakthrough means · Set achievement criteria · Execute, analyse, improvise</div>
-    </div>
-    <div style="padding-left:12px;border-left:3px solid #4A90D9;">
-      <div style="font-size:0.72rem;color:#C5D4E8;line-height:1.5;">Fix quick timelines · Execute plans at the earliest · No strategy-only cycles</div>
-    </div>
-  </div>
-</div>
+          <div class="h2x-h"><h2>Future direction</h2><p>Sell-out · Expense optimum · Additional business · Execution speed-up</p></div>
+          <div class="h2x-tiles" style="grid-template-columns:1fr;">
+            <div class="h2x-tile"><b>A · Sell-out drive</b><span>Build confidence — trade, partners, consumers</span>
+              <p class="h2x-rule"><b>Premium branding in retail outlets</b> — Backed by PBG project · Retail hygiene focus · Enhanced service support from HO</p>
+              <p class="h2x-rule"><b>Better APAC coordination</b> — Proper timeline-followed campaign execution · Regular presence per product focus</p>
+              <p class="h2x-rule"><b>Timely competitor counter-measure</b> — Visit market · Understand market · Plan immediate counter · Execute best-in-class</p>
+            </div>
+            <div class="h2x-tile"><b>B · Expense optimisation</b><span>Benchmark every rupee — cut what cannot prove itself</span>
+              <p class="h2x-rule">Analyse past campaigns → frame benchmark per execution type from HO · Every future activity compared against the benchmark · Below benchmark: analyse and improve · Otherwise: plan an alternative</p>
+            </div>
+            <div class="h2x-tile"><b>C · Additional business</b><span>IoT + targeted campaigns</span>
+              <p class="h2x-rule">IoT support aligned to market standards</p>
+              <p class="h2x-rule">Targeted audience-oriented campaigns per segment</p>
+            </div>
+          </div>
+          <div class="h2x-band" style="margin-top:0.7rem;grid-template-columns:1fr;">
+            <div>
+              <div class="l" style="font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:#9DB2EC;">D · Strategic work execution speed-up</div>
+              <div class="n" style="font-size:1.05rem;color:#93C5FD;">PBG + fast timelines</div>
+              <div class="t" style="margin-top:0.45rem;">
+                <p class="h2x-rule" style="border-left-color:rgba(147,197,253,0.45);color:#C5D0EA;"><b style="color:#fff;">X-Zone &amp; Special projects</b> — aligned to annual targets · KOL Breakthrough · White-Collar Breakthrough · College Breakthrough · Each with a defined long-term goal and clear achievement definition</p>
+                <p class="h2x-rule" style="border-left-color:rgba(147,197,253,0.45);color:#C5D0EA;">Define what Premium Breakthrough means · Set achievement criteria · Execute, analyse, improvise</p>
+                <p class="h2x-rule" style="border-left-color:rgba(147,197,253,0.45);color:#C5D0EA;">Fix quick timelines · Execute plans at the earliest · No strategy-only cycles</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="h2x-board">
@@ -4471,170 +4438,70 @@ img,video,iframe,canvas,svg{max-width:100%;}
 
     <!-- PAGE 2: DIFFERENT USER → DIFFERENT STRATEGY -->
     <section class="page h2x-page" id="h2dir-p2">
-<div style="padding:32px 40px;max-width:1300px;margin:0 auto;font-family:'Bahnschrift SemiBold SemiCondensed',Arial Narrow,sans-serif;">
-
-  <!-- BREADCRUMB -->
-  <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;color:#1565C0;text-transform:uppercase;margin-bottom:10px;">
-    H2 DIRECTION · PAGE 2 · USERS
-  </div>
-
-  <!-- TITLE -->
-  <div style="font-size:2.6rem;font-weight:800;color:#0B1730;line-height:1.15;margin-bottom:8px;">
-    Different user. <span style="color:#1565C0;">Different strategy.</span>
-  </div>
-  <div style="font-size:0.95rem;color:#3D4E73;margin-bottom:32px;max-width:780px;">
-    White collar buys on aspiration. Blue collar buys on trigger. Existing users buy again if we stay close. Three segments — three distinct plans.
-  </div>
-
-  <!-- THREE COLUMN GRID -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:0;">
-
-    <!-- WHITE COLLAR -->
-    <div style="background:#fff;border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;gap:16px;">
-      <div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.13em;color:#1565C0;text-transform:uppercase;margin-bottom:6px;">A · AWARENESS + INTEREST</div>
-        <div style="font-size:1.25rem;font-weight:800;color:#0B1730;margin-bottom:4px;">White collar</div>
-        <div style="font-size:0.8rem;font-weight:700;color:#3D4E73;">Make vivo the professional's phone</div>
-      </div>
-
-      <!-- WHO THEY ARE -->
-      <div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.11em;color:#6B7B9C;text-transform:uppercase;margin-bottom:8px;">WHO THEY ARE</div>
-        <div style="display:flex;flex-direction:column;gap:5px;">
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">IT &amp; Tech — Engineers, PMs, Developers</div>
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">Corporate &amp; Managers — Banking, FMCG, MNC HOs</div>
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">Medical &amp; Health — Doctors, clinic owners</div>
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">Founders &amp; SME owners — Self-employed professionals</div>
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">Government &amp; Education — Officers, lecturers, principals</div>
-        </div>
-      </div>
-
-      <!-- LIFESTYLE & HABIT -->
-      <div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.11em;color:#6B7B9C;text-transform:uppercase;margin-bottom:8px;">LIFESTYLE &amp; HABIT</div>
-        <div style="display:flex;flex-direction:column;gap:4px;">
-          <div style="font-size:0.73rem;color:#3D4E73;padding-left:10px;border-left:2px solid #1565C0;line-height:1.5;">Buys on aspiration and peer validation — not price</div>
-          <div style="font-size:0.73rem;color:#3D4E73;padding-left:10px;border-left:2px solid #1565C0;line-height:1.5;">Research-heavy — reviews, YouTube, word of mouth</div>
-          <div style="font-size:0.73rem;color:#3D4E73;padding-left:10px;border-left:2px solid #1565C0;line-height:1.5;">Influences 3–5 people in network after buying</div>
-          <div style="font-size:0.73rem;color:#3D4E73;padding-left:10px;border-left:2px solid #1565C0;line-height:1.5;">Responds to premium in-person experience over mass ads</div>
-        </div>
-      </div>
-
-      <!-- 3 CORE PLANS -->
-      <div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.11em;color:#6B7B9C;text-transform:uppercase;margin-bottom:8px;">3 CORE PLANS</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-            <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">01 · IT Park DOOH + Experience</div>
-            <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">Captive audience at commute + lunch zones. Demo unit in cafeteria corridors. Not a sticker — a proper experience corner.</div>
+      <header>
+        <div class="eyebrow">H2 Direction · Page ② · Users</div>
+        <h1 class="title">Different user. <span>Different strategy.</span></h1>
+        <p class="sub">White collar buys on aspiration. Blue collar buys on trigger. Existing users buy again if we stay close. Three segments — three distinct plans.</p>
+      </header>
+      <div class="h2x-seg">
+        <article class="h2x-segcard wc">
+          <span class="badge">A · Awareness + Interest</span>
+          <h3>White collar</h3>
+          <div class="verb">Make vivo the professional's phone</div>
+          <div class="lbl">Who they are</div>
+          <div class="h2x-chiprow">
+            <span class="h2x-chip">IT &amp; Tech — Engineers, PMs, Developers</span>
+            <span class="h2x-chip">Corporate &amp; Managers — Banking, FMCG, MNC HOs</span>
+            <span class="h2x-chip">Medical &amp; Health — Doctors, clinic owners</span>
+            <span class="h2x-chip">Founders &amp; SME owners — Self-employed professionals</span>
+            <span class="h2x-chip">Government &amp; Education — Officers, lecturers, principals</span>
           </div>
-          <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-            <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">02 · White Collar Circle Events</div>
-            <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">Finance Circle · Doctor Circle · Founder Circle. Curated invite-only 15–20 person experiences per quarter per city. Not mass.</div>
+          <div class="lbl">Lifestyle &amp; habit</div>
+          <p class="h2x-rule">Buys on aspiration and peer validation — not price</p>
+          <p class="h2x-rule">Research-heavy — reviews, YouTube, word of mouth</p>
+          <p class="h2x-rule">Influences 3–5 people in network after buying</p>
+          <p class="h2x-rule">Responds to premium in-person experience over mass ads</p>
+          <div class="lbl">3 core plans</div>
+          <div class="h2x-tile"><b>01 · IT Park DOOH + Experience</b><span>Captive audience at commute + lunch zones. Demo unit in cafeteria corridors. Not a sticker — a proper experience corner.</span></div>
+          <div class="h2x-tile"><b>02 · White Collar Circle Events</b><span>Finance Circle · Doctor Circle · Founder Circle. Curated invite-only 15–20 person experiences per quarter per city. Not mass.</span></div>
+          <div class="h2x-tile"><b>03 · Premium OOH in Their Zones</b><span>Metro · Chennai OMR / Anna Salai · Key corporate corridors. Visual-first. No price messaging — brand only.</span></div>
+        </article>
+        <article class="h2x-segcard bc">
+          <span class="badge">B · Purchase</span>
+          <h3>Blue collar</h3>
+          <div class="verb">Win the town and the rural counter</div>
+          <div class="lbl">Who they are</div>
+          <div class="h2x-chiprow">
+            <span class="h2x-chip">Factory &amp; Industrial — Hosur, Ambattur, Sriperumbudur belts</span>
+            <span class="h2x-chip">Town traders &amp; shop staff — Tier 2/3 kirana and retail workers</span>
+            <span class="h2x-chip">Rural field workers — Agricultural, daily wage, rural youth</span>
+            <span class="h2x-chip">Transport &amp; Logistics — Auto, truck, delivery workers</span>
+            <span class="h2x-chip">Construction &amp; Technicians — Electricians, plumbers, AC techs</span>
           </div>
-          <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-            <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">03 · Premium OOH in Their Zones</div>
-            <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">Metro · Chennai OMR / Anna Salai · Key corporate corridors. Visual-first. No price messaging — brand only.</div>
+          <div class="lbl">Lifestyle &amp; habit</div>
+          <p class="h2x-rule">Buys on trigger — festival, salary credit, family push</p>
+          <p class="h2x-rule">Price-sensitive but brand-aspirational — wants a good phone</p>
+          <p class="h2x-rule">Heavily influenced by local retailer recommendation</p>
+          <p class="h2x-rule">Responds to visible offline promos — canter, terminal, local OOH</p>
+          <div class="lbl">3 core plans</div>
+          <div class="h2x-tile"><b>01 · Rural/Town Offline Activation</b><span>Canter van · Bus terminal activations. HO writes script + material. Branch executes per local calendar. No freelance activity.</span></div>
+          <div class="h2x-tile"><b>02 · Local KOC + Town OOH</b><span>A known face from that town using vivo. Micro-influence — not a celebrity. Relatable. Paired with town-level OOH.</span></div>
+          <div class="h2x-tile"><b>03 · Festival + Salary-Cycle Timing</b><span>Activations around 1st and 15th salary credits. Diwali and Pongal windows fully owned. No off-cycle wastage.</span></div>
+        </article>
+        <article class="h2x-segcard eu">
+          <span class="badge">C · Loyalty · WOM · KOC</span>
+          <h3>User operation</h3>
+          <div class="verb">Turn owners into repeat buyers and advocates</div>
+          <div class="lbl">Four pillars</div>
+          <div class="h2x-tile"><b>01 · Align with vivo India</b><span>Use vivo India's subsidy and offline event framework as leverage. FTPL coordinates and amplifies — does not reinvent.</span></div>
+          <div class="h2x-tile"><b>02 · Loyalty — Vivo Week</b><span>Create a special week-long vibe for existing customers. Timely instant cashback delivery. Not a discount — a reward experience.</span></div>
+          <div class="h2x-tile"><b>03 · WOM</b><span>Design campaigns and social ads genuinely jaw-dropping for TN audiences. People share because it surprises them — not because we asked.</span></div>
+          <div class="h2x-tile"><b>04 · KOC</b><span>Develop an interesting video shoot concept that makes other users want to be part of it. Participation-driven — not broadcast.</span></div>
+          <div class="h2x-band" style="margin-top:0.55rem;grid-template-columns:1fr;">
+            <div class="t"><b>Outcome.</b> All four pillars drive incentivised, ROI-visible execution → improves visibility, increases repeat purchase, grows company profitability.</div>
           </div>
-        </div>
+        </article>
       </div>
-    </div>
-
-    <!-- BLUE COLLAR -->
-    <div style="background:#fff;border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;gap:16px;">
-      <div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.13em;color:#1565C0;text-transform:uppercase;margin-bottom:6px;">B · PURCHASE</div>
-        <div style="font-size:1.25rem;font-weight:800;color:#0B1730;margin-bottom:4px;">Blue collar</div>
-        <div style="font-size:0.8rem;font-weight:700;color:#3D4E73;">Win the town and the rural counter</div>
-      </div>
-
-      <!-- WHO THEY ARE -->
-      <div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.11em;color:#6B7B9C;text-transform:uppercase;margin-bottom:8px;">WHO THEY ARE</div>
-        <div style="display:flex;flex-direction:column;gap:5px;">
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">Factory &amp; Industrial — Hosur, Ambattur, Sriperumbudur belts</div>
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">Town traders &amp; shop staff — Tier 2/3 kirana and retail workers</div>
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">Rural field workers — Agricultural, daily wage, rural youth</div>
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">Transport &amp; Logistics — Auto, truck, delivery workers</div>
-          <div style="font-size:0.75rem;color:#0B1730;padding:6px 10px;background:#F0F4FB;border-radius:6px;">Construction &amp; Technicians — Electricians, plumbers, AC techs</div>
-        </div>
-      </div>
-
-      <!-- LIFESTYLE & HABIT -->
-      <div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.11em;color:#6B7B9C;text-transform:uppercase;margin-bottom:8px;">LIFESTYLE &amp; HABIT</div>
-        <div style="display:flex;flex-direction:column;gap:4px;">
-          <div style="font-size:0.73rem;color:#3D4E73;padding-left:10px;border-left:2px solid #1565C0;line-height:1.5;">Buys on trigger — festival, salary credit, family push</div>
-          <div style="font-size:0.73rem;color:#3D4E73;padding-left:10px;border-left:2px solid #1565C0;line-height:1.5;">Price-sensitive but brand-aspirational — wants a good phone</div>
-          <div style="font-size:0.73rem;color:#3D4E73;padding-left:10px;border-left:2px solid #1565C0;line-height:1.5;">Heavily influenced by local retailer recommendation</div>
-          <div style="font-size:0.73rem;color:#3D4E73;padding-left:10px;border-left:2px solid #1565C0;line-height:1.5;">Responds to visible offline promos — canter, terminal, local OOH</div>
-        </div>
-      </div>
-
-      <!-- 3 CORE PLANS -->
-      <div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.11em;color:#6B7B9C;text-transform:uppercase;margin-bottom:8px;">3 CORE PLANS</div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-            <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">01 · Rural/Town Offline Activation</div>
-            <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">Canter van · Bus terminal activations. HO writes script + material. Branch executes per local calendar. No freelance activity.</div>
-          </div>
-          <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-            <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">02 · Local KOC + Town OOH</div>
-            <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">A known face from that town using vivo. Micro-influence — not a celebrity. Relatable. Paired with town-level OOH.</div>
-          </div>
-          <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-            <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">03 · Festival + Salary-Cycle Timing</div>
-            <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">Activations around 1st and 15th salary credits. Diwali and Pongal windows fully owned. No off-cycle wastage.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- USER OPERATION -->
-    <div style="background:#fff;border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;gap:16px;">
-      <div>
-        <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.13em;color:#1565C0;text-transform:uppercase;margin-bottom:6px;">C · LOYALTY · WOM · KOC</div>
-        <div style="font-size:1.25rem;font-weight:800;color:#0B1730;margin-bottom:4px;">User operation</div>
-        <div style="font-size:0.8rem;font-weight:700;color:#3D4E73;">Turn owners into repeat buyers and advocates</div>
-      </div>
-
-      <!-- 4 PILLARS -->
-      <div style="display:flex;flex-direction:column;gap:8px;">
-
-        <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-          <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">01 · Align with vivo India</div>
-          <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">Use vivo India's subsidy and offline event framework as leverage. FTPL coordinates and amplifies — does not reinvent.</div>
-        </div>
-
-        <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-          <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">02 · Loyalty — Vivo Week</div>
-          <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">Create a special week-long vibe for existing customers. Timely instant cashback delivery. Not a discount — a reward experience.</div>
-        </div>
-
-        <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-          <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">03 · WOM</div>
-          <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">Design campaigns and social ads genuinely jaw-dropping for TN audiences. People share because it surprises them — not because we asked.</div>
-        </div>
-
-        <div style="padding:10px 12px;background:#F0F4FB;border-radius:8px;border-left:3px solid #0D2B6B;">
-          <div style="font-size:0.75rem;font-weight:700;color:#0B1730;margin-bottom:3px;">04 · KOC</div>
-          <div style="font-size:0.7rem;color:#3D4E73;line-height:1.5;">Develop an interesting video shoot concept that makes other users want to be part of it. Participation-driven — not broadcast.</div>
-        </div>
-
-      </div>
-
-      <!-- OUTCOME -->
-      <div style="background:#0B1730;border-radius:10px;padding:14px 16px;margin-top:4px;">
-        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;color:#90AAD4;text-transform:uppercase;margin-bottom:6px;">OUTCOME</div>
-        <div style="font-size:0.78rem;color:#C5D4E8;line-height:1.6;">All four pillars drive incentivised, ROI-visible execution → improves visibility, increases repeat purchase, grows company profitability.</div>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
     </section>
 
     <!-- PAGE 2B: 5H HERO -->
