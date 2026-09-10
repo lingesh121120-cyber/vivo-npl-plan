@@ -1615,7 +1615,11 @@ img,video,iframe,canvas,svg{max-width:100%;}
 .huc-score-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-bottom:1.5rem;}
 @media(max-width:1100px){.huc-pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.huc-score-grid{grid-template-columns:1fr;}}
 @media(max-width:640px){.huc-pillar-grid{grid-template-columns:1fr;}}
-.h1review-panel .kpi,.h1review-panel .panel,.h1review-panel .hl-card,.h1review-panel .gcard,.h1review-panel .kdb-pill{min-width:0;overflow:hidden;}
+.h1review-panel .kpi,.h1review-panel .hl-card,.h1review-panel .gcard,.h1review-panel .kdb-pill{min-width:0;overflow:hidden;}
+.h1review-panel .panel{min-width:0;overflow-x:auto;overflow-y:visible;}
+.h1review-panel #page-4{overflow-y:auto;}
+.h1review-panel #page-4 .panel{flex:0 0 auto;min-height:auto;overflow:visible;}
+.h1review-panel #page-4 .tbl-scroll{flex:none;overflow:visible;min-height:0;}
 .h1review-panel .k-num{overflow-wrap:anywhere;}
 .h1review-panel .kpis{grid-template-columns:repeat(3,minmax(0,1fr));}
 .h1review-panel .bar-track{overflow:hidden;}
