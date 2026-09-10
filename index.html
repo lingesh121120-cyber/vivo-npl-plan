@@ -1617,6 +1617,99 @@ img,video,iframe,canvas,svg{max-width:100%;}
 @media(max-width:640px){.huc-pillar-grid{grid-template-columns:1fr;}}
 .h1review-panel .kpi,.h1review-panel .panel,.h1review-panel .hl-card,.h1review-panel .gcard,.h1review-panel .kdb-pill{min-width:0;overflow:hidden;}
 .h1review-panel .k-num{overflow-wrap:anywhere;}
+/* ===== H1 Audit Analysis — executive layout ===== */
+.audit-page{gap:1rem !important;overflow-y:auto;}
+.audit-page header{flex:0 0 auto;}
+.audit-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.85rem;flex:0 0 auto;}
+.audit-kpi{background:#fff;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1rem 1.1rem;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(11,23,48,0.05);}
+.audit-kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--ak,#1565C0);}
+.audit-kpi .ak-l{font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;}
+.audit-kpi .ak-n{font-family:Sora,Inter,sans-serif;font-size:clamp(1.7rem,3vw,2.15rem);font-weight:800;color:var(--ak,#0D2B6B);line-height:1;margin:0.35rem 0 0.25rem;}
+.audit-kpi .ak-s{font-size:0.74rem;color:#3D4E73;line-height:1.3;}
+.audit-kpi.is-crit .ak-s{color:#DC2626;font-weight:600;}
+.audit-card{background:#fff;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.05rem 1.15rem 1.15rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);min-width:0;overflow:visible;flex:0 0 auto;}
+.audit-card-h{display:flex;align-items:baseline;justify-content:space-between;gap:0.8rem;flex-wrap:wrap;margin-bottom:0.85rem;}
+.audit-card-h h2{margin:0;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;}
+.audit-card-h p{margin:0;font-size:0.78rem;color:#6B7B9C;}
+.audit-legend{display:flex;gap:0.85rem;align-items:center;font-size:0.68rem;color:#6B7B9C;flex-wrap:wrap;}
+.audit-legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:0.3rem;vertical-align:middle;}
+.audit-legend .lg-50{background:#DC2626;opacity:0.7;}
+.audit-legend .lg-70{background:#15A34A;opacity:0.85;}
+.audit-bars{display:flex;flex-direction:column;gap:0.45rem;position:relative;}
+.audit-axis{position:relative;height:16px;margin:0 4.6rem 0.15rem 7.2rem;}
+.audit-axis span{position:absolute;top:0;font-size:0.58rem;font-weight:700;color:#6B7B9C;transform:translateX(-50%);}
+.audit-axis .ax-0{left:0;transform:none;}
+.audit-axis .ax-50{left:50%;color:#DC2626;}
+.audit-axis .ax-70{left:70%;color:#15A34A;}
+.audit-axis .ax-100{left:100%;transform:translateX(-100%);}
+.audit-bar{appearance:none;-webkit-appearance:none;border:1px solid transparent;background:#F7F9FD;border-radius:12px;padding:0.5rem 0.7rem;display:grid;grid-template-columns:7.2rem minmax(0,1fr) 4.2rem;gap:0.65rem;align-items:center;width:100%;text-align:left;cursor:pointer;position:relative;font-family:inherit;transition:border-color .15s,background .15s,box-shadow .15s;}
+.audit-bar:hover,.audit-bar:focus-visible{background:#fff;border-color:rgba(13,43,107,0.16);box-shadow:0 8px 22px rgba(11,23,48,0.08);outline:none;z-index:3;}
+.audit-bar .ab-name{font-size:0.78rem;font-weight:700;color:#0B1730;}
+.audit-bar .ab-track{position:relative;height:18px;background:#E8EEF8;border-radius:99px;overflow:visible;}
+.audit-bar .ab-fill{display:block;height:100%;width:var(--pct);min-width:10px;max-width:100%;border-radius:99px;background:var(--tone);box-shadow:0 0 0 1px rgba(255,255,255,0.4) inset;transition:filter .15s,transform .15s;}
+.audit-bar:hover .ab-fill,.audit-bar:focus-visible .ab-fill{filter:brightness(1.05);transform:scaleY(1.12);}
+.audit-bar .ab-tick{position:absolute;top:-4px;bottom:-4px;width:0;border-left:1.5px dashed rgba(220,38,38,0.55);z-index:1;pointer-events:none;}
+.audit-bar .ab-tick.t50{left:50%;}
+.audit-bar .ab-tick.t70{left:70%;border-left-color:rgba(21,163,74,0.7);}
+.audit-bar .ab-val{font-family:Sora,Inter,sans-serif;font-size:0.92rem;font-weight:800;color:var(--tone);text-align:right;}
+.audit-bar .ab-tip{position:absolute;left:7.9rem;right:4.8rem;top:calc(100% + 8px);background:#0B1730;color:#fff;border-radius:12px;padding:0.7rem 0.85rem;box-shadow:0 14px 32px rgba(11,23,48,0.28);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s,visibility .15s;pointer-events:none;z-index:8;}
+.audit-bar:hover .ab-tip,.audit-bar:focus-visible .ab-tip{opacity:1;visibility:visible;transform:translateY(0);}
+.audit-bar .ab-tip::after{content:"";position:absolute;left:28px;bottom:100%;border:6px solid transparent;border-bottom-color:#0B1730;}
+.audit-page .eyebrow{color:#DC2626;}
+.audit-page .eyebrow::before{background:#DC2626;box-shadow:0 0 0 4px rgba(220,38,38,0.18);}
+.audit-bar .ab-tip b{display:block;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:#FCA5A5;margin-bottom:0.2rem;}
+.audit-bar .ab-tip b.amber{color:#FCD34D;}
+.audit-bar .ab-tip strong{display:block;font-size:0.92rem;font-weight:700;margin-bottom:0.2rem;}
+.audit-bar .ab-tip em{display:block;font-style:normal;font-size:0.72rem;color:#C5D0EA;line-height:1.4;}
+.audit-insight{margin:0.75rem 0 0;font-size:0.75rem;color:#3D4E73;background:#F8FAFF;border:1px solid rgba(11,23,48,0.06);border-radius:10px;padding:0.55rem 0.75rem;}
+.audit-insight b{color:#0B1730;}
+.audit-fail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.75rem;}
+.fail-tile{position:relative;background:linear-gradient(180deg,#FFF8F8,#fff);border:1px solid rgba(220,38,38,0.16);border-radius:14px;padding:0.9rem 0.9rem 0.85rem;display:flex;flex-direction:column;gap:0.4rem;min-height:100%;transition:transform .15s,box-shadow .15s;}
+.fail-tile:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(220,38,38,0.1);}
+.fail-top{display:flex;align-items:center;justify-content:space-between;gap:0.4rem;}
+.fail-zero{font-family:Sora,Inter,sans-serif;font-size:1.55rem;font-weight:800;color:#DC2626;line-height:1;letter-spacing:-0.03em;}
+.fail-tag{font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#DC2626;background:rgba(220,38,38,0.08);border:1px solid rgba(220,38,38,0.16);border-radius:99px;padding:0.18rem 0.5rem;}
+.fail-tile h3{margin:0;font-size:0.92rem;font-weight:800;color:#0B1730;line-height:1.2;}
+.fail-chips{display:flex;flex-wrap:wrap;gap:0.3rem;}
+.fail-chips span{font-size:0.64rem;font-weight:600;color:#3D4E73;background:#fff;border:1px solid rgba(11,23,48,0.1);border-radius:99px;padding:0.16rem 0.45rem;}
+.fail-scope{font-size:0.68rem;font-weight:700;color:#B45309;}
+.fail-fix{margin:0.15rem 0 0;font-size:0.72rem;color:#3D4E73;line-height:1.35;}
+.audit-roles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.7rem;}
+.role-card{position:relative;border:1px solid rgba(11,23,48,0.10);border-radius:14px;padding:0.9rem 0.85rem 0.95rem;background:#F8FAFF;display:flex;flex-direction:column;gap:0.35rem;min-width:0;}
+.role-card:hover,.role-card:focus-within{background:#fff;border-color:rgba(21,102,192,0.28);box-shadow:0 10px 24px rgba(11,23,48,0.08);}
+.role-kicker{font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1566C0;}
+.role-code{font-family:Sora,Inter,sans-serif;font-size:1.35rem;font-weight:800;color:#002B6B;line-height:1;}
+.role-verb{font-size:0.88rem;font-weight:700;color:#0B1730;line-height:1.25;}
+.role-card ul{margin:0.25rem 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:0.28rem;}
+.role-card li{font-size:0.72rem;font-weight:600;color:#3D4E73;padding-left:0.7rem;position:relative;line-height:1.3;}
+.role-card li::before{content:"";position:absolute;left:0;top:0.42rem;width:6px;height:6px;border-radius:50%;background:#1566C0;}
+.audit-rail{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0.45rem;position:relative;}
+.audit-rail::before{content:"";position:absolute;left:6%;right:6%;top:22px;height:2px;background:linear-gradient(90deg,#0D2B6B,#1566C0 70%,#15A34A);opacity:0.25;pointer-events:none;}
+.rail-step{position:relative;background:#fff;border:1px solid rgba(11,23,48,0.10);border-radius:14px;padding:0.75rem 0.7rem 0.8rem;text-align:left;min-width:0;}
+.rail-step.is-live{border-color:rgba(21,163,74,0.28);background:#F4FBF6;}
+.rail-n{width:28px;height:28px;border-radius:50%;background:#002B6B;color:#fff;font-size:0.72rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:0.5rem;position:relative;z-index:1;}
+.rail-step.is-live .rail-n{background:#15A34A;}
+.rail-when{font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1566C0;margin-bottom:0.2rem;}
+.rail-title{font-size:0.82rem;font-weight:800;color:#0B1730;line-height:1.2;margin-bottom:0.25rem;}
+.rail-who{font-size:0.68rem;color:#3D4E73;line-height:1.35;}
+.audit-kpi-band{display:grid;grid-template-columns:auto 1fr;gap:0.9rem;align-items:center;margin-top:0.85rem;padding:0.75rem 0.95rem;background:#0B1730;color:#fff;border-radius:14px;}
+.audit-kpi-band .akb-n{font-family:Sora,Inter,sans-serif;font-size:2rem;font-weight:800;line-height:1;color:#86EFAC;}
+.audit-kpi-band .akb-l{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:#9DB2EC;margin-bottom:0.15rem;}
+.audit-kpi-band .akb-t{font-size:0.8rem;line-height:1.4;color:#E8EEF8;}
+.audit-kpi-band b{color:#fff;}
+@media(max-width:1100px){
+  .audit-kpis,.audit-fail-grid{grid-template-columns:1fr;}
+  .audit-roles,.audit-rail{grid-template-columns:1fr 1fr;}
+  .audit-axis{margin:0 0 0.15rem 0;}
+  .audit-bar{grid-template-columns:1fr auto;}
+  .audit-bar .ab-track{grid-column:1 / -1;}
+  .audit-bar .ab-tip{left:0.7rem;right:0.7rem;}
+  .audit-rail::before{display:none;}
+}
+@media(max-width:700px){
+  .audit-roles,.audit-rail{grid-template-columns:1fr;}
+  .audit-kpi-band{grid-template-columns:1fr;}
+}
 .h1review-panel .kpis{grid-template-columns:repeat(3,minmax(0,1fr));}
 .h1review-panel .bar-track{overflow:hidden;}
 .h1review-panel .bar-fill{min-width:4.6rem;padding-left:0.45rem;font-size:0.7rem;}
@@ -3992,131 +4085,184 @@ img,video,iframe,canvas,svg{max-width:100%;}
 </div>
 </section>
 
-<section class="page" id="page-5">
+<section class="page audit-page" id="page-5">
 <header>
-  <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#1565C0;display:flex;align-items:center;gap:0.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:#DC2626;box-shadow:0 0 0 4px rgba(220,38,38,0.18);display:inline-block;"></span>vivo Tamil Nadu · Retail Com · Channel One Audit</div>
-  <h1 style="font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.04;letter-spacing:-0.02em;margin:0.6rem 0 0.3rem;color:#0B1730;">Audit Analysis — <span style="color:#DC2626;">Key Findings & Action Plan</span></h1>
-  <p style="font-size:clamp(0.9rem,1.2vw,1rem);color:#3D4E73;max-width:72ch;line-height:1.5;margin:0;">Channel One Audit — 5 models, 1,849 stores. No model reached 50% compliance. VIVO Zone weakest in every model.</p>
+  <div class="eyebrow" style="color:#DC2626;">vivo Tamil Nadu · Retail Com · Channel One Audit</div>
+  <h1 class="title">Audit Analysis — <span style="color:#DC2626;">Key Findings &amp; Action Plan</span></h1>
+  <p class="sub">1,849 stores · 5 models. No model crossed 50%. VIVO Zone is the weakest channel in every model.</p>
 </header>
 
-<!-- KPI ROW -->
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;flex:0 0 auto;">
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
-    <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
-    <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;">Stores Audited</div>
-    <div style="font-size:2.2rem;font-weight:800;color:#0D2B6B;line-height:1;margin:0.3rem 0;">1,849</div>
-    <div style="font-size:0.75rem;color:#3D4E73;">5 smartphone models</div>
+<div class="audit-kpis">
+  <div class="audit-kpi" style="--ak:#1565C0;"><div class="ak-l">Stores audited</div><div class="ak-n">1,849</div><div class="ak-s">5 smartphone models</div></div>
+  <div class="audit-kpi is-crit" style="--ak:#DC2626;"><div class="ak-l">Correct WODs</div><div class="ak-n">22.8%</div><div class="ak-s">Critical — no model hit 50%</div></div>
+  <div class="audit-kpi" style="--ak:#B45309;"><div class="ak-l">Weakest model</div><div class="ak-n">2.4%</div><div class="ak-s">X300 Ultra</div></div>
+  <div class="audit-kpi is-crit" style="--ak:#DC2626;"><div class="ak-l">Weakest channel</div><div class="ak-n" style="font-size:1.35rem;margin-top:0.55rem;">VIVO Zone</div><div class="ak-s">Last in every model</div></div>
+</div>
+
+<div class="audit-card">
+  <div class="audit-card-h">
+    <h2>Model compliance</h2>
+    <div class="audit-legend"><span><i class="lg-50"></i>50% bar — none crossed</span><span><i class="lg-70"></i>70% TL/ME KPI</span></div>
   </div>
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
-    <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#DC2626,#EF4444);"></div>
-    <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;">Overall Correct WODs</div>
-    <div style="font-size:2.2rem;font-weight:800;color:#DC2626;line-height:1;margin:0.3rem 0;">22.8%</div>
-    <div style="font-size:0.75rem;color:#DC2626;font-weight:600;">Critical — no model hit 50%</div>
+  <div class="audit-axis"><span class="ax-0">0%</span><span class="ax-50">50%</span><span class="ax-70">70%</span><span class="ax-100">100%</span></div>
+  <div class="audit-bars">
+    <button type="button" class="audit-bar" style="--pct:2.4%;--tone:#DC2626;" aria-label="X300 Ultra 2.4 percent, 47.6 points below 50 percent">
+      <span class="ab-name">X300 Ultra</span>
+      <span class="ab-track"><span class="ab-fill"></span><span class="ab-tick t50"></span><span class="ab-tick t70"></span></span>
+      <span class="ab-val">2.4%</span>
+      <span class="ab-tip"><b>Critical</b><strong>2.4% correct WODs</strong><em>47.6 pts below 50% · 67.6 pts below 70% KPI. Weakest SKU in the audit.</em></span>
+    </button>
+    <button type="button" class="audit-bar" style="--pct:16%;--tone:#DC2626;" aria-label="X300 FE 16 percent, 34 points below 50 percent">
+      <span class="ab-name">X300 FE</span>
+      <span class="ab-track"><span class="ab-fill"></span><span class="ab-tick t50"></span><span class="ab-tick t70"></span></span>
+      <span class="ab-val">16.0%</span>
+      <span class="ab-tip"><b>Critical</b><strong>16.0% correct WODs</strong><em>34 pts below 50% · 54 pts below 70% KPI. Still in the red band (&lt;25%).</em></span>
+    </button>
+    <button type="button" class="audit-bar" style="--pct:21%;--tone:#B45309;" aria-label="V70 21 percent, 29 points below 50 percent">
+      <span class="ab-name">V70</span>
+      <span class="ab-track"><span class="ab-fill"></span><span class="ab-tick t50"></span><span class="ab-tick t70"></span></span>
+      <span class="ab-val">21.0%</span>
+      <span class="ab-tip"><b class="amber">Severe</b><strong>21.0% correct WODs</strong><em>29 pts below 50% · 49 pts below 70% KPI. Amber band — still a fail.</em></span>
+    </button>
+    <button type="button" class="audit-bar" style="--pct:24.2%;--tone:#B45309;" aria-label="X300 24.2 percent, 25.8 points below 50 percent">
+      <span class="ab-name">X300</span>
+      <span class="ab-track"><span class="ab-fill"></span><span class="ab-tick t50"></span><span class="ab-tick t70"></span></span>
+      <span class="ab-val">24.2%</span>
+      <span class="ab-tip"><b class="amber">Severe</b><strong>24.2% correct WODs</strong><em>25.8 pts below 50% · 45.8 pts below 70% KPI.</em></span>
+    </button>
+    <button type="button" class="audit-bar" style="--pct:39.9%;--tone:#B45309;" aria-label="V60 39.9 percent, closest to 50 percent but still short">
+      <span class="ab-name">V60</span>
+      <span class="ab-track"><span class="ab-fill"></span><span class="ab-tick t50"></span><span class="ab-tick t70"></span></span>
+      <span class="ab-val">39.9%</span>
+      <span class="ab-tip"><b class="amber">Best of a fail</b><strong>39.9% correct WODs</strong><em>Closest SKU — still 10.1 pts short of 50% and 30.1 pts short of the 70% KPI.</em></span>
+    </button>
   </div>
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
-    <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#B45309,#D97706);"></div>
-    <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;">Weakest Model</div>
-    <div style="font-size:2.2rem;font-weight:800;color:#B45309;line-height:1;margin:0.3rem 0;">2.4%</div>
-    <div style="font-size:0.75rem;color:#3D4E73;">X300 Ultra compliance</div>
+  <p class="audit-insight"><b>Read in 5 seconds:</b> every bar dies before the red 50% line. V60 is the only model even in striking distance.</p>
+</div>
+
+<div class="audit-card">
+  <div class="audit-card-h">
+    <h2>Where scores hit zero</h2>
+    <p>3 POSM families failing across all 5 models</p>
   </div>
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
-    <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#DC2626,#EF4444);"></div>
-    <div style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7B9C;">Weakest Channel</div>
-    <div style="font-size:1.3rem;font-weight:800;color:#DC2626;line-height:1;margin:0.3rem 0;">VIVO Zone</div>
-    <div style="font-size:0.75rem;color:#3D4E73;">Weakest in every model audited</div>
+  <div class="audit-fail-grid">
+    <article class="fail-tile">
+      <div class="fail-top"><span class="fail-zero">0%</span><span class="fail-tag">Table-top</span></div>
+      <h3>Prop / Lighting</h3>
+      <div class="fail-chips"><span>AIP / DIP</span><span>Tent card</span><span>Luminous top</span><span>Panel insert</span></div>
+      <div class="fail-scope">Dead on every model</div>
+      <p class="fail-fix">Reset fixture SOP and photo proof before the next window.</p>
+    </article>
+    <article class="fail-tile">
+      <div class="fail-top"><span class="fail-zero">0%</span><span class="fail-tag">In-shop</span></div>
+      <h3>ISB / Lampcloth</h3>
+      <div class="fail-chips"><span>ISB</span><span>Lampcloth</span><span>Table sticker</span></div>
+      <div class="fail-scope">0–50% in-shop scores, nearly all models</div>
+      <p class="fail-fix">Make identity elements a must-pass on the TL checklist.</p>
+    </article>
+    <article class="fail-tile">
+      <div class="fail-top"><span class="fail-zero">0%</span><span class="fail-tag">Secondary</span></div>
+      <h3>Shelf talker / Dangler</h3>
+      <div class="fail-chips"><span>Shelf talker</span><span>Dangler</span><span>Wobbler</span></div>
+      <div class="fail-scope">0–50% POSM scores, nearly all models</div>
+      <p class="fail-fix">Stock and place secondary POSM in the same 5–7 day window.</p>
+    </article>
   </div>
 </div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;flex:0 0 auto;">
-
-  <!-- MODEL COMPLIANCE -->
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
-    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;margin-bottom:0.8rem;">MODEL COMPLIANCE %</div>
-    <div style="display:flex;flex-direction:column;gap:0.5rem;">
-      <div style="display:flex;align-items:center;gap:0.6rem;">
-        <span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">X300 ULTRA</span>
-        <div style="flex:1;height:22px;background:#F0F4FB;border-radius:5px;position:relative;">
-          <div style="width:2.4%;height:100%;background:#DC2626;border-radius:5px;"></div>
-        </div>
-        <span style="font-size:0.68rem;font-weight:700;color:#DC2626;width:36px;flex:none;text-align:right;">2.4%</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:0.6rem;">
-        <span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">X300 FE</span>
-        <div style="flex:1;height:22px;background:#F0F4FB;border-radius:5px;position:relative;">
-          <div style="width:16%;height:100%;background:#DC2626;border-radius:5px;"></div>
-        </div>
-        <span style="font-size:0.68rem;font-weight:700;color:#DC2626;width:36px;flex:none;text-align:right;">16.0%</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:0.6rem;">
-        <span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">V70</span>
-        <div style="flex:1;height:22px;background:#F0F4FB;border-radius:5px;position:relative;">
-          <div style="width:21%;height:100%;background:#B45309;border-radius:5px;"></div>
-        </div>
-        <span style="font-size:0.68rem;font-weight:700;color:#B45309;width:36px;flex:none;text-align:right;">21.0%</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:0.6rem;">
-        <span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">X300</span>
-        <div style="flex:1;height:22px;background:#F0F4FB;border-radius:5px;position:relative;">
-          <div style="width:24.2%;height:100%;background:#B45309;border-radius:5px;"></div>
-        </div>
-        <span style="font-size:0.68rem;font-weight:700;color:#B45309;width:36px;flex:none;text-align:right;">24.2%</span>
-      </div>
-      <div style="display:flex;align-items:center;gap:0.6rem;">
-        <span style="font-size:0.72rem;font-weight:600;color:#3D4E73;width:90px;flex:none;">V60</span>
-        <div style="flex:1;height:22px;background:#F0F4FB;border-radius:5px;position:relative;">
-          <div style="width:39.9%;height:100%;background:#B45309;border-radius:5px;"></div>
-        </div>
-        <span style="font-size:0.68rem;font-weight:700;color:#B45309;width:36px;flex:none;text-align:right;">39.9%</span>
-      </div>
-      <div style="font-size:0.62rem;color:#6B7B9C;margin-top:0.4rem;">Source: Channel One Audit consolidated report. Color: red &lt;25% · amber 25–49%.</div>
-    </div>
+<div class="audit-card">
+  <div class="audit-card-h">
+    <h2>Who owns the next score</h2>
+    <p>One job per layer — field to HO</p>
   </div>
-
-  <!-- RECURRING FAILURES -->
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);">
-    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;margin-bottom:0.8rem;">RECURRING 0% FAILURE CATEGORIES</div>
-    <div style="display:flex;flex-direction:column;gap:0.6rem;">
-      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:24px;height:24px;border-radius:6px;background:#DC2626;color:#fff;font-weight:800;font-size:0.7rem;display:flex;align-items:center;justify-content:center;">1</div><div><div style="font-size:0.85rem;font-weight:700;color:#0B1730;">Prop / Lighting / Table-Top</div><div style="font-size:0.72rem;color:#6B7B9C;margin-top:0.15rem;">AIP/DIP/Tent Card · Luminous Table Top · Lighting Panel Insert</div></div></div>
-      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:24px;height:24px;border-radius:6px;background:#DC2626;color:#fff;font-weight:800;font-size:0.7rem;display:flex;align-items:center;justify-content:center;">2</div><div><div style="font-size:0.85rem;font-weight:700;color:#0B1730;">ISB / Lampcloth / Table Sticker</div><div style="font-size:0.72rem;color:#6B7B9C;margin-top:0.15rem;">Recurring 0–50% inshop scores across nearly all models</div></div></div>
-      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:24px;height:24px;border-radius:6px;background:#DC2626;color:#fff;font-weight:800;font-size:0.7rem;display:flex;align-items:center;justify-content:center;">3</div><div><div style="font-size:0.85rem;font-weight:700;color:#0B1730;">Shelf Talker / Dangler / Wobbler</div><div style="font-size:0.72rem;color:#6B7B9C;margin-top:0.15rem;">Recurring 0–50% inshop POSM scores across nearly all models</div></div></div>
-    </div>
+  <div class="audit-roles">
+    <article class="role-card">
+      <div class="role-kicker">Store</div>
+      <div class="role-code">TL</div>
+      <div class="role-verb">Shoot the audit right</div>
+      <ul>
+        <li>Attend pre-audit training</li>
+        <li>Geo-tagged, time-stamped photos</li>
+        <li>Follow SOP checklist</li>
+      </ul>
+    </article>
+    <article class="role-card">
+      <div class="role-kicker">Field</div>
+      <div class="role-code">ME</div>
+      <div class="role-verb">Keep quality live</div>
+      <ul>
+        <li>Clean master data before open</li>
+        <li>Daily progress + photo QA</li>
+        <li>Support TLs on ground</li>
+      </ul>
+    </article>
+    <article class="role-card">
+      <div class="role-kicker">Branch</div>
+      <div class="role-code">BM</div>
+      <div class="role-verb">Own the branch score</div>
+      <ul>
+        <li>Run TL / ME KPI</li>
+        <li>Review the scorecard</li>
+        <li>Name an owner per gap</li>
+      </ul>
+    </article>
+    <article class="role-card">
+      <div class="role-kicker">System</div>
+      <div class="role-code">HO</div>
+      <div class="role-verb">Set the standard</div>
+      <ul>
+        <li>SOP + training design</li>
+        <li>Checklist and scoring</li>
+        <li>Guide BMs on repeats</li>
+      </ul>
+    </article>
   </div>
 </div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;flex:1;min-height:0;">
-
-  <!-- ROLE RESPONSIBILITY TABLE -->
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);display:flex;flex-direction:column;">
-    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;margin-bottom:0.8rem;flex:0 0 auto;">ROLE RESPONSIBILITIES</div>
-    <div style="overflow:auto;flex:1;">
-      <table style="width:100%;border-collapse:collapse;font-size:0.75rem;">
-        <thead><tr style="background:#F0F4FB;"><th style="text-align:left;padding:0.4rem 0.6rem;font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;border-bottom:2px solid rgba(11,23,48,0.10);">Role</th><th style="text-align:left;padding:0.4rem 0.6rem;font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;border-bottom:2px solid rgba(11,23,48,0.10);">Responsibility</th></tr></thead>
-        <tbody>
-          <tr><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);font-weight:700;color:#0D2B6B;vertical-align:top;">TL</td><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;line-height:1.4;">Attends pre-audit training. Executes store audit correctly — geo-tagged, time-stamped photos per SOP.</td></tr>
-          <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);font-weight:700;color:#0D2B6B;vertical-align:top;">ME</td><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;line-height:1.4;">Validates store/TL master data before audit opens. Monitors daily progress and photo quality. Supports TL on-ground.</td></tr>
-          <tr><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);font-weight:700;color:#0D2B6B;vertical-align:top;">BM</td><td style="padding:0.4rem 0.6rem;border-bottom:1px solid rgba(11,23,48,0.05);color:#3D4E73;line-height:1.4;">Implements and monitors TL/ME KPI at branch level. Reviews scorecard. Assigns owners to gaps.</td></tr>
-          <tr style="background:#FAFBFF;"><td style="padding:0.4rem 0.6rem;font-weight:700;color:#0D2B6B;vertical-align:top;">HO</td><td style="padding:0.4rem 0.6rem;color:#3D4E73;line-height:1.4;">Designs pre-audit training and SOP. Defines checklist and scoring standard. Consolidates reporting. Guides BM on recurring gaps.</td></tr>
-        </tbody>
-      </table>
+<div class="audit-card">
+  <div class="audit-card-h">
+    <h2>Next audit cycle</h2>
+    <p>Five beats — not five paragraphs</p>
+  </div>
+  <div class="audit-rail">
+    <div class="rail-step">
+      <div class="rail-n">1</div>
+      <div class="rail-when">Now</div>
+      <div class="rail-title">Lock SOP</div>
+      <div class="rail-who">HO writes it. BM is briefed on the KPI rollout.</div>
+    </div>
+    <div class="rail-step">
+      <div class="rail-n">2</div>
+      <div class="rail-when">T–7 days</div>
+      <div class="rail-title">Train field</div>
+      <div class="rail-who">TL + ME, per model, before the window opens.</div>
+    </div>
+    <div class="rail-step">
+      <div class="rail-n">3</div>
+      <div class="rail-when">5–7 days</div>
+      <div class="rail-title">Run + watch</div>
+      <div class="rail-who">ME daily monitor. HO mid-window spot check.</div>
+    </div>
+    <div class="rail-step">
+      <div class="rail-n">4</div>
+      <div class="rail-when">Report out</div>
+      <div class="rail-title">Score it</div>
+      <div class="rail-who">BM-led scorecard. KPI line closed.</div>
+    </div>
+    <div class="rail-step is-live">
+      <div class="rail-n">5</div>
+      <div class="rail-when">Every cycle</div>
+      <div class="rail-title">Feed gaps back</div>
+      <div class="rail-who">Last round’s 0% families become next training.</div>
     </div>
   </div>
-
-  <!-- IMPLEMENTATION TIMELINE + KPI -->
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.2rem;box-shadow:0 10px 26px rgba(11,23,48,0.05);display:flex;flex-direction:column;">
-    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;margin-bottom:0.8rem;flex:0 0 auto;">IMPLEMENTATION TIMELINE</div>
-    <div style="display:flex;flex-direction:column;gap:0.45rem;flex:1;">
-      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#0D2B6B,#1565C0);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">1</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">Before next audit window</div><div style="font-size:0.68rem;color:#6B7B9C;">Finalize SOP · Brief BMs on KPI rollout</div></div></div>
-      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#0D2B6B,#1565C0);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">2</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">1 week before audit opens</div><div style="font-size:0.68rem;color:#6B7B9C;">Conduct pre-audit TL/ME training per model</div></div></div>
-      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#0D2B6B,#1565C0);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">3</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">During audit window (5–7 days)</div><div style="font-size:0.68rem;color:#6B7B9C;">Daily ME monitoring + mid-window HO spot checks</div></div></div>
-      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#0D2B6B,#1565C0);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">4</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">Audit scoring report published</div><div style="font-size:0.68rem;color:#6B7B9C;">BM-led scorecard review · KPI scoring finalized</div></div></div>
-      <div style="display:flex;gap:0.6rem;align-items:flex-start;"><div style="flex:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#15A34A,#16A34A);color:#fff;font-weight:800;font-size:0.62rem;display:flex;align-items:center;justify-content:center;">5</div><div><div style="font-size:0.78rem;font-weight:700;color:#0B1730;">Ongoing — each cycle</div><div style="font-size:0.68rem;color:#6B7B9C;">Prior round gap areas built into next training · Continuous improvement</div></div></div>
+  <div class="audit-kpi-band">
+    <div>
+      <div class="akb-l">Named KPI</div>
+      <div class="akb-n">70%</div>
     </div>
-    <div style="margin-top:0.8rem;padding:0.7rem;background:#F0F4FB;border-radius:10px;flex:0 0 auto;">
-      <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0D2B6B;margin-bottom:0.3rem;">TL / ME KPI FRAMEWORK</div>
-      <div style="font-size:0.72rem;color:#3D4E73;line-height:1.45;">Channel One Audit score is a <strong>named KPI line item</strong> for TL and ME. Measured on: store-level Correct % achieved + audit coverage within 5–7 day window. Minimum threshold per channel: <strong>70%</strong>. Below threshold triggers automatic escalation.</div>
-    </div>
+    <div class="akb-t"><b>TL &amp; ME line item.</b> Store-level correct % + coverage in the 5–7 day window. Miss the 70% channel floor and it auto-escalates.</div>
   </div>
-
 </div>
 </section>
   </div><!-- end .h1review-panel -->
