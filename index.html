@@ -1518,7 +1518,9 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2x-kpi .s{font-size:0.74rem;color:#3D4E73;line-height:1.3;}
 .h2x-chain{display:flex;align-items:stretch;gap:0.45rem;flex-wrap:wrap;}
 .h2x-node{flex:1;min-width:140px;background:#F7F9FD;border:1px solid rgba(11,23,48,0.08);border-radius:14px;padding:0.85rem 0.9rem;position:relative;cursor:default;transition:box-shadow .15s,transform .15s,border-color .15s;}
-.h2x-node:hover,.h2x-node:focus-within{background:#fff;border-color:rgba(21,102,192,0.28);box-shadow:0 10px 24px rgba(11,23,48,0.08);z-index:2;}
+.h2x-node:hover,.h2x-node:focus-within{background:#fff;border-color:rgba(21,102,192,0.28);box-shadow:0 10px 24px rgba(11,23,48,0.08);z-index:4;}
+.h2x-ntip{position:absolute;left:0.7rem;right:0.7rem;top:calc(100% + 8px);background:#0B1730;color:#fff;border-radius:12px;padding:0.6rem 0.75rem;font-size:0.72rem;line-height:1.4;opacity:0;visibility:hidden;z-index:9;pointer-events:none;box-shadow:0 12px 28px rgba(11,23,48,0.25);}
+.h2x-node:hover .h2x-ntip,.h2x-node:focus-within .h2x-ntip{opacity:1;visibility:visible;}
 .h2x-node .k{font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1566C0;margin-bottom:0.25rem;}
 .h2x-node .t{font-family:Sora,Inter,sans-serif;font-size:1.02rem;font-weight:800;color:#0B1730;line-height:1.15;}
 .h2x-node .d{font-size:0.74rem;color:#3D4E73;margin-top:0.3rem;line-height:1.35;}
@@ -1557,8 +1559,8 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2x-bar{appearance:none;border:1px solid transparent;background:#F7F9FD;border-radius:12px;padding:0.48rem 0.7rem;display:grid;grid-template-columns:7.4rem minmax(0,1fr) 3.6rem;gap:0.6rem;align-items:center;width:100%;text-align:left;cursor:pointer;position:relative;font-family:inherit;margin-bottom:0.4rem;}
 .h2x-bar:hover,.h2x-bar:focus-visible{background:#fff;border-color:rgba(13,43,107,0.16);box-shadow:0 8px 22px rgba(11,23,48,0.08);outline:none;z-index:3;}
 .h2x-bar .nm{font-size:0.78rem;font-weight:700;color:#0B1730;}
-.h2x-bar .tr{height:16px;background:#E8EEF8;border-radius:99px;overflow:hidden;}
-.h2x-bar .fl{display:block;height:100%;width:var(--pct);min-width:8px;border-radius:99px;background:var(--tone);}
+.h2x-bar .tr{position:relative;height:16px;background:#E8EEF8;border-radius:99px;overflow:visible;}
+.h2x-bar .fl{display:block;height:100%;width:var(--pct);min-width:8px;border-radius:99px;background:var(--tone);position:relative;z-index:1;}
 .h2x-bar .vl{font-family:Sora,Inter,sans-serif;font-weight:800;color:var(--tone);text-align:right;}
 .h2x-bar .tip{position:absolute;left:7.9rem;top:calc(100% + 6px);width:min(340px,70%);background:#0B1730;color:#fff;border-radius:12px;padding:0.65rem 0.8rem;opacity:0;visibility:hidden;z-index:8;font-size:0.74rem;line-height:1.4;pointer-events:none;box-shadow:0 12px 28px rgba(11,23,48,0.25);}
 .h2x-bar:hover .tip,.h2x-bar:focus-visible .tip{opacity:1;visibility:visible;}
@@ -1591,13 +1593,46 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2x-rail .n{width:26px;height:26px;border-radius:50%;background:#002B6B;color:#fff;font-size:0.7rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:0.4rem;}
 .h2x-rail h3{margin:0 0 0.2rem;font-size:0.85rem;}
 .h2x-rail p{margin:0;font-size:0.72rem;color:#3D4E73;line-height:1.35;}
+.h2x-board{display:grid;grid-template-columns:1.1fr 1fr;gap:0.75rem;align-items:stretch;}
+.h2x-swap{display:flex;align-items:center;gap:0.45rem;margin-top:0.45rem;flex-wrap:wrap;}
+.h2x-swap > div{flex:1;min-width:110px;background:#F3F6FD;border:1px solid rgba(11,23,48,0.1);border-radius:10px;padding:0.45rem 0.55rem;font-size:0.74rem;font-weight:700;color:#0B1730;text-align:center;}
+.h2x-swap .arr{flex:none;font-weight:800;color:#1566C0;}
+.h2x-score{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.65rem;}
+.h2x-score article{background:#fff;border:1px solid rgba(11,23,48,0.1);border-radius:16px;padding:0.95rem 1rem;box-shadow:0 8px 20px rgba(11,23,48,0.04);min-width:0;}
+.h2x-score .no{font-size:0.58rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#1566C0;}
+.h2x-score h3{margin:0.25rem 0 0.35rem;font-family:Sora,Inter,sans-serif;font-size:1.05rem;}
+.h2x-score p{margin:0;font-size:0.76rem;color:#3D4E73;line-height:1.4;}
+.h2x-score .own{margin-top:0.55rem;font-size:0.62rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B7B9C;}
+.h2x-heat{display:flex;flex-direction:column;gap:0.35rem;}
+.h2x-conc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0.65rem;}
+.h2x-conc article{background:#0B1730;color:#fff;border-radius:16px;padding:1rem 1.05rem;}
+.h2x-conc .k{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:#9DB2EC;}
+.h2x-conc h3{margin:0.25rem 0 0.35rem;font-family:Sora,Inter,sans-serif;font-size:1.1rem;}
+.h2x-conc p{margin:0;font-size:0.76rem;color:#C5D0EA;line-height:1.4;}
+.h2x-axis{display:grid;grid-template-columns:7.4rem 1fr 3.6rem;font-size:0.58rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B7B9C;margin:0 0 0.25rem;}
+.h2x-axis .m{position:relative;}
+.h2x-axis .m span{position:absolute;transform:translateX(-50%);}
+.h2x-axis .m .a50{left:50%;}
+.h2x-axis .m .a70{left:70%;color:#15A34A;}
+.h2x-tick{position:absolute;top:-3px;bottom:-3px;width:0;border-left:1.5px dashed rgba(220,38,38,0.55);z-index:0;pointer-events:none;}
+.h2x-tick.t50{left:50%;}
+.h2x-tick.t70{left:70%;border-left-color:rgba(21,163,74,0.7);}
+.h2x-move{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0.55rem;}
+.h2x-move article{background:#fff;border:1px solid rgba(11,23,48,0.1);border-radius:14px;padding:0.85rem 0.9rem;min-width:0;box-shadow:0 8px 18px rgba(11,23,48,0.04);}
+.h2x-move .no{font-family:Sora,Inter,sans-serif;font-size:1.25rem;font-weight:800;color:#1566C0;line-height:1;}
+.h2x-move .tag{display:inline-block;margin:0.35rem 0;font-size:0.58rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#1566C0;background:rgba(21,102,192,0.08);border-radius:99px;padding:0.12rem 0.45rem;}
+.h2x-move h3{margin:0 0 0.25rem;font-size:0.95rem;}
+.h2x-move p{margin:0;font-size:0.74rem;color:#3D4E73;line-height:1.35;}
+.h2x-rule{font-size:0.74rem;color:#3D4E73;line-height:1.4;margin:0.2rem 0;padding-left:0.2rem;border-left:3px solid rgba(21,102,192,0.35);padding-left:0.55rem;}
+.h2x-rule b{color:#0B1730;}
 @media(max-width:1100px){
-  .h2x-kpis,.h2x-seg,.h2x-fail,.h2x-rail,.h2x-month{grid-template-columns:1fr 1fr;}
+  .h2x-kpis,.h2x-seg,.h2x-fail,.h2x-rail,.h2x-month,.h2x-board,.h2x-score,.h2x-conc,.h2x-move{grid-template-columns:1fr 1fr;}
   .h2x-bar{grid-template-columns:1fr auto;}
   .h2x-bar .tr{grid-column:1/-1;}
+  .h2x-axis{grid-template-columns:1fr;}
 }
 @media(max-width:700px){
-  .h2x-kpis,.h2x-seg,.h2x-fail,.h2x-rail,.h2x-month{grid-template-columns:1fr;}
+  .h2x-kpis,.h2x-seg,.h2x-fail,.h2x-rail,.h2x-month,.h2x-board,.h2x-score,.h2x-conc,.h2x-move{grid-template-columns:1fr;}
 }
 /* ========== END H2 DIRECTION ========== */
 
@@ -4392,56 +4427,64 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <!-- PAGE 1: MAJOR ISSUE & DIRECTION -->
     <section class="page h2x-page" id="h2dir-p1" style="display:flex;">
       <header>
-        <div class="eyebrow">H2 Direction · Marketing · Page ①</div>
+        <div class="eyebrow">H2 Direction · Marketing Dept · Page ①</div>
         <h1 class="title">Price hike is the issue. <span>ROI is the answer.</span></h1>
-        <p class="sub">Pan-industry price hike gives competitors room. H2 spends only where it converts — and we execute faster.</p>
+        <p class="sub">Pan-industry price hike gives competitors room. H2 spends only where it converts — MT-focused, POS-driven, faster.</p>
       </header>
-      <div class="h2x-card">
-        <div class="h2x-h"><h2>The chain</h2><p>Hover any step</p></div>
-        <div class="h2x-chain">
-          <div class="h2x-node" tabindex="0"><div class="k">Pressure</div><div class="t">Pan-industry price hike</div><div class="d">Whole category moved. Value positioning opened for others.</div></div>
-          <span class="h2x-arr">→</span>
-          <div class="h2x-node" tabindex="0"><div class="k">Risk</div><div class="t">Competitor advantage</div><div class="d">They can talk price. We cannot buy share with wasted rupees.</div></div>
-          <span class="h2x-arr">→</span>
-          <div class="h2x-node" tabindex="0"><div class="k">Response</div><div class="t">ROI-based campaigns</div><div class="d">Cost-effective reach. Every activity must earn its keep.</div></div>
+      <div class="h2x-board">
+        <div class="h2x-card">
+          <div class="h2x-h"><h2>Major issue → direction</h2><p>Hover any step</p></div>
+          <div class="h2x-chain">
+            <div class="h2x-node" tabindex="0"><div class="k">Pressure</div><div class="t">Pan-industry price hike</div><div class="d">Whole category moved. Value opened for others.</div><span class="h2x-ntip">Not a vivo-only problem. When the industry lifts price, competitors can talk value while we look expensive.</span></div>
+            <span class="h2x-arr">→</span>
+            <div class="h2x-node" tabindex="0"><div class="k">Risk</div><div class="t">Competitor advantage</div><div class="d">They can talk price. We cannot buy share with wasted rupees.</div><span class="h2x-ntip">Share of voice without ROI is a gift to the other brand. H2 does not fund that.</span></div>
+            <span class="h2x-arr">→</span>
+            <div class="h2x-node" tabindex="0"><div class="k">Response</div><div class="t">ROI-based campaigns</div><div class="d">Cost-effective reach. Every activity must earn its keep.</div><span class="h2x-ntip">Cost-effective campaigns only. If it cannot show conversion, it does not ship.</span></div>
+          </div>
+          <div class="h2x-band" style="margin-top:0.75rem;"><div><div class="l" style="font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:#9DB2EC;">Must-do</div><div class="n" style="font-size:1.05rem;color:#93C5FD;">MT-focused</div></div><div class="t"><b>Modern trade gets its own campaign architecture.</b> Not a GT plan stretched onto MT.</div></div>
         </div>
-        <div class="h2x-band" style="margin-top:0.85rem;"><div><div class="l" style="font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:#9DB2EC;">Must-do</div><div class="n" style="font-size:1.15rem;color:#93C5FD;">MT-focused</div></div><div class="t"><b>Modern trade gets its own campaign architecture.</b> Not a GT plan stretched onto MT.</div></div>
-      </div>
-      <div class="h2x-card">
-        <div class="h2x-h"><h2>Future direction</h2><p>Sell-out + lean spend + extra business</p></div>
-        <div class="h2x-eq">
-          <div class="h2x-node" tabindex="0"><div class="k">A</div><div class="t">Sell-out drive</div><div class="d">Move stock through every channel. Not just bill-in.</div></div>
-          <span class="h2x-op">+</span>
-          <div class="h2x-node" tabindex="0"><div class="k">B</div><div class="t">Expense optimum</div><div class="d">Cut low-ROI mix. Keep only what converts.</div></div>
-          <span class="h2x-op">+</span>
-          <div class="h2x-node" tabindex="0"><div class="k">C</div><div class="t">Additional business</div><div class="d">Accessories, service, ecosystem — extra TN revenue.</div></div>
-        </div>
-        <div class="h2x-chiprow">
-          <span class="h2x-chip">POS-driven activities</span>
-          <span class="h2x-chip">Work execution speed-up</span>
-          <span class="h2x-chip">IoT support</span>
-        </div>
-      </div>
-      <div class="h2x-card">
-        <div class="h2x-h"><h2>How we show up</h2><p>Confidence → premium → APAC → counter</p></div>
-        <div class="h2x-chain">
-          <div class="h2x-node"><div class="k">1</div><div class="t">Confidence</div><div class="d">Trade and consumer believe vivo in TN.</div></div>
-          <span class="h2x-arr">→</span>
-          <div class="h2x-node"><div class="k">2</div><div class="t">Premium branding + MarCom</div><div class="d">Standing in store and in media, together.</div></div>
-          <span class="h2x-arr">→</span>
-          <div class="h2x-node"><div class="k">3</div><div class="t">Better APAC</div><div class="d">Faster, cleaner market response.</div></div>
-          <span class="h2x-arr">→</span>
-          <div class="h2x-node"><div class="k">4</div><div class="t">Timely competitor counter</div><div class="d">Hit back in the same window — not next month.</div></div>
+        <div class="h2x-card">
+          <div class="h2x-h"><h2>Future direction</h2><p>Sell-out + lean spend + extra business</p></div>
+          <div class="h2x-eq">
+            <div class="h2x-node" tabindex="0"><div class="k">A</div><div class="t">Sell-out drive</div><div class="d">Through the counter. Not bill-in theatre.</div><span class="h2x-ntip">Aggressive sell-through across GT, RMT and NMT. Stock that sits is not a win.</span></div>
+            <span class="h2x-op">+</span>
+            <div class="h2x-node" tabindex="0"><div class="k">B</div><div class="t">Expense optimum</div><div class="d">Cut low-ROI mix. Keep what converts.</div><span class="h2x-ntip">Cost-efficient media. Kill activities that cannot show a rupee back.</span></div>
+            <span class="h2x-op">+</span>
+            <div class="h2x-node" tabindex="0"><div class="k">C</div><div class="t">Additional business</div><div class="d">Accessories, service, ecosystem.</div><span class="h2x-ntip">New TN revenue next to the handset — accessories, service, IoT ecosystem.</span></div>
+          </div>
+          <div class="h2x-tiles" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0.7rem;">
+            <div class="h2x-tile" tabindex="0"><b>POS-driven</b><span>Activities start at the point of sale, not the slide.</span></div>
+            <div class="h2x-tile" tabindex="0"><b>Execution speed-up</b><span>Strategy work lands in-market in the same window.</span></div>
+            <div class="h2x-tile" tabindex="0"><b>IoT support</b><span>Expand vivo ecosystem presence in TN retail.</span></div>
+          </div>
         </div>
       </div>
-      <div class="h2x-card">
-        <div class="h2x-h"><h2>PBG engine</h2><p>X-Zone + Marketing 2.0 + brand touch</p></div>
-        <div class="h2x-tiles" style="grid-template-columns:repeat(5,minmax(0,1fr));">
-          <div class="h2x-tile"><b>X-Zone</b><span>Premium brand growth in-store</span></div>
-          <div class="h2x-tile"><b>Mktg 2.0</b><span>Campaign system, not one-offs</span></div>
-          <div class="h2x-tile"><b>ROI BT</b><span>Brand touch that pays back</span></div>
-          <div class="h2x-tile"><b>College BT</b><span>Youth campuses</span></div>
-          <div class="h2x-tile"><b>IT BT</b><span>Corporate / tech parks</span></div>
+      <div class="h2x-board">
+        <div class="h2x-card">
+          <div class="h2x-h"><h2>How we show up</h2><p>Confidence → counter</p></div>
+          <div class="h2x-chain">
+            <div class="h2x-node" tabindex="0"><div class="k">1</div><div class="t">Confidence</div><div class="d">Trade and consumer believe vivo in TN.</div><span class="h2x-ntip">If the counter does not believe, the consumer will not.</span></div>
+            <span class="h2x-arr">→</span>
+            <div class="h2x-node" tabindex="0"><div class="k">2</div><div class="t">Premium + MarCom</div><div class="d">Store standing and media, together.</div><span class="h2x-ntip">Premium branding and MarCom are one system — not two departments.</span></div>
+            <span class="h2x-arr">→</span>
+            <div class="h2x-node" tabindex="0"><div class="k">3</div><div class="t">Better APAC</div><div class="d">Faster, cleaner market response.</div><span class="h2x-ntip">APAC here means speed and quality of market action — not a slogan.</span></div>
+            <span class="h2x-arr">→</span>
+            <div class="h2x-node" tabindex="0"><div class="k">4</div><div class="t">Competitor counter</div><div class="d">Hit back in the same window.</div><span class="h2x-ntip">Timely counter. Next month is too late.</span></div>
+          </div>
+        </div>
+        <div class="h2x-card">
+          <div class="h2x-h"><h2>PBG engine</h2><p>Not KOL-only</p></div>
+          <div class="h2x-eq">
+            <div class="h2x-tile" tabindex="0"><b>X-Zone</b><span>Premium brand growth in-store</span></div>
+            <span class="h2x-op">+</span>
+            <div class="h2x-tile" tabindex="0"><b>Mktg 2.0</b><span>Campaign system, not one-offs</span></div>
+            <span class="h2x-op">+</span>
+            <div class="h2x-tile" tabindex="0"><b>ROI BT</b><span>Brand touch that pays back</span></div>
+            <span class="h2x-op">+</span>
+            <div class="h2x-tile" tabindex="0"><b>College BT</b><span>Youth campuses</span></div>
+            <span class="h2x-op">+</span>
+            <div class="h2x-tile" tabindex="0"><b>IT BT</b><span>Corporate / tech parks</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -4463,7 +4506,9 @@ img,video,iframe,canvas,svg{max-width:100%;}
           <div class="h2x-chiprow"><span class="h2x-chip">IT</span><span class="h2x-chip">Corporate</span><span class="h2x-chip">Managers</span><span class="h2x-chip">Doctors</span><span class="h2x-chip">Founders</span></div>
           <div class="lbl">Campaigns</div>
           <div class="h2x-chiprow"><span class="h2x-chip">Market branding</span><span class="h2x-chip">Online</span><span class="h2x-chip">WhatsApp</span><span class="h2x-chip">FM</span></div>
-          <p style="margin:0.4rem 0 0;font-size:0.76rem;color:#3D4E73;line-height:1.4;">Objective: awareness + interest. Premium consideration, not a price war.</p>
+          <div class="lbl">Formats</div>
+          <div class="h2x-chiprow"><span class="h2x-chip">IT Park DOOH</span><span class="h2x-chip">Chennai OOH</span><span class="h2x-chip">Metro</span><span class="h2x-chip">Theatre</span><span class="h2x-chip">YouTube / OTT</span><span class="h2x-chip">KOL</span></div>
+          <p style="margin:0.4rem 0 0;font-size:0.76rem;color:#3D4E73;line-height:1.4;">Objective: awareness + interest. Premium consideration — not a price war.</p>
         </article>
         <article class="h2x-segcard bc">
           <span class="badge">P — Purchase</span>
@@ -4473,8 +4518,9 @@ img,video,iframe,canvas,svg{max-width:100%;}
           <div class="lbl">Audience</div>
           <div class="h2x-chiprow"><span class="h2x-chip">Factory</span><span class="h2x-chip">Technicians</span><span class="h2x-chip">Town</span><span class="h2x-chip">Rural</span><span class="h2x-chip">Field</span></div>
           <div class="lbl">On ground</div>
-          <div class="h2x-chiprow"><span class="h2x-chip">Rural / low-town</span><span class="h2x-chip">Offline promo</span></div>
-          <p style="margin:0.4rem 0 0;font-size:0.76rem;color:#3D4E73;line-height:1.4;"><b>HO writes the guideline.</b> Branch executes. No freelance town activity.</p>
+          <div class="h2x-chiprow"><span class="h2x-chip">Rural / low-town</span><span class="h2x-chip">Offline promo</span><span class="h2x-chip">Canter van</span><span class="h2x-chip">Bus terminal</span><span class="h2x-chip">Town OOH</span><span class="h2x-chip">Local KOC</span></div>
+          <div class="h2x-swap"><div>HO guideline + material</div><span class="arr">↔</span><div>Branch execution</div></div>
+          <p style="margin:0.4rem 0 0;font-size:0.76rem;color:#3D4E73;line-height:1.4;">No freelance town activity. HO writes it. Branch runs it.</p>
         </article>
         <article class="h2x-segcard eu">
           <span class="badge">Loyalty · WOM · KOC</span>
@@ -4484,7 +4530,9 @@ img,video,iframe,canvas,svg{max-width:100%;}
           <div class="lbl">Keep them</div>
           <div class="h2x-chiprow"><span class="h2x-chip">Loyalty</span><span class="h2x-chip">WOM</span><span class="h2x-chip">KOC</span><span class="h2x-chip">Yugi</span></div>
           <div class="lbl">Channels</div>
-          <div class="h2x-chiprow"><span class="h2x-chip">WhatsApp</span><span class="h2x-chip">CRM</span><span class="h2x-chip">Service</span><span class="h2x-chip">Referral</span></div>
+          <div class="h2x-chiprow"><span class="h2x-chip">WhatsApp</span><span class="h2x-chip">CRM</span><span class="h2x-chip">Service</span><span class="h2x-chip">Referral</span><span class="h2x-chip">Communities</span></div>
+          <div class="lbl">Read</div>
+          <div class="h2x-chiprow"><span class="h2x-chip">Registration</span><span class="h2x-chip">Upgrade</span><span class="h2x-chip">Repurchase</span><span class="h2x-chip">UGC</span></div>
           <p style="margin:0.4rem 0 0;font-size:0.76rem;color:#3D4E73;line-height:1.4;">Turn owners into repeat buyers and advocates — not a second awareness campaign.</p>
         </article>
       </div>
@@ -4508,9 +4556,9 @@ img,video,iframe,canvas,svg{max-width:100%;}
           <div class="h2x-tile" tabindex="0"><b>Lifestyle</b><span>Aspiration and identity — not spec sheets.</span></div>
           <span class="h2x-op">→</span>
           <div class="h2x-moment">
-            <div class="k">The output</div>
+            <div class="k">The fifth H</div>
             <div class="t">Business moment</div>
-            <div class="h2x-slots"><span></span><span></span><span></span></div>
+            <div class="h2x-slots"><span title="Moment 1"></span><span title="Moment 2"></span><span title="Moment 3"></span></div>
             <p style="margin:0.55rem 0 0;font-size:0.75rem;color:#C5D0EA;line-height:1.4;">Three slots in market. Each must carry all four H’s — or it does not ship.</p>
           </div>
         </div>
@@ -4528,24 +4576,28 @@ img,video,iframe,canvas,svg{max-width:100%;}
       <header>
         <div class="eyebrow">H2 Direction · Retail Com · Page ⑤</div>
         <h1 class="title">Branding build — <span>new, top, audit, defend</span></h1>
-        <p class="sub">Four focus lines. One SOP from BM to HO. 32-hour usage. Competitor presence does not get a free store.</p>
+        <p class="sub">Four focus lines. One SOP from BM to HO. Material live in 32 hours. Competitor presence does not get a free store.</p>
       </header>
       <div class="h2x-fail" style="grid-template-columns:repeat(4,minmax(0,1fr));">
-        <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><b>New shop</b><span>vivo brand build on every new door. Space check → fixture / ISB.</span></article>
-        <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><b>Top shop</b><span>Upgrade A+ / A / B to current vivo standard.</span></article>
+        <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><b>New shop</b><span>vivo brand build on every new door. Identify → deploy HO material → SOP.</span></article>
+        <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><b>Top shop</b><span>Upgrade A+ / A / B to current vivo standard. Old-to-new, not a sticker.</span></article>
         <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><b>Regular audit</b><span>Channel One is the score. Fix POSM, not the slide.</span></article>
         <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><b>Supply &amp; service</b><span>Shortage and service issues get solved — not parked.</span></article>
       </div>
-      <div class="h2x-card">
-        <div class="h2x-h"><h2>How work moves</h2><p>BM sales-force policy → direct HO → SOP</p></div>
-        <div class="h2x-chain">
-          <div class="h2x-node"><div class="k">Field</div><div class="t">BM / sales force</div><div class="d">Policy on the ground. No local remix.</div></div>
-          <span class="h2x-arr">→</span>
-          <div class="h2x-node"><div class="k">Line</div><div class="t">Direct HO</div><div class="d">Guideline and material from HO. Not a side WhatsApp.</div></div>
-          <span class="h2x-arr">→</span>
-          <div class="h2x-node"><div class="k">Standard</div><div class="t">SOP</div><div class="d">Same play in every branch.</div></div>
-          <span class="h2x-arr">→</span>
-          <div class="h2x-node"><div class="k">Clock</div><div class="t">32h usage</div><div class="d">Material live in 32 hours. Tracked.</div></div>
+      <div class="h2x-board">
+        <div class="h2x-card">
+          <div class="h2x-h"><h2>How work moves</h2><p>BM → HO → SOP → clock</p></div>
+          <div class="h2x-chain">
+            <div class="h2x-node" tabindex="0"><div class="k">Field</div><div class="t">BM / sales force</div><div class="d">Policy on the ground. No local remix.</div><span class="h2x-ntip">3Bm / sales-force policy. Same play in every branch.</span></div>
+            <span class="h2x-arr">→</span>
+            <div class="h2x-node" tabindex="0"><div class="k">Line</div><div class="t">Direct HO</div><div class="d">Guideline and material from HO.</div><span class="h2x-ntip">Not a side WhatsApp. Direct HO is the line.</span></div>
+            <span class="h2x-arr">→</span>
+            <div class="h2x-node" tabindex="0"><div class="k">Standard</div><div class="t">SOP</div><div class="d">Same play in every branch.</div><span class="h2x-ntip">SOP is the document the field can be scored against.</span></div>
+          </div>
+        </div>
+        <div class="h2x-card">
+          <div class="h2x-h"><h2>Clock</h2><p>Tracked usage</p></div>
+          <div class="h2x-band" style="margin-top:0;"><div class="n">32h</div><div class="t"><b>Material live in 32 hours.</b> If it is still in the bag, it is not branding. Compliance is audited.</div></div>
         </div>
       </div>
       <div class="h2x-card">
@@ -4565,19 +4617,16 @@ img,video,iframe,canvas,svg{max-width:100%;}
         <h1 class="title">Balance scorecard — <span>one owner, four scores</span></h1>
         <p class="sub">Yugendhar tracks the card. Leadership reads four numbers — not five nested lists.</p>
       </header>
-      <div class="h2x-kpis">
-        <div class="h2x-kpi" style="--ak:#DC2626;"><div class="l">01 Issue → Direction</div><div class="n" style="font-size:1.15rem;">ROI spend</div><div class="s">Are campaigns cost-effective after the price hike?</div></div>
-        <div class="h2x-kpi" style="--ak:#1566C0;"><div class="l">02 Users</div><div class="n" style="font-size:1.15rem;">A+I / P / L</div><div class="s">White, blue, existing — each hitting its AIPL job?</div></div>
-        <div class="h2x-kpi" style="--ak:#B45309;"><div class="l">03 5H Hero</div><div class="n" style="font-size:1.15rem;">Moments</div><div class="s">Did the four H’s land in one TN business moment?</div></div>
-        <div class="h2x-kpi" style="--ak:#15A34A;"><div class="l">04 Branding build</div><div class="n" style="font-size:1.15rem;">Stores</div><div class="s">New + top + audit + Zone held vs competition</div></div>
+      <div class="h2x-score">
+        <article><div class="no">01 · Issue → Direction</div><h3>ROI spend</h3><p>Are campaigns cost-effective after the price hike? MT plan standing on its own?</p><div class="own">Owner · Yugendhar · quarterly</div></article>
+        <article><div class="no">02 · Users</div><h3>A+I / P / L</h3><p>White, blue, existing — each hitting its AIPL job, not one generic mix.</p><div class="own">Owner · Yugendhar · monthly</div></article>
+        <article><div class="no">03 · 5H Hero</div><h3>Moments</h3><p>Did the four H’s land in one TN business moment — or four orphan films?</p><div class="own">Owner · Yugendhar · per moment</div></article>
+        <article><div class="no">04 · Branding build</div><h3>Stores</h3><p>New + top + audit score + Zone / MBB held vs competition.</p><div class="own">Owner · Yugendhar · weekly ops</div></article>
       </div>
-      <div class="h2x-card">
-        <div class="h2x-h"><h2>H2 conclusion</h2><p>Three outcomes. That is the department promise.</p></div>
-        <div class="h2x-tiles" style="grid-template-columns:repeat(3,minmax(0,1fr));">
-          <div class="h2x-tile"><b>Strengthen belief</b><span>TN trade and consumers trust vivo again.</span></div>
-          <div class="h2x-tile"><b>Grow steadily</b><span>Volume and value, district by district — no spike-and-die.</span></div>
-          <div class="h2x-tile"><b>Optimise operation</b><span>Leaner execution, better ROI, faster counter.</span></div>
-        </div>
+      <div class="h2x-conc">
+        <article><div class="k">Outcome 01</div><h3>Strengthen belief</h3><p>TN trade and consumers trust vivo again.</p></article>
+        <article><div class="k">Outcome 02</div><h3>Grow steadily</h3><p>Volume and value, district by district — no spike-and-die.</p></article>
+        <article><div class="k">Outcome 03</div><h3>Optimise operation</h3><p>Leaner execution, better ROI, faster counter.</p></article>
       </div>
     </section>
 
@@ -4585,19 +4634,19 @@ img,video,iframe,canvas,svg{max-width:100%;}
       <header>
         <div class="eyebrow">TN Retail Branding · AOP H2</div>
         <h1 class="title">State plan — <span>five moves</span></h1>
-        <p class="sub">Visibility, upgrade, compliance, maintenance, defence. Same five as the notebook — numbered for the room.</p>
+        <p class="sub">Visibility, upgrade, compliance, maintenance, defence. Same five as the book — numbered for the room.</p>
       </header>
       <div class="h2x-kpis" style="grid-template-columns:repeat(3,minmax(0,1fr));">
-        <div class="h2x-kpi" style="--ak:#1566C0;"><div class="l">X-Zone</div><div class="n">70</div><div class="s">TN target</div></div>
-        <div class="h2x-kpi" style="--ak:#B45309;"><div class="l">Audited</div><div class="n">1,849</div><div class="s">Stores already scored</div></div>
+        <div class="h2x-kpi" style="--ak:#1566C0;"><div class="l">X-Zone</div><div class="n">70</div><div class="s">TN target · GT 25 + MT 45</div></div>
+        <div class="h2x-kpi" style="--ak:#B45309;"><div class="l">Audited</div><div class="n">1,849</div><div class="s">22.8% correct WODs today</div></div>
         <div class="h2x-kpi" style="--ak:#15A34A;"><div class="l">Vendor zones</div><div class="n">3</div><div class="s">Chennai · Central · South</div></div>
       </div>
-      <div class="h2x-fail" style="grid-template-columns:repeat(5,minmax(0,1fr));">
-        <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><div class="lbl" style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;color:#6B7B9C;">01</div><b>New store</b><span>Fixture, MSB/OSB, project on GT · RMT · NMT.</span></article>
-        <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><div class="lbl" style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;color:#6B7B9C;">02</div><b>Top store</b><span>Old-to-new on A+ / A / B. MSB and X-Zone.</span></article>
-        <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><div class="lbl" style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;color:#6B7B9C;">03</div><b>Regular audit</b><span>22.8% correct today. This is the score that moves.</span></article>
-        <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><div class="lbl" style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;color:#6B7B9C;">04</div><b>Supply &amp; service</b><span>Zone vendors + buffer. No silent shortages.</span></article>
-        <article class="h2x-tile" style="background:#fff;border:1px solid rgba(11,23,48,0.1);"><div class="lbl" style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;color:#6B7B9C;">05</div><b>Counter</b><span>Bigger fixtures. 100% MSB. X-Zone before them.</span></article>
+      <div class="h2x-move">
+        <article><div class="no">01</div><span class="tag">Visibility</span><h3>New store</h3><p>Fixture, MSB/OSB and project on every new door — GT, RMT, NMT.</p></article>
+        <article><div class="no">02</div><span class="tag">Upgrade</span><h3>Top store</h3><p>Old-to-new on A+ / A / B. MSB and X-Zone on the sellers that matter.</p></article>
+        <article><div class="no">03</div><span class="tag">Compliance</span><h3>Regular audit</h3><p>Channel One is the score. 22.8% is the problem this move exists to kill.</p></article>
+        <article><div class="no">04</div><span class="tag">Maintenance</span><h3>Supply &amp; service</h3><p>Zone vendors + buffer. No silent shortages. No dead cabinets.</p></article>
+        <article><div class="no">05</div><span class="tag">Defend</span><h3>Counter</h3><p>Bigger fixtures. 100% MSB. X-Zone before them — not after.</p></article>
       </div>
     </section>
 
@@ -4605,7 +4654,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
       <header>
         <div class="eyebrow">FY26-27 · X-Zone</div>
         <h1 class="title">70 zones — <span>10 live, 57 to go</span></h1>
-        <p class="sub">Premium vivo experience. Hover a month to see the pending load. Table is the full branch truth.</p>
+        <p class="sub">Premium vivo experience. Hover a month or a hot branch. Table is the full branch truth.</p>
       </header>
       <div class="h2x-kpis">
         <div class="h2x-kpi" style="--ak:#1566C0;"><div class="l">Target</div><div class="n">70</div><div class="s">GT 25 + MT 45</div></div>
@@ -4613,19 +4662,31 @@ img,video,iframe,canvas,svg{max-width:100%;}
         <div class="h2x-kpi" style="--ak:#B45309;"><div class="l">Build</div><div class="n">4</div><div class="s">Under construction</div></div>
         <div class="h2x-kpi" style="--ak:#DC2626;"><div class="l">Pending</div><div class="n">57</div><div class="s">Sep → Feb cadence</div></div>
       </div>
-      <div class="h2x-card">
-        <div class="h2x-h"><h2>Monthly pending rollout</h2><p>57 zones · hover a month</p></div>
-        <div class="h2x-month">
-          <button type="button"><div class="m">Sep</div><div class="n">7</div><span class="tip">7 pending this month — first cut of the 57</span></button>
-          <button type="button"><div class="m">Oct</div><div class="n">10</div><span class="tip">10 · keep cadence after festival</span></button>
-          <button type="button"><div class="m">Nov</div><div class="n">10</div><span class="tip">10 · do not slip into Dec pile-up</span></button>
-          <button type="button"><div class="m">Dec</div><div class="n">10</div><span class="tip">10 · year-end still a delivery month</span></button>
-          <button type="button"><div class="m">Jan</div><div class="n">10</div><span class="tip">10 · new-year push</span></button>
-          <button type="button"><div class="m">Feb</div><div class="n">10</div><span class="tip">10 · close the 70</span></button>
+      <div class="h2x-board">
+        <div class="h2x-card">
+          <div class="h2x-h"><h2>Monthly pending</h2><p>57 zones · hover a month</p></div>
+          <div class="h2x-month">
+            <button type="button"><div class="m">Sep</div><div class="n">7</div><span class="tip">7 pending this month — first cut of the 57</span></button>
+            <button type="button"><div class="m">Oct</div><div class="n">10</div><span class="tip">10 · keep cadence after festival</span></button>
+            <button type="button"><div class="m">Nov</div><div class="n">10</div><span class="tip">10 · do not slip into Dec pile-up</span></button>
+            <button type="button"><div class="m">Dec</div><div class="n">10</div><span class="tip">10 · year-end still a delivery month</span></button>
+            <button type="button"><div class="m">Jan</div><div class="n">10</div><span class="tip">10 · new-year push</span></button>
+            <button type="button"><div class="m">Feb</div><div class="n">10</div><span class="tip">10 · close the 70</span></button>
+          </div>
+        </div>
+        <div class="h2x-card">
+          <div class="h2x-h"><h2>Heat — watch these</h2><p>Pending vs target</p></div>
+          <div class="h2x-heat">
+            <button type="button" class="h2x-bar" style="--pct:100%;--tone:#DC2626;"><span class="nm">Poorvika CHN</span><span class="tr"><span class="fl"></span></span><span class="vl">11/11</span><span class="tip">Zero live. Entire 11 still pending.</span></button>
+            <button type="button" class="h2x-bar" style="--pct:100%;--tone:#DC2626;"><span class="nm">Vellore</span><span class="tr"><span class="fl"></span></span><span class="vl">9/9</span><span class="tip">Zero live. Full branch still open.</span></button>
+            <button type="button" class="h2x-bar" style="--pct:70%;--tone:#DC2626;"><span class="nm">Trichy</span><span class="tr"><span class="fl"></span></span><span class="vl">7/10</span><span class="tip">2 live, 1 U/C, 7 pending.</span></button>
+            <button type="button" class="h2x-bar" style="--pct:86%;--tone:#DC2626;"><span class="nm">Salem</span><span class="tr"><span class="fl"></span></span><span class="vl">6/7</span><span class="tip">1 live. 6 still to open.</span></button>
+            <button type="button" class="h2x-bar" style="--pct:80%;--tone:#B45309;"><span class="nm">Erode</span><span class="tr"><span class="fl"></span></span><span class="vl">4/5</span><span class="tip">1 live. 4 pending.</span></button>
+          </div>
         </div>
       </div>
       <div class="h2x-card">
-        <div class="h2x-h"><h2>Branch status · Sep ’26</h2><p>Watch Poorvika 11, Vellore 9, Trichy 7 pending</p></div>
+        <div class="h2x-h"><h2>Branch status · Sep ’26</h2><p>MT Chennai 3 U/C vs target 2 — over-build, not pending</p></div>
         <table class="h2x-table">
           <thead><tr><th>Branch</th><th>Target</th><th>Done</th><th>U/C</th><th>Pending</th></tr></thead>
           <tbody>
@@ -4664,7 +4725,9 @@ img,video,iframe,canvas,svg{max-width:100%;}
             <div class="h2x-kpi" style="--ak:#002B6B;padding:0.55rem;"><div class="l">MSB</div><div class="n">19</div></div>
             <div class="h2x-kpi" style="--ak:#15A34A;padding:0.55rem;"><div class="l">Project</div><div class="n">25</div></div>
           </div>
-          <div class="h2x-chiprow"><span class="h2x-chip">Space check → ISB</span><span class="h2x-chip">Chain → MSB else OSB</span><span class="h2x-chip">A+ / A / B first</span></div>
+          <p class="h2x-rule"><b>Fixture</b> — space check; if no space, ISB in 1st location.</p>
+          <p class="h2x-rule"><b>MSB</b> — chain outlets; if not approved, plan OSB.</p>
+          <p class="h2x-rule"><b>Focus</b> — A+ / A / B first.</p>
         </article>
         <article class="h2x-segcard bc">
           <span class="badge">RMT</span>
@@ -4674,7 +4737,9 @@ img,video,iframe,canvas,svg{max-width:100%;}
             <div class="h2x-kpi" style="--ak:#002B6B;padding:0.55rem;"><div class="l">MSB</div><div class="n">13</div></div>
             <div class="h2x-kpi" style="--ak:#15A34A;padding:0.55rem;"><div class="l">Project</div><div class="n">45</div></div>
           </div>
-          <div class="h2x-chiprow"><span class="h2x-chip">100% fixture</span><span class="h2x-chip">ISB in 1st location</span><span class="h2x-chip">Project = 1st location</span></div>
+          <p class="h2x-rule"><b>Fixture</b> — 100% per space; ISB in 1st location.</p>
+          <p class="h2x-rule"><b>MSB</b> — new stores; if not allowed, OSB.</p>
+          <p class="h2x-rule"><b>Project</b> — 1st location area only.</p>
         </article>
         <article class="h2x-segcard eu">
           <span class="badge">NMT</span>
@@ -4684,42 +4749,46 @@ img,video,iframe,canvas,svg{max-width:100%;}
             <div class="h2x-kpi" style="--ak:#002B6B;padding:0.55rem;"><div class="l">OSB</div><div class="n" style="font-size:1.2rem;">≥1</div></div>
             <div class="h2x-kpi" style="--ak:#15A34A;padding:0.55rem;"><div class="l">X-Zone</div><div class="n" style="font-size:1.2rem;">Yes</div></div>
           </div>
-          <div class="h2x-chiprow"><span class="h2x-chip">6ft+ fixture</span><span class="h2x-chip">Façade OSB</span><span class="h2x-chip">Desk at entrance</span></div>
+          <p class="h2x-rule"><b>Fixture</b> — 100%, focus 6ft and above.</p>
+          <p class="h2x-rule"><b>OSB</b> — at least one façade.</p>
+          <p class="h2x-rule"><b>Desk</b> — vivo desk at the entrance, 1st location.</p>
         </article>
       </div>
     </section>
 
     <section class="page h2x-page" id="h2dir-p8">
       <header>
-        <div class="eyebrow">Regular audit · Channel One</div>
-        <h1 class="title">Audit — <span>22.8% is the problem</span></h1>
-        <p class="sub">1,849 stores. No model at 50%. Hover a bar. Then look at the three 0% families and the four owners.</p>
+        <div class="eyebrow">Regular audit · Channel One · H2 action</div>
+        <h1 class="title">Audit — <span>fix Zone first</span></h1>
+        <p class="sub">1,849 stores. Overall 22.8% correct. H2 action is VIVO Zone + the three 0% families. Hover a bar against 50% and 70%.</p>
       </header>
       <div class="h2x-kpis">
-        <div class="h2x-kpi" style="--ak:#DC2626;"><div class="l">Correct WODs</div><div class="n">22.8%</div><div class="s">Critical</div></div>
-        <div class="h2x-kpi" style="--ak:#B45309;"><div class="l">Bar none crossed</div><div class="n">&lt;50%</div><div class="s">Every model</div></div>
-        <div class="h2x-kpi" style="--ak:#DC2626;"><div class="l">Weakest channel</div><div class="n" style="font-size:1.2rem;">VIVO Zone</div><div class="s">Last in every SKU</div></div>
+        <div class="h2x-kpi" style="--ak:#DC2626;"><div class="l">Correct WODs</div><div class="n">22.8%</div><div class="s">All-model score — critical</div></div>
+        <div class="h2x-kpi" style="--ak:#B45309;"><div class="l">Zone over 50%</div><div class="n" style="font-size:1.2rem;">V70 only</div><div class="s">52.1% — still short of 70% KPI</div></div>
+        <div class="h2x-kpi" style="--ak:#DC2626;"><div class="l">Weakest Zone SKU</div><div class="n">9.5%</div><div class="s">X300 Ultra</div></div>
         <div class="h2x-kpi" style="--ak:#15A34A;"><div class="l">Fix</div><div class="n" style="font-size:1.2rem;">KPI + SOP</div><div class="s">Named line for TL / ME</div></div>
       </div>
       <div class="h2x-card">
-        <div class="h2x-h"><h2>VIVO Zone correct % · hover</h2><p>H2 audit action uses these SKUs</p></div>
-        <button type="button" class="h2x-bar" style="--pct:45.9%;--tone:#B45309;"><span class="nm">V60</span><span class="tr"><span class="fl"></span></span><span class="vl">45.9%</span><span class="tip">Closest Zone score — still a fail vs 50% and vs 70% KPI.</span></button>
-        <button type="button" class="h2x-bar" style="--pct:52.1%;--tone:#1566C0;"><span class="nm">V70</span><span class="tr"><span class="fl"></span></span><span class="vl">52.1%</span><span class="tip">Only Zone SKU over 50%. Still short of 70% KPI.</span></button>
-        <button type="button" class="h2x-bar" style="--pct:34%;--tone:#B45309;"><span class="nm">X300</span><span class="tr"><span class="fl"></span></span><span class="vl">34.0%</span><span class="tip">16 pts below 50%.</span></button>
-        <button type="button" class="h2x-bar" style="--pct:21.8%;--tone:#DC2626;"><span class="nm">X300 FE</span><span class="tr"><span class="fl"></span></span><span class="vl">21.8%</span><span class="tip">Deep red. Photo + POSM SOP on this SKU first.</span></button>
-        <button type="button" class="h2x-bar" style="--pct:9.5%;--tone:#DC2626;"><span class="nm">X300 Ultra</span><span class="tr"><span class="fl"></span></span><span class="vl">9.5%</span><span class="tip">Worst Zone score. Hero product, worst store proof.</span></button>
+        <div class="h2x-h"><h2>VIVO Zone correct % · hover</h2><p>Red 50% · green 70% KPI</p></div>
+        <div class="h2x-axis"><span>SKU</span><span class="m"><span class="a50">50</span><span class="a70">70</span></span><span>Score</span></div>
+        <button type="button" class="h2x-bar" style="--pct:45.9%;--tone:#B45309;"><span class="nm">V60</span><span class="tr"><span class="fl"></span><span class="h2x-tick t50"></span><span class="h2x-tick t70"></span></span><span class="vl">45.9%</span><span class="tip">4.1 pts below 50% · 24.1 pts below 70% KPI.</span></button>
+        <button type="button" class="h2x-bar" style="--pct:52.1%;--tone:#1566C0;"><span class="nm">V70</span><span class="tr"><span class="fl"></span><span class="h2x-tick t50"></span><span class="h2x-tick t70"></span></span><span class="vl">52.1%</span><span class="tip">Only Zone SKU over 50%. Still 17.9 pts short of 70% KPI.</span></button>
+        <button type="button" class="h2x-bar" style="--pct:34%;--tone:#B45309;"><span class="nm">X300</span><span class="tr"><span class="fl"></span><span class="h2x-tick t50"></span><span class="h2x-tick t70"></span></span><span class="vl">34.0%</span><span class="tip">16 pts below 50% · 36 pts below 70%.</span></button>
+        <button type="button" class="h2x-bar" style="--pct:21.8%;--tone:#DC2626;"><span class="nm">X300 FE</span><span class="tr"><span class="fl"></span><span class="h2x-tick t50"></span><span class="h2x-tick t70"></span></span><span class="vl">21.8%</span><span class="tip">Deep red. Photo + POSM SOP on this SKU with Ultra.</span></button>
+        <button type="button" class="h2x-bar" style="--pct:9.5%;--tone:#DC2626;"><span class="nm">X300 Ultra</span><span class="tr"><span class="fl"></span><span class="h2x-tick t50"></span><span class="h2x-tick t70"></span></span><span class="vl">9.5%</span><span class="tip">Worst Zone score. Hero product, worst store proof.</span></button>
       </div>
       <div class="h2x-fail">
-        <article><div class="z">0%</div><h3>Prop / Lighting</h3><div class="h2x-chiprow"><span class="h2x-chip">AIP/DIP</span><span class="h2x-chip">Tent</span><span class="h2x-chip">Luminous</span></div></article>
-        <article><div class="z">0%</div><h3>ISB / Lampcloth</h3><div class="h2x-chiprow"><span class="h2x-chip">ISB</span><span class="h2x-chip">Sticker</span></div></article>
-        <article><div class="z">0%</div><h3>Shelf talker</h3><div class="h2x-chiprow"><span class="h2x-chip">Dangler</span><span class="h2x-chip">Wobbler</span></div></article>
+        <article><div class="z">0%</div><h3>Prop / Lighting</h3><div class="h2x-chiprow"><span class="h2x-chip">AIP/DIP</span><span class="h2x-chip">Tent</span><span class="h2x-chip">Luminous</span></div><p style="margin:0.4rem 0 0;font-size:0.74rem;color:#3D4E73;">Reset fixture SOP and photo proof.</p></article>
+        <article><div class="z">0%</div><h3>ISB / Lampcloth</h3><div class="h2x-chiprow"><span class="h2x-chip">ISB</span><span class="h2x-chip">Sticker</span></div><p style="margin:0.4rem 0 0;font-size:0.74rem;color:#3D4E73;">Identity elements are a must-pass on the TL list.</p></article>
+        <article><div class="z">0%</div><h3>Shelf talker</h3><div class="h2x-chiprow"><span class="h2x-chip">Dangler</span><span class="h2x-chip">Wobbler</span></div><p style="margin:0.4rem 0 0;font-size:0.74rem;color:#3D4E73;">Stock and place in the same 5–7 day window.</p></article>
       </div>
       <div class="h2x-rail">
-        <article><div class="n">TL</div><h3>Shoot it right</h3><p>Training. Geo-tagged photos. SOP.</p></article>
-        <article><div class="n">ME</div><h3>Watch daily</h3><p>Master data. Photo QA. Support.</p></article>
-        <article><div class="n">BM</div><h3>Own the KPI</h3><p>Scorecard. Name gap owners.</p></article>
-        <article><div class="n">HO</div><h3>Set SOP</h3><p>Checklist, scoring, next-round gaps.</p></article>
+        <article><div class="n">TL</div><h3>Shoot it right</h3><p>Pre-audit training. Geo-tagged photos. SOP checklist.</p></article>
+        <article><div class="n">ME</div><h3>Watch daily</h3><p>Master data. Photo QA. Support TLs on ground.</p></article>
+        <article><div class="n">BM</div><h3>Own the KPI</h3><p>Named monthly line. Scorecard. Gap owners.</p></article>
+        <article><div class="n">HO</div><h3>Set SOP</h3><p>Checklist, scoring, last-round gaps into next training.</p></article>
       </div>
+      <div class="h2x-band"><div class="n">70%</div><div class="t"><b>TL / ME named KPI.</b> Training → field → daily monitor → post-audit review. Zone is the first channel we pull up.</div></div>
     </section>
 
     <section class="page h2x-page" id="h2dir-p9">
@@ -4742,7 +4811,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
           <span class="badge">Maintain</span>
           <h3>Service gaps</h3>
           <div class="h2x-chiprow"><span class="h2x-chip">Alarm kit</span><span class="h2x-chip">MSB</span><span class="h2x-chip">Backwall</span><span class="h2x-chip">Experience cabinet</span></div>
-          <p style="margin:0.4rem 0 0;font-size:0.76rem;color:#3D4E73;">Vendor owns the ticket. SOP has TAT and cost.</p>
+          <p style="margin:0.4rem 0 0;font-size:0.76rem;color:#3D4E73;">Vendor owns the ticket. SOP has TAT and cost. Vendor is solely responsible for any service issue.</p>
         </article>
         <article class="h2x-segcard wc">
           <span class="badge">3 zones</span>
@@ -4753,8 +4822,9 @@ img,video,iframe,canvas,svg{max-width:100%;}
         <article class="h2x-segcard eu">
           <span class="badge">Counter</span>
           <h3>Do not lose the wall</h3>
-          <div class="h2x-chiprow"><span class="h2x-chip">≥ competitor fixture</span><span class="h2x-chip">4.2 if &gt;1 yr</span><span class="h2x-chip">100% MSB</span><span class="h2x-chip">X-Zone first</span></div>
-          <p style="margin:0.4rem 0 0;font-size:0.76rem;color:#3D4E73;">Old vivo MSB swapped for competitor → action on ASM &amp; TL.</p>
+          <p class="h2x-rule" style="margin-top:0.4rem;"><b>Fixture</b> — equal or bigger than competitor. Replace if &gt;1 year with 4.2.</p>
+          <p class="h2x-rule"><b>MSB</b> — 100% old-to-new. Competitor swap → action on ASM &amp; TL.</p>
+          <p class="h2x-rule"><b>X-Zone</b> — deploy before competition, not after.</p>
         </article>
       </div>
       <div class="h2x-card">
