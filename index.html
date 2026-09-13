@@ -1410,6 +1410,29 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 /* H2 Direction shell */
 #h2direction{display:none;position:fixed;inset:0;background:#F0F4FB;z-index:900;flex-direction:column;}
 #h2direction.visible{display:flex;}
+#strategy-house{display:none;position:fixed;inset:0;z-index:850;background:#F4F7FB;flex-direction:column;overflow-y:auto;}
+#strategy-house.is-open{display:flex;}
+.h1review-panel .gcard{cursor:pointer;transition:transform .18s,background .18s,border-color .18s,box-shadow .18s;}
+.h1review-panel .gcard.is-on{background:#1a3c6e;border-color:#1a3c6e;color:#fff;transform:scale(1.04);box-shadow:0 10px 24px rgba(26,60,110,0.22);}
+.h1review-panel .gcard.is-on .g-ct,.h1review-panel .gcard.is-on .g-nm{color:#fff;}
+.h1review-panel .gcard.is-on .g-bar{background:rgba(255,255,255,0.22);}
+.h1review-panel .gcard.is-on .g-bar span{background:#fff;}
+.h1review-panel .gcard.is-dim{opacity:0.55;}
+.h1review-panel .tbl tbody tr.branch-row{cursor:pointer;transition:background .15s;}
+.h1review-panel .tbl tbody tr.branch-row:hover{background:#F4F7FB;}
+.h1review-panel .tbl tbody tr.branch-row.is-open{background:#EEF3FA;}
+.h1review-panel .tbl tbody tr.branch-detail td{padding:0.55rem 0.7rem 0.75rem;background:#F7F9FC;border-bottom:1px solid rgba(11,23,48,0.08);}
+.h1-spend-story .h1-hero-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:24px;}
+.h1-spend-story .h1-rest-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;}
+.h1-bht-funnel{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;}
+@media(max-width:1280px){
+  .h1-spend-story .h1-hero-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .h1-bht-funnel{grid-template-columns:repeat(4,minmax(0,1fr));}
+}
+@media(max-width:900px){
+  .h1-spend-story .h1-hero-grid,.h1-spend-story .h1-rest-grid,.h1-bht-funnel{grid-template-columns:1fr 1fr;}
+}
+
 .h2dir-bar{display:flex;align-items:center;gap:1rem;padding:0 1.5rem;height:56px;background:#002B6B;border-bottom:0;flex-shrink:0;}
 .h2dir-back{background:none;border:1px solid rgba(255,255,255,0.28);border-radius:6px;padding:0.26rem 0.7rem;font-size:0.72rem;font-weight:700;color:#fff;cursor:pointer;letter-spacing:0.08em;text-transform:uppercase;}
 .h2dir-title{font-family:Sora,Inter,sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;}
@@ -3710,6 +3733,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
       <div class="h1-tab-bar" id="h1-tab-scroller">
       <button class="h1-tab active" id="h1-tab-1" onclick="switchH1Tab('page-1',this)">FY26-27 H1 — COST ANALYSIS</button>
       <button class="h1-tab" id="h1-tab-2" onclick="switchH1Tab('page-2',this)">H1 HIGHLIGHTS</button>
+      <button class="h1-tab" id="h1-tab-bht" onclick="switchH1Tab('page-bht',this)">BRAND HEALTH</button>
       <button class="h1-tab" id="h1-tab-3" onclick="switchH1Tab('page-3',this)">KOL DATABASE</button>
       <button class="h1-tab" id="h1-tab-4" onclick="switchH1Tab('page-4',this)">PROJECT ANALYSIS</button>
       <button class="h1-tab" id="h1-tab-5" onclick="switchH1Tab('page-5',this)">AUDIT ANALYSIS</button>
@@ -3724,7 +3748,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
 </header>
 
 <!-- PRIMARY KPI CARDS -->
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(0.8rem,1.4vw,1.2rem);flex:0 0 auto;">
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(0.8rem,1.4vw,1.2rem);flex:0 0 auto;max-width:980px;">
 
   <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.2rem,2vw,1.8rem);box-shadow:0 12px 32px rgba(11,23,48,0.06);position:relative;overflow:hidden;">
     <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
@@ -3748,7 +3772,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <div style="margin-top:0.6rem;font-size:0.75rem;color:#3D4E73;">Apr 2025–Mar 2026 · 12 months</div>
   </div>
 
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.2rem,2vw,1.8rem);box-shadow:0 12px 32px rgba(11,23,48,0.06);position:relative;overflow:hidden;">
+  <div style="display:none;background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.2rem,2vw,1.8rem);box-shadow:0 12px 32px rgba(11,23,48,0.06);position:relative;overflow:hidden;">
     <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#0D2B6B,#1565C0);"></div>
     <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;">Sales Value — H1</div>
     <div style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#0D2B6B;line-height:1;letter-spacing:-0.02em;margin:0.4rem 0 0.3rem;">₹190.5 Cr</div>
@@ -3758,7 +3782,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <div style="margin-top:0.6rem;font-size:0.75rem;color:#3D4E73;">Apr–Sep 2026 actual sales</div>
   </div>
 
-  <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.2rem,2vw,1.8rem);box-shadow:0 12px 32px rgba(11,23,48,0.06);position:relative;overflow:hidden;">
+  <div style="display:none;background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:clamp(1.2rem,2vw,1.8rem);box-shadow:0 12px 32px rgba(11,23,48,0.06);position:relative;overflow:hidden;">
     <div style="position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#B45309,#D97706);"></div>
     <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;">Expenses % (Spend/Sales)</div>
     <div style="font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#B45309;line-height:1;letter-spacing:-0.02em;margin:0.4rem 0 0.3rem;">0.400%</div>
@@ -3772,7 +3796,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
 </div>
 
 <!-- CATEGORY SPEND TABLE — visual bar layout, no scroll -->
-<div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:1.4rem 1.6rem;box-shadow:0 12px 32px rgba(11,23,48,0.05);flex:1;display:flex;flex-direction:column;">
+<div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:18px;padding:1.4rem 1.6rem;box-shadow:0 12px 32px rgba(11,23,48,0.05);flex:1;display:none;flex-direction:column;">
   <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:0.9rem;flex:0 0 auto;">
     <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;">CATEGORY-WISE SPEND — CURRENT FY H1 vs LAST FY</div>
     <div style="font-size:0.65rem;color:#6B7B9C;">Last FY = 12 months &nbsp;·&nbsp; Current H1 = 6 months (Apr–Sep 2026)</div>
@@ -3944,6 +3968,139 @@ img,video,iframe,canvas,svg{max-width:100%;}
   </div>
   <div style="margin-top:0.6rem;font-size:0.65rem;color:#6B7B9C;font-style:italic;flex:0 0 auto;">* Christ &amp; New Year and Pongal show ₹0 in Current H1 — fall in Dec/Jan and not yet due. S Series had no Last FY base. Diwali H1 spend already exceeds full Last FY — H2 budget watch flag.</div>
 </div>
+<div class="h1-spend-story" style="padding:0 0 8px;">
+
+  <div style="margin-bottom:20px;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:#6B7A99;margin-bottom:6px;">WHERE THE ₹7.62 CR WENT — FY26-27 H1</div>
+    <div style="font-size:13px;color:#3A4A6B;">55% concentrated on product launches · 16% on retail presence · balanced across 13 active categories</div>
+  </div>
+
+  <div class="h1-hero-grid">
+
+    <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:16px;border-top:3px solid #1a3c6e;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:#6B7A99;margin-bottom:8px;">V SERIES</div>
+      <div style="font-size:22px;font-weight:800;color:#1a3c6e;">₹2.08 Cr</div>
+      <div style="font-size:11px;color:#6B7A99;margin:4px 0;">Last FY: ₹4.51 Cr</div>
+      <div style="height:4px;background:#E8EDF6;border-radius:2px;margin-top:10px;">
+        <div style="height:4px;background:#1a3c6e;border-radius:2px;width:46%;"></div>
+      </div>
+      <div style="font-size:10px;color:#6B7A99;margin-top:4px;">46% of LY · Flagship volume driver</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:16px;border-top:3px solid #1a3c6e;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:#6B7A99;margin-bottom:8px;">X SERIES</div>
+      <div style="font-size:22px;font-weight:800;color:#1a3c6e;">₹1.27 Cr</div>
+      <div style="font-size:11px;color:#6B7A99;margin:4px 0;">Last FY: ₹2.35 Cr</div>
+      <div style="height:4px;background:#E8EDF6;border-radius:2px;margin-top:10px;">
+        <div style="height:4px;background:#1a3c6e;border-radius:2px;width:54%;"></div>
+      </div>
+      <div style="font-size:10px;color:#6B7A99;margin-top:4px;">54% of LY · Premium breakthrough spend</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:16px;border-top:3px solid #1B5E9B;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:#6B7A99;margin-bottom:8px;">CABINET MATL</div>
+      <div style="font-size:22px;font-weight:800;color:#1a3c6e;">₹1.25 Cr</div>
+      <div style="font-size:11px;color:#6B7A99;margin:4px 0;">Last FY: ₹1.27 Cr</div>
+      <div style="height:4px;background:#E8EDF6;border-radius:2px;margin-top:10px;">
+        <div style="height:4px;background:#1B5E9B;border-radius:2px;width:98%;"></div>
+      </div>
+      <div style="font-size:10px;color:#6B7A99;margin-top:4px;">98% of LY · Retail visibility maintained</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #FFF3E0;border-radius:12px;padding:16px;border-top:3px solid #E65100;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:#6B7A99;margin-bottom:8px;">DIWALI <span style="background:#FFF3E0;color:#E65100;font-size:9px;padding:1px 5px;border-radius:3px;margin-left:4px;">▲+44.5%</span></div>
+      <div style="font-size:22px;font-weight:800;color:#E65100;">₹1.14 Cr</div>
+      <div style="font-size:11px;color:#6B7A99;margin:4px 0;">Last FY: ₹78.7 L</div>
+      <div style="height:4px;background:#FFF3E0;border-radius:2px;margin-top:10px;">
+        <div style="height:4px;background:#E65100;border-radius:2px;width:100%;"></div>
+      </div>
+      <div style="font-size:10px;color:#E65100;margin-top:4px;">Exceeds full LY · Festival offensive</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #E8F5E9;border-radius:12px;padding:16px;border-top:3px solid #2E7D32;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:#6B7A99;margin-bottom:8px;">S SERIES <span style="background:#E8F5E9;color:#2E7D32;font-size:9px;padding:1px 5px;border-radius:3px;margin-left:4px;">NEW</span></div>
+      <div style="font-size:22px;font-weight:800;color:#2E7D32;">₹86.7 L</div>
+      <div style="font-size:11px;color:#6B7A99;margin:4px 0;">No Last FY base</div>
+      <div style="height:4px;background:#E8F5E9;border-radius:2px;margin-top:10px;">
+        <div style="height:4px;background:#2E7D32;border-radius:2px;width:100%;"></div>
+      </div>
+      <div style="font-size:10px;color:#2E7D32;margin-top:4px;">New category · Market attack weapon</div>
+    </div>
+
+  </div>
+
+  <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:20px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1px;color:#6B7A99;margin-bottom:14px;">REMAINING CATEGORIES</div>
+    <div class="h1-rest-grid">
+
+      <div style="padding:10px;background:#F7F9FC;border-radius:8px;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:3px;">Y SERIES</div>
+        <div style="font-size:15px;font-weight:700;color:#1a3c6e;">₹20.7 L</div>
+        <div style="font-size:10px;color:#9AA3B5;">LY: ₹79.5 L</div>
+      </div>
+
+      <div style="padding:10px;background:#F7F9FC;border-radius:8px;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:3px;">MAINTENANCE</div>
+        <div style="font-size:15px;font-weight:700;color:#1a3c6e;">₹18.7 L</div>
+        <div style="font-size:10px;color:#9AA3B5;">LY: ₹21.6 L</div>
+      </div>
+
+      <div style="padding:10px;background:#F7F9FC;border-radius:8px;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:3px;">AADI</div>
+        <div style="font-size:15px;font-weight:700;color:#1a3c6e;">₹8.4 L</div>
+        <div style="font-size:10px;color:#9AA3B5;">LY: ₹9.2 L</div>
+      </div>
+
+      <div style="padding:10px;background:#F7F9FC;border-radius:8px;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:3px;">PROMO MATL</div>
+        <div style="font-size:15px;font-weight:700;color:#1a3c6e;">₹16.1 L</div>
+        <div style="font-size:10px;color:#9AA3B5;">LY: ₹16.3 L</div>
+      </div>
+
+      <div style="padding:10px;background:#F7F9FC;border-radius:8px;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:3px;">MSB</div>
+        <div style="font-size:15px;font-weight:700;color:#1a3c6e;">₹7.6 L</div>
+        <div style="font-size:10px;color:#9AA3B5;">LY: ₹20.1 L</div>
+      </div>
+
+      <div style="padding:10px;background:#F7F9FC;border-radius:8px;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:3px;">PROJECT RENT</div>
+        <div style="font-size:15px;font-weight:700;color:#1a3c6e;">₹7.6 L</div>
+        <div style="font-size:10px;color:#9AA3B5;">LY: ₹15.9 L</div>
+      </div>
+
+      <div style="padding:10px;background:#F7F9FC;border-radius:8px;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:3px;">OTHER CAMP.</div>
+        <div style="font-size:15px;font-weight:700;color:#1a3c6e;">₹6.5 L</div>
+        <div style="font-size:10px;color:#9AA3B5;">LY: ₹9.3 L</div>
+      </div>
+
+      <div style="padding:10px;background:#F7F9FC;border-radius:8px;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:3px;">PROJECT</div>
+        <div style="font-size:15px;font-weight:700;color:#1a3c6e;">₹17.0 L</div>
+        <div style="font-size:10px;color:#9AA3B5;">LY: ₹92.5 L</div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:16px;padding-top:14px;border-top:2px solid #E8EDF6;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <div style="font-size:11px;font-weight:700;color:#1a3c6e;letter-spacing:1px;">TOTAL H1 SPEND</div>
+      <div style="display:flex;gap:32px;">
+        <div style="text-align:right;">
+          <div style="font-size:10px;color:#6B7A99;">Last FY (12 months)</div>
+          <div style="font-size:18px;font-weight:800;color:#6B7A99;">₹12.13 Cr</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:10px;color:#1a3c6e;">Current H1 (6 months)</div>
+          <div style="font-size:18px;font-weight:800;color:#1a3c6e;">₹7.62 Cr</div>
+        </div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#6B7A99;margin-top:8px;">⚠ Pongal (₹56.6L LY) and Christmas &amp; NY (₹89,940 LY) not yet due — scheduled H2</div>
+  </div>
+
+</div>
+
 </section>
 
 <section class="page hl" id="page-2">
@@ -3952,14 +4109,14 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <h1 class="title">Highlights of the <span>Period</span></h1>
     <p class="sub">From underperforming output to ad-grade, premium execution — the shift that defined the S2 campaign.</p>
   </header>
-  <div class="hl-split">
-    <div class="hl-video">
+  <div class="hl-split" style="display:flex;gap:32px;align-items:flex-start;height:auto;overflow:visible;">
+    <div class="hl-video" style="flex:0 0 42%;max-width:42%;">
       <video src="assets/h1-highlights.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
       <div class="hv-cap">Current best execution · playing muted</div>
     </div>
-    <div class="hl-points">
+    <div class="hl-points" style="flex:1;">
       <div class="hp-title"><small>What We Changed</small>10 Key Improvements</div>
-      <div class="hl-grid">
+      <div class="hl-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;align-content:start;">
         <div class="hl-card"><div class="hc-top"><span class="hc-num">01</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Quality over Quantity</div><div class="hc-desc">Fewer, higher-impact deliverables</div></div>
         <div class="hl-card"><div class="hc-top"><span class="hc-num">02</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Premium Camera Gear</div><div class="hc-desc">Shot on Red Komodo for cinematic output</div></div>
         <div class="hl-card"><div class="hc-top"><span class="hc-num">03</span><span class="hc-badge">✓ DONE</span></div><div class="hc-title">Efficient Vendor Sourcing</div><div class="hc-desc">Better execution partners at optimized cost</div></div>
@@ -3974,7 +4131,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
     </div>
   </div>
 <!-- MARCOM H1 PERFORMANCE — moved from Cost Analysis -->
-<div style="margin-top:2rem;border-top:1px solid rgba(11,23,48,0.10);padding-top:1.5rem;">
+<div style="display:none;margin-top:2rem;border-top:1px solid rgba(11,23,48,0.10);padding-top:1.5rem;">
   <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;margin-bottom:1rem;">MARCOM H1 PERFORMANCE — APR-SEP 2026</div>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.2rem;">
     <div style="background:#FFFFFF;border:1px solid rgba(11,23,48,0.10);border-radius:16px;padding:1.4rem;position:relative;overflow:hidden;">
@@ -4035,6 +4192,212 @@ img,video,iframe,canvas,svg{max-width:100%;}
 </div>
 </section>
 
+<section class="page" id="page-bht">
+
+  <div style="margin-bottom:8px;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:#6B7A99;margin-bottom:6px;">
+      VIVO TAMIL NADU · BRAND HEALTH TRACKER · 2026 H1 VS 2025
+    </div>
+    <div style="font-size:28px;font-weight:800;color:#1a3c6e;line-height:1.2;">
+      TN Brand Health —
+      <span style="color:#1B5E9B;">Strong Defense,</span>
+      <span style="color:#C62828;">Unfinished Offense</span>
+    </div>
+    <div style="font-size:13px;color:#6B7A99;margin-top:6px;">
+      TN sample: 2026H1 n=916 vs 2025 n=1,359 · Benchmarked against National (n=11,918)
+    </div>
+  </div>
+
+  <div style="margin-bottom:8px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:#2E7D32;margin-bottom:12px;">
+      ✓ WHERE WE STAND — TN LEADS NATIONAL ON EVERY METRIC
+    </div>
+    <div class="h1-bht-funnel">
+
+      <div style="background:#fff;border:1px solid #E8EDF6;border-radius:10px;padding:14px;text-align:center;border-top:3px solid #1a3c6e;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:4px;">TOM</div>
+        <div style="font-size:22px;font-weight:800;color:#1a3c6e;">30%</div>
+        <div style="font-size:10px;color:#2E7D32;">No.1</div>
+        <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Nat: 25%</div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #E8EDF6;border-radius:10px;padding:14px;text-align:center;border-top:3px solid #1a3c6e;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:4px;">INTENT</div>
+        <div style="font-size:22px;font-weight:800;color:#1a3c6e;">98%</div>
+        <div style="font-size:10px;color:#2E7D32;">Near ceiling</div>
+        <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Nat: 83%</div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #E8EDF6;border-radius:10px;padding:14px;text-align:center;border-top:3px solid #1a3c6e;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:4px;">INTEREST</div>
+        <div style="font-size:22px;font-weight:800;color:#1a3c6e;">71%</div>
+        <div style="font-size:10px;color:#F57C00;">-2pct</div>
+        <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Nat: 54%</div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #E8EDF6;border-radius:10px;padding:14px;text-align:center;border-top:3px solid #1a3c6e;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:4px;">PREFERENCE</div>
+        <div style="font-size:22px;font-weight:800;color:#1a3c6e;">29%</div>
+        <div style="font-size:10px;color:#F57C00;">Flat</div>
+        <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Nat: 23%</div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #E8EDF6;border-radius:10px;padding:14px;text-align:center;border-top:3px solid #1a3c6e;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:4px;">PURCHASE</div>
+        <div style="font-size:22px;font-weight:800;color:#1a3c6e;">30%</div>
+        <div style="font-size:10px;color:#F57C00;">Flat</div>
+        <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Nat: 25%</div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #E8EDF6;border-radius:10px;padding:14px;text-align:center;border-top:3px solid #1a3c6e;">
+        <div style="font-size:10px;color:#6B7A99;margin-bottom:4px;">LOYALTY</div>
+        <div style="font-size:22px;font-weight:800;color:#1a3c6e;">38%</div>
+        <div style="font-size:10px;color:#2E7D32;">No.1 Android</div>
+        <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Nat: 37%</div>
+      </div>
+
+      <div style="background:#E8F5E9;border:1px solid #A5D6A7;border-radius:10px;padding:14px;text-align:center;border-top:3px solid #2E7D32;">
+        <div style="font-size:10px;color:#2E7D32;margin-bottom:4px;font-weight:700;">RETENTION</div>
+        <div style="font-size:22px;font-weight:800;color:#2E7D32;">38%</div>
+        <div style="font-size:10px;color:#2E7D32;">No.1 Android</div>
+        <div style="font-size:9px;color:#388E3C;margin-top:2px;">Samsung: 23%</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+    <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:20px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:#2E7D32;margin-bottom:12px;">
+        ✓ THE WIN — OPPO COLLAPSE IS TN'S OWN ACHIEVEMENT
+      </div>
+      <div style="font-size:12px;color:#3A4A6B;margin-bottom:14px;">
+        OPPO fell across every metric in TN while their national numbers stayed flat.
+        Same brand, same period — opposite direction. This is what our investment produced.
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;">
+        <div style="background:#FFF3E0;border-radius:8px;padding:10px;text-align:center;">
+          <div style="font-size:9px;color:#E65100;">TOM</div>
+          <div style="font-size:16px;font-weight:800;color:#C62828;">-4pct</div>
+          <div style="font-size:9px;color:#9AA3B5;">Nat: 0</div>
+        </div>
+        <div style="background:#FFF3E0;border-radius:8px;padding:10px;text-align:center;">
+          <div style="font-size:9px;color:#E65100;">INTEREST</div>
+          <div style="font-size:16px;font-weight:800;color:#C62828;">-11pct</div>
+          <div style="font-size:9px;color:#9AA3B5;">Nat: +3</div>
+        </div>
+        <div style="background:#FFF3E0;border-radius:8px;padding:10px;text-align:center;">
+          <div style="font-size:9px;color:#E65100;">PREFERENCE</div>
+          <div style="font-size:16px;font-weight:800;color:#C62828;">-5pct</div>
+          <div style="font-size:9px;color:#9AA3B5;">Nat: 0</div>
+        </div>
+        <div style="background:#FFF3E0;border-radius:8px;padding:10px;text-align:center;">
+          <div style="font-size:9px;color:#E65100;">LOYALTY</div>
+          <div style="font-size:16px;font-weight:800;color:#C62828;">-8pct</div>
+          <div style="font-size:9px;color:#9AA3B5;">Nat: 0</div>
+        </div>
+      </div>
+      <div style="background:#E8F5E9;border-radius:8px;padding:10px;font-size:11px;color:#2E7D32;font-weight:600;">
+        → OPPO/realme now = 22% of new vivo users in TN. Harvest window is open.
+      </div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:20px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:#2E7D32;margin-bottom:12px;">
+        ✓ IMAGERY WINS — TWO No.1 POSITIONS GAINED IN TN
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
+        <div style="background:#E8F5E9;border-radius:10px;padding:14px;">
+          <div style="font-size:10px;color:#2E7D32;font-weight:700;margin-bottom:4px;">TRUSTWORTHY</div>
+          <div style="font-size:20px;font-weight:800;color:#2E7D32;">107 → 110</div>
+          <div style="font-size:10px;color:#388E3C;">3rd → No.1 in TN</div>
+          <div style="font-size:9px;color:#9AA3B5;margin-top:3px;">National fell -5pts same period</div>
+        </div>
+        <div style="background:#E8F5E9;border-radius:10px;padding:14px;">
+          <div style="font-size:10px;color:#2E7D32;font-weight:700;margin-bottom:4px;">BELONGINGNESS</div>
+          <div style="font-size:20px;font-weight:800;color:#2E7D32;">103 → 106</div>
+          <div style="font-size:10px;color:#388E3C;">4th → Tied No.1</div>
+          <div style="font-size:9px;color:#9AA3B5;margin-top:3px;">National fell -5pts same period</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:#3A4A6B;">
+        These No.1 positions are TN's own achievement — the national numbers moved in the opposite direction.
+      </div>
+    </div>
+
+  </div>
+
+  <div>
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:#C62828;margin-bottom:12px;">
+      ✗ THE GAPS — TWO FLAGSHIP STRENGTHS ERODED (H2 MUST FIX)
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+      <div style="background:#fff;border:1px solid #FFCDD2;border-radius:12px;padding:20px;border-left:4px solid #C62828;">
+        <div style="font-size:12px;font-weight:700;color:#C62828;margin-bottom:6px;">CAMERA IMAGERY — LEAD NARROWING</div>
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:10px;">
+          <div style="font-size:28px;font-weight:800;color:#C62828;">120 → 106</div>
+          <div style="font-size:12px;color:#6B7A99;">vivo TN index</div>
+        </div>
+        <div style="font-size:12px;color:#3A4A6B;margin-bottom:10px;">
+          Apple now leads TN at 111. Old "Camera = vivo" monopoly is becoming a close contest.
+          National vivo Camera fell only -3pts — this is a TN-specific erosion.
+        </div>
+        <div style="background:#FFF3E0;border-radius:8px;padding:10px;font-size:11px;color:#E65100;font-weight:600;">
+          H2 Fix → X/T series camera experience · Photography workshops · In-channel demo corners
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #FFCDD2;border-radius:12px;padding:20px;border-left:4px solid #C62828;">
+        <div style="font-size:12px;font-weight:700;color:#C62828;margin-bottom:6px;">INTERNATIONAL BRAND — CRITICAL DECLINE</div>
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:10px;">
+          <div style="font-size:28px;font-weight:800;color:#C62828;">107 → 91</div>
+          <div style="font-size:12px;color:#6B7A99;">vivo TN index</div>
+        </div>
+        <div style="font-size:12px;color:#3A4A6B;margin-bottom:10px;">
+          National vivo went +7pts in the opposite direction. Apple (123), Samsung (110) lead.
+          TN-specific decline — regional activation is what's missing, not brand equity.
+        </div>
+        <div style="background:#FFF3E0;border-radius:8px;padding:10px;font-size:11px;color:#E65100;font-weight:600;">
+          H2 Fix → Localize HQ premium assets · Premium model launch activations in TN
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="background:#1a3c6e;border-radius:12px;padding:20px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.6);margin-bottom:12px;">
+      H1 LEARNINGS → H2 INVESTMENT PRIORITIES
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;">
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;color:#90CAF9;margin-bottom:6px;">PRIORITY 1</div>
+        <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:4px;">Rebuild Camera Lead</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.7);">Target index back above 115 · Beat Apple in TN</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;color:#90CAF9;margin-bottom:6px;">PRIORITY 2</div>
+        <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:4px;">Close Premium Gaps</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.7);">International Brand back above 100 · Status + Security</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;color:#90CAF9;margin-bottom:6px;">PRIORITY 3</div>
+        <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:4px;">Convert Trust → Purchase</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.7);">Trade-in offers · OPPO/realme churner targeting</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;color:#90CAF9;margin-bottom:6px;">PRIORITY 4</div>
+        <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:4px;">Own WOM Vacancy</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.7);">Xiaomi WOM collapsed · NPS + referral programs</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
 <section class="page db" id="page-3">
   <header>
     <div class="eyebrow">vivo Tamil Nadu · MarCom · KOL Database</div>
@@ -4048,7 +4411,14 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <div class="kdb-pill"><span class="kp-num">21</span><span class="kp-lbl">Genres Mapped<small>253 creators sorted by content genre</small></span></div>
   </div>
 
-  <div class="kdb-genres">
+  <div style="display:flex;gap:20px;margin-bottom:4px;padding:4px 0 14px;border-bottom:1px solid #E8EDF6;align-items:center;flex-wrap:wrap;">
+    <div style="background:#FFF3E0;border-radius:8px;padding:10px 16px;">
+      <div style="font-size:11px;color:#E65100;font-weight:700;">⚡ CLICK A GENRE TO EXPLORE</div>
+      <div style="font-size:10px;color:#E65100;">Individual KOL profiles — coming soon</div>
+    </div>
+    <div id="kol-genre-status" style="font-size:12px;color:#6B7A99;">21 genres mapped · tap a tile to highlight, tap again to clear</div>
+  </div>
+  <div class="kdb-genres" id="kol-genre-grid">
     <div class="gcard"><div class="g-ct">50</div><div class="g-nm">Lifestyle</div><div class="g-bar"><span style="width:100%"></span></div></div>
     <div class="gcard"><div class="g-ct">44</div><div class="g-nm">Celebrity</div><div class="g-bar"><span style="width:88%"></span></div></div>
     <div class="gcard"><div class="g-ct">25</div><div class="g-nm">Model</div><div class="g-bar"><span style="width:50%"></span></div></div>
@@ -4129,22 +4499,37 @@ img,video,iframe,canvas,svg{max-width:100%;}
         </tr>
       </thead>
       <tbody>
-        <tr><td class="b">Coimbatore</td><td>1</td><td>3</td><td>4</td><td class="g">2</td><td>0</td><td class="a">2</td></tr>
-        <tr><td class="b">Erode</td><td>2</td><td>3</td><td>5</td><td class="g">1</td><td>0</td><td class="a">4</td></tr>
-        <tr><td class="b">Madurai</td><td>1</td><td>1</td><td>2</td><td class="g">0</td><td>0</td><td class="a">2</td></tr>
-        <tr><td class="b">MT Chennai</td><td>0</td><td>2</td><td>2</td><td class="g">0</td><td class="a">3</td><td>0</td></tr>
-        <tr><td class="b">North Chennai</td><td>1</td><td>0</td><td>1</td><td class="g">1</td><td>0</td><td>0</td></tr>
-        <tr><td class="b">Pondicherry</td><td>1</td><td>3</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
-        <tr><td class="b">Poorvika Chennai</td><td>0</td><td>11</td><td>11</td><td class="g">0</td><td>0</td><td class="r">11</td></tr>
-        <tr><td class="b">Salem</td><td>4</td><td>3</td><td>7</td><td class="g">1</td><td>0</td><td class="a">6</td></tr>
-        <tr><td class="b">South Chennai</td><td>1</td><td>4</td><td>5</td><td class="g">2</td><td>0</td><td class="a">3</td></tr>
-        <tr><td class="b">Thanjavur</td><td>3</td><td>1</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
-        <tr><td class="b">Tirunelveli</td><td>2</td><td>2</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
-        <tr><td class="b">Trichy</td><td>2</td><td>8</td><td>10</td><td class="g">2</td><td class="a">1</td><td class="a">7</td></tr>
-        <tr><td class="b">Vellore</td><td>5</td><td>4</td><td>9</td><td class="g">0</td><td>0</td><td class="r">9</td></tr>
-        <tr><td class="b">Virudhunagar</td><td>2</td><td>0</td><td>2</td><td class="g">1</td><td>0</td><td class="a">1</td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Coimbatore</td><td>1</td><td>3</td><td>4</td><td class="g">2</td><td>0</td><td class="a">2</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 1 · MT Target: 3 · Completed: 2 · Under Construction: 0 · Pending: 2</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Erode</td><td>2</td><td>3</td><td>5</td><td class="g">1</td><td>0</td><td class="a">4</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 2 · MT Target: 3 · Completed: 1 · Under Construction: 0 · Pending: 4</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Madurai</td><td>1</td><td>1</td><td>2</td><td class="g">0</td><td>0</td><td class="a">2</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 1 · MT Target: 1 · Completed: 0 · Under Construction: 0 · Pending: 2</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">MT Chennai</td><td>0</td><td>2</td><td>2</td><td class="g">0</td><td class="a">3</td><td>0</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 0 · MT Target: 2 · Completed: 0 · Under Construction: 3 · Pending: 0</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">North Chennai</td><td>1</td><td>0</td><td>1</td><td class="g">1</td><td>0</td><td>0</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 1 · MT Target: 0 · Completed: 1 · Under Construction: 0 · Pending: 0</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Pondicherry</td><td>1</td><td>3</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 1 · MT Target: 3 · Completed: 0 · Under Construction: 0 · Pending: 4</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Poorvika Chennai</td><td>0</td><td>11</td><td>11</td><td class="g">0</td><td>0</td><td class="r">11</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 0 · MT Target: 11 · Completed: 0 · Under Construction: 0 · Pending: 11</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Salem</td><td>4</td><td>3</td><td>7</td><td class="g">1</td><td>0</td><td class="a">6</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 4 · MT Target: 3 · Completed: 1 · Under Construction: 0 · Pending: 6</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">South Chennai</td><td>1</td><td>4</td><td>5</td><td class="g">2</td><td>0</td><td class="a">3</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 1 · MT Target: 4 · Completed: 2 · Under Construction: 0 · Pending: 3</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Thanjavur</td><td>3</td><td>1</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 3 · MT Target: 1 · Completed: 0 · Under Construction: 0 · Pending: 4</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Tirunelveli</td><td>2</td><td>2</td><td>4</td><td class="g">0</td><td>0</td><td class="a">4</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 2 · MT Target: 2 · Completed: 0 · Under Construction: 0 · Pending: 4</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Trichy</td><td>2</td><td>8</td><td>10</td><td class="g">2</td><td class="a">1</td><td class="a">7</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 2 · MT Target: 8 · Completed: 2 · Under Construction: 1 · Pending: 7</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Vellore</td><td>5</td><td>4</td><td>9</td><td class="g">0</td><td>0</td><td class="r">9</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 5 · MT Target: 4 · Completed: 0 · Under Construction: 0 · Pending: 9</div></td></tr>
+        <tr class="branch-row" onclick="toggleBranch(this)"><td class="b">Virudhunagar</td><td>2</td><td>0</td><td>2</td><td class="g">1</td><td>0</td><td class="a">1</td></tr>
+        <tr class="branch-detail" style="display:none;"><td colspan="7"><div style="padding:8px 12px;background:#F7F9FC;border-radius:6px;font-size:11px;color:#3A4A6B;">GT Target: 2 · MT Target: 0 · Completed: 1 · Under Construction: 0 · Pending: 1</div></td></tr>
         <tr class="total"><td>OVERALL</td><td>25</td><td>45</td><td>70</td><td>10</td><td>4</td><td>57</td></tr>
       </tbody>
+
     </table>
   </div>
 </div>
@@ -4207,27 +4592,30 @@ img,video,iframe,canvas,svg{max-width:100%;}
 
 <div class="audit-card">
   <div class="audit-card-h">
-    <h2>Where scores hit zero</h2>
-    <p>3 POSM families failing across all 5 models</p>
+    <h2>TOP 3 RECURRING POSM GAPS</h2>
+    <p>Highest recurrence across all 5 models — ranked by failure frequency</p>
   </div>
   <div class="audit-fail-grid">
     <article class="fail-tile">
-      <div class="fail-top"><span class="fail-zero">0%</span><span class="fail-tag">Table-top</span></div>
+      <div class="fail-top"><span class="fail-zero" style="font-size:20px;font-weight:800;color:#1a3c6e;">RANK 1</span><span class="fail-tag">Table-top</span></div>
       <h3>Prop / Lighting</h3>
+      <div style="font-size:10px;color:#9AA3B5;">Exact % — to be confirmed</div>
       <div class="fail-chips"><span>AIP / DIP</span><span>Tent card</span><span>Luminous top</span><span>Panel insert</span></div>
       <div class="fail-scope">Dead on every model</div>
       <p class="fail-fix">Reset fixture SOP and photo proof before the next window.</p>
     </article>
     <article class="fail-tile">
-      <div class="fail-top"><span class="fail-zero">0%</span><span class="fail-tag">In-shop</span></div>
+      <div class="fail-top"><span class="fail-zero" style="font-size:20px;font-weight:800;color:#1a3c6e;">RANK 2</span><span class="fail-tag">In-shop</span></div>
       <h3>ISB / Lampcloth</h3>
+      <div style="font-size:10px;color:#9AA3B5;">Exact % — to be confirmed</div>
       <div class="fail-chips"><span>ISB</span><span>Lampcloth</span><span>Table sticker</span></div>
       <div class="fail-scope">0–50% in-shop scores, nearly all models</div>
       <p class="fail-fix">Make identity elements a must-pass on the TL checklist.</p>
     </article>
     <article class="fail-tile">
-      <div class="fail-top"><span class="fail-zero">0%</span><span class="fail-tag">Secondary</span></div>
+      <div class="fail-top"><span class="fail-zero" style="font-size:20px;font-weight:800;color:#1a3c6e;">RANK 3</span><span class="fail-tag">Secondary</span></div>
       <h3>Shelf talker / Dangler</h3>
+      <div style="font-size:10px;color:#9AA3B5;">Exact % — to be confirmed</div>
       <div class="fail-chips"><span>Shelf talker</span><span>Dangler</span><span>Wobbler</span></div>
       <div class="fail-scope">0–50% POSM scores, nearly all models</div>
       <p class="fail-fix">Stock and place secondary POSM in the same 5–7 day window.</p>
@@ -4235,7 +4623,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
   </div>
 </div>
 
-<div class="audit-card">
+<div class="audit-card" style="display:none;">
   <div class="audit-card-h">
     <h2>Who owns the next score</h2>
     <p>One job per layer — field to HO</p>
@@ -4284,7 +4672,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
   </div>
 </div>
 
-<div class="audit-card">
+<div class="audit-card" style="display:none;">
   <div class="audit-card-h">
     <h2>Next audit cycle</h2>
     <p>Five beats — not five paragraphs</p>
@@ -4321,7 +4709,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
       <div class="rail-who">Last round’s 0% families become next training.</div>
     </div>
   </div>
-  <div class="audit-kpi-band">
+  <div class="audit-kpi-band" style="display:none;">
     <div>
       <div class="akb-l">Named KPI</div>
       <div class="akb-n">70%</div>
@@ -4332,6 +4720,200 @@ img,video,iframe,canvas,svg{max-width:100%;}
 </section>
   </div><!-- end .h1review-panel -->
 </div><!-- end #h1review -->
+<div id="strategy-house">
+
+  <div style="background:#1a3c6e;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;">
+    <button type="button" onclick="closeStrategyHouse()"
+      style="background:rgba(255,255,255,0.15);border:none;color:#fff;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:700;letter-spacing:1px;">
+      ← H1 REVIEW
+    </button>
+    <span style="color:#fff;font-size:13px;font-weight:700;letter-spacing:2px;">MARKETING STRATEGY HOUSE</span>
+    <button type="button" onclick="openH2FromStrategy()"
+      style="background:#fff;border:none;color:#1a3c6e;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:700;letter-spacing:1px;">
+      H2 DIRECTION →
+    </button>
+  </div>
+
+  <div style="padding:32px;max-width:1200px;margin:0 auto;width:100%;">
+
+    <div style="background:#1a3c6e;border-radius:16px 16px 0 0;padding:20px 28px;margin-bottom:2px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.6);margin-bottom:10px;">
+        COMPANY GOAL — VIVO INDIA FY26-27 (TOM'S DIRECTION)
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;">
+        <div style="text-align:center;padding:10px;background:rgba(255,255,255,0.1);border-radius:8px;">
+          <div style="font-size:20px;font-weight:800;color:#fff;">₹4,600 Cr</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.7);">Annual Value Target</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:rgba(255,255,255,0.1);border-radius:8px;">
+          <div style="font-size:20px;font-weight:800;color:#fff;">16.4 Lac</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.7);">Annual Units Target</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:rgba(255,255,255,0.1);border-radius:8px;">
+          <div style="font-size:20px;font-weight:800;color:#fff;">30%</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.7);">₹15K+ Market Share (GFK)</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:rgba(255,255,255,0.1);border-radius:8px;">
+          <div style="font-size:20px;font-weight:800;color:#fff;">≥ 1.6×</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.7);">vivo/OPPO Units Ratio</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:rgba(255,255,255,0.15);border-radius:8px;border:1px solid rgba(255,255,255,0.3);">
+          <div style="font-size:14px;font-weight:800;color:#90CAF9;">PREMIUM</div>
+          <div style="font-size:14px;font-weight:800;color:#fff;">BREAKTHROUGH</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.7);">Core Theme FY26-27</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#1B5E9B;padding:16px 28px;margin-bottom:2px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.6);margin-bottom:10px;">
+        MARKETING DEPARTMENT GOAL — HOW WE SUPPORT THE COMPANY TARGET
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;">
+        <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px;">
+          <div style="font-size:11px;font-weight:700;color:#fff;margin-bottom:4px;">BRAND A+I IMPROVEMENT</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.75);">TN Brand Awareness + Intent must improve vs 25FY in Chennai white collar market</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px;">
+          <div style="font-size:11px;font-weight:700;color:#fff;margin-bottom:4px;">BRAND VISIBILITY No.1</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.75);">vivo branding display space, perceived value and visibility — No.1 in TN market</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px;">
+          <div style="font-size:11px;font-weight:700;color:#fff;margin-bottom:4px;">EXPENSE OPTIMISATION</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.75);">Improve ROI per investment. Reduce unnecessary cost. Expense rate below target.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:12px;">
+          <div style="font-size:11px;font-weight:700;color:#fff;margin-bottom:4px;">AIPL FUNNEL CONVERSION</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.75);">Move TN consumers from Awareness through Interest to Purchase and Loyalty</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin-bottom:2px;">
+
+      <div style="background:#fff;border:1px solid #E8EDF6;padding:20px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div style="width:36px;height:36px;background:#1a3c6e;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;">🏪</div>
+          <div>
+            <div style="font-size:12px;font-weight:800;color:#1a3c6e;">RETAIL BRANDING</div>
+            <div style="font-size:10px;color:#6B7A99;">Brand Visibility · X-Zone · Cabinet · PBG</div>
+          </div>
+        </div>
+        <div style="font-size:10px;color:#3A4A6B;line-height:1.6;margin-bottom:12px;">
+          Ensures vivo is the most visible brand at every retail touchpoint across TN.
+          Drives the physical premium experience customers see before they buy.
+        </div>
+        <div style="background:#F4F7FB;border-radius:8px;padding:10px;">
+          <div style="font-size:10px;font-weight:700;color:#1a3c6e;margin-bottom:6px;">CONNECTS TO COMPANY GOAL</div>
+          <div style="font-size:10px;color:#3A4A6B;line-height:1.5;">
+            ✓ Brand Visibility No.1 → Premium Breakthrough<br>
+            ✓ X-Zone build → 30% ₹15K+ share<br>
+            ✓ Cabinet Matl → Channel structure health
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #E8EDF6;padding:20px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div style="width:36px;height:36px;background:#1B5E9B;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;">📣</div>
+          <div>
+            <div style="font-size:12px;font-weight:800;color:#1a3c6e;">MARCOM</div>
+            <div style="font-size:10px;color:#6B7A99;">KOL · Digital · Events · NPL</div>
+          </div>
+        </div>
+        <div style="font-size:10px;color:#3A4A6B;line-height:1.6;margin-bottom:12px;">
+          Builds brand Awareness and Interest through KOL content, digital campaigns,
+          and product launch activations. Drives upper-funnel conversion.
+        </div>
+        <div style="background:#F4F7FB;border-radius:8px;padding:10px;">
+          <div style="font-size:10px;font-weight:700;color:#1a3c6e;margin-bottom:6px;">CONNECTS TO COMPANY GOAL</div>
+          <div style="font-size:10px;color:#3A4A6B;line-height:1.5;">
+            ✓ KOL/Digital → Brand A+I improvement<br>
+            ✓ NPL activations → Premium brand perception<br>
+            ✓ Diwali/Festival → Purchase conversion spike
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #E8EDF6;padding:20px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <div style="width:36px;height:36px;background:#0D47A1;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;">💎</div>
+          <div>
+            <div style="font-size:12px;font-weight:800;color:#1a3c6e;">HUC</div>
+            <div style="font-size:10px;color:#6B7A99;">High User Communication · Premium Experience</div>
+          </div>
+        </div>
+        <div style="font-size:10px;color:#3A4A6B;line-height:1.6;margin-bottom:12px;">
+          Targets white collar and premium users in Chennai and Coimbatore.
+          Builds the brand "A+I" in premium segments that drive the ₹15K+ share target.
+        </div>
+        <div style="background:#F4F7FB;border-radius:8px;padding:10px;">
+          <div style="font-size:10px;font-weight:700;color:#1a3c6e;margin-bottom:6px;">CONNECTS TO COMPANY GOAL</div>
+          <div style="font-size:10px;color:#3A4A6B;line-height:1.5;">
+            ✓ Premium user A+I → 30% ₹15K+ market share<br>
+            ✓ White collar targeting → vivo/OPPO ratio ≥1.6×<br>
+            ✓ IT Park · College funnel → Loyalty growth
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="background:#fff;border:1px solid #E8EDF6;border-radius:0 0 16px 16px;padding:20px 28px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:#6B7A99;margin-bottom:14px;">
+        H2 ACTIVITY TIMELINE — OCT 2026 TO MAR 2027
+        <span style="color:#C62828;margin-left:8px;font-size:9px;">⚠ Exact dates — to be confirmed with team</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;">
+
+        <div style="border-radius:8px;overflow:hidden;">
+          <div style="background:#1a3c6e;color:#fff;font-size:10px;font-weight:700;padding:8px;text-align:center;">OCT 2026</div>
+          <div style="background:#F4F7FB;padding:10px;font-size:10px;color:#3A4A6B;line-height:1.6;">
+            V80 NPL Launch<br>Diwali Campaign<br>X-Zone Drive
+          </div>
+        </div>
+
+        <div style="border-radius:8px;overflow:hidden;">
+          <div style="background:#1a3c6e;color:#fff;font-size:10px;font-weight:700;padding:8px;text-align:center;">NOV 2026</div>
+          <div style="background:#F4F7FB;padding:10px;font-size:10px;color:#3A4A6B;line-height:1.6;">
+            Post-Diwali Review<br>Camera KOL Push<br>Audit Cycle 2
+          </div>
+        </div>
+
+        <div style="border-radius:8px;overflow:hidden;">
+          <div style="background:#1a3c6e;color:#fff;font-size:10px;font-weight:700;padding:8px;text-align:center;">DEC 2026</div>
+          <div style="background:#F4F7FB;padding:10px;font-size:10px;color:#3A4A6B;line-height:1.6;">
+            Christmas Camp.<br>Premium Activation<br>KOL Contracts H2
+          </div>
+        </div>
+
+        <div style="border-radius:8px;overflow:hidden;">
+          <div style="background:#1B5E9B;color:#fff;font-size:10px;font-weight:700;padding:8px;text-align:center;">JAN 2027</div>
+          <div style="background:#F4F7FB;padding:10px;font-size:10px;color:#3A4A6B;line-height:1.6;">
+            Pongal Campaign<br>Mid-H2 Review<br>WOM Program Launch
+          </div>
+        </div>
+
+        <div style="border-radius:8px;overflow:hidden;">
+          <div style="background:#1B5E9B;color:#fff;font-size:10px;font-weight:700;padding:8px;text-align:center;">FEB 2027</div>
+          <div style="background:#F4F7FB;padding:10px;font-size:10px;color:#3A4A6B;line-height:1.6;">
+            Brand Health Check<br>OPPO Harvest Push<br>X-Zone Completion
+          </div>
+        </div>
+
+        <div style="border-radius:8px;overflow:hidden;">
+          <div style="background:#0D47A1;color:#fff;font-size:10px;font-weight:700;padding:8px;text-align:center;">MAR 2027</div>
+          <div style="background:#F4F7FB;padding:10px;font-size:10px;color:#3A4A6B;line-height:1.6;">
+            H2 Close Review<br>Annual BSC Score<br>FY27-28 Planning
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div id="h2direction">
   <!-- TOP BAR -->
   <div class="h2dir-bar" style="flex-shrink:0;">
@@ -5684,6 +6266,7 @@ function closeH1Review(){
   var el=document.getElementById('h1review');
   el.classList.add('hidden');
   el.style.display='none';
+  closeStrategyHouse();
   closeH2Direction();
   document.getElementById('entry').classList.remove('hidden');
 }
@@ -5741,6 +6324,47 @@ function bindTabRails(){
     document.querySelectorAll('.cc-tab-rail [id$="-scroller"]').forEach(syncTabRail);
   });
 }
+function toggleBranch(row){
+  var detail=row.nextElementSibling;
+  if(!detail||!detail.classList.contains('branch-detail'))return;
+  var open=detail.style.display==='table-row';
+  detail.style.display=open?'none':'table-row';
+  row.classList.toggle('is-open',!open);
+}
+function bindKolGenreTiles(){
+  var tiles=document.querySelectorAll('#page-3 .gcard');
+  var status=document.getElementById('kol-genre-status');
+  if(!tiles.length||document.getElementById('kol-genre-grid')&&document.getElementById('kol-genre-grid').dataset.bound)return;
+  if(document.getElementById('kol-genre-grid'))document.getElementById('kol-genre-grid').dataset.bound='1';
+  var active=null;
+  tiles.forEach(function(t){
+    t.addEventListener('click',function(){
+      if(active===t){
+        t.classList.remove('is-on');
+        tiles.forEach(function(x){x.classList.remove('is-dim');});
+        active=null;
+        if(status)status.textContent='21 genres mapped · tap a tile to highlight, tap again to clear';
+        return;
+      }
+      if(active)active.classList.remove('is-on');
+      tiles.forEach(function(x){x.classList.toggle('is-dim',x!==t);});
+      t.classList.add('is-on');
+      t.classList.remove('is-dim');
+      active=t;
+      var name=t.querySelector('.g-nm');
+      var count=t.querySelector('.g-ct');
+      if(status&&name&&count){
+        status.textContent=name.textContent+' · '+count.textContent+' KOLs · individual profiles coming soon';
+      }
+    });
+  });
+}
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',bindKolGenreTiles);
+}else{
+  bindKolGenreTiles();
+}
+
 function switchH1Tab(pageId,btn){
   document.querySelectorAll('.h1review-panel .page').forEach(function(p){
     p.style.display='none';
@@ -5755,6 +6379,21 @@ function switchH1Tab(pageId,btn){
   syncTabRail(document.getElementById('h1-tab-scroller'));
 }
 function openH2Direction(){
+  var house=document.getElementById('strategy-house');
+  if(house){
+    house.style.display='flex';
+    house.classList.add('is-open');
+  }
+}
+function closeStrategyHouse(){
+  var house=document.getElementById('strategy-house');
+  if(house){
+    house.style.display='none';
+    house.classList.remove('is-open');
+  }
+}
+function openH2FromStrategy(){
+  closeStrategyHouse();
   document.getElementById('h2direction').classList.add('visible');
   var firstTab=document.getElementById('h2dir-tab-1');
   switchH2Tab('h2dir-p1',firstTab);
