@@ -1511,6 +1511,40 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2x-h h2{margin:0;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0B1730;}
 .h2x-h p{margin:0;font-size:0.78rem;color:#6B7B9C;}
 .h2x-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.75rem;}
+.h2x-kpis.h2x-kpis-5{grid-template-columns:repeat(5,minmax(0,1fr));}
+.h2x-kpi.theme{background:linear-gradient(180deg,#F3F8FF,#fff);border-color:rgba(21,102,192,0.22);}
+.h2x-kpi .n em{font-style:normal;font-size:0.72em;font-weight:700;color:#6B7B9C;margin-left:0.12em;}
+.h2x-kpi.theme .n{font-size:clamp(0.95rem,1.5vw,1.15rem);letter-spacing:0.04em;line-height:1.2;}
+.h2tl-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0.55rem;align-items:start;}
+.h2tl-month{margin:0;background:#fff;border:1px solid rgba(11,23,48,0.1);border-radius:14px;overflow:visible;box-shadow:0 8px 18px rgba(11,23,48,0.04);position:relative;}
+.h2tl-month > summary{list-style:none;cursor:pointer;padding:0.7rem 0.75rem 0.65rem;background:#0B1730;color:#fff;border-radius:14px 14px 0 0;display:block;position:relative;}
+.h2tl-month:not([open]) > summary{border-radius:14px;}
+.h2tl-month > summary::-webkit-details-marker{display:none;}
+.h2tl-month.q2 > summary{background:#002B6B;}
+.h2tl-month.q2close > summary{background:#0D47A1;}
+.h2tl-month .h2tl-k{font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:#9DB2EC;}
+.h2tl-month .h2tl-n{font-family:Sora,Inter,sans-serif;font-size:0.92rem;font-weight:800;color:#fff;margin-top:0.12rem;padding-right:1.2rem;line-height:1.2;}
+.h2tl-arrow{position:absolute;right:0.7rem;top:0.75rem;color:#93C5FD;font-size:0.72rem;transition:transform 0.2s ease;pointer-events:none;}
+.h2tl-month[open] .h2tl-arrow{transform:rotate(180deg);}
+.h2tl-marks{display:flex;gap:0.28rem;margin-top:0.45rem;}
+.h2tl-marks i{width:8px;height:8px;border-radius:50%;display:block;font-style:normal;}
+.h2tl-marks i.mc{background:#93C5FD;}
+.h2tl-marks i.rt{background:#FDBA74;}
+.h2tl-marks i.hu{background:#86EFAC;}
+.h2tl-prog{height:5px;background:rgba(255,255,255,0.16);border-radius:99px;overflow:hidden;margin-top:0.5rem;}
+.h2tl-prog > span{display:block;height:100%;width:var(--pct);background:#93C5FD;border-radius:99px;}
+.h2tl-tip{position:absolute;left:0.45rem;right:0.45rem;top:calc(100% + 8px);background:#0B1730;color:#fff;border-radius:10px;padding:0.5rem 0.6rem;font-size:0.68rem;line-height:1.4;opacity:0;visibility:hidden;z-index:8;pointer-events:none;box-shadow:0 12px 28px rgba(11,23,48,0.25);}
+.h2tl-month:not([open]) > summary:hover .h2tl-tip,
+.h2tl-month:not([open]) > summary:focus-visible .h2tl-tip{opacity:1;visibility:visible;}
+.h2tl-month[open] > summary .h2tl-tip{display:none;opacity:0;visibility:hidden;}
+.h2tl-body{background:#F4F7FB;padding:0.7rem 0.75rem 0.8rem;border-radius:0 0 14px 14px;border-top:0;}
+.h2tl-tag{display:inline-block;font-size:0.58rem;font-weight:800;letter-spacing:0.08em;padding:2px 7px;border-radius:3px;margin:0.15rem 0 0.25rem;}
+.h2tl-tag.mc{background:#EFF6FF;color:#1a3c6e;}
+.h2tl-tag.rt{background:#FFF7ED;color:#C2410C;}
+.h2tl-tag.hu{background:#F0FDF4;color:#15803D;}
+.h2tl-body p{font-size:0.72rem;color:#3D4E73;margin:0 0 0.45rem;line-height:1.4;}
+.h2tl-body p:last-child{margin-bottom:0;}
+.h2tl-warn{color:#B45309;font-weight:700;}
 .h2x-kpi{background:#fff;border:1px solid rgba(11,23,48,0.10);border-radius:14px;padding:0.9rem 1rem;position:relative;overflow:hidden;box-shadow:0 8px 20px rgba(11,23,48,0.04);}
 .h2x-kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--ak,#1566C0);}
 .h2x-kpi .n{font-family:Sora,Inter,sans-serif;font-size:clamp(1.45rem,2.6vw,2rem);font-weight:800;color:var(--ak,#002B6B);line-height:1;margin:0.3rem 0 0.2rem;}
@@ -1626,13 +1660,13 @@ body.presenting.in-deck .deck-home{display:inline-flex;}
 .h2x-rule{font-size:0.74rem;color:#3D4E73;line-height:1.4;margin:0.2rem 0;padding-left:0.2rem;border-left:3px solid rgba(21,102,192,0.35);padding-left:0.55rem;}
 .h2x-rule b{color:#0B1730;}
 @media(max-width:1100px){
-  .h2x-kpis,.h2x-seg,.h2x-fail,.h2x-rail,.h2x-month,.h2x-board,.h2x-score,.h2x-conc,.h2x-move{grid-template-columns:1fr 1fr;}
+  .h2x-kpis,.h2x-kpis.h2x-kpis-5,.h2x-seg,.h2x-fail,.h2x-rail,.h2x-month,.h2tl-grid,.h2x-board,.h2x-score,.h2x-conc,.h2x-move{grid-template-columns:1fr 1fr;}
   .h2x-bar{grid-template-columns:1fr auto;}
   .h2x-bar .tr{grid-column:1/-1;}
   .h2x-axis{grid-template-columns:1fr;}
 }
 @media(max-width:700px){
-  .h2x-kpis,.h2x-seg,.h2x-fail,.h2x-rail,.h2x-month,.h2x-board,.h2x-score,.h2x-conc,.h2x-move{grid-template-columns:1fr;}
+  .h2x-kpis,.h2x-kpis.h2x-kpis-5,.h2x-seg,.h2x-fail,.h2x-rail,.h2x-month,.h2tl-grid,.h2x-board,.h2x-score,.h2x-conc,.h2x-move{grid-template-columns:1fr;}
 }
 /* ========== END H2 DIRECTION ========== */
 
@@ -4682,6 +4716,135 @@ function toggleBranch(row){
             <span class="h2x-op">+</span>
             <div class="h2x-tile" tabindex="0"><b>IT BT</b><span>Corporate / tech parks</span></div>
           </div>
+        </div>
+      </div>
+      <div class="h2x-card">
+        <div class="h2x-h">
+          <h2>H2 targets — what success looks like</h2>
+          <p>From Tom's direction · These are the numbers marketing must support</p>
+        </div>
+        <div class="h2x-kpis h2x-kpis-5">
+          <div class="h2x-kpi" style="--ak:#002B6B;"><div class="l">Annual Value</div><div class="n">₹4,600<em> Cr</em></div><div class="s">Full FY target</div></div>
+          <div class="h2x-kpi" style="--ak:#1566C0;"><div class="l">Annual Units</div><div class="n">16.4<em> Lac</em></div><div class="s">Full FY target</div></div>
+          <div class="h2x-kpi" style="--ak:#1566C0;"><div class="l">Premium Share</div><div class="n">30<em> %</em></div><div class="s">₹15K+ band (GFK)</div></div>
+          <div class="h2x-kpi" style="--ak:#0D47A1;"><div class="l">vivo / OPPO Ratio</div><div class="n">≥ 1.6<em>×</em></div><div class="s">Units share ratio</div></div>
+          <div class="h2x-kpi theme" style="--ak:#1566C0;"><div class="l">Core Theme</div><div class="n">PREMIUM BREAKTHROUGH</div><div class="s">Marketing owns the brand half</div></div>
+        </div>
+      </div>
+      <div class="h2x-card">
+        <div class="h2x-h">
+          <h2>H2 activity timeline</h2>
+          <p>Oct 2026 → Mar 2027 · Click any month to expand · <span class="h2tl-warn">⚠ Exact dates — confirm with team</span></p>
+        </div>
+        <div id="h2-timeline" class="h2tl-grid">
+          <details class="h2tl-month">
+            <summary>
+              <div class="h2tl-k">OCT 2026</div>
+              <div class="h2tl-n">Diwali + V80</div>
+              <span class="h2tl-arrow" aria-hidden="true">▼</span>
+              <div class="h2tl-marks" aria-hidden="true"><i class="mc"></i><i class="rt"></i><i class="hu"></i></div>
+              <div class="h2tl-prog" aria-hidden="true"><span style="--pct:17%"></span></div>
+              <span class="h2tl-tip">Marcom: V80 NPL + KOL wave · Retail: Diwali POS / X-Zone · HUC: white-collar Diwali circles</span>
+            </summary>
+            <div class="h2tl-body">
+              <div class="h2tl-tag mc">MARCOM</div>
+              <p>V80 NPL launch activation · KOL content wave · Digital push</p>
+              <div class="h2tl-tag rt">RETAIL</div>
+              <p>Diwali branding · POS + fixture priority · X-Zone push</p>
+              <div class="h2tl-tag hu">HUC</div>
+              <p>White collar Diwali circles · IT park activations</p>
+            </div>
+          </details>
+          <details class="h2tl-month">
+            <summary>
+              <div class="h2tl-k">NOV 2026</div>
+              <div class="h2tl-n">Post-Diwali</div>
+              <span class="h2tl-arrow" aria-hidden="true">▼</span>
+              <div class="h2tl-marks" aria-hidden="true"><i class="mc"></i><i class="rt"></i><i class="hu"></i></div>
+              <div class="h2tl-prog" aria-hidden="true"><span style="--pct:33%"></span></div>
+              <span class="h2tl-tip">Marcom: post-Diwali review + camera KOL · Retail: audit cycle 2 · HUC: doctor circle + WOM seed</span>
+            </summary>
+            <div class="h2tl-body">
+              <div class="h2tl-tag mc">MARCOM</div>
+              <p>Post-Diwali review · Camera KOL content push · Expense audit</p>
+              <div class="h2tl-tag rt">RETAIL</div>
+              <p>Audit cycle 2 · POSM gap fixes from Rank 1/2/3 findings</p>
+              <div class="h2tl-tag hu">HUC</div>
+              <p>Doctor circle event · WOM campaign seeding</p>
+            </div>
+          </details>
+          <details class="h2tl-month">
+            <summary>
+              <div class="h2tl-k">DEC 2026</div>
+              <div class="h2tl-n">Christmas</div>
+              <span class="h2tl-arrow" aria-hidden="true">▼</span>
+              <div class="h2tl-marks" aria-hidden="true"><i class="mc"></i><i class="rt"></i><i class="hu"></i></div>
+              <div class="h2tl-prog" aria-hidden="true"><span style="--pct:50%"></span></div>
+              <span class="h2tl-tip">Marcom: Christmas + NY + H2 KOL lock · Retail: premium store branding · HUC: founder + college year-end</span>
+            </summary>
+            <div class="h2tl-body">
+              <div class="h2tl-tag mc">MARCOM</div>
+              <p>Christmas + NY campaign · H2 KOL contracts locked · IoT push</p>
+              <div class="h2tl-tag rt">RETAIL</div>
+              <p>Premium store branding activation · MSB old-to-new drive</p>
+              <div class="h2tl-tag hu">HUC</div>
+              <p>Founder circle · College year-end activation</p>
+            </div>
+          </details>
+          <details class="h2tl-month q2">
+            <summary>
+              <div class="h2tl-k">JAN 2027</div>
+              <div class="h2tl-n">Pongal</div>
+              <span class="h2tl-arrow" aria-hidden="true">▼</span>
+              <div class="h2tl-marks" aria-hidden="true"><i class="mc"></i><i class="rt"></i><i class="hu"></i></div>
+              <div class="h2tl-prog" aria-hidden="true"><span style="--pct:67%"></span></div>
+              <span class="h2tl-tip">Marcom: Pongal + mid-H2 review · Retail: X-Zone completion · HUC: Pongal white collar + Vivo Week</span>
+            </summary>
+            <div class="h2tl-body">
+              <div class="h2tl-tag mc">MARCOM</div>
+              <p>Pongal campaign · Mid-H2 review · WOM program launch</p>
+              <div class="h2tl-tag rt">RETAIL</div>
+              <p>X-Zone completion drive · Competitor wall audit</p>
+              <div class="h2tl-tag hu">HUC</div>
+              <p>Pongal white collar activation · Vivo Week loyalty push</p>
+            </div>
+          </details>
+          <details class="h2tl-month q2">
+            <summary>
+              <div class="h2tl-k">FEB 2027</div>
+              <div class="h2tl-n">Brand push</div>
+              <span class="h2tl-arrow" aria-hidden="true">▼</span>
+              <div class="h2tl-marks" aria-hidden="true"><i class="mc"></i><i class="rt"></i><i class="hu"></i></div>
+              <div class="h2tl-prog" aria-hidden="true"><span style="--pct:83%"></span></div>
+              <span class="h2tl-tip">Marcom: OPPO harvest + brand health · Retail: audit cycle 3 · HUC: premium segment + camera imagery</span>
+            </summary>
+            <div class="h2tl-body">
+              <div class="h2tl-tag mc">MARCOM</div>
+              <p>OPPO harvest push · Brand health recheck · KOC content drop</p>
+              <div class="h2tl-tag rt">RETAIL</div>
+              <p>Audit cycle 3 · Supply gap resolution check</p>
+              <div class="h2tl-tag hu">HUC</div>
+              <p>Premium segment review · Camera imagery rebuild activation</p>
+            </div>
+          </details>
+          <details class="h2tl-month q2close">
+            <summary>
+              <div class="h2tl-k">MAR 2027</div>
+              <div class="h2tl-n">H2 close</div>
+              <span class="h2tl-arrow" aria-hidden="true">▼</span>
+              <div class="h2tl-marks" aria-hidden="true"><i class="mc"></i><i class="rt"></i><i class="hu"></i></div>
+              <div class="h2tl-prog" aria-hidden="true"><span style="--pct:100%"></span></div>
+              <span class="h2tl-tip">Marcom: H2 close + BSC + FY27-28 kick-off · Retail: final audit / No.1 visibility · HUC: A+I score + KOC size</span>
+            </summary>
+            <div class="h2tl-body">
+              <div class="h2tl-tag mc">MARCOM</div>
+              <p>H2 close review · Annual BSC score · FY27-28 plan kick-off</p>
+              <div class="h2tl-tag rt">RETAIL</div>
+              <p>Final audit · Brand visibility No.1 confirmation vs competitors</p>
+              <div class="h2tl-tag hu">HUC</div>
+              <p>Premium user A+I final score · KOC community size check</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
