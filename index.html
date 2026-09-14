@@ -4598,9 +4598,9 @@ function toggleBranch(row){
     <div class="h2dir-tab-bar" id="h2dir-tab-scroller">
     <button class="h2dir-tab active" id="h2dir-tab-1" onclick="switchH2Tab('h2dir-p1',this)">ISSUE → DIRECTION</button>
     <button class="h2dir-tab" id="h2dir-tab-2" onclick="switchH2Tab('h2dir-p2',this)">DIFFERENT USER</button>
-    <button class="h2dir-tab" id="h2dir-tab-2b" onclick="switchH2Tab('h2dir-p2b',this)">5H HERO</button>
+    <button class="h2dir-tab" style="display:none;" id="h2dir-tab-2b" onclick="switchH2Tab('h2dir-p2b',this)">5H HERO</button>
     <button class="h2dir-tab" id="h2dir-tab-3" onclick="switchH2Tab('h2dir-p3',this)">BRANDING BUILD</button>
-    <button class="h2dir-tab" id="h2dir-tab-7" onclick="switchH2Tab('h2dir-p7',this)">STORES</button>
+    <button class="h2dir-tab" style="display:none;" id="h2dir-tab-7" onclick="switchH2Tab('h2dir-p7',this)">STORES</button>
     <button class="h2dir-tab" id="h2dir-tab-9" onclick="switchH2Tab('h2dir-p9',this)">SUPPLY &amp; DEFEND</button>
     </div>
     <button type="button" class="cc-tab-chev" data-rail="h2dir-tab-scroller" data-dir="1" aria-label="Scroll tabs right">&#8250;</button>
@@ -4755,7 +4755,7 @@ function toggleBranch(row){
     </section>
 
     <!-- PAGE 2B: 5H HERO -->
-    <section class="page h2x-page" id="h2dir-p2b">
+    <section class="page h2x-page" id="h2dir-p2b" style="display:none;">
       <header>
         <div class="eyebrow">H2 Direction · Page ④ · 5H Hero</div>
         <h1 class="title">5H Hero — <span>one business moment</span></h1>
@@ -4920,12 +4920,47 @@ function toggleBranch(row){
         </div>
 
       </div>
+<div class="h2x-card" style="margin-top:1.5rem;">
+  <div class="h2x-h">
+    <h2>Store deployment</h2>
+    <p>Three channels, three rules — numbers first</p>
+  </div>
+  <div class="h2x-tiles" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:1rem;">
+    <div class="h2x-tile">
+      <b>General Trade</b>
+      <div style="display:flex;gap:1.2rem;margin:0.5rem 0;">
+        <span><span style="font-size:1.1rem;font-weight:800;color:#1a3c6e;">70</span><br><span style="font-size:0.68rem;color:#6B7B9C;">FIXTURE</span></span>
+        <span><span style="font-size:1.1rem;font-weight:800;color:#1a3c6e;">19</span><br><span style="font-size:0.68rem;color:#6B7B9C;">MSB</span></span>
+        <span><span style="font-size:1.1rem;font-weight:800;color:#1a3c6e;">25</span><br><span style="font-size:0.68rem;color:#6B7B9C;">PROJECT</span></span>
+      </div>
+      <span>Fixture space check first. MSB for chain outlets. Focus A+/A/B stores first.</span>
+    </div>
+    <div class="h2x-tile">
+      <b>Regional MT</b>
+      <div style="display:flex;gap:1.2rem;margin:0.5rem 0;">
+        <span><span style="font-size:1.1rem;font-weight:800;color:#1a3c6e;">182</span><br><span style="font-size:0.68rem;color:#6B7B9C;">FIXTURE</span></span>
+        <span><span style="font-size:1.1rem;font-weight:800;color:#1a3c6e;">13</span><br><span style="font-size:0.68rem;color:#6B7B9C;">MSB</span></span>
+        <span><span style="font-size:1.1rem;font-weight:800;color:#1a3c6e;">45</span><br><span style="font-size:0.68rem;color:#6B7B9C;">PROJECT</span></span>
+      </div>
+      <span>100% fixture per space. ISB in 1st location. Project — 1st location area only.</span>
+    </div>
+    <div class="h2x-tile">
+      <b>National MT</b>
+      <div style="display:flex;gap:1.2rem;margin:0.5rem 0;">
+        <span><span style="font-size:1.1rem;font-weight:800;color:#1a3c6e;">32</span><br><span style="font-size:0.68rem;color:#6B7B9C;">FIXTURE</span></span>
+        <span><span style="font-size:1.1rem;font-weight:800;color:#1a3c6e;">≥1</span><br><span style="font-size:0.68rem;color:#6B7B9C;">OSB</span></span>
+        <span><span style="font-size:1.1rem;font-weight:800;color:#1B5E9B;">Yes</span><br><span style="font-size:0.68rem;color:#6B7B9C;">X-ZONE</span></span>
+      </div>
+      <span>100% fixture, 6ft and above. OSB at least one façade. vivo desk at entrance.</span>
+    </div>
+  </div>
+</div>
     </section>
 
 
 
 
-    <section class="page h2x-page" id="h2dir-p7">
+    <section class="page h2x-page" id="h2dir-p7" style="display:none;">
       <header>
         <div class="eyebrow">Deployment · New &amp; top stores</div>
         <h1 class="title">Store branding — <span>three channels, three rules</span></h1>
