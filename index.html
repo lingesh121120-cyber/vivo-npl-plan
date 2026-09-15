@@ -5023,6 +5023,95 @@ img,video,iframe,canvas,svg{max-width:100%;}
 .bht-plan-card.open{border-color:#1a3c6e;background:#F0F4FF;}
 .bht-plan-detail{display:none;margin-top:10px;padding-top:10px;border-top:1px solid #E8EDF6;font-size:11px;color:#3A4A6B;line-height:1.6;}
 .bht-plan-card.open .bht-plan-detail{display:block;}
+
+/* ── P4/P5/P6: SPACE FILL + VISIBILITY UPGRADES ── */
+
+/* Panel fills full available height */
+.bht-panel.active{display:flex;flex-direction:column;min-height:calc(100vh - 220px);}
+
+/* ── IMAGERY: larger cards, full-space grid ── */
+.bht-img-grid{grid-template-columns:repeat(4,1fr);gap:16px;flex:1;}
+.bht-img-card{min-height:280px;display:flex;flex-direction:column;border-radius:14px;padding:20px;border:1.5px solid #E8EDF6;}
+.bht-img-card .front{display:flex;flex-direction:column;flex:1;}
+.bht-img-card .back{display:flex;flex-direction:column;justify-content:center;flex:1;font-size:13px;line-height:1.7;color:#1a3c6e;font-weight:500;padding:8px 0;}
+.bht-img-card.flipped{border-color:#1a3c6e;background:#F0F4FF;}
+.bht-img-title{font-size:17px;font-weight:800;color:#1a3c6e;margin:10px 0 12px;}
+.bht-img-bars{display:flex;flex-direction:column;gap:8px;flex:1;}
+.bht-img-bar-row{display:flex;align-items:center;gap:8px;}
+.bht-img-bar-year{font-size:10px;font-weight:700;color:#6B7A99;width:28px;}
+.bht-img-bar-track{flex:1;height:14px;background:#F0F4FF;border-radius:4px;overflow:hidden;}
+.bht-img-bar-fill{height:100%;border-radius:4px;transition:width 0.4s ease;}
+.bht-img-bar-val{font-size:11px;font-weight:700;width:28px;text-align:right;}
+.bht-img-verdict{margin-top:12px;font-size:11px;font-weight:700;padding:5px 10px;border-radius:20px;display:inline-block;}
+.bht-img-flip-hint{font-size:10px;color:#9AA3B5;margin-top:auto;padding-top:10px;}
+.bht-img-back-label{font-size:10px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;}
+
+/* WIN card colors */
+.bht-img-win{border-top:3px solid #16a34a;}
+.bht-img-win .bht-img-bar-fill{background:#16a34a;}
+.bht-img-win .bht-img-bar-val{color:#16a34a;}
+.bht-img-win .bht-img-verdict{background:#F0FDF4;color:#16a34a;}
+.bht-img-win .bht-img-back-label{color:#16a34a;}
+
+/* GAP card colors */
+.bht-img-gap{border-top:3px solid #dc2626;}
+.bht-img-gap .bht-img-bar-fill.y2025{background:#fca5a5;}
+.bht-img-gap .bht-img-bar-fill.y2026{background:#dc2626;}
+.bht-img-gap .bht-img-bar-val{color:#dc2626;}
+.bht-img-gap .bht-img-verdict{background:#FEF2F2;color:#dc2626;}
+.bht-img-gap .bht-img-back-label{color:#dc2626;}
+
+/* restore flip: later .back{display:flex} must not un-hide unflipped backs */
+.bht-img-card:not(.flipped) .back{display:none;}
+.bht-img-card.flipped .back{display:flex;}
+
+/* ── H2 PLAN: larger accordion, readable expand ── */
+.bht-plan-grid{gap:16px;flex:1;}
+.bht-plan-card{padding:20px 22px;border-radius:14px;border-left:4px solid #1a3c6e;}
+.bht-plan-card.open{border-left-color:#1a3c6e;}
+.bht-plan-num{font-size:11px;font-weight:800;letter-spacing:0.1em;color:#6B7A99;text-transform:uppercase;margin-bottom:4px;}
+.bht-plan-title{font-size:16px;font-weight:800;color:#0d1b2a;margin-bottom:3px;}
+.bht-plan-sub{font-size:11px;color:#6B7A99;margin-bottom:0;}
+.bht-plan-toggle{float:right;font-size:18px;color:#1a3c6e;font-weight:300;margin-top:-2px;}
+.bht-plan-detail{font-size:12px;line-height:1.8;color:#3A4A6B;padding-top:14px;margin-top:14px;}
+.bht-plan-detail ul{margin:6px 0 0 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.bht-plan-detail ul li{padding-left:1.1rem;position:relative;}
+.bht-plan-detail ul li::before{content:"→";position:absolute;left:0;color:#1a3c6e;font-weight:700;}
+.bht-plan-kpi{display:inline-block;margin-top:10px;background:#EEF2FB;color:#1a3c6e;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;}
+
+/* ── COMPETITION: full-height cards ── */
+.bht-comp-panel{display:none;}
+.bht-comp-panel.active{display:grid;}
+#bht-comp-oppo.active{grid-template-columns:1fr 1fr;gap:20px;}
+#bht-comp-samsung.active{display:block;}
+#bht-comp-harvest.active{grid-template-columns:1fr 2fr;gap:20px;}
+.bht-comp-card{background:#fff;border:1px solid #E8EDF6;border-radius:14px;padding:22px 24px;}
+.bht-comp-card.collapsed{border-top:3px solid #dc2626;}
+.bht-comp-card.flat{border-top:3px solid #6B7A99;}
+.bht-comp-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px;}
+.bht-comp-eyebrow.red{color:#dc2626;}
+.bht-comp-eyebrow.grey{color:#6B7A99;}
+.bht-comp-row{margin-bottom:12px;}
+.bht-comp-metric{font-size:11px;font-weight:700;color:#6B7A99;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.06em;}
+.bht-comp-bar-track{background:#F7F9FD;border-radius:4px;height:20px;overflow:hidden;position:relative;}
+.bht-comp-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:10px;font-weight:700;color:#fff;}
+.bht-comp-bar-fill.neg{background:#dc2626;}
+.bht-comp-bar-fill.pos{background:#16a34a;}
+.bht-comp-bar-fill.flat-bar{background:#9AA3B5;}
+.bht-comp-footer{margin-top:16px;background:#F0FDF4;border-radius:8px;padding:10px 14px;font-size:11px;color:#15803d;font-weight:600;line-height:1.5;}
+.bht-comp-footer.red{background:#FEF2F2;color:#dc2626;}
+.bht-kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px;}
+.bht-kpi-tile{background:#F7F9FD;border-radius:10px;padding:14px;text-align:center;}
+.bht-kpi-tile .num{font-size:22px;font-weight:900;color:#1a3c6e;}
+.bht-kpi-tile .num.good{color:#16a34a;}
+.bht-kpi-tile .lbl{font-size:10px;color:#6B7A99;margin-top:3px;text-transform:uppercase;letter-spacing:0.06em;}
+.bht-harvest-stat{font-size:28px;font-weight:900;color:#1a3c6e;margin-bottom:4px;}
+.bht-harvest-desc{font-size:12px;color:#4A5568;line-height:1.6;margin-bottom:16px;}
+.bht-action-row{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #E8EDF6;}
+.bht-action-row:last-child{border-bottom:none;}
+.bht-action-num{font-size:11px;font-weight:800;color:#1a3c6e;min-width:20px;}
+.bht-action-text{font-size:12px;color:#3A4A6B;line-height:1.5;}
+.bht-comp-panel .bht-comp-row{display:block;grid-template-columns:none;}
 </style>
 
 <div class="bht-wrap">
@@ -5100,163 +5189,168 @@ img,video,iframe,canvas,svg{max-width:100%;}
 
   <!-- PANEL 2: COMPETITION -->
   <div class="bht-panel" id="bht-competition">
-    <div class="bht-toggle">
-      <button class="bht-toggle-btn active" onclick="bhtComp('oppo',this)">OPPO COLLAPSE</button>
-      <button class="bht-toggle-btn" onclick="bhtComp('samsung',this)">SAMSUNG THREAT</button>
-      <button class="bht-toggle-btn" onclick="bhtComp('harvest',this)">HARVEST OPPORTUNITY</button>
+    <div class="bht-toggle" style="display:flex;gap:8px;margin-bottom:20px;">
+      <button class="bht-tog-btn active" onclick="bhtCompTab('oppo',this)" style="padding:6px 16px;border-radius:20px;border:2px solid #1a3c6e;background:#1a3c6e;color:#fff;font-size:11px;font-weight:700;cursor:pointer;">OPPO COLLAPSE</button>
+      <button class="bht-tog-btn" onclick="bhtCompTab('samsung',this)" style="padding:6px 16px;border-radius:20px;border:2px solid #E8EDF6;background:#fff;color:#6B7A99;font-size:11px;font-weight:700;cursor:pointer;">SAMSUNG THREAT</button>
+      <button class="bht-tog-btn" onclick="bhtCompTab('harvest',this)" style="padding:6px 16px;border-radius:20px;border:2px solid #E8EDF6;background:#fff;color:#6B7A99;font-size:11px;font-weight:700;cursor:pointer;">HARVEST OPPORTUNITY</button>
     </div>
 
-    <div id="bht-comp-oppo" style="display:block;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-        <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:16px;">
-          <div style="font-size:10px;font-weight:700;color:#C62828;letter-spacing:1px;margin-bottom:12px;">OPPO TN — COLLAPSED</div>
-          <div class="bht-comp-row"><div class="bht-comp-label">TOM</div><div class="bht-bar-track" style="height:16px;"><div class="bht-bar-fill" style="width:40%;background:#C62828;font-size:9px;">-4pct</div></div><div class="bht-comp-val" style="color:#C62828;">↓</div></div>
-          <div class="bht-comp-row"><div class="bht-comp-label">INTEREST</div><div class="bht-bar-track" style="height:16px;"><div class="bht-bar-fill" style="width:80%;background:#C62828;font-size:9px;">-11pct</div></div><div class="bht-comp-val" style="color:#C62828;">↓</div></div>
-          <div class="bht-comp-row"><div class="bht-comp-label">PREFERENCE</div><div class="bht-bar-track" style="height:16px;"><div class="bht-bar-fill" style="width:50%;background:#C62828;font-size:9px;">-5pct</div></div><div class="bht-comp-val" style="color:#C62828;">↓</div></div>
-          <div class="bht-comp-row"><div class="bht-comp-label">LOYALTY</div><div class="bht-bar-track" style="height:16px;"><div class="bht-bar-fill" style="width:70%;background:#C62828;font-size:9px;">-8pct</div></div><div class="bht-comp-val" style="color:#C62828;">↓</div></div>
-        </div>
-        <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:16px;">
-          <div style="font-size:10px;font-weight:700;color:#9AA3B5;letter-spacing:1px;margin-bottom:12px;">OPPO NATIONAL — FLAT</div>
-          <div class="bht-comp-row"><div class="bht-comp-label">TOM</div><div class="bht-bar-track" style="height:16px;background:#F0F0F0;"><div class="bht-bar-fill" style="width:50%;background:#9AA3B5;font-size:9px;">0</div></div><div class="bht-comp-val" style="color:#9AA3B5;">—</div></div>
-          <div class="bht-comp-row"><div class="bht-comp-label">INTEREST</div><div class="bht-bar-track" style="height:16px;background:#F0F0F0;"><div class="bht-bar-fill" style="width:53%;background:#2E7D32;font-size:9px;">+3</div></div><div class="bht-comp-val" style="color:#2E7D32;">↑</div></div>
-          <div class="bht-comp-row"><div class="bht-comp-label">PREFERENCE</div><div class="bht-bar-track" style="height:16px;background:#F0F0F0;"><div class="bht-bar-fill" style="width:50%;background:#9AA3B5;font-size:9px;">0</div></div><div class="bht-comp-val" style="color:#9AA3B5;">—</div></div>
-          <div class="bht-comp-row"><div class="bht-comp-label">LOYALTY</div><div class="bht-bar-track" style="height:16px;background:#F0F0F0;"><div class="bht-bar-fill" style="width:50%;background:#9AA3B5;font-size:9px;">0</div></div><div class="bht-comp-val" style="color:#9AA3B5;">—</div></div>
-        </div>
+    <!-- OPPO -->
+    <div class="bht-comp-panel active" id="bht-comp-oppo">
+      <div class="bht-comp-card collapsed">
+        <div class="bht-comp-eyebrow red">OPPO TN — COLLAPSED</div>
+        <div class="bht-comp-row"><div class="bht-comp-metric">TOM</div><div class="bht-comp-bar-track"><div class="bht-comp-bar-fill neg" style="width:40%;">-4pct</div></div></div>
+        <div class="bht-comp-row"><div class="bht-comp-metric">INTEREST</div><div class="bht-comp-bar-track"><div class="bht-comp-bar-fill neg" style="width:75%;">-11pct</div></div></div>
+        <div class="bht-comp-row"><div class="bht-comp-metric">PREFERENCE</div><div class="bht-comp-bar-track"><div class="bht-comp-bar-fill neg" style="width:45%;">-5pct</div></div></div>
+        <div class="bht-comp-row"><div class="bht-comp-metric">LOYALTY</div><div class="bht-comp-bar-track"><div class="bht-comp-bar-fill neg" style="width:60%;">-8pct</div></div></div>
+        <div class="bht-comp-footer red">TN dropped hard. National stayed flat. This is what our investment produced.</div>
       </div>
-      <div style="background:#E8F5E9;border-radius:8px;padding:12px 16px;margin-top:12px;font-size:11px;color:#2E7D32;font-weight:600;">
-        Same brand. Same period. TN dropped, national stayed flat. This is what our investment produced.
-        OPPO/realme = 22% of new vivo TN users — harvest window is open now.
+      <div class="bht-comp-card flat">
+        <div class="bht-comp-eyebrow grey">OPPO NATIONAL — FLAT</div>
+        <div class="bht-comp-row"><div class="bht-comp-metric">TOM</div><div class="bht-comp-bar-track"><div class="bht-comp-bar-fill flat-bar" style="width:20%;">0</div></div></div>
+        <div class="bht-comp-row"><div class="bht-comp-metric">INTEREST</div><div class="bht-comp-bar-track"><div class="bht-comp-bar-fill pos" style="width:25%;">+3</div></div></div>
+        <div class="bht-comp-row"><div class="bht-comp-metric">PREFERENCE</div><div class="bht-comp-bar-track"><div class="bht-comp-bar-fill flat-bar" style="width:20%;">0</div></div></div>
+        <div class="bht-comp-row"><div class="bht-comp-metric">LOYALTY</div><div class="bht-comp-bar-track"><div class="bht-comp-bar-fill flat-bar" style="width:20%;">0</div></div></div>
+        <div class="bht-comp-footer">Same brand. Same period. OPPO/realme = 22% of new vivo TN users — harvest window is open now.</div>
       </div>
     </div>
 
-    <div id="bht-comp-samsung" style="display:none;">
-      <div style="background:#fff;border:1px solid #FFCDD2;border-radius:12px;padding:16px;">
-        <div style="font-size:10px;font-weight:700;color:#C62828;letter-spacing:1px;margin-bottom:12px;">SAMSUNG MID-FUNNEL CLIMB — WATCH IN H2</div>
-        <div style="font-size:12px;color:#3A4A6B;line-height:1.6;margin-bottom:12px;">
-          Samsung is climbing the Interest → Preference bridge in TN. Their lower-segment aggressive pricing
-          is pulling first-time buyers. vivo's retention lead (38% vs Samsung 23%) is our strongest counter —
-          but only if we convert existing trust into repeat purchase.
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
-          <div style="background:#FFF5F5;border-radius:8px;padding:10px;text-align:center;">
-            <div style="font-size:9px;color:#C62828;font-weight:700;margin-bottom:4px;">SAMSUNG RETENTION</div>
-            <div style="font-size:20px;font-weight:800;color:#C62828;">23%</div>
-            <div style="font-size:9px;color:#9AA3B5;">vs vivo 38%</div>
-          </div>
-          <div style="background:#E8F5E9;border-radius:8px;padding:10px;text-align:center;">
-            <div style="font-size:9px;color:#2E7D32;font-weight:700;margin-bottom:4px;">vivo RETENTION</div>
-            <div style="font-size:20px;font-weight:800;color:#2E7D32;">38%</div>
-            <div style="font-size:9px;color:#9AA3B5;">No.1 Android TN</div>
-          </div>
-          <div style="background:#FFF8E1;border-radius:8px;padding:10px;text-align:center;">
-            <div style="font-size:9px;color:#F57C00;font-weight:700;margin-bottom:4px;">OUR ADVANTAGE</div>
-            <div style="font-size:20px;font-weight:800;color:#F57C00;">+15pct</div>
-            <div style="font-size:9px;color:#9AA3B5;">Retention gap to defend</div>
-          </div>
-        </div>
+    <!-- SAMSUNG -->
+    <div class="bht-comp-panel" id="bht-comp-samsung">
+      <div class="bht-kpi-row">
+        <div class="bht-kpi-tile"><div class="num">23%</div><div class="lbl">Samsung Retention</div></div>
+        <div class="bht-kpi-tile"><div class="num good">38%</div><div class="lbl">vivo Retention</div></div>
+        <div class="bht-kpi-tile"><div class="num good">+15pct</div><div class="lbl">Our Advantage</div></div>
+      </div>
+      <div class="bht-comp-card" style="border-top:3px solid #f97316;">
+        <div class="bht-comp-eyebrow" style="color:#f97316;">SAMSUNG THREAT — CLIMBING</div>
+        <p style="font-size:13px;color:#3A4A6B;line-height:1.7;margin:0 0 12px;">Samsung is climbing Interest → Preference in TN. Their retention (23%) is far below vivo (38%) — but they are moving fast in the premium space we are targeting.</p>
+        <p style="font-size:13px;color:#3A4A6B;line-height:1.7;margin:0;">Counter: own the camera story and premium OOH before Samsung fills that space. Speed matters — execute H2 plan before their Q4 push.</p>
       </div>
     </div>
 
-    <div id="bht-comp-harvest" style="display:none;">
-      <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:16px;">
-        <div style="font-size:10px;font-weight:700;color:#2E7D32;letter-spacing:1px;margin-bottom:12px;">OPPO/REALME CHURNER HARVEST — H2 OPPORTUNITY</div>
-        <div style="display:grid;grid-template-columns:1fr 2fr;gap:16px;align-items:center;">
-          <div style="text-align:center;background:#E8F5E9;border-radius:10px;padding:16px;">
-            <div style="font-size:36px;font-weight:800;color:#2E7D32;">22%</div>
-            <div style="font-size:11px;color:#2E7D32;font-weight:700;">of new vivo TN users</div>
-            <div style="font-size:10px;color:#9AA3B5;margin-top:4px;">came from OPPO/realme in H1</div>
-          </div>
-          <div>
-            <div style="font-size:12px;color:#3A4A6B;line-height:1.6;margin-bottom:10px;">
-              OPPO collapsed in TN specifically. Their users are already switching to vivo.
-              H2 must accelerate this with targeted churner campaigns — trade-in offers,
-              comparison content, and retailer push at the moment of switch.
-            </div>
-            <div style="display:flex;flex-direction:column;gap:6px;">
-              <div style="background:#F4F7FB;border-radius:6px;padding:8px 12px;font-size:11px;color:#1a3c6e;">→ Trade-in offer specifically for OPPO/realme devices</div>
-              <div style="background:#F4F7FB;border-radius:6px;padding:8px 12px;font-size:11px;color:#1a3c6e;">→ Retailer incentive to switch OPPO buyers to vivo</div>
-              <div style="background:#F4F7FB;border-radius:6px;padding:8px 12px;font-size:11px;color:#1a3c6e;">→ KOC content — "I switched from OPPO, here's why"</div>
-            </div>
-          </div>
-        </div>
+    <!-- HARVEST -->
+    <div class="bht-comp-panel" id="bht-comp-harvest">
+      <div class="bht-comp-card" style="border-top:3px solid #1a3c6e;">
+        <div class="bht-harvest-stat">22%</div>
+        <div class="bht-harvest-desc">of new vivo TN users came from OPPO/realme in H1 2026. The floor collapsed. We caught the fall. Now we scale the harvest.</div>
+      </div>
+      <div class="bht-comp-card" style="border-top:3px solid #16a34a;">
+        <div class="bht-comp-eyebrow" style="color:#16a34a;">3 HARVEST ACTIONS — H2 2026</div>
+        <div class="bht-action-row"><div class="bht-action-num">01</div><div class="bht-action-text"><strong>Trade-in program</strong> — OPPO/realme device accepted. Retailer gets incentive. Consumer gets upgrade path.</div></div>
+        <div class="bht-action-row"><div class="bht-action-num">02</div><div class="bht-action-text"><strong>Retailer incentive</strong> — push OPPO/realme users toward vivo at the counter. Train + motivate.</div></div>
+        <div class="bht-action-row"><div class="bht-action-num">03</div><div class="bht-action-text"><strong>KOC switch content</strong> — real TN users who switched from OPPO/realme telling their story.</div></div>
       </div>
     </div>
+
   </div>
 
   <!-- PANEL 3: IMAGERY -->
   <div class="bht-panel" id="bht-imagery">
-    <div style="font-size:11px;color:#6B7A99;margin-bottom:14px;">Click any card to see the H2 fix plan</div>
+    <div style="font-size:11px;color:#6B7A99;margin-bottom:16px;">Click any card to flip — see the H2 fix plan on the back</div>
     <div class="bht-img-grid">
 
+      <!-- TRUSTWORTHY — WIN -->
       <div class="bht-img-card bht-img-win" onclick="this.classList.toggle('flipped')">
         <div class="front">
-          <div class="bht-badge win">✓ GAINED No.1</div>
-          <div style="font-size:13px;font-weight:700;color:#1a3c6e;margin-bottom:8px;">TRUSTWORTHY</div>
-          <div style="display:flex;flex-direction:column;gap:4px;">
-            <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:9px;color:#9AA3B5;width:30px;">2025</span><div style="flex:1;background:#C8E6C9;border-radius:3px;height:14px;"><div style="width:70%;height:100%;background:#81C784;border-radius:3px;"></div></div><span style="font-size:10px;color:#6B7A99;">107</span></div>
-            <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:9px;color:#2E7D32;font-weight:700;width:30px;">2026</span><div style="flex:1;background:#C8E6C9;border-radius:3px;height:14px;"><div style="width:73%;height:100%;background:#2E7D32;border-radius:3px;"></div></div><span style="font-size:10px;color:#2E7D32;font-weight:700;">110</span></div>
+          <div class="bht-badge win" style="font-size:10px;font-weight:800;color:#16a34a;background:#F0FDF4;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:6px;">✓ GAINED No.1</div>
+          <div class="bht-img-title">TRUSTWORTHY</div>
+          <div class="bht-img-bars">
+            <div class="bht-img-bar-row">
+              <div class="bht-img-bar-year">2025</div>
+              <div class="bht-img-bar-track"><div class="bht-img-bar-fill y2025" style="width:71%;"></div></div>
+              <div class="bht-img-bar-val">107</div>
+            </div>
+            <div class="bht-img-bar-row">
+              <div class="bht-img-bar-year">2026</div>
+              <div class="bht-img-bar-track"><div class="bht-img-bar-fill y2026" style="width:73%;"></div></div>
+              <div class="bht-img-bar-val">110</div>
+            </div>
           </div>
-          <div style="font-size:10px;color:#2E7D32;margin-top:8px;font-weight:700;">3rd → No.1 in TN</div>
-          <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Tap to see H2 plan</div>
+          <div class="bht-img-verdict">3rd → No.1 in TN</div>
+          <div class="bht-img-flip-hint">Tap to see H2 plan →</div>
         </div>
         <div class="back">
-          <div class="bht-badge win">H2 PLAN</div>
-          <div style="font-size:12px;font-weight:700;color:#2E7D32;margin-bottom:8px;">DEFEND & AMPLIFY</div>
-          <div style="font-size:10px;color:#3A4A6B;line-height:1.6;">Trustworthy is No.1 — protect it. Service excellence, after-sales SOPs, VBA quality improvement. WOM campaigns that showcase real owner experiences. This is our loyalty engine.</div>
+          <div class="bht-img-back-label">DEFEND &amp; AMPLIFY</div>
+          Trustworthy is No.1 — protect it. Service excellence, after-sales SOPs, VBA quality control, WOM activation. Never let this slip.
         </div>
       </div>
 
+      <!-- BELONGINGNESS — WIN -->
       <div class="bht-img-card bht-img-win" onclick="this.classList.toggle('flipped')">
         <div class="front">
-          <div class="bht-badge win">✓ TIED No.1</div>
-          <div style="font-size:13px;font-weight:700;color:#1a3c6e;margin-bottom:8px;">BELONGINGNESS</div>
-          <div style="display:flex;flex-direction:column;gap:4px;">
-            <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:9px;color:#9AA3B5;width:30px;">2025</span><div style="flex:1;background:#C8E6C9;border-radius:3px;height:14px;"><div style="width:68%;height:100%;background:#81C784;border-radius:3px;"></div></div><span style="font-size:10px;color:#6B7A99;">103</span></div>
-            <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:9px;color:#2E7D32;font-weight:700;width:30px;">2026</span><div style="flex:1;background:#C8E6C9;border-radius:3px;height:14px;"><div style="width:71%;height:100%;background:#2E7D32;border-radius:3px;"></div></div><span style="font-size:10px;color:#2E7D32;font-weight:700;">106</span></div>
+          <div class="bht-badge win" style="font-size:10px;font-weight:800;color:#16a34a;background:#F0FDF4;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:6px;">✓ TIED No.1</div>
+          <div class="bht-img-title">BELONGINGNESS</div>
+          <div class="bht-img-bars">
+            <div class="bht-img-bar-row">
+              <div class="bht-img-bar-year">2025</div>
+              <div class="bht-img-bar-track"><div class="bht-img-bar-fill y2025" style="width:69%;"></div></div>
+              <div class="bht-img-bar-val">103</div>
+            </div>
+            <div class="bht-img-bar-row">
+              <div class="bht-img-bar-year">2026</div>
+              <div class="bht-img-bar-track"><div class="bht-img-bar-fill y2026" style="width:71%;"></div></div>
+              <div class="bht-img-bar-val">106</div>
+            </div>
           </div>
-          <div style="font-size:10px;color:#2E7D32;margin-top:8px;font-weight:700;">4th → Tied No.1 TN</div>
-          <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Tap to see H2 plan</div>
+          <div class="bht-img-verdict">4th → Tied No.1 TN</div>
+          <div class="bht-img-flip-hint">Tap to see H2 plan →</div>
         </div>
         <div class="back">
-          <div class="bht-badge win">H2 PLAN</div>
-          <div style="font-size:12px;font-weight:700;color:#2E7D32;margin-bottom:8px;">CONVERT TO PREFERENCE</div>
-          <div style="font-size:10px;color:#3A4A6B;line-height:1.6;">Belongingness is high but Preference is flat. Gap between "I like vivo" and "I choose vivo" is the H2 problem. Blue collar and white collar circle events. KOC community — people who belong.</div>
+          <div class="bht-img-back-label">CONVERT TO PREFERENCE</div>
+          Blue collar and white collar circle events. KOC community building. Turn belonging into preference and purchase intent.
         </div>
       </div>
 
+      <!-- CAMERA — GAP -->
       <div class="bht-img-card bht-img-gap" onclick="this.classList.toggle('flipped')">
         <div class="front">
-          <div class="bht-badge gap">✗ ERODED</div>
-          <div style="font-size:13px;font-weight:700;color:#C62828;margin-bottom:8px;">CAMERA</div>
-          <div style="display:flex;flex-direction:column;gap:4px;">
-            <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:9px;color:#9AA3B5;width:30px;">2025</span><div style="flex:1;background:#FECACA;border-radius:3px;height:14px;"><div style="width:80%;height:100%;background:#FCA5A5;border-radius:3px;"></div></div><span style="font-size:10px;color:#6B7A99;">120</span></div>
-            <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:9px;color:#C62828;font-weight:700;width:30px;">2026</span><div style="flex:1;background:#FECACA;border-radius:3px;height:14px;"><div style="width:71%;height:100%;background:#C62828;border-radius:3px;"></div></div><span style="font-size:10px;color:#C62828;font-weight:700;">106</span></div>
+          <div class="bht-badge gap" style="font-size:10px;font-weight:800;color:#dc2626;background:#FEF2F2;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:6px;">✗ ERODED</div>
+          <div class="bht-img-title" style="color:#dc2626;">CAMERA</div>
+          <div class="bht-img-bars">
+            <div class="bht-img-bar-row">
+              <div class="bht-img-bar-year">2025</div>
+              <div class="bht-img-bar-track"><div class="bht-img-bar-fill y2025" style="width:80%;"></div></div>
+              <div class="bht-img-bar-val">120</div>
+            </div>
+            <div class="bht-img-bar-row">
+              <div class="bht-img-bar-year">2026</div>
+              <div class="bht-img-bar-track"><div class="bht-img-bar-fill y2026" style="width:71%;"></div></div>
+              <div class="bht-img-bar-val">106</div>
+            </div>
           </div>
-          <div style="font-size:10px;color:#C62828;margin-top:8px;font-weight:700;">Apple now leads TN: 111</div>
-          <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Tap to see H2 fix</div>
+          <div class="bht-img-verdict">Apple now leads TN: 111</div>
+          <div class="bht-img-flip-hint">Tap to see H2 fix →</div>
         </div>
         <div class="back">
-          <div class="bht-badge gap">H2 FIX</div>
-          <div style="font-size:12px;font-weight:700;color:#C62828;margin-bottom:8px;">REBUILD CAMERA LEAD</div>
-          <div style="font-size:10px;color:#3A4A6B;line-height:1.6;">X/T series camera experience at retail. Photography workshops with KOLs. In-channel demo corners. Target: index back above 115 and beat Apple in TN by H2 end.</div>
+          <div class="bht-img-back-label">REBUILD CAMERA LEAD</div>
+          X/T series camera demo at every A+ outlet. KOL workshops. Demo corners. Comparison content vs Apple. Target index above 115.
         </div>
       </div>
 
+      <!-- INTL BRAND — GAP -->
       <div class="bht-img-card bht-img-gap" onclick="this.classList.toggle('flipped')">
         <div class="front">
-          <div class="bht-badge gap">✗ CRITICAL</div>
-          <div style="font-size:13px;font-weight:700;color:#C62828;margin-bottom:8px;">INTL BRAND</div>
-          <div style="display:flex;flex-direction:column;gap:4px;">
-            <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:9px;color:#9AA3B5;width:30px;">2025</span><div style="flex:1;background:#FECACA;border-radius:3px;height:14px;"><div style="width:71%;height:100%;background:#FCA5A5;border-radius:3px;"></div></div><span style="font-size:10px;color:#6B7A99;">107</span></div>
-            <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:9px;color:#C62828;font-weight:700;width:30px;">2026</span><div style="flex:1;background:#FECACA;border-radius:3px;height:14px;"><div style="width:60%;height:100%;background:#C62828;border-radius:3px;"></div></div><span style="font-size:10px;color:#C62828;font-weight:700;">91</span></div>
+          <div class="bht-badge gap" style="font-size:10px;font-weight:800;color:#dc2626;background:#FEF2F2;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:6px;">✗ CRITICAL</div>
+          <div class="bht-img-title" style="color:#dc2626;">INTL BRAND</div>
+          <div class="bht-img-bars">
+            <div class="bht-img-bar-row">
+              <div class="bht-img-bar-year">2025</div>
+              <div class="bht-img-bar-track"><div class="bht-img-bar-fill y2025" style="width:71%;"></div></div>
+              <div class="bht-img-bar-val">107</div>
+            </div>
+            <div class="bht-img-bar-row">
+              <div class="bht-img-bar-year">2026</div>
+              <div class="bht-img-bar-track"><div class="bht-img-bar-fill y2026" style="width:61%;"></div></div>
+              <div class="bht-img-bar-val">91</div>
+            </div>
           </div>
-          <div style="font-size:10px;color:#C62828;margin-top:8px;font-weight:700;">National went +7 opposite</div>
-          <div style="font-size:9px;color:#9AA3B5;margin-top:2px;">Tap to see H2 fix</div>
+          <div class="bht-img-verdict">National went +7 opposite</div>
+          <div class="bht-img-flip-hint">Tap to see H2 fix →</div>
         </div>
         <div class="back">
-          <div class="bht-badge gap">H2 FIX</div>
-          <div style="font-size:12px;font-weight:700;color:#C62828;margin-bottom:8px;">CLOSE PREMIUM GAP</div>
-          <div style="font-size:10px;color:#3A4A6B;line-height:1.6;">Localize HQ premium assets for TN. Premium model launch activations in Chennai and Coimbatore. White collar circle events. Target: International Brand index back above 100.</div>
+          <div class="bht-img-back-label">CLOSE PREMIUM GAP</div>
+          Localize HQ premium assets. Launch activations Chennai + Coimbatore. White collar circles. Premium OOH OMR + Anna Salai. No price messaging.
         </div>
       </div>
 
@@ -5265,58 +5359,87 @@ img,video,iframe,canvas,svg{max-width:100%;}
 
   <!-- PANEL 4: H2 PLAN -->
   <div class="bht-panel" id="bht-h2plan">
-    <div style="font-size:11px;color:#6B7A99;margin-bottom:14px;">Click any priority to expand the action plan</div>
+    <div style="font-size:11px;color:#6B7A99;margin-bottom:16px;">Click any priority to expand the full action plan</div>
     <div class="bht-plan-grid">
 
       <div class="bht-plan-card" onclick="this.classList.toggle('open')">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:32px;height:32px;background:#1a3c6e;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;">P1</div>
-          <div><div style="font-size:12px;font-weight:700;color:#1a3c6e;">Rebuild Camera Lead</div><div style="font-size:10px;color:#9AA3B5;">Target index above 115 · Beat Apple TN</div></div>
-          <div style="margin-left:auto;font-size:14px;color:#1a3c6e;">+</div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+          <div>
+            <div class="bht-plan-num">P1 · CAMERA</div>
+            <div class="bht-plan-title">Rebuild Camera Lead</div>
+            <div class="bht-plan-sub">Target index above 115 · Beat Apple TN</div>
+          </div>
+          <div class="bht-plan-toggle">+</div>
         </div>
         <div class="bht-plan-detail">
-          X/T series camera experience at every A+ retail outlet · Photography workshop series with KOLs ·
-          In-channel demo corners — not a poster, a working demo · Camera comparison content targeting Apple users ·
-          Track index monthly vs Apple and Samsung.
+          <ul>
+            <li>X/T series camera demo at every A+ outlet in TN</li>
+            <li>KOL workshops — hands-on camera challenge content</li>
+            <li>Demo corners with Apple/Samsung side-by-side comparison</li>
+            <li>Monthly index tracking vs Apple and Samsung TN</li>
+          </ul>
+          <div class="bht-plan-kpi">Target: Index &gt;115 by Mar 2027</div>
         </div>
       </div>
 
       <div class="bht-plan-card" onclick="this.classList.toggle('open')">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:32px;height:32px;background:#1a3c6e;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;">P2</div>
-          <div><div style="font-size:12px;font-weight:700;color:#1a3c6e;">Close Premium Gaps</div><div style="font-size:10px;color:#9AA3B5;">Intl Brand above 100 · Status + Security</div></div>
-          <div style="margin-left:auto;font-size:14px;color:#1a3c6e;">+</div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+          <div>
+            <div class="bht-plan-num">P2 · PREMIUM</div>
+            <div class="bht-plan-title">Close Premium Gaps</div>
+            <div class="bht-plan-sub">Intl Brand above 100 · Status + Security</div>
+          </div>
+          <div class="bht-plan-toggle">+</div>
         </div>
         <div class="bht-plan-detail">
-          Localize HQ premium assets for TN market · Premium model launch activations Chennai + Coimbatore ·
-          White collar circle events — Founder Circle, Doctor Circle, Finance Circle ·
-          Premium OOH on OMR and Anna Salai · No price messaging — brand imagery only.
+          <ul>
+            <li>Localize HQ premium assets for TN market</li>
+            <li>Launch activations — Chennai + Coimbatore premium zones</li>
+            <li>White collar circles — IT parks + corporate campuses</li>
+            <li>Premium OOH — OMR and Anna Salai corridors</li>
+            <li>Zero price messaging in premium touchpoints</li>
+          </ul>
+          <div class="bht-plan-kpi">Target: Intl Brand index &gt;100</div>
         </div>
       </div>
 
       <div class="bht-plan-card" onclick="this.classList.toggle('open')">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:32px;height:32px;background:#1a3c6e;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;">P3</div>
-          <div><div style="font-size:12px;font-weight:700;color:#1a3c6e;">Convert Trust → Purchase</div><div style="font-size:10px;color:#9AA3B5;">Trade-in · OPPO/realme churner targeting</div></div>
-          <div style="margin-left:auto;font-size:14px;color:#1a3c6e;">+</div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+          <div>
+            <div class="bht-plan-num">P3 · CONVERSION</div>
+            <div class="bht-plan-title">Convert Trust → Purchase</div>
+            <div class="bht-plan-sub">Trade-in · OPPO/realme churner targeting</div>
+          </div>
+          <div class="bht-plan-toggle">+</div>
         </div>
         <div class="bht-plan-detail">
-          Trade-in offer specifically for OPPO/realme devices · Retailer incentive at point of switch ·
-          KOC content "I switched from OPPO, here's why" · Member-get-member referral program ·
-          Vivo Week loyalty event — cashback for existing users who refer new buyers.
+          <ul>
+            <li>OPPO/realme trade-in program — retailer incentivised</li>
+            <li>KOC switch content — real users switching stories</li>
+            <li>Member-get-member referral push</li>
+            <li>Vivo Week loyalty conversion drive</li>
+          </ul>
+          <div class="bht-plan-kpi">Target: Preference + Purchase → above national avg</div>
         </div>
       </div>
 
       <div class="bht-plan-card" onclick="this.classList.toggle('open')">
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div style="width:32px;height:32px;background:#1a3c6e;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;">P4</div>
-          <div><div style="font-size:12px;font-weight:700;color:#1a3c6e;">Own WOM Vacancy</div><div style="font-size:10px;color:#9AA3B5;">Xiaomi WOM collapsed · NPS + referral</div></div>
-          <div style="margin-left:auto;font-size:14px;color:#1a3c6e;">+</div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+          <div>
+            <div class="bht-plan-num">P4 · WOM</div>
+            <div class="bht-plan-title">Own WOM Vacancy</div>
+            <div class="bht-plan-sub">Xiaomi WOM collapsed · NPS + referral</div>
+          </div>
+          <div class="bht-plan-toggle">+</div>
         </div>
         <div class="bht-plan-detail">
-          Xiaomi WOM collapsed in TN — vacuum exists now · NPS program: collect scores, act on gaps ·
-          KOC community — video shoot concept that makes owners want to participate ·
-          Social ads genuinely surprising to TN audiences — people share because they want to, not because we asked.
+          <ul>
+            <li>Fill Xiaomi WOM vacuum — act before Samsung does</li>
+            <li>NPS program — score every buyer, act on detractors</li>
+            <li>KOC community video shoot — authentic TN voices</li>
+            <li>Social ads designed to be shared, not just seen</li>
+          </ul>
+          <div class="bht-plan-kpi">Target: Retention stays No.1 · Loyalty above 40%</div>
         </div>
       </div>
 
@@ -5342,6 +5465,14 @@ function bhtComp(id,btn){
     .forEach(function(b){b.classList.remove('active');});
   document.getElementById('bht-comp-'+id).style.display='block';
   btn.classList.add('active');
+}
+function bhtCompTab(id, el) {
+  document.querySelectorAll('.bht-comp-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.bht-tog-btn').forEach(function(b){
+    b.style.background='#fff';b.style.color='#6B7A99';b.style.borderColor='#E8EDF6';
+  });
+  document.getElementById('bht-comp-'+id).classList.add('active');
+  el.style.background='#1a3c6e';el.style.color='#fff';el.style.borderColor='#1a3c6e';
 }
 </script>
 
