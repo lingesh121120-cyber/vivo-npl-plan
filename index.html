@@ -2438,6 +2438,25 @@ img,video,iframe,canvas,svg{max-width:100%;}
   .h2v-dirs,.h2v-seg,.h2v-grid6,.h2v-stores,.h2v-show{grid-template-columns:1fr;}
 }
 
+/* ── HLV: Vendor Intelligence inside H1 Highlights ── */
+.hlv-wrap{margin-top:2.4rem;border-top:2px solid var(--vblue,#1a3c6e);padding-top:1.6rem;}
+.hlv-header{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:0.8rem;margin-bottom:1.2rem;}
+.hlv-title{font-size:1.05rem;font-weight:800;color:var(--ink,#0d1b2a);letter-spacing:0.03em;text-transform:uppercase;}
+.hlv-sub{font-size:0.72rem;color:var(--ink3,#6b7a8d);margin-top:0.25rem;}
+.hlv-stats{display:flex;gap:0.7rem;flex-wrap:wrap;margin-bottom:1.1rem;}
+.hlv-stat{background:var(--vblue,#1a3c6e);color:#fff;border-radius:8px;padding:0.55rem 1rem;text-align:center;min-width:90px;}
+.hlv-stat .hlv-num{font-size:1.4rem;font-weight:800;line-height:1;}
+.hlv-stat .hlv-num.g{color:#4ade80;}
+.hlv-stat .hlv-lbl{font-size:0.6rem;margin-top:0.2rem;opacity:0.85;text-transform:uppercase;letter-spacing:0.04em;}
+.hlv-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.hlv-tab{padding:0.45rem 1.1rem;border-radius:20px;border:2px solid var(--vblue,#1a3c6e);background:#fff;color:var(--vblue,#1a3c6e);font-size:0.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:0.05em;transition:all 0.18s;}
+.hlv-tab.on{background:var(--vblue,#1a3c6e);color:#fff;}
+.hlv-tab:hover:not(.on){background:#eef2fa;}
+.hlv-panel{display:none;animation:hlvFade 0.2s ease;}
+.hlv-panel.on{display:block;}
+@keyframes hlvFade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+.hlv-banner{background:#f0f4ff;border-left:3px solid var(--vblue,#1a3c6e);padding:0.5rem 0.9rem;font-size:0.67rem;color:var(--ink,#0d1b2a);border-radius:0 6px 6px 0;margin-bottom:0.9rem;line-height:1.5;}
+
 </style>
 </head>
 <body>
@@ -2706,7 +2725,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
     </div>
     <div class="kt-sec" id="v80-story"><div class="kt-story">
     <div class="ey">The V80 Creative Brief &middot; ZEISS Telephoto &amp; Cinematic Video</div>
-    <div class="stitle">Every moment deserves a cinematic frame.</div>
+    <div class="stitle">Make life feel Cinematic.</div>
     <div class="ssub">The V80 story is built on one capability &mdash; <strong>ZEISS Telephoto &amp; Cinematic Video</strong>. Creators tell a real story, the phone appears organically, and the cinematic quality shows through the content &mdash; never explained.</div>
     <div class="theme-banner"><div class="tb-ico">&#127909;</div><div><div class="tb-t">Style &mdash; Premium &middot; Aspirational &middot; Cinematic &middot; Fashion</div><div class="tb-s">40-second narrative &middot; ZEISS Telephoto framing &middot; Cinematic Video Mode as the hero moment.</div></div></div>
     <div class="sb-head" style="margin-top:2rem;">Video Concepts &middot; Storyboards</div>
@@ -3260,7 +3279,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
       </div>
     </div>
   </div>
-<div class="kmpage" id="page-vendor">
+<div class="kmpage" id="page-vendor" style="display:none;">
   <div class="kt-bar">
     <div style="display:flex;align-items:center;gap:1.1rem;min-width:0;">
       <button class="kt-back" onclick="showLanding()"><span class="bk-ar">&larr;</span> Back to Hub</button>
@@ -4516,6 +4535,165 @@ img,video,iframe,canvas,svg{max-width:100%;}
       </div>
     </div>
   </div>
+<div class="hlv-wrap">
+  <div class="hlv-header">
+    <div>
+      <div class="hlv-title">DOP Vendor Intelligence</div>
+      <div class="hlv-sub">H1 vendor scorecard · capability matrix · selection logic — how we chose who shoots for vivo TN</div>
+    </div>
+  </div>
+  <div class="hlv-stats">
+    <div class="hlv-stat"><div class="hlv-num g">4</div><div class="hlv-lbl">Ranked Existing</div></div>
+    <div class="hlv-stat"><div class="hlv-num">4</div><div class="hlv-lbl">New Vendors</div></div>
+    <div class="hlv-stat"><div class="hlv-num">8</div><div class="hlv-lbl">In Logic Matrix</div></div>
+    <div class="hlv-stat"><div class="hlv-num">8</div><div class="hlv-lbl">Capabilities Scored</div></div>
+  </div>
+  <div class="hlv-tabs">
+    <button class="hlv-tab on" onclick="hlvSwitch('hlv-score',this)">Existing Vendors</button>
+    <button class="hlv-tab" onclick="hlvSwitch('hlv-new',this)">New Vendors</button>
+    <button class="hlv-tab" onclick="hlvSwitch('hlv-matrix',this)">Logic Matrix</button>
+  </div>
+
+  <!-- PANEL: Existing Vendors -->
+  <div class="hlv-panel on" id="hlv-score">
+    <div class="hlv-banner">Ranking = weighted score · Views 30% &nbsp; Engagement 20% &nbsp; Do's &amp; Don'ts 15% &nbsp; Daily involvement 15% &nbsp; Colour grading 10% &nbsp; Timeline 10% · Ratings scored 1–5</div>
+    <div class="vsec"><div class="lb">
+      <div class="lbrow top">
+        <div class="lb-rank">#1</div>
+        <img class="lb-logo" src="assets/embedded/c2b0a4e1255557d4.png" alt="Deepak">
+        <div class="lb-mid">
+          <div class="lb-name">Deepak</div>
+          <div class="lb-handle">@9by9.prod</div>
+          <div class="lb-chips">
+            <span class="vchip"><b>885K</b> views</span>
+            <span class="vchip"><b>0.33%</b> eng rate</span>
+            <span class="vchip">Do's &amp; Don'ts <b>5/5</b></span>
+            <span class="vchip">Involvement <b>5/5</b></span>
+            <span class="vchip">Colour <b>5/5</b></span>
+            <span class="vchip">Timeline <b>5/5</b></span>
+          </div>
+          <div class="lb-note">Followed do's &amp; don'ts very carefully; excellent involvement &amp; colour grading; on time.</div>
+        </div>
+        <div class="lb-score"><div class="sv">100</div><div class="sl">Weighted Score</div></div>
+      </div>
+      <div class="lbrow">
+        <div class="lb-rank">#2</div>
+        <img class="lb-logo" src="assets/embedded/fa1e2ecff6f8b304.png" alt="Ishvaar">
+        <div class="lb-mid">
+          <div class="lb-name">Ishvaar</div>
+          <div class="lb-handle">@lsd_production</div>
+          <div class="lb-chips">
+            <span class="vchip"><b>885K</b> views</span>
+            <span class="vchip"><b>0.24%</b> eng rate</span>
+            <span class="vchip">Do's &amp; Don'ts <b>4/5</b></span>
+            <span class="vchip">Involvement <b>5/5</b></span>
+            <span class="vchip">Colour <b>4/5</b></span>
+            <span class="vchip">Timeline <b>5/5</b></span>
+          </div>
+          <div class="lb-note">Followed brief well; excellent daily involvement; good colour grading; on time.</div>
+        </div>
+        <div class="lb-score"><div class="sv">73.8</div><div class="sl">Weighted Score</div></div>
+      </div>
+      <div class="lbrow">
+        <div class="lb-rank">#3</div>
+        <img class="lb-logo" src="assets/embedded/901b02eaa06a6659.png" alt="Dhanapal">
+        <div class="lb-mid">
+          <div class="lb-name">Dhanapal</div>
+          <div class="lb-handle">@genvybez</div>
+          <div class="lb-chips">
+            <span class="vchip"><b>723K</b> views</span>
+            <span class="vchip"><b>0.20%</b> eng rate</span>
+            <span class="vchip">Do's &amp; Don'ts <b>2/5</b></span>
+            <span class="vchip">Involvement <b>2/5</b></span>
+            <span class="vchip">Colour <b>4/5</b></span>
+            <span class="vchip">Timeline <b>5/5</b></span>
+          </div>
+          <div class="lb-note">Strong reach but brief not followed; storyboard didn't match final output; below-average follow-up.</div>
+        </div>
+        <div class="lb-score"><div class="sv">64.4</div><div class="sl">Weighted Score</div></div>
+      </div>
+      <div class="lbrow">
+        <div class="lb-rank">#4</div>
+        <img class="lb-logo" src="assets/embedded/3432d529a4f1dea4.png" alt="Midhun">
+        <div class="lb-mid">
+          <div class="lb-name">Midhun</div>
+          <div class="lb-handle">@bosemediaproduction</div>
+          <div class="lb-chips">
+            <span class="vchip"><b>418K</b> views</span>
+            <span class="vchip">Do's &amp; Don'ts <b>3/5</b></span>
+            <span class="vchip">Involvement <b>4/5</b></span>
+            <span class="vchip">Colour <b>3/5</b></span>
+            <span class="vchip">Timeline <b>4/5</b></span>
+          </div>
+          <div class="lb-note">Decent execution; moderate brief adherence; acceptable colour grading and timeline.</div>
+        </div>
+        <div class="lb-score"><div class="sv">57.2</div><div class="sl">Weighted Score</div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- PANEL: New Vendors — content copied from vsec-new in page-vendor -->
+  <div class="hlv-panel" id="hlv-new">
+    <div class="hlv-banner">New vendors evaluated this cycle — not yet ranked on weighted score. Assessment based on portfolio review and briefing sessions.</div>
+    <div class="vsec" id="hlv-new-inner"><div class="vsec"><div class="nvgrid"><div class="nvcard">
+      <div class="nv-head"><img class="nv-logo" src="assets/embedded/30bde9342ceb101d.png" alt="Mark Hubert"><div style="min-width:0;"><div class="nv-name">Mark Hubert</div><div class="nv-co">Indie South Film Company</div></div><span class="nv-badge rec">Recommended</span></div>
+      <ul class="nv-why"><li>Influencer shoots - already doing for other brands</li><li>Good colour grading</li><li>Relatively just started his own production</li><li>more into cine field - short films just starting</li></ul>
+      <div class="nv-links"><a class="nv-link" href="https://www.instagram.com/mark_hubert/" target="_blank" rel="noopener">Personal IG</a><a class="nv-link" href="https://www.instagram.com/indiesouthoffl/" target="_blank" rel="noopener">Business</a><a class="nv-link" href="https://www.instagram.com/p/DWJae4gDJj6/" target="_blank" rel="noopener">&#9658; Sample Video</a></div>
+    </div><div class="nvcard">
+      <div class="nv-head"><img class="nv-logo" src="assets/embedded/28ce3212c4c813e4.png" alt="Naveen"><div style="min-width:0;"><div class="nv-name">Naveen</div><div class="nv-co">Color Kadai</div></div><span class="nv-badge top">Top Priority</span></div>
+      <ul class="nv-why"><li>Into the film industry - established</li><li>does a lot of commercials</li><li>good at colour grading</li></ul>
+      <div class="nv-links"><a class="nv-link" href="https://www.instagram.com/naveenkumar_filmmaker/reels/" target="_blank" rel="noopener">Personal IG</a><a class="nv-link" href="https://www.instagram.com/color_kadai/" target="_blank" rel="noopener">Business</a><a class="nv-link" href="https://www.instagram.com/reel/DPoNGwgk4wS/" target="_blank" rel="noopener">&#9658; Sample Video</a></div>
+    </div><div class="nvcard">
+      <div class="nv-head"><img class="nv-logo" src="assets/embedded/0bd037849e6553a9.png" alt="Cherin Paul"><div style="min-width:0;"><div class="nv-name">Cherin Paul</div><div class="nv-co">Director of Photography</div></div><span class="nv-badge top">Top Priority</span></div>
+      <ul class="nv-why"><li>has done a lot of commercial ads</li><li>based out of kerala but willing to travel to chennai</li><li>good experience and colour grading</li></ul>
+      <div class="nv-links"><a class="nv-link" href="https://www.instagram.com/cherin_paul/" target="_blank" rel="noopener">Personal IG</a><a class="nv-link" href="https://www.cherinpaul.com/" target="_blank" rel="noopener">Business</a><a class="nv-link" href="https://www.instagram.com/p/DTVvKBXE8dz/" target="_blank" rel="noopener">&#9658; Sample Video</a></div>
+    </div><div class="nvcard">
+      <div class="nv-head"><img class="nv-logo" src="assets/embedded/813197b69bc465cc.png" alt="Akash"><div style="min-width:0;"><div class="nv-name">Akash</div><div class="nv-co">them*</div></div><span class="nv-badge rec">Recommended</span></div>
+      <ul class="nv-why"><li>good with documentary style videos (showcased)</li><li>good colour grading</li><li>good with cinematic shots</li></ul>
+      <div class="nv-links"><a class="nv-link" href="https://www.instagram.com/thoduvanam/" target="_blank" rel="noopener">Personal IG</a><a class="nv-link" href="https://www.instagram.com/p/DHTPFeTyh2J/" target="_blank" rel="noopener">Business</a><a class="nv-link" href="https://www.instagram.com/reel/DHTPFeTyh2J/" target="_blank" rel="noopener">&#9658; Sample Video</a></div>
+    </div></div></div></div>
+  </div>
+
+  <!-- PANEL: Logic Matrix — content copied from vsec-matrix in page-vendor -->
+  <div class="hlv-panel" id="hlv-matrix">
+    <div class="hlv-banner">Capability matrix across 8 vendors · 8 production dimensions · ratings: Best / Yes / Moderate / No / Yet to Confirm</div>
+    <div class="vsec" id="hlv-matrix-inner"><div class="vsec"><div class="vmatrix"><table><thead><tr><th>Vendor</th><th>Type</th><th>Colour Grading</th><th>Cinematic Video</th><th>Storytelling</th><th>Suitable for High-Quality / Premium Video</th><th>Lighting &amp; Composition</th><th>Editing &amp; Pacing</th><th>Versatility Across Formats</th><th>Concept-to-Output Consistency</th></tr></thead><tbody><tr>
+    <td><div style="display:flex;align-items:center;gap:0.5rem;"><img class="lb-logo" style="width:30px;height:30px;border-radius:6px;" src="assets/embedded/c2b0a4e1255557d4.png" alt=""><div><div class="tb" style="font-size:0.8rem;">Deepak</div><div style="font-size:0.62rem;color:var(--ink3);">@9by9.prod</div></div></div></td>
+    <td><span class="collab-tag old">Old</span></td>
+    <td><span class="vpill best">Best</span></td><td><span class="vpill best">Best</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill best">Best</span></td><td><span class="vpill yes">Yes</span></td>
+  </tr><tr>
+    <td><div style="display:flex;align-items:center;gap:0.5rem;"><img class="lb-logo" style="width:30px;height:30px;border-radius:6px;" src="assets/embedded/fa1e2ecff6f8b304.png" alt=""><div><div class="tb" style="font-size:0.8rem;">Ishvaar</div><div style="font-size:0.62rem;color:var(--ink3);">@lsd_production</div></div></div></td>
+    <td><span class="collab-tag old">Old</span></td>
+    <td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill moderate">Moderate</span></td><td><span class="vpill moderate">Moderate</span></td><td><span class="vpill yes">Yes</span></td>
+  </tr><tr>
+    <td><div style="display:flex;align-items:center;gap:0.5rem;"><img class="lb-logo" style="width:30px;height:30px;border-radius:6px;" src="assets/embedded/901b02eaa06a6659.png" alt=""><div><div class="tb" style="font-size:0.8rem;">Dhanapal</div><div style="font-size:0.62rem;color:var(--ink3);">@genvybez</div></div></div></td>
+    <td><span class="collab-tag old">Old</span></td>
+    <td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill no">No</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill no">No</span></td><td><span class="vpill no">No</span></td><td><span class="vpill no">No</span></td><td><span class="vpill no">No</span></td>
+  </tr><tr>
+    <td><div style="display:flex;align-items:center;gap:0.5rem;"><img class="lb-logo" style="width:30px;height:30px;border-radius:6px;" src="assets/embedded/3432d529a4f1dea4.png" alt=""><div><div class="tb" style="font-size:0.8rem;">Midhun</div><div style="font-size:0.62rem;color:var(--ink3);">@bosemediaproduction</div></div></div></td>
+    <td><span class="collab-tag old">Old</span></td>
+    <td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill moderate">Moderate</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill moderate">Moderate</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill no">No</span></td>
+  </tr><tr>
+    <td><div style="display:flex;align-items:center;gap:0.5rem;"><img class="lb-logo" style="width:30px;height:30px;border-radius:6px;" src="assets/embedded/30bde9342ceb101d.png" alt=""><div><div class="tb" style="font-size:0.8rem;">Mark Hubert</div><div style="font-size:0.62rem;color:var(--ink3);">Indie South Film Company</div></div></div></td>
+    <td><span class="collab-tag new">New</span></td>
+    <td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill ytc">Yet to Confirm</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill ytc">Yet to Confirm</span></td><td><span class="vpill ytc">Yet to Confirm</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill ytc">Yet to Confirm</span></td>
+  </tr><tr>
+    <td><div style="display:flex;align-items:center;gap:0.5rem;"><img class="lb-logo" style="width:30px;height:30px;border-radius:6px;" src="assets/embedded/28ce3212c4c813e4.png" alt=""><div><div class="tb" style="font-size:0.8rem;">Naveen</div><div style="font-size:0.62rem;color:var(--ink3);">Color Kadai</div></div></div></td>
+    <td><span class="collab-tag new">New</span></td>
+    <td><span class="vpill best">Best</span></td><td><span class="vpill best">Best</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill ytc">Yet to Confirm</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill ytc">Yet to Confirm</span></td>
+  </tr><tr>
+    <td><div style="display:flex;align-items:center;gap:0.5rem;"><img class="lb-logo" style="width:30px;height:30px;border-radius:6px;" src="assets/embedded/0bd037849e6553a9.png" alt=""><div><div class="tb" style="font-size:0.8rem;">Cherin Paul</div><div style="font-size:0.62rem;color:var(--ink3);">Director of Photography</div></div></div></td>
+    <td><span class="collab-tag new">New</span></td>
+    <td><span class="vpill best">Best</span></td><td><span class="vpill best">Best</span></td><td><span class="vpill best">Best</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill ytc">Yet to Confirm</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill best">Best</span></td><td><span class="vpill ytc">Yet to Confirm</span></td>
+  </tr><tr>
+    <td><div style="display:flex;align-items:center;gap:0.5rem;"><img class="lb-logo" style="width:30px;height:30px;border-radius:6px;" src="assets/embedded/813197b69bc465cc.png" alt=""><div><div class="tb" style="font-size:0.8rem;">Akash</div><div style="font-size:0.62rem;color:var(--ink3);">them*</div></div></div></td>
+    <td><span class="collab-tag new">New</span></td>
+    <td><span class="vpill yes">Yes</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill ytc">Yet to Confirm</span></td><td><span class="vpill yes">Yes</span></td><td><span class="vpill ytc">Yet to Confirm</span></td><td><span class="vpill ytc">Yet to Confirm</span></td><td><span class="vpill ytc">Yet to Confirm</span></td><td><span class="vpill ytc">Yet to Confirm</span></td>
+  </tr></tbody></table></div>
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.9rem;font-size:0.62rem;color:var(--ink3);align-items:center;"><span>Legend:</span><span class="vpill best">Best</span><span class="vpill yes">Yes</span><span class="vpill moderate">Moderate</span><span class="vpill no">No</span><span class="vpill ytc">Yet to Confirm</span></div></div></div>
+  </div>
+
+</div>
 <!-- MARCOM H1 PERFORMANCE — moved from Cost Analysis -->
 <div style="display:none;margin-top:2rem;border-top:1px solid rgba(11,23,48,0.10);padding-top:1.5rem;">
   <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7B9C;margin-bottom:1rem;">MARCOM H1 PERFORMANCE — APR-SEP 2026</div>
@@ -7774,6 +7952,13 @@ window.addEventListener('load',function(){setTimeout(function(){fitDeck();fitLan
 
 buildDots();updateCtr();['v80','xfold','s2fe'].forEach(initObs);
 setTimeout(function(){fitDeck();fitLanding();bindTabRails();},180);
+
+function hlvSwitch(id, el) {
+  document.querySelectorAll('.hlv-panel').forEach(p => p.classList.remove('on'));
+  document.querySelectorAll('.hlv-tab').forEach(t => t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  el.classList.add('on');
+}
 
 </script>
 
