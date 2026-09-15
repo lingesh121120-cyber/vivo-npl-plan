@@ -4980,7 +4980,29 @@ img,video,iframe,canvas,svg{max-width:100%;}
 .bht-panel.active{display:block;}
 
 /* FUNNEL BARS */
-.bht-funnel-row{display:grid;grid-template-columns:90px 1fr 55px 55px 55px;gap:8px;align-items:center;margin-bottom:8px;}
+.bht-funnel-row{display:grid;grid-template-columns:100px 1fr 62px 62px 55px;gap:8px;align-items:center;margin-bottom:10px;}
+.bht-dual-bars{display:flex;flex-direction:column;gap:4px;}
+.bht-dual-row{display:flex;align-items:center;gap:6px;}
+.bht-dual-yr{font-size:9px;font-weight:700;color:#9AA3B5;width:32px;flex-shrink:0;}
+.bht-dual-track{flex:1;background:#F0F4FF;border-radius:3px;height:13px;overflow:hidden;position:relative;}
+.bht-dual-fill{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:6px;font-size:9px;font-weight:700;color:#fff;white-space:nowrap;}
+.bht-dual-fill.h25{opacity:0.45;}
+.bht-dual-fill.h26{}
+.bht-dual-val{font-size:10px;font-weight:800;width:26px;text-align:right;flex-shrink:0;}
+.bht-dual-val.h25{color:#9AA3B5;}
+.bht-dual-delta{font-size:9px;font-weight:800;padding:1px 5px;border-radius:10px;white-space:nowrap;}
+.bht-dual-delta.up{background:#F0FDF4;color:#16a34a;}
+.bht-dual-delta.down{background:#FEF2F2;color:#dc2626;}
+.bht-dual-delta.flat{background:#F7F9FD;color:#9AA3B5;}
+/* Definitions panel */
+.bht-defs{margin-top:14px;background:#F7F9FD;border-radius:10px;padding:16px 18px;border:1px solid #E8EDF6;}
+.bht-defs-title{font-size:9px;font-weight:800;letter-spacing:0.1em;color:#6B7A99;text-transform:uppercase;margin-bottom:12px;}
+.bht-defs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.bht-def-item{border-left:2px solid #1a3c6e;padding-left:8px;}
+.bht-def-item.orange{border-left-color:#F57C00;}
+.bht-def-item.green{border-left-color:#2E7D32;}
+.bht-def-term{font-size:10px;font-weight:800;color:#0d1b2a;margin-bottom:2px;}
+.bht-def-desc{font-size:10px;color:#4A5568;line-height:1.5;}
 .bht-funnel-label{font-size:11px;font-weight:700;color:#1a3c6e;}
 .bht-bar-track{background:#E8EDF6;border-radius:4px;height:22px;overflow:hidden;position:relative;cursor:pointer;}
 .bht-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:10px;font-weight:700;color:#fff;transition:width 0.6s ease;}
@@ -5137,54 +5159,205 @@ img,video,iframe,canvas,svg{max-width:100%;}
   <!-- PANEL 1: FUNNEL -->
   <div class="bht-panel active" id="bht-funnel">
     <div style="background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:20px;margin-bottom:14px;">
-      <div style="display:grid;grid-template-columns:90px 1fr 55px 55px 55px;gap:8px;margin-bottom:10px;">
-        <div></div><div style="font-size:9px;color:#9AA3B5;font-weight:700;">TN SCORE</div>
+
+      <!-- HEADER ROW -->
+      <div style="display:grid;grid-template-columns:100px 1fr 62px 62px 55px;gap:8px;margin-bottom:12px;">
+        <div></div>
+        <div style="display:flex;gap:20px;align-items:center;">
+          <span style="font-size:9px;color:#9AA3B5;font-weight:700;">TN SCORE</span>
+          <span style="display:flex;align-items:center;gap:6px;font-size:9px;color:#9AA3B5;">
+            <span style="display:inline-block;width:28px;height:7px;background:#1a3c6e;border-radius:2px;opacity:0.4;"></span>H2 2025
+            <span style="display:inline-block;width:28px;height:7px;background:#1a3c6e;border-radius:2px;margin-left:6px;"></span>H1 2026
+          </span>
+        </div>
         <div style="font-size:9px;color:#9AA3B5;font-weight:700;text-align:center;">STATUS</div>
-        <div style="font-size:9px;color:#9AA3B5;font-weight:700;text-align:center;">VS LAST YR</div>
+        <div style="font-size:9px;color:#9AA3B5;font-weight:700;text-align:center;">VS LY</div>
         <div style="font-size:9px;color:#9AA3B5;font-weight:700;text-align:center;">NATIONAL</div>
       </div>
+
+      <!-- TOM: H2 2025=32% H1 2026=30% delta=-2pct -->
       <div class="bht-funnel-row">
         <div class="bht-funnel-label">TOM</div>
-        <div class="bht-bar-track"><div class="bht-bar-fill" style="width:30%;background:#1a3c6e;">30%</div><div class="bht-tooltip">TN: 30% · National: 25% · No.1 brand in TN</div></div>
-        <div class="bht-stat pos">No.1</div><div class="bht-stat pos">+2pct</div><div class="bht-nat">25%</div>
+        <div class="bht-dual-bars">
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2025</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h25" style="width:32%;background:#1a3c6e;">32%</div></div>
+            <div class="bht-dual-val h25">32%</div>
+          </div>
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2026</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h26" style="width:30%;background:#1a3c6e;">30%</div></div>
+            <div class="bht-dual-val">30%</div>
+          </div>
+        </div>
+        <div class="bht-stat pos">No.1</div>
+        <div class="bht-dual-delta down">-2pct</div>
+        <div class="bht-nat">25%</div>
       </div>
+
+      <!-- INTENT: H2 2025=96% H1 2026=98% delta=+2pct -->
       <div class="bht-funnel-row">
         <div class="bht-funnel-label">INTENT</div>
-        <div class="bht-bar-track"><div class="bht-bar-fill" style="width:98%;background:#1a3c6e;">98%</div><div class="bht-tooltip">TN: 98% · National: 83% · Near ceiling — exceptional</div></div>
-        <div class="bht-stat pos">Ceiling</div><div class="bht-stat pos">+1pct</div><div class="bht-nat">83%</div>
+        <div class="bht-dual-bars">
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2025</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h25" style="width:96%;background:#1a3c6e;">96%</div></div>
+            <div class="bht-dual-val h25">96%</div>
+          </div>
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2026</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h26" style="width:98%;background:#1a3c6e;">98%</div></div>
+            <div class="bht-dual-val">98%</div>
+          </div>
+        </div>
+        <div class="bht-stat pos">Ceiling</div>
+        <div class="bht-dual-delta up">+2pct</div>
+        <div class="bht-nat">83%</div>
       </div>
+
+      <!-- INTEREST: H2 2025=73% H1 2026=71% delta=-2pct -->
       <div class="bht-funnel-row">
         <div class="bht-funnel-label">INTEREST</div>
-        <div class="bht-bar-track"><div class="bht-bar-fill" style="width:71%;background:#F57C00;">71%</div><div class="bht-tooltip">TN: 71% · National: 54% · Slipped -2pct vs last year</div></div>
-        <div class="bht-stat flat">-2pct</div><div class="bht-stat flat">-2pct</div><div class="bht-nat">54%</div>
+        <div class="bht-dual-bars">
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2025</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h25" style="width:73%;background:#F57C00;">73%</div></div>
+            <div class="bht-dual-val h25">73%</div>
+          </div>
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2026</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h26" style="width:71%;background:#F57C00;">71%</div></div>
+            <div class="bht-dual-val">71%</div>
+          </div>
+        </div>
+        <div class="bht-stat flat">-2pct</div>
+        <div class="bht-dual-delta down">-2pct</div>
+        <div class="bht-nat">54%</div>
       </div>
+
+      <!-- PREFERENCE: H2 2025=29% H1 2026=29% delta=Flat -->
       <div class="bht-funnel-row">
         <div class="bht-funnel-label">PREFERENCE</div>
-        <div class="bht-bar-track"><div class="bht-bar-fill" style="width:29%;background:#F57C00;">29%</div><div class="bht-tooltip">TN: 29% · National: 23% · Flat — not converting interest</div></div>
-        <div class="bht-stat flat">Flat</div><div class="bht-stat flat">0</div><div class="bht-nat">23%</div>
+        <div class="bht-dual-bars">
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2025</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h25" style="width:29%;background:#F57C00;">29%</div></div>
+            <div class="bht-dual-val h25">29%</div>
+          </div>
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2026</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h26" style="width:29%;background:#F57C00;">29%</div></div>
+            <div class="bht-dual-val">29%</div>
+          </div>
+        </div>
+        <div class="bht-stat flat">Flat</div>
+        <div class="bht-dual-delta flat">0</div>
+        <div class="bht-nat">23%</div>
       </div>
+
+      <!-- PURCHASE: H2 2025=30% H1 2026=30% delta=Flat -->
       <div class="bht-funnel-row">
         <div class="bht-funnel-label">PURCHASE</div>
-        <div class="bht-bar-track"><div class="bht-bar-fill" style="width:30%;background:#F57C00;">30%</div><div class="bht-tooltip">TN: 30% · National: 25% · Flat — same as last year</div></div>
-        <div class="bht-stat flat">Flat</div><div class="bht-stat flat">0</div><div class="bht-nat">25%</div>
+        <div class="bht-dual-bars">
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2025</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h25" style="width:30%;background:#F57C00;">30%</div></div>
+            <div class="bht-dual-val h25">30%</div>
+          </div>
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2026</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h26" style="width:30%;background:#F57C00;">30%</div></div>
+            <div class="bht-dual-val">30%</div>
+          </div>
+        </div>
+        <div class="bht-stat flat">Flat</div>
+        <div class="bht-dual-delta flat">0</div>
+        <div class="bht-nat">25%</div>
       </div>
+
+      <!-- LOYALTY: H2 2025=37% H1 2026=38% delta=+1pct -->
       <div class="bht-funnel-row">
         <div class="bht-funnel-label">LOYALTY</div>
-        <div class="bht-bar-track"><div class="bht-bar-fill" style="width:38%;background:#2E7D32;">38%</div><div class="bht-tooltip">TN: 38% · National: 37% · No.1 Android in TN</div></div>
-        <div class="bht-stat pos">No.1</div><div class="bht-stat pos">+1pct</div><div class="bht-nat">37%</div>
+        <div class="bht-dual-bars">
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2025</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h25" style="width:37%;background:#2E7D32;">37%</div></div>
+            <div class="bht-dual-val h25">37%</div>
+          </div>
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2026</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h26" style="width:38%;background:#2E7D32;">38%</div></div>
+            <div class="bht-dual-val">38%</div>
+          </div>
+        </div>
+        <div class="bht-stat pos">No.1</div>
+        <div class="bht-dual-delta up">+1pct</div>
+        <div class="bht-nat">37%</div>
       </div>
+
+      <!-- RETENTION: H2 2025=37% H1 2026=38% delta=+1pct -->
       <div class="bht-funnel-row">
         <div class="bht-funnel-label">RETENTION</div>
-        <div class="bht-bar-track"><div class="bht-bar-fill" style="width:38%;background:#2E7D32;">38%</div><div class="bht-tooltip">TN: 38% vs Samsung 23% · No.1 Android retention</div></div>
-        <div class="bht-stat pos">No.1</div><div class="bht-stat pos">+2pct</div><div class="bht-nat">Sam:23%</div>
+        <div class="bht-dual-bars">
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2025</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h25" style="width:37%;background:#2E7D32;">37%</div></div>
+            <div class="bht-dual-val h25">37%</div>
+          </div>
+          <div class="bht-dual-row">
+            <div class="bht-dual-yr">2026</div>
+            <div class="bht-dual-track"><div class="bht-dual-fill h26" style="width:38%;background:#2E7D32;">38%</div></div>
+            <div class="bht-dual-val">38%</div>
+          </div>
+        </div>
+        <div class="bht-stat pos">No.1</div>
+        <div class="bht-dual-delta up">+1pct</div>
+        <div class="bht-nat">Sam:23%</div>
+      </div>
+
+    </div>
+
+    <!-- READ IN 5 SECONDS FOOTER -->
+    <div style="background:#1a3c6e;border-radius:8px;padding:12px 16px;font-size:11px;color:rgba(255,255,255,0.85);margin-bottom:14px;">
+      <strong style="color:#fff;">Read in 5 seconds:</strong>
+      TN leads national on every funnel metric. Awareness and loyalty are locked. The gap is in the middle — Interest → Preference → Purchase conversion needs H2 work.
+    </div>
+
+    <!-- DEFINITIONS PANEL -->
+    <div class="bht-defs">
+      <div class="bht-defs-title">What each metric means</div>
+      <div class="bht-defs-grid">
+        <div class="bht-def-item">
+          <div class="bht-def-term">TOM</div>
+          <div class="bht-def-desc">Top of Mind — first brand that comes to mind unprompted. Measures raw mindshare dominance.</div>
+        </div>
+        <div class="bht-def-item">
+          <div class="bht-def-term">INTENT</div>
+          <div class="bht-def-desc">Purchase Intent — % who would consider buying vivo next. Near 98% means near-ceiling reach.</div>
+        </div>
+        <div class="bht-def-item orange">
+          <div class="bht-def-term">INTEREST</div>
+          <div class="bht-def-desc">Active interest in the brand — researching, following, engaging. The first conversion step.</div>
+        </div>
+        <div class="bht-def-item orange">
+          <div class="bht-def-term">PREFERENCE</div>
+          <div class="bht-def-desc">Choosing vivo over others when considering a purchase. Stuck at 29% — H2 priority gap.</div>
+        </div>
+        <div class="bht-def-item orange">
+          <div class="bht-def-term">PURCHASE</div>
+          <div class="bht-def-desc">Actual buying rate among those who considered vivo. Flat at 30% — conversion wall.</div>
+        </div>
+        <div class="bht-def-item green">
+          <div class="bht-def-term">LOYALTY</div>
+          <div class="bht-def-desc">Repeat intent — existing vivo users who plan to buy vivo again. No.1 Android at 38%.</div>
+        </div>
+        <div class="bht-def-item green">
+          <div class="bht-def-term">RETENTION</div>
+          <div class="bht-def-desc">Users whose previous phone was also vivo. No.1 at 38% vs Samsung 23% in TN Android camp.</div>
+        </div>
       </div>
     </div>
-    <div style="background:#1a3c6e;border-radius:8px;padding:12px 16px;font-size:11px;color:rgba(255,255,255,0.85);">
-      <strong style="color:#fff;">Read in 5 seconds:</strong>
-      TN leads national on every funnel metric.
-      Awareness and loyalty are locked.
-      The gap is in the middle — Interest → Preference → Purchase conversion needs H2 work.
-    </div>
+
   </div>
 
   <!-- PANEL 2: COMPETITION -->
