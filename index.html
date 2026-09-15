@@ -2660,6 +2660,110 @@ img,video,iframe,canvas,svg{max-width:100%;}
   .sd-split,.sd-vcards,.sd-meta{grid-template-columns:1fr;}
 }
 
+/* ══ V80 HUC — KOL Launch Event vh-* ══ */
+.vh-wrap{font-family:'Bahnschrift SemiBold SemiCondensed',Arial Narrow,sans-serif;padding:28px 32px;max-width:1300px;margin:0 auto;}
+.vh-hero{background:linear-gradient(135deg,#0D2B6B 0%,#1565C0 100%);border-radius:16px;padding:28px 32px;margin-bottom:20px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;position:relative;overflow:hidden;}
+.vh-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.07) 50%,transparent 60%);pointer-events:none;}
+.vh-hero-left{position:relative;z-index:1;}
+.vh-hero-eyebrow{font-size:0.6rem;font-weight:700;letter-spacing:0.15em;color:rgba(255,255,255,0.55);text-transform:uppercase;margin-bottom:8px;}
+.vh-hero-title{font-size:2rem;font-weight:900;color:#fff;line-height:1.1;margin-bottom:6px;}
+.vh-hero-title span{color:#64B5F6;}
+.vh-hero-sub{font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.6;max-width:560px;}
+.vh-hero-right{text-align:right;position:relative;z-index:1;}
+.vh-hero-budget{font-size:2.4rem;font-weight:900;color:#fff;line-height:1;}
+.vh-hero-budget-lbl{font-size:0.6rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;}
+.vh-hero-tags{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+.vh-tag{font-size:0.6rem;font-weight:700;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);letter-spacing:0.05em;text-transform:uppercase;}
+.vh-sec{font-size:0.6rem;font-weight:800;letter-spacing:0.1em;color:#6B7A99;text-transform:uppercase;margin-bottom:10px;}
+/* PURPOSE STRIP */
+.vh-purpose{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px;}
+.vh-purpose-card{background:#fff;border:1px solid #E8EDF6;border-radius:12px;padding:14px 16px;border-top:3px solid #0D2B6B;}
+.vh-purpose-card.orange{border-top-color:#F57C00;}
+.vh-purpose-card.green{border-top-color:#2E7D32;}
+.vh-purpose-card.purple{border-top-color:#6A1B9A;}
+.vh-purpose-num{font-size:0.6rem;font-weight:800;color:#9AA3B5;letter-spacing:0.1em;margin-bottom:4px;}
+.vh-purpose-title{font-size:0.8rem;font-weight:800;color:#0d1b2a;margin-bottom:4px;}
+.vh-purpose-desc{font-size:0.65rem;color:#4A5568;line-height:1.5;}
+/* EVENT FLOW */
+.vh-flow-title{font-size:0.6rem;font-weight:800;letter-spacing:0.1em;color:#6B7A99;text-transform:uppercase;margin-bottom:12px;}
+.vh-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:20px;position:relative;}
+.vh-flow-step{background:#fff;border:1px solid #E8EDF6;border-radius:10px;padding:12px;text-align:center;position:relative;}
+.vh-flow-step::after{content:'→';position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:12px;color:#C8D0E0;z-index:1;}
+.vh-flow-step:last-child::after{display:none;}
+.vh-flow-num{font-size:0.55rem;font-weight:800;color:#9AA3B5;margin-bottom:6px;}
+.vh-flow-icon{font-size:1.4rem;margin-bottom:6px;}
+.vh-flow-label{font-size:0.62rem;font-weight:800;color:#0d1b2a;line-height:1.3;}
+.vh-flow-time{font-size:0.55rem;color:#9AA3B5;margin-top:4px;}
+/* KOL PYRAMID */
+.vh-mid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
+.vh-pyramid-wrap{background:#fff;border:1px solid #E8EDF6;border-radius:14px;padding:18px 20px;}
+.vh-pyramid-hd{font-size:0.62rem;font-weight:800;letter-spacing:0.1em;color:#6B7A99;text-transform:uppercase;margin-bottom:14px;}
+.vh-pyramid{display:flex;flex-direction:column;gap:8px;}
+.vh-p-layer{border-radius:8px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;}
+.vh-p-layer.l1{background:#EEF2FB;border-left:3px solid #0D2B6B;width:100%;}
+.vh-p-layer.l2{background:#FFF8E1;border-left:3px solid #F57C00;width:92%;margin-left:4%;}
+.vh-p-layer.l3{background:#F3E5F5;border-left:3px solid #6A1B9A;width:84%;margin-left:8%;}
+.vh-p-left{}
+.vh-p-type{font-size:0.62rem;font-weight:800;color:#0d1b2a;}
+.vh-p-range{font-size:0.58rem;color:#6B7A99;margin-top:1px;}
+.vh-p-right{text-align:right;}
+.vh-p-pax{font-size:1rem;font-weight:900;color:#0d1b2a;}
+.vh-p-cost{font-size:0.58rem;color:#6B7A99;}
+/* SCENARIOS */
+.vh-scenarios-wrap{background:#fff;border:1px solid #E8EDF6;border-radius:14px;padding:18px 20px;}
+.vh-scenarios-hd{font-size:0.62rem;font-weight:800;letter-spacing:0.1em;color:#6B7A99;text-transform:uppercase;margin-bottom:14px;}
+.vh-scenario-tabs{display:flex;gap:6px;margin-bottom:14px;}
+.vh-sc-tab{padding:5px 12px;border-radius:20px;border:1.5px solid #E8EDF6;background:#fff;color:#6B7A99;font-size:0.6rem;font-weight:700;cursor:pointer;transition:all 0.15s;font-family:inherit;}
+.vh-sc-tab.on{background:#0D2B6B;color:#fff;border-color:#0D2B6B;}
+.vh-sc-panel{display:none;}
+.vh-sc-panel.on{display:block;}
+.vh-sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px;}
+.vh-sc-stat{background:#F7F9FD;border-radius:8px;padding:10px;text-align:center;}
+.vh-sc-num{font-size:1.2rem;font-weight:900;color:#0D2B6B;}
+.vh-sc-lbl{font-size:0.55rem;color:#6B7A99;text-transform:uppercase;letter-spacing:0.06em;margin-top:2px;}
+.vh-sc-rows{display:flex;flex-direction:column;gap:4px;}
+.vh-sc-row{display:flex;justify-content:space-between;font-size:0.62rem;padding:4px 0;border-bottom:1px solid #F0F4FF;color:#3A4A6B;}
+.vh-sc-row:last-child{border-bottom:none;font-weight:800;color:#0d1b2a;}
+.vh-sc-badge{display:inline-block;font-size:0.55rem;font-weight:800;padding:2px 8px;border-radius:10px;background:#F0FDF4;color:#16a34a;margin-top:8px;}
+.vh-sc-badge.warn{background:#FFFBEB;color:#d97706;}
+/* CONTEST */
+.vh-bottom{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.vh-contest{background:linear-gradient(135deg,#0D2B6B,#1565C0);border-radius:14px;padding:18px 20px;color:#fff;}
+.vh-contest-eyebrow{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;}
+.vh-contest-title{font-size:1rem;font-weight:900;color:#fff;margin-bottom:4px;}
+.vh-contest-sub{font-size:0.65rem;color:rgba(255,255,255,0.75);line-height:1.5;margin-bottom:12px;}
+.vh-contest-steps{display:flex;flex-direction:column;gap:6px;}
+.vh-contest-step{display:flex;align-items:flex-start;gap:8px;}
+.vh-contest-dot{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:0.55rem;font-weight:800;flex-shrink:0;}
+.vh-contest-text{font-size:0.63rem;color:rgba(255,255,255,0.85);line-height:1.5;padding-top:2px;}
+/* BUDGET SUMMARY */
+.vh-budget-card{background:#fff;border:1px solid #E8EDF6;border-radius:14px;padding:18px 20px;}
+.vh-budget-hd{font-size:0.62rem;font-weight:800;letter-spacing:0.1em;color:#6B7A99;text-transform:uppercase;margin-bottom:14px;}
+.vh-budget-rows{display:flex;flex-direction:column;gap:6px;}
+.vh-budget-row{display:flex;justify-content:space-between;align-items:center;font-size:0.68rem;padding:6px 0;border-bottom:1px solid #F0F4FF;color:#3A4A6B;}
+.vh-budget-row:last-child{border-bottom:none;font-weight:900;font-size:0.75rem;color:#0d1b2a;padding-top:8px;}
+.vh-budget-row span.amt{font-weight:800;color:#0D2B6B;}
+.vh-budget-row span.amt.total{color:#0D2B6B;font-size:0.85rem;}
+.vh-budget-note{font-size:0.58rem;color:#9AA3B5;margin-top:8px;line-height:1.5;}
+/* FOOTER NOTE */
+.vh-footer{background:#F7F9FD;border-radius:10px;padding:12px 16px;font-size:0.62rem;color:#6B7A99;line-height:1.6;border-left:3px solid #0D2B6B;}
+@media(max-width:1100px){
+  .vh-hero{grid-template-columns:1fr;}
+  .vh-hero-right{text-align:left;}
+  .vh-purpose{grid-template-columns:1fr 1fr;}
+  .vh-flow{grid-template-columns:repeat(3,1fr);}
+  .vh-flow-step:nth-child(3n)::after{display:none;}
+  .vh-mid,.vh-bottom{grid-template-columns:1fr;}
+  .vh-p-layer.l2,.vh-p-layer.l3{width:100%;margin-left:0;}
+}
+@media(max-width:700px){
+  .vh-wrap{padding:16px 14px;}
+  .vh-purpose,.vh-flow,.vh-sc-grid{grid-template-columns:1fr;}
+  .vh-flow-step::after{display:none;}
+  .vh-hero-title{font-size:1.55rem;}
+  .vh-hero-budget{font-size:1.9rem;}
+}
+
 </style>
 </head>
 <body>
@@ -4088,15 +4192,266 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <div class="arrs"><button class="arr" onclick="nplBrandingScroll(-1)">&#8593;</button><button class="arr" onclick="nplBrandingScroll(1)">&#8595;</button></div>
   </div>
   </div>
-  <div id="npl-panel-huc" class="npl-panel" style="display:none;">
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;min-height:420px;font-family:'Bahnschrift SemiBold SemiCondensed',Arial Narrow,sans-serif;">
-  <div style="background:#fff;border-radius:20px;padding:52px 64px;text-align:center;max-width:520px;border-top:4px solid #0D2B6B;box-shadow:0 4px 24px rgba(13,43,107,0.08);">
-    <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.15em;color:#6B7B9C;text-transform:uppercase;margin-bottom:16px;">NPL · HUC</div>
-    <div style="font-size:2rem;font-weight:800;color:#0B1730;line-height:1.2;margin-bottom:12px;">KOL LAUNCH EVENT</div>
-    <div style="width:48px;height:4px;background:linear-gradient(90deg,#0D2B6B,#1565C0);border-radius:2px;margin:0 auto 20px;"></div>
-    <div style="font-size:0.88rem;color:#6B7B9C;line-height:1.6;">Content coming soon.<br>KOL Launch Event plan will be updated here.</div>
+  <div id="npl-panel-huc" class="npl-panel" style="display:none;overflow-y:auto;">
+  <div class="vh-wrap">
+
+    <!-- HERO BANNER -->
+    <div class="vh-hero">
+      <div class="vh-hero-left">
+        <div class="vh-hero-eyebrow">NPL · HUC · Tamil Nadu · V80 Launch</div>
+        <div class="vh-hero-title">CINEMATIC NIGHT<br><span>KOL Launch Event</span></div>
+        <div class="vh-hero-sub">A curated premium evening around the vivo V80 — Tamil Nadu’s influencers inside an Accor / ITC event hall, with the vivo India setup on the floor. Welcome. Experience. Reveal. Dinner. Then they post. One night, long-term relationships.</div>
+        <div class="vh-hero-tags">
+          <span class="vh-tag">📍 Accor / ITC Event Hall · YTR</span>
+          <span class="vh-tag">🎟 V80 Pass Invitation</span>
+          <span class="vh-tag">📸 Make Life Feel Cinematic</span>
+          <span class="vh-tag">⚡ 4 Mix Scenarios</span>
+        </div>
+      </div>
+      <div class="vh-hero-right">
+        <div class="vh-hero-budget">₹20L</div>
+        <div class="vh-hero-budget-lbl">Total Budget<br>All Inclusive</div>
+      </div>
+    </div>
+
+    <!-- PURPOSE STRIP -->
+    <div class="vh-sec">Why We Are Doing This</div>
+    <div class="vh-purpose">
+      <div class="vh-purpose-card">
+        <div class="vh-purpose-num">01</div>
+        <div class="vh-purpose-title">Amplify Reach</div>
+        <div class="vh-purpose-desc">KOL follower base drives organic, high-trust reach around the V80 launch. Each KOL posts 2 videos — Story + Launch. Marcom boosts the best.</div>
+      </div>
+      <div class="vh-purpose-card orange">
+        <div class="vh-purpose-num">02</div>
+        <div class="vh-purpose-title">Premium Experience</div>
+        <div class="vh-purpose-desc">vivo India setup inside a classy Accor / ITC venue. Not a product demo — an evening they want to be seen at.</div>
+      </div>
+      <div class="vh-purpose-card green">
+        <div class="vh-purpose-num">03</div>
+        <div class="vh-purpose-title">Long-Term Relationship</div>
+        <div class="vh-purpose-desc">Build an active KOL community that recognises and responds to every future vivo launch call — proactively.</div>
+      </div>
+      <div class="vh-purpose-card purple">
+        <div class="vh-purpose-num">04</div>
+        <div class="vh-purpose-title">Authentic Content</div>
+        <div class="vh-purpose-desc">KOL-generated video from the engagement zone drives credibility beyond paid media. Scripted brief from vivo team, posted on their handles.</div>
+      </div>
+    </div>
+
+    <!-- EVENT FLOW -->
+    <div class="vh-flow-title">Event Night Flow · Indicative evening sequence</div>
+    <div class="vh-flow">
+      <div class="vh-flow-step">
+        <div class="vh-flow-num">01</div>
+        <div class="vh-flow-icon">🎟</div>
+        <div class="vh-flow-label">Welcome &amp; Branded Entry Photo</div>
+        <div class="vh-flow-time">6:00 PM</div>
+      </div>
+      <div class="vh-flow-step">
+        <div class="vh-flow-num">02</div>
+        <div class="vh-flow-icon">🎁</div>
+        <div class="vh-flow-label">Welcome Gift at Registration</div>
+        <div class="vh-flow-time">6:15 PM</div>
+      </div>
+      <div class="vh-flow-step">
+        <div class="vh-flow-num">03</div>
+        <div class="vh-flow-icon">🎬</div>
+        <div class="vh-flow-label">Short Product Session + V80 Reveal</div>
+        <div class="vh-flow-time">6:30 PM</div>
+      </div>
+      <div class="vh-flow-step">
+        <div class="vh-flow-num">04</div>
+        <div class="vh-flow-icon">📸</div>
+        <div class="vh-flow-label">Hands-On Zone + Cinematic Shot Challenge</div>
+        <div class="vh-flow-time">7:00 PM</div>
+      </div>
+      <div class="vh-flow-step">
+        <div class="vh-flow-num">05</div>
+        <div class="vh-flow-icon">🏆</div>
+        <div class="vh-flow-label">Contest Winner Announced + Dinner</div>
+        <div class="vh-flow-time">8:00 PM</div>
+      </div>
+      <div class="vh-flow-step">
+        <div class="vh-flow-num">06</div>
+        <div class="vh-flow-icon">📲</div>
+        <div class="vh-flow-label">Social Drop — All KOLs Post Live</div>
+        <div class="vh-flow-time">9:00 PM</div>
+      </div>
+    </div>
+
+    <!-- KOL PYRAMID + SCENARIOS -->
+    <div class="vh-mid">
+
+      <!-- KOL 3-LAYER PYRAMID -->
+      <div class="vh-pyramid-wrap">
+        <div class="vh-pyramid-hd">3-Layer KOL Invite Concept</div>
+        <div class="vh-pyramid">
+          <div class="vh-p-layer l1">
+            <div class="vh-p-left">
+              <div class="vh-p-type">Macro + Mid-Tier</div>
+              <div class="vh-p-range">₹40K–₹80K per KOL · Anchor reach</div>
+            </div>
+            <div class="vh-p-right">
+              <div class="vh-p-pax">5–15</div>
+              <div class="vh-p-cost">pax</div>
+            </div>
+          </div>
+          <div class="vh-p-layer l2">
+            <div class="vh-p-left">
+              <div class="vh-p-type">Micro Amplifiers</div>
+              <div class="vh-p-range">₹20K–₹40K per KOL · Niche engagement</div>
+            </div>
+            <div class="vh-p-right">
+              <div class="vh-p-pax">10–20</div>
+              <div class="vh-p-cost">pax</div>
+            </div>
+          </div>
+          <div class="vh-p-layer l3">
+            <div class="vh-p-left">
+              <div class="vh-p-type">Nano / Invite-Only</div>
+              <div class="vh-p-range">₹1K–₹20K · Community + buzz</div>
+            </div>
+            <div class="vh-p-right">
+              <div class="vh-p-pax">20–30</div>
+              <div class="vh-p-cost">pax</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:0.6rem;color:#9AA3B5;margin-top:12px;line-height:1.5;">Final mix subject to management decision. Personalized V80 Pass invitation sent to each shortlisted KOL. Welcome gift ₹700–₹1,500 per KOL (PPT range).</div>
+      </div>
+
+      <!-- SCENARIOS -->
+      <div class="vh-scenarios-wrap">
+        <div class="vh-scenarios-hd">KOL Mix Scenarios — Select One</div>
+        <div class="vh-scenario-tabs">
+          <button class="vh-sc-tab" onclick="vhScenario('vh-sc1',this)">S1</button>
+          <button class="vh-sc-tab" onclick="vhScenario('vh-sc2',this)">S2</button>
+          <button class="vh-sc-tab on" onclick="vhScenario('vh-sc3',this)">S3 ★</button>
+          <button class="vh-sc-tab" onclick="vhScenario('vh-sc4',this)">S4</button>
+        </div>
+
+        <div class="vh-sc-panel" id="vh-sc1">
+          <div class="vh-sc-grid">
+            <div class="vh-sc-stat"><div class="vh-sc-num">15</div><div class="vh-sc-lbl">Total KOLs</div></div>
+            <div class="vh-sc-stat"><div class="vh-sc-num">₹8.5L</div><div class="vh-sc-lbl">KOL Fees</div></div>
+            <div class="vh-sc-stat"><div class="vh-sc-num">Macro+Mid</div><div class="vh-sc-lbl">Mix</div></div>
+          </div>
+          <div class="vh-sc-rows">
+            <div class="vh-sc-row"><span>Macro (₹60K–₹80K × 5)</span><span>₹3,50,000</span></div>
+            <div class="vh-sc-row"><span>Mid-Tier (₹40K–₹60K × 10)</span><span>₹5,00,000</span></div>
+            <div class="vh-sc-row"><span>Event Execution</span><span>₹12,00,000</span></div>
+            <div class="vh-sc-row"><span>F&amp;B (₹2,500 × 15 pax)</span><span>₹37,500</span></div>
+            <div class="vh-sc-row"><span>Welcome Gifts (~₹1,000 × 15)</span><span>₹15,000</span></div>
+            <div class="vh-sc-row"><span>TOTAL</span><span>₹22,02,500</span></div>
+          </div>
+          <div class="vh-sc-badge warn">⚠ Exceeds ₹20L budget</div>
+        </div>
+
+        <div class="vh-sc-panel" id="vh-sc2">
+          <div class="vh-sc-grid">
+            <div class="vh-sc-stat"><div class="vh-sc-num">20</div><div class="vh-sc-lbl">Total KOLs</div></div>
+            <div class="vh-sc-stat"><div class="vh-sc-num">₹8.4L</div><div class="vh-sc-lbl">KOL Fees</div></div>
+            <div class="vh-sc-stat"><div class="vh-sc-num">Mac+Mid+Micro</div><div class="vh-sc-lbl">Mix</div></div>
+          </div>
+          <div class="vh-sc-rows">
+            <div class="vh-sc-row"><span>Macro (₹70K × 2)</span><span>₹1,40,000</span></div>
+            <div class="vh-sc-row"><span>Mid-Tier (₹50K × 8)</span><span>₹4,00,000</span></div>
+            <div class="vh-sc-row"><span>Micro (₹30K × 10)</span><span>₹3,00,000</span></div>
+            <div class="vh-sc-row"><span>Event Execution</span><span>₹12,00,000</span></div>
+            <div class="vh-sc-row"><span>F&amp;B (₹2,500 × 20 pax)</span><span>₹50,000</span></div>
+            <div class="vh-sc-row"><span>Welcome Gifts (~₹1,000 × 20)</span><span>₹20,000</span></div>
+            <div class="vh-sc-row"><span>TOTAL</span><span>₹21,10,000</span></div>
+          </div>
+          <div class="vh-sc-badge warn">⚠ Slightly over ₹20L</div>
+        </div>
+
+        <div class="vh-sc-panel on" id="vh-sc3">
+          <div class="vh-sc-grid">
+            <div class="vh-sc-stat"><div class="vh-sc-num">35</div><div class="vh-sc-lbl">Total KOLs</div></div>
+            <div class="vh-sc-stat"><div class="vh-sc-num">₹7.5L</div><div class="vh-sc-lbl">KOL Fees</div></div>
+            <div class="vh-sc-stat"><div class="vh-sc-num">Mid+Micro+Nano</div><div class="vh-sc-lbl">Mix</div></div>
+          </div>
+          <div class="vh-sc-rows">
+            <div class="vh-sc-row"><span>Mid-Tier (₹50K × 5)</span><span>₹2,50,000</span></div>
+            <div class="vh-sc-row"><span>Micro (₹30K × 10)</span><span>₹3,00,000</span></div>
+            <div class="vh-sc-row"><span>Nano/Invite (₹10K × 20)</span><span>₹2,00,000</span></div>
+            <div class="vh-sc-row"><span>Event Execution</span><span>₹12,00,000</span></div>
+            <div class="vh-sc-row"><span>F&amp;B (₹2,500 × 35 pax)</span><span>₹87,500</span></div>
+            <div class="vh-sc-row"><span>Welcome Gifts (~₹1,000 × 35)</span><span>₹35,000</span></div>
+            <div class="vh-sc-row"><span>TOTAL</span><span>₹20,72,500</span></div>
+          </div>
+          <div class="vh-sc-badge">✓ Closest to ₹20L · Recommended</div>
+        </div>
+
+        <div class="vh-sc-panel" id="vh-sc4">
+          <div class="vh-sc-grid">
+            <div class="vh-sc-stat"><div class="vh-sc-num">50</div><div class="vh-sc-lbl">Total KOLs</div></div>
+            <div class="vh-sc-stat"><div class="vh-sc-num">₹9L</div><div class="vh-sc-lbl">KOL Fees</div></div>
+            <div class="vh-sc-stat"><div class="vh-sc-num">Micro+Nano</div><div class="vh-sc-lbl">Mix</div></div>
+          </div>
+          <div class="vh-sc-rows">
+            <div class="vh-sc-row"><span>Micro (₹30K × 20)</span><span>₹6,00,000</span></div>
+            <div class="vh-sc-row"><span>Nano/Invite (₹10K × 30)</span><span>₹3,00,000</span></div>
+            <div class="vh-sc-row"><span>Event Execution</span><span>₹12,00,000</span></div>
+            <div class="vh-sc-row"><span>F&amp;B (₹2,500 × 50 pax)</span><span>₹1,25,000</span></div>
+            <div class="vh-sc-row"><span>Welcome Gifts (~₹1,000 × 50)</span><span>₹50,000</span></div>
+            <div class="vh-sc-row"><span>TOTAL</span><span>₹22,75,000</span></div>
+          </div>
+          <div class="vh-sc-badge warn">⚠ Exceeds ₹20L — wide reach, lower individual fees</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTEST + BUDGET -->
+    <div class="vh-bottom">
+
+      <div class="vh-contest">
+        <div class="vh-contest-eyebrow">KOL Contest · During Event</div>
+        <div class="vh-contest-title">📸 Cinematic Shot Challenge</div>
+        <div class="vh-contest-sub">KOLs capture the best V80 frame during the hands-on zone. Live vote. Winner on stage before dinner. Gift + credit on vivo TN social.</div>
+        <div class="vh-contest-steps">
+          <div class="vh-contest-step">
+            <div class="vh-contest-dot">1</div>
+            <div class="vh-contest-text">Each KOL shoots one frame using V80 — theme: “Make Life Feel Cinematic”</div>
+          </div>
+          <div class="vh-contest-step">
+            <div class="vh-contest-dot">2</div>
+            <div class="vh-contest-text">Photos on screen — all attendees vote via QR link (live poll)</div>
+          </div>
+          <div class="vh-contest-step">
+            <div class="vh-contest-dot">3</div>
+            <div class="vh-contest-text">Top 3 receive exclusive vivo prizes on stage before dinner</div>
+          </div>
+          <div class="vh-contest-step">
+            <div class="vh-contest-dot">4</div>
+            <div class="vh-contest-text">Winning shot used on vivo TN social — KOL credited + boosted</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vh-budget-card">
+        <div class="vh-budget-hd">Budget Summary · All Inclusive</div>
+        <div class="vh-budget-rows">
+          <div class="vh-budget-row"><span>Event Execution (Setup + PPL License)</span><span class="amt">₹12,00,000</span></div>
+          <div class="vh-budget-row"><span>KOL Fees (scenario-dependent)</span><span class="amt">₹7.5L–₹9L</span></div>
+          <div class="vh-budget-row"><span>F&amp;B (₹2,500/head incl. tax)</span><span class="amt">₹37,500–₹1,25,000</span></div>
+          <div class="vh-budget-row"><span>Welcome Gifts (₹700–₹1,500/KOL)</span><span class="amt">₹10,500–₹75,000</span></div>
+          <div class="vh-budget-row"><span>Contest Prizes (tentative)</span><span class="amt">TBC</span></div>
+          <div class="vh-budget-row"><span>TOTAL BUDGET AVAILABLE</span><span class="amt total">₹20,00,000</span></div>
+        </div>
+        <div class="vh-budget-note">* Execution ₹12L from team PPT (setup &amp; photo-opp ₹7L + PPL ₹1.3L + agency 10% + venue YTR). vivo India setup range ₹8L–₹12L incl. tax — final figure from vivo India. F&amp;B ₹2,500/head added because the team plan left food out. Venue F&amp;B on PPT is YTR. Scenario 3 is the closest fit to ₹20L. Final mix is a management decision.</div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER NOTE -->
+    <div class="vh-footer">
+      <strong>Next Steps:</strong> Confirm Accor / ITC hall · Lock KOL scenario with management · Send V80 Pass invitations with personalized note · Lock PPL license · Brief KOLs on engagement-zone script + Shot Challenge · Confirm F&amp;B headcount with venue.
+    </div>
+
   </div>
-</div>
   </div>
 </div>
 <div class="landing hidden" id="diwali">
@@ -8796,6 +9151,13 @@ setTimeout(function(){fitDeck();fitLanding();bindTabRails();},180);
 function hlvSwitch(id, el) {
   document.querySelectorAll('.hlv-panel').forEach(p => p.classList.remove('on'));
   document.querySelectorAll('.hlv-tab').forEach(t => t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  el.classList.add('on');
+}
+
+function vhScenario(id, el) {
+  document.querySelectorAll('.vh-sc-panel').forEach(function(p){p.classList.remove('on');});
+  document.querySelectorAll('.vh-sc-tab').forEach(function(t){t.classList.remove('on');});
   document.getElementById(id).classList.add('on');
   el.classList.add('on');
 }
