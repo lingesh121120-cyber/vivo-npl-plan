@@ -2457,6 +2457,209 @@ img,video,iframe,canvas,svg{max-width:100%;}
 @keyframes hlvFade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
 .hlv-banner{background:#f0f4ff;border-left:3px solid var(--vblue,#1a3c6e);padding:0.5rem 0.9rem;font-size:0.67rem;color:var(--ink,#0d1b2a);border-radius:0 6px 6px 0;margin-bottom:0.9rem;line-height:1.5;}
 
+/* ══ STRATEGY HOUSE — CEO briefing house ══ */
+#strategy-house.sh-root,#strategy-house{background:#EEF3FA;overflow-y:auto;}
+.sh-topbar{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 1.8rem;background:#0B1730;position:sticky;top:0;z-index:20;box-shadow:0 8px 24px rgba(11,23,48,0.28);}
+.sh-topbar-left{display:flex;align-items:center;gap:1rem;min-width:0;}
+.sh-back{background:none;border:1px solid rgba(255,255,255,0.25);color:#fff;padding:0.35rem 0.9rem;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer;letter-spacing:0.04em;font-family:inherit;}
+.sh-back:hover{background:rgba(255,255,255,0.08);}
+.sh-stepper{display:flex;align-items:center;gap:0.45rem;}
+.sh-step{font-size:0.62rem;color:rgba(255,255,255,0.4);font-weight:700;letter-spacing:0.08em;display:flex;align-items:center;gap:0.45rem;}
+.sh-step.active{color:#fff;}
+.sh-step-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.25);}
+.sh-step.active .sh-step-dot{background:#7CC4FF;box-shadow:0 0 0 4px rgba(124,196,255,0.22);}
+.sh-step-line{width:28px;height:1px;background:rgba(255,255,255,0.2);}
+.sh-fwd{background:#fff;color:#0B1730;border:none;padding:0.42rem 1.15rem;border-radius:6px;font-size:0.72rem;font-weight:800;cursor:pointer;letter-spacing:0.04em;font-family:inherit;}
+.sh-fwd:hover{background:#E8F1FF;}
+.sh-body{padding:1.35rem 2rem 2.2rem;max-width:1440px;margin:0 auto;width:100%;}
+.sh-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:1.2rem;margin-bottom:1.15rem;animation:shFadeUp 0.45s ease both;}
+.sh-kicker{font-size:0.62rem;font-weight:800;letter-spacing:0.16em;color:#5B6B8C;text-transform:uppercase;margin-bottom:0.35rem;}
+.sh-title{font-family:Sora,Inter,sans-serif;font-size:clamp(1.55rem,2.4vw,2.15rem);font-weight:800;color:#0B1730;line-height:1.12;letter-spacing:-0.03em;}
+.sh-title em{font-style:normal;color:#1566C0;}
+.sh-hero-note{font-size:0.72rem;color:#5B6B8C;max-width:32ch;line-height:1.45;text-align:right;}
+.sh-house{position:relative;padding-left:3.4rem;}
+.sh-spine{position:absolute;left:15px;top:18px;bottom:18px;width:2px;background:linear-gradient(#0B1730 0%,#1a3c6e 42%,#1566C0 72%,#93C5FD 100%);border-radius:2px;}
+.sh-floor{position:relative;margin-bottom:0.85rem;animation:shFadeUp 0.5s ease both;}
+.sh-floor:nth-of-type(1){animation-delay:0.05s;}
+.sh-floor:nth-of-type(2){animation-delay:0.16s;}
+.sh-floor:nth-of-type(3){animation-delay:0.28s;}
+.sh-floor:nth-of-type(4){animation-delay:0.4s;}
+.sh-num{position:absolute;left:-3.4rem;top:1.05rem;width:28px;height:28px;border-radius:50%;background:#0B1730;color:#fff;font-size:0.68rem;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 0 0 4px #EEF3FA;}
+.sh-l1{background:linear-gradient(135deg,#0B1730 0%,#12305A 58%,#1a3c6e 100%);border-radius:16px;padding:1.25rem 1.45rem 1.35rem;position:relative;overflow:hidden;}
+.sh-l1::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(144,202,249,0.18),transparent 68%);pointer-events:none;}
+.sh-l1-eyebrow{font-size:0.6rem;font-weight:800;letter-spacing:0.14em;color:rgba(255,255,255,0.5);margin-bottom:0.75rem;text-transform:uppercase;}
+.sh-l1-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:0.7rem;}
+.sh-kpi{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:1.05rem 0.7rem 0.9rem;text-align:center;}
+.sh-kpi-num{font-family:Sora,Inter,sans-serif;font-size:clamp(1.35rem,2vw,1.85rem);font-weight:800;color:#fff;line-height:1;letter-spacing:-0.03em;}
+.sh-kpi-num span{font-size:0.72rem;font-weight:600;color:rgba(255,255,255,0.55);margin-left:0.15rem;}
+.sh-kpi-lbl{font-size:0.58rem;color:rgba(255,255,255,0.5);margin-top:0.4rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:700;}
+.sh-kpi.accent{background:rgba(144,202,249,0.12);border-color:rgba(144,202,249,0.32);}
+.sh-kpi.accent .sh-kpi-num{color:#90CAF9;font-size:clamp(0.95rem,1.3vw,1.15rem);letter-spacing:0.04em;line-height:1.2;}
+.sh-l2{background:#14325C;border-radius:16px;padding:1.15rem 1.35rem;}
+.sh-l2-eyebrow{font-size:0.6rem;font-weight:800;letter-spacing:0.14em;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:0.8rem;}
+.sh-goals{display:grid;grid-template-columns:repeat(4,1fr);gap:0.65rem;}
+.sh-goal{border-radius:12px;padding:0.85rem 0.9rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-top:3px solid #90CAF9;}
+.sh-goal.g-orange{border-top-color:#FB923C;}
+.sh-goal.g-green{border-top-color:#4ADE80;}
+.sh-goal.g-purple{border-top-color:#C4B5FD;}
+.sh-goal-title{font-size:0.72rem;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.28rem;}
+.sh-goal-desc{font-size:0.7rem;color:rgba(255,255,255,0.78);line-height:1.45;}
+.sh-l3{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;}
+.sh-pillar{background:#fff;border-radius:16px;padding:1.15rem 1.2rem;border:1px solid #E3EAF6;box-shadow:0 8px 22px rgba(11,23,48,0.05);transition:transform 0.18s,box-shadow 0.18s;}
+.sh-pillar:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(11,23,48,0.1);}
+.sh-pillar-icon{width:40px;height:40px;border-radius:11px;background:#0B1730;display:flex;align-items:center;justify-content:center;margin-bottom:0.7rem;}
+.sh-pillar.p-mc .sh-pillar-icon{background:#1a3c6e;}
+.sh-pillar.p-hu .sh-pillar-icon{background:#1566C0;}
+.sh-pillar-icon svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;}
+.sh-pillar-tag{font-size:0.58rem;font-weight:700;letter-spacing:0.1em;color:#6B7A99;text-transform:uppercase;margin-bottom:0.22rem;}
+.sh-pillar-name{font-family:Sora,Inter,sans-serif;font-size:1.05rem;font-weight:800;color:#0B1730;margin-bottom:0.28rem;}
+.sh-pillar-desc{font-size:0.72rem;color:#3A4A6B;line-height:1.5;margin-bottom:0.75rem;}
+.sh-pillar-links{display:flex;flex-direction:column;gap:0.28rem;}
+.sh-link-chip{font-size:0.65rem;color:#1a3c6e;background:#EEF2FB;padding:0.32rem 0.65rem;border-radius:8px;font-weight:600;line-height:1.35;}
+.sh-l4-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.7rem;}
+.sh-l4-title{font-size:0.68rem;font-weight:800;color:#0B1730;text-transform:uppercase;letter-spacing:0.1em;}
+.sh-l4-note{font-size:0.62rem;color:#C2410C;font-weight:700;}
+.sh-timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:0.55rem;}
+.sh-month{background:#fff;border-radius:12px;border:1px solid #E3EAF6;overflow:hidden;cursor:pointer;transition:border-color 0.18s,box-shadow 0.18s;}
+.sh-month:hover{border-color:#1a3c6e;}
+.sh-month.open{border-color:#1a3c6e;box-shadow:0 10px 22px rgba(26,60,110,0.12);}
+.sh-mhead{background:#0B1730;padding:0.55rem 0.7rem 0.5rem;display:flex;align-items:flex-start;justify-content:space-between;gap:0.4rem;}
+.sh-month:nth-child(3) .sh-mhead,.sh-month:nth-child(4) .sh-mhead{background:#14325C;}
+.sh-month:nth-child(5) .sh-mhead,.sh-month:nth-child(6) .sh-mhead{background:#1566C0;}
+.sh-mhead-label{font-size:0.55rem;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:0.1em;text-transform:uppercase;}
+.sh-mhead-name{font-family:Sora,Inter,sans-serif;font-size:0.82rem;font-weight:800;color:#fff;line-height:1.2;margin-top:0.12rem;}
+.sh-mchev{color:rgba(255,255,255,0.45);font-size:0.7rem;transition:transform 0.2s;}
+.sh-month.open .sh-mchev{transform:rotate(180deg);}
+.sh-mdots{display:flex;gap:4px;padding:0.45rem 0.7rem 0.2rem;}
+.sh-mdot{width:7px;height:7px;border-radius:50%;}
+.sh-mdot.mc{background:#4da6ff;}
+.sh-mdot.mr{background:#f97316;}
+.sh-mdot.mh{background:#16a34a;}
+.sh-mpeek{padding:0.25rem 0.7rem 0.65rem;font-size:0.62rem;color:#3A4A6B;line-height:1.4;}
+.sh-month.open .sh-mpeek{display:none;}
+.sh-mbody{display:none;padding:0.15rem 0.7rem 0.75rem;}
+.sh-month.open .sh-mbody{display:block;}
+.sh-mrow{margin-bottom:0.5rem;}
+.sh-mrow:last-child{margin-bottom:0;}
+.sh-mrow-tag{font-size:0.55rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.12rem;}
+.sh-mrow-tag.mc{color:#1566C0;}
+.sh-mrow-tag.mr{color:#C2410C;}
+.sh-mrow-tag.mh{color:#15803D;}
+.sh-mrow-text{font-size:0.66rem;color:#3A4A6B;line-height:1.45;}
+@keyframes shFadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+@keyframes shKpiIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+@media(prefers-reduced-motion:reduce){.sh-floor,.sh-hero,.sh-kpi{animation:none;}}
+@media(max-width:1100px){
+  .sh-l1-kpis,.sh-goals,.sh-l3,.sh-timeline{grid-template-columns:1fr 1fr;}
+  .sh-house{padding-left:0;}
+  .sh-spine,.sh-num{display:none;}
+  .sh-hero{flex-direction:column;align-items:flex-start;}
+  .sh-hero-note{text-align:left;}
+}
+@media(max-width:700px){.sh-l1-kpis,.sh-goals,.sh-l3,.sh-timeline{grid-template-columns:1fr;}}
+
+/* Issue → Direction fills the page after Strategy House dupes hide */
+#h2dir-p1 .h2x-board{flex:1;align-items:stretch;}
+#h2dir-p1 .h2x-board > .h2x-card{display:flex;flex-direction:column;}
+#h2dir-p1 .h2v-dirs{flex:1;}
+#h2dir-p1 .h2v-pbg{margin-top:auto;}
+
+/* ══ BRANDING BUILD — formula ══ */
+.bb-formula{display:flex;align-items:stretch;gap:0;margin-bottom:1rem;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #E3EAF6;}
+.bb-fstep{flex:1;padding:0.75rem 0.85rem;text-align:center;font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;color:#6B7A99;border-right:1px solid #E3EAF6;position:relative;}
+.bb-fstep:last-child{border-right:none;}
+.bb-fstep span{display:block;font-weight:500;font-size:0.62rem;text-transform:none;letter-spacing:0;margin-top:0.18rem;color:#6B7B9C;}
+.bb-fstep.deploy{color:#1a3c6e;background:#EEF2FB;}
+.bb-fstep.audit{color:#d97706;background:#FFFBEB;}
+.bb-fstep.defend{color:#dc2626;background:#FEF2F2;}
+.bb-fstep.grow{color:#16a34a;background:#F0FDF4;}
+.bb-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;}
+.bb-card{background:#fff;border:1px solid #E3EAF6;border-radius:14px;padding:1.05rem 1.15rem;border-top:4px solid #1a3c6e;}
+.bb-card.audit{border-top-color:#d97706;}
+.bb-card.defend{border-top-color:#dc2626;}
+.bb-card.grow{border-top-color:#16a34a;}
+.bb-stage{font-size:0.55rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.28rem;}
+.bb-stage.deploy{color:#1a3c6e;}
+.bb-stage.audit{color:#d97706;}
+.bb-stage.defend{color:#dc2626;}
+.bb-stage.grow{color:#16a34a;}
+.bb-ctitle{font-family:Sora,Inter,sans-serif;font-size:0.95rem;font-weight:800;color:#0B1730;margin-bottom:0.5rem;}
+.bb-bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.32rem;}
+.bb-bullets li{font-size:0.74rem;color:#3A4A6B;line-height:1.45;padding-left:0.95rem;position:relative;}
+.bb-bullets li::before{content:"→";position:absolute;left:0;color:#1a3c6e;font-weight:700;}
+.bb-card.audit .bb-bullets li::before{color:#d97706;}
+.bb-card.defend .bb-bullets li::before{color:#dc2626;}
+.bb-card.grow .bb-bullets li::before{color:#16a34a;}
+.bb-kpi{display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.7rem;background:#F7F9FD;padding:0.32rem 0.75rem;border-radius:20px;font-size:0.65rem;font-weight:700;color:#1a3c6e;}
+.bb-kpi.warn{background:#FFFBEB;color:#d97706;}
+.bb-kpi.danger{background:#FEF2F2;color:#dc2626;}
+.bb-kpi.good{background:#F0FDF4;color:#16a34a;}
+.bb-stores{margin-top:1rem;background:#0B1730;border-radius:14px;padding:1rem 1.2rem;}
+.bb-stores-title{font-size:0.6rem;font-weight:800;letter-spacing:0.12em;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:0.7rem;}
+.bb-stores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem;}
+.bb-store-col{background:rgba(255,255,255,0.06);border-radius:10px;padding:0.75rem 0.85rem;}
+.bb-store-ch{font-size:0.6rem;font-weight:800;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;}
+.bb-store-nums{display:flex;flex-direction:column;gap:0.28rem;}
+.bb-store-num{font-size:0.72rem;color:#fff;display:flex;justify-content:space-between;font-weight:600;}
+.bb-store-num span{color:rgba(255,255,255,0.5);font-weight:800;}
+@media(max-width:900px){.bb-grid,.bb-stores-grid,.bb-formula{grid-template-columns:1fr;flex-direction:column;display:grid;}}
+
+/* ══ SUPPLY DEFEND — stock + vendor mockup ══ */
+.sd-proto{display:inline-flex;align-items:center;gap:0.35rem;font-size:0.58rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#92400E;background:#FEF3C7;border:1px solid #F59E0B;border-radius:99px;padding:0.2rem 0.6rem;}
+.sd-views{display:flex;gap:0.4rem;margin:0.2rem 0 0.85rem;}
+.sd-view{appearance:none;border:1px solid rgba(11,23,48,0.12);background:#fff;border-radius:99px;padding:0.4rem 0.95rem;font-size:0.7rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#3D4E73;cursor:pointer;font-family:inherit;}
+.sd-view.on{background:#0B1730;color:#fff;border-color:#0B1730;}
+.sd-panel{display:none;}
+.sd-panel.on{display:block;}
+.sd-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:0.55rem;margin-bottom:0.85rem;}
+.sd-kpi{background:#fff;border:1px solid #E3EAF6;border-radius:12px;padding:0.75rem 0.8rem;}
+.sd-kpi .n{font-family:Sora,Inter,sans-serif;font-size:1.45rem;font-weight:800;color:#0B1730;line-height:1;}
+.sd-kpi .n.bad{color:#DC2626;}
+.sd-kpi .n.warn{color:#D97706;}
+.sd-kpi .l{font-size:0.58rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;margin-top:0.28rem;}
+.sd-split{display:grid;grid-template-columns:220px minmax(0,1fr);gap:0.75rem;}
+.sd-blist{background:#fff;border:1px solid #E3EAF6;border-radius:14px;padding:0.55rem;max-height:520px;overflow:auto;}
+.sd-bitem{width:100%;text-align:left;border:0;background:transparent;border-radius:10px;padding:0.5rem 0.6rem;cursor:pointer;font-family:inherit;display:flex;justify-content:space-between;align-items:center;gap:0.4rem;}
+.sd-bitem:hover{background:#F4F7FB;}
+.sd-bitem.on{background:#0B1730;color:#fff;}
+.sd-bitem .bn{font-size:0.74rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;}
+.sd-bitem .bs{font-size:0.62rem;font-weight:700;color:#DC2626;white-space:nowrap;flex:none;}
+.sd-bitem.on .bs{color:#FCA5A5;}
+.sd-detail{background:#fff;border:1px solid #E3EAF6;border-radius:14px;padding:1rem 1.1rem;}
+.sd-dh{display:flex;align-items:flex-start;justify-content:space-between;gap:0.8rem;margin-bottom:0.75rem;}
+.sd-dh h3{margin:0;font-family:Sora,Inter,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1730;}
+.sd-dh p{margin:0.15rem 0 0;font-size:0.72rem;color:#6B7B9C;}
+.sd-mats{display:grid;grid-template-columns:repeat(5,1fr);gap:0.45rem;margin-bottom:0.75rem;}
+.sd-mat{background:#F7F9FD;border-radius:10px;padding:0.55rem 0.45rem;text-align:center;}
+.sd-mat .n{font-family:Sora,Inter,sans-serif;font-size:1.2rem;font-weight:800;color:#0B1730;line-height:1;}
+.sd-mat .l{font-size:0.55rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B7B9C;margin-top:0.2rem;}
+.sd-meta{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-bottom:0.75rem;}
+.sd-meta article{background:#F7F9FD;border-radius:10px;padding:0.6rem 0.7rem;}
+.sd-meta b{display:block;font-size:0.92rem;color:#0B1730;}
+.sd-meta span{font-size:0.62rem;color:#6B7B9C;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;}
+.sd-loan{font-size:0.74rem;color:#3D4E73;line-height:1.45;background:#FFF7ED;border-left:3px solid #EA580C;border-radius:0 8px 8px 0;padding:0.5rem 0.7rem;}
+.sd-table{width:100%;border-collapse:collapse;font-size:0.72rem;margin-top:0.7rem;}
+.sd-table th{font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;color:#6B7B9C;text-align:left;padding:0.35rem 0.4rem;border-bottom:1px solid #E3EAF6;}
+.sd-table td{padding:0.32rem 0.4rem;border-bottom:1px solid #F0F4FB;color:#3D4E73;}
+.sd-table td.b{font-weight:800;color:#0B1730;}
+.sd-table tr.on td{background:#EEF4FF;}
+.sd-vcards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.55rem;}
+.sd-vcard{border:1px solid #E3EAF6;border-radius:12px;padding:0.75rem 0.8rem;background:#F8FAFF;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s;}
+.sd-vcard:hover,.sd-vcard.on{border-color:#1566C0;box-shadow:0 8px 18px rgba(11,23,48,0.08);background:#fff;}
+.sd-vtop{display:flex;justify-content:space-between;gap:0.5rem;align-items:flex-start;}
+.sd-vname{font-size:0.82rem;font-weight:800;color:#0B1730;}
+.sd-vtype{font-size:0.58rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#1566C0;background:#DBEAFE;border-radius:99px;padding:0.12rem 0.45rem;}
+.sd-vmeta{display:flex;gap:0.7rem;margin-top:0.4rem;font-size:0.68rem;color:#3D4E73;}
+.sd-vprice{display:none;margin-top:0.5rem;font-size:0.7rem;color:#3D4E73;line-height:1.45;background:#fff;border-radius:8px;padding:0.5rem 0.6rem;}
+.sd-vcard.on .sd-vprice{display:block;}
+.sd-fill{height:8px;background:#F0F4FB;border-radius:99px;overflow:hidden;margin-top:0.55rem;}
+.sd-fill > i{display:block;height:100%;width:var(--pct);background:linear-gradient(90deg,#DC2626,#F59E0B);border-radius:99px;}
+.sd-legend{font-size:0.68rem;color:#6B7B9C;margin-top:0.55rem;}
+@media(max-width:1100px){
+  .sd-kpis,.sd-mats{grid-template-columns:1fr 1fr;}
+  .sd-split,.sd-vcards,.sd-meta{grid-template-columns:1fr;}
+}
+
 </style>
 </head>
 <body>
@@ -5543,10 +5746,8 @@ function toggleBranch(row){
 </section>
   </div><!-- end .h1review-panel -->
 </div><!-- end #h1review -->
-<div id="strategy-house" style="display:none;
-position:fixed;top:0;left:0;width:100%;height:100%;
-z-index:850;background:#F4F7FB;flex-direction:column;
-overflow-y:auto;">
+<div id="strategy-house" class="sh-root" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:850;flex-direction:column;overflow-y:auto;background:#EEF3FA;">
+<div id="strategy-house-legacy" style="display:none;">
 
   <!-- TOP BAR matching H1 Review bar style -->
   <div style="background:#0B1730;padding:0 32px;
@@ -6070,6 +6271,191 @@ overflow-y:auto;">
 
   </div>
 </div>
+  <div class="sh-topbar">
+    <div class="sh-topbar-left">
+      <button class="sh-back" type="button" onclick="closeStrategyHouse()">← H1 REVIEW</button>
+      <div class="sh-stepper">
+        <div class="sh-step"><div class="sh-step-dot"></div>H1 REVIEW</div>
+        <div class="sh-step-line"></div>
+        <div class="sh-step active"><div class="sh-step-dot"></div>STRATEGY HOUSE</div>
+        <div class="sh-step-line"></div>
+        <div class="sh-step"><div class="sh-step-dot"></div>H2 DIRECTION</div>
+      </div>
+    </div>
+    <button class="sh-fwd" type="button" onclick="openH2FromStrategy()">H2 DIRECTION →</button>
+  </div>
+
+  <div class="sh-body">
+    <div class="sh-hero">
+      <div>
+        <div class="sh-kicker">FY26-27 · Marketing Department</div>
+        <div class="sh-title">Strategy House — <em>How marketing supports the company goal</em></div>
+      </div>
+      <div class="sh-hero-note">Four floors. One ask. Company numbers first, then how TN marketing holds them.</div>
+    </div>
+
+    <div class="sh-house">
+      <div class="sh-spine" aria-hidden="true"></div>
+
+      <div class="sh-floor" data-n="01">
+        <div class="sh-num">01</div>
+        <div class="sh-l1">
+          <div class="sh-l1-eyebrow">↑ Company Goal — vivo India FY26-27 · Tom's Direction</div>
+          <div class="sh-l1-kpis">
+            <div class="sh-kpi"><div class="sh-kpi-num">₹4,600<span>Cr</span></div><div class="sh-kpi-lbl">Annual Value</div></div>
+            <div class="sh-kpi"><div class="sh-kpi-num">16.4<span>Lac</span></div><div class="sh-kpi-lbl">Annual Units</div></div>
+            <div class="sh-kpi"><div class="sh-kpi-num">30<span>%</span></div><div class="sh-kpi-lbl">₹15K+ Share (GFK)</div></div>
+            <div class="sh-kpi"><div class="sh-kpi-num">≥1.6<span>×</span></div><div class="sh-kpi-lbl">vivo/OPPO Ratio</div></div>
+            <div class="sh-kpi accent"><div class="sh-kpi-num">PREMIUM<br>BREAKTHROUGH</div><div class="sh-kpi-lbl">Core Theme FY26-27</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sh-floor" data-n="02">
+        <div class="sh-num">02</div>
+        <div class="sh-l2">
+          <div class="sh-l2-eyebrow">Marketing Department Goal — How we support the company target</div>
+          <div class="sh-goals">
+            <div class="sh-goal">
+              <div class="sh-goal-title">Brand A+I</div>
+              <div class="sh-goal-desc">TN Awareness + Intent improve vs 25FY. Chennai white collar market focus.</div>
+            </div>
+            <div class="sh-goal g-orange">
+              <div class="sh-goal-title">Visibility No.1</div>
+              <div class="sh-goal-desc">vivo branding display space + perceived value — No.1 in TN market.</div>
+            </div>
+            <div class="sh-goal g-green">
+              <div class="sh-goal-title">Expense ROI</div>
+              <div class="sh-goal-desc">Every rupee benchmarked. Cut what cannot prove itself. ROI first.</div>
+            </div>
+            <div class="sh-goal g-purple">
+              <div class="sh-goal-title">AIPL Conversion</div>
+              <div class="sh-goal-desc">Move TN consumers Awareness → Interest → Purchase → Loyalty.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sh-floor" data-n="03">
+        <div class="sh-num">03</div>
+        <div class="sh-l3">
+          <div class="sh-pillar">
+            <div class="sh-pillar-icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </div>
+            <div class="sh-pillar-tag">Retail Branding · Visibility · X-Zone · Cabinet · PBG</div>
+            <div class="sh-pillar-name">Retail Branding</div>
+            <div class="sh-pillar-desc">Ensures vivo is the most visible brand at every retail touchpoint across TN. Drives the physical premium experience before purchase.</div>
+            <div class="sh-pillar-links">
+              <span class="sh-link-chip">Brand Visibility No.1 → Premium Breakthrough</span>
+              <span class="sh-link-chip">X-Zone build → 30% ₹15K+ share</span>
+              <span class="sh-link-chip">Cabinet Matl → Channel health</span>
+            </div>
+          </div>
+          <div class="sh-pillar p-mc">
+            <div class="sh-pillar-icon">
+              <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            </div>
+            <div class="sh-pillar-tag">MarCom · KOL · Digital · Events · NPL</div>
+            <div class="sh-pillar-name">MarCom</div>
+            <div class="sh-pillar-desc">Builds brand Awareness and Interest through KOL content, digital campaigns, and product launch activations. Upper-funnel engine.</div>
+            <div class="sh-pillar-links">
+              <span class="sh-link-chip">KOL/Digital → Brand A+I improvement</span>
+              <span class="sh-link-chip">NPL activations → Premium brand perception</span>
+              <span class="sh-link-chip">Festival → Purchase conversion</span>
+            </div>
+          </div>
+          <div class="sh-pillar p-hu">
+            <div class="sh-pillar-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="sh-pillar-tag">HUC · High User Communication · Premium</div>
+            <div class="sh-pillar-name">HUC</div>
+            <div class="sh-pillar-desc">Targets white collar and premium users in Chennai and Coimbatore. Builds brand A+I in premium segments that drive ₹15K+ share.</div>
+            <div class="sh-pillar-links">
+              <span class="sh-link-chip">Premium A+I → 30% ₹15K+ share</span>
+              <span class="sh-link-chip">White collar → vivo/OPPO ≥1.6×</span>
+              <span class="sh-link-chip">IT Park + College → Loyalty growth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sh-floor" data-n="04">
+        <div class="sh-num">04</div>
+        <div class="sh-l4">
+          <div class="sh-l4-header">
+            <div class="sh-l4-title">H2 Activity Timeline — Oct 2026 → Mar 2027</div>
+            <div class="sh-l4-note">⚠ Exact dates — confirm with team · click a month for full plan</div>
+          </div>
+          <div class="sh-timeline">
+            <div class="sh-month open" onclick="shToggleMonth(this)">
+              <div class="sh-mhead"><div><div class="sh-mhead-label">OCT 2026</div><div class="sh-mhead-name">Diwali + V80</div></div><span class="sh-mchev">▾</span></div>
+              <div class="sh-mdots"><div class="sh-mdot mc"></div><div class="sh-mdot mr"></div><div class="sh-mdot mh"></div></div>
+              <div class="sh-mpeek">V80 NPL Launch · Diwali branding · White collar circles</div>
+              <div class="sh-mbody">
+                <div class="sh-mrow"><div class="sh-mrow-tag mc">MARCOM</div><div class="sh-mrow-text">V80 NPL Launch · KOL wave · Diwali digital</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mr">RETAIL</div><div class="sh-mrow-text">Diwali branding · X-Zone push · POS priority</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mh">HUC</div><div class="sh-mrow-text">Diwali circles · IT park activations</div></div>
+              </div>
+            </div>
+            <div class="sh-month" onclick="shToggleMonth(this)">
+              <div class="sh-mhead"><div><div class="sh-mhead-label">NOV 2026</div><div class="sh-mhead-name">Post-Diwali</div></div><span class="sh-mchev">▾</span></div>
+              <div class="sh-mdots"><div class="sh-mdot mc"></div><div class="sh-mdot mr"></div><div class="sh-mdot mh"></div></div>
+              <div class="sh-mpeek">Post-Diwali review · Audit cycle 2 · Doctor circle</div>
+              <div class="sh-mbody">
+                <div class="sh-mrow"><div class="sh-mrow-tag mc">MARCOM</div><div class="sh-mrow-text">Post-Diwali review · Emotional Video push</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mr">RETAIL</div><div class="sh-mrow-text">Audit cycle 2 · POSM gap fixes</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mh">HUC</div><div class="sh-mrow-text">Doctor circle · WOM seeding</div></div>
+              </div>
+            </div>
+            <div class="sh-month" onclick="shToggleMonth(this)">
+              <div class="sh-mhead"><div><div class="sh-mhead-label">DEC 2026</div><div class="sh-mhead-name">Christmas</div></div><span class="sh-mchev">▾</span></div>
+              <div class="sh-mdots"><div class="sh-mdot mc"></div><div class="sh-mdot mr"></div><div class="sh-mdot mh"></div></div>
+              <div class="sh-mpeek">Christmas camp · Premium activation · Founder circle</div>
+              <div class="sh-mbody">
+                <div class="sh-mrow"><div class="sh-mrow-tag mc">MARCOM</div><div class="sh-mrow-text">Christmas camp · KOL H2 contracts · IoT</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mr">RETAIL</div><div class="sh-mrow-text">Premium activation · MSB old-to-new</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mh">HUC</div><div class="sh-mrow-text">Founder circle · College year-end</div></div>
+              </div>
+            </div>
+            <div class="sh-month" onclick="shToggleMonth(this)">
+              <div class="sh-mhead"><div><div class="sh-mhead-label">JAN 2027</div><div class="sh-mhead-name">Pongal</div></div><span class="sh-mchev">▾</span></div>
+              <div class="sh-mdots"><div class="sh-mdot mc"></div><div class="sh-mdot mr"></div><div class="sh-mdot mh"></div></div>
+              <div class="sh-mpeek">Pongal campaign · X-Zone completion · Vivo Week</div>
+              <div class="sh-mbody">
+                <div class="sh-mrow"><div class="sh-mrow-tag mc">MARCOM</div><div class="sh-mrow-text">Pongal campaign · WOM program launch</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mr">RETAIL</div><div class="sh-mrow-text">X-Zone completion · Competitor wall audit</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mh">HUC</div><div class="sh-mrow-text">Pongal white collar · Vivo Week loyalty</div></div>
+              </div>
+            </div>
+            <div class="sh-month" onclick="shToggleMonth(this)">
+              <div class="sh-mhead"><div><div class="sh-mhead-label">FEB 2027</div><div class="sh-mhead-name">Brand push</div></div><span class="sh-mchev">▾</span></div>
+              <div class="sh-mdots"><div class="sh-mdot mc"></div><div class="sh-mdot mr"></div><div class="sh-mdot mh"></div></div>
+              <div class="sh-mpeek">V90 planning · Audit cycle 3 · Camera imagery</div>
+              <div class="sh-mbody">
+                <div class="sh-mrow"><div class="sh-mrow-tag mc">MARCOM</div><div class="sh-mrow-text">Pongal review · V90 planning</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mr">RETAIL</div><div class="sh-mrow-text">Audit cycle 3 · Supply gap check</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mh">HUC</div><div class="sh-mrow-text">Premium review · Camera imagery push</div></div>
+              </div>
+            </div>
+            <div class="sh-month" onclick="shToggleMonth(this)">
+              <div class="sh-mhead"><div><div class="sh-mhead-label">MAR 2027</div><div class="sh-mhead-name">H2 close</div></div><span class="sh-mchev">▾</span></div>
+              <div class="sh-mdots"><div class="sh-mdot mc"></div><div class="sh-mdot mr"></div><div class="sh-mdot mh"></div></div>
+              <div class="sh-mpeek">V90 execution · Visibility No.1 confirm · A+I final score</div>
+              <div class="sh-mbody">
+                <div class="sh-mrow"><div class="sh-mrow-tag mc">MARCOM</div><div class="sh-mrow-text">V90 Execution · H1 &amp; H2 review · FY&#39;27 plan</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mr">RETAIL</div><div class="sh-mrow-text">Final audit · Visibility No.1 confirm</div></div>
+                <div class="sh-mrow"><div class="sh-mrow-tag mh">HUC</div><div class="sh-mrow-text">A+I final score · KOC community check</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 <div id="h2direction">
   <!-- TOP BAR -->
   <div class="h2dir-bar" style="flex-shrink:0;">
@@ -6213,7 +6599,7 @@ overflow-y:auto;">
           </div>
         </div>
       </div>
-      <div class="h2x-card h2v-hero">
+      <div class="h2x-card h2v-hero" style="display:none;">
         <div class="h2x-h">
           <h2>H2 targets — what success looks like</h2>
           <p>From Tom's direction · These are the numbers marketing must support</p>
@@ -6226,7 +6612,7 @@ overflow-y:auto;">
           <div class="h2x-kpi theme"><div class="l">Core Theme</div><div class="n">PREMIUM BREAKTHROUGH</div><div class="s">Marketing owns the brand half</div></div>
         </div>
       </div>
-      <div class="h2x-card">
+      <div class="h2x-card" style="display:none;">
         <div class="h2x-h">
           <h2>H2 activity timeline</h2>
           <p>Oct 2026 → Mar 2027 · Click any month to expand · <span class="h2tl-warn">⚠ Exact dates — confirm with team</span></p>
@@ -6495,6 +6881,96 @@ overflow-y:auto;">
 
     <!-- PAGE 3: BRANDING BUILD -->
         <section class="page h2x-page" id="h2dir-p3">
+  <header style="margin-bottom:0.35rem;">
+    <div class="eyebrow">H2 Direction · Branding Build</div>
+    <h1 class="title">The Formula: <span>Deploy → Audit → Defend → Grow</span></h1>
+    <p class="sub">Every branding rupee follows this sequence. No step is skipped. No store is left unscored.</p>
+  </header>
+
+  <div class="bb-formula">
+    <div class="bb-fstep deploy">1 · Deploy<span>Set up &amp; upgrade</span></div>
+    <div class="bb-fstep audit">2 · Audit<span>Score every store</span></div>
+    <div class="bb-fstep defend">3 · Defend<span>Hold the wall</span></div>
+    <div class="bb-fstep grow">4 · Grow<span>Expand &amp; sustain</span></div>
+  </div>
+
+  <div class="bb-grid">
+    <div class="bb-card deploy">
+      <div class="bb-stage deploy">Stage 1 · Deploy</div>
+      <div class="bb-ctitle">New Shop + Top Shop Setup</div>
+      <ul class="bb-bullets">
+        <li>New store: fixture + MSB + X-Zone from day one</li>
+        <li>Top shop upgrade: PBG-backed premium zone build</li>
+        <li>MSB old-to-new drive across all 14 branches</li>
+      </ul>
+      <div class="bb-kpi">Target: 100% new stores WOD-ready at launch</div>
+    </div>
+    <div class="bb-card audit">
+      <div class="bb-stage audit">Stage 2 · Audit</div>
+      <div class="bb-ctitle">Regular Compliance Audit</div>
+      <ul class="bb-bullets">
+        <li>Current overall WOD compliance: 22.8% — critical</li>
+        <li>X300 Ultra lowest at 2.4% · V70 at 21.0% across 1,849 stores</li>
+        <li>No model has crossed 50% — VIVO Zone is weakest channel</li>
+        <li>Audit cycle: 3 rounds in H2 · Rank 1/2/3 branch scorecard</li>
+      </ul>
+      <div class="bb-kpi warn">Current: 22.8% · Target: 70% by FY-end</div>
+    </div>
+    <div class="bb-card defend">
+      <div class="bb-stage defend">Stage 3 · Defend</div>
+      <div class="bb-ctitle">Supply Continuity + Competitor Wall</div>
+      <ul class="bb-bullets">
+        <li>434 cabinets ordered · only 25 received (5.8%) — critical gap</li>
+        <li>Fixture: equal or bigger than competitor · replace if &gt;1 year + 4.2 rating</li>
+        <li>X-Zone: deploy before competition visits, not after</li>
+        <li>MSB: 100% old-to-new · competitor swap → ASM + TL action</li>
+      </ul>
+      <div class="bb-kpi danger">409 cabinets still with vivo India · transit damage flagged</div>
+    </div>
+    <div class="bb-card grow">
+      <div class="bb-stage grow">Stage 4 · Grow</div>
+      <div class="bb-ctitle">Expand Coverage + Sustain Premium</div>
+      <ul class="bb-bullets">
+        <li>PBG: 3-zone vendor model · Grand Chennai / Central TN / South TN</li>
+        <li>Competitor presence map: visit, understand, plan, execute</li>
+        <li>Premium store count target: 70 GT fixture + 182 RMT fixture</li>
+        <li>Annual BSC score tracks branding health across all branches</li>
+      </ul>
+      <div class="bb-kpi good">Goal: Visibility No.1 in TN by Mar 2027</div>
+    </div>
+  </div>
+
+  <div class="bb-stores">
+    <div class="bb-stores-title">Current Store Deployment — Sep 2026</div>
+    <div class="bb-stores-grid">
+      <div class="bb-store-col">
+        <div class="bb-store-ch">General Trade</div>
+        <div class="bb-store-nums">
+          <div class="bb-store-num">Fixture <span>70</span></div>
+          <div class="bb-store-num">MSB <span>19</span></div>
+          <div class="bb-store-num">Project <span>25</span></div>
+        </div>
+      </div>
+      <div class="bb-store-col">
+        <div class="bb-store-ch">Regional MT</div>
+        <div class="bb-store-nums">
+          <div class="bb-store-num">Fixture <span>182</span></div>
+          <div class="bb-store-num">MSB <span>13</span></div>
+          <div class="bb-store-num">Project <span>45</span></div>
+        </div>
+      </div>
+      <div class="bb-store-col">
+        <div class="bb-store-ch">National MT</div>
+        <div class="bb-store-nums">
+          <div class="bb-store-num">Fixture <span>32</span></div>
+          <div class="bb-store-num">OSB <span>≥1</span></div>
+          <div class="bb-store-num">X-Zone <span>Yes</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="h2dir-p3-legacy" style="display:none;">
       <header>
         <div class="eyebrow">H2 Direction · Marcom · Branding Build</div>
         <h1 class="title">Branding build — <span>invest right, audit hard, defend always</span></h1>
@@ -6623,13 +7099,10 @@ overflow-y:auto;">
           </div>
         </div>
       </div>
+    </div>
     </section>
 
-
-
-
-
-    <section class="page h2x-page" id="h2dir-p7" style="display:none;">
+<section class="page h2x-page" id="h2dir-p7" style="display:none;">
       <header>
         <div class="eyebrow">Deployment · New &amp; top stores</div>
         <h1 class="title">Store branding — <span>three channels, three rules</span></h1>
@@ -6677,6 +7150,68 @@ overflow-y:auto;">
 
 
         <section class="page h2x-page" id="h2dir-p9">
+      <header>
+        <div class="eyebrow">Supply · Service · Counter</div>
+        <h1 class="title">Material is late. <span>Competition is not.</span></h1>
+        <p class="sub">434 ordered, 25 in. The branch tool below is the operating system we will run — stock, open orders, inter-branch owing, and 10 vendors per branch.</p>
+        <div style="margin-top:0.55rem;"><span class="sd-proto">Prototype · illustrative numbers · live tool in build</span></div>
+      </header>
+      <div class="sd-views">
+        <button type="button" class="sd-view on" id="sd-tab-stock" onclick="sdSwitchView('stock')">Stock control</button>
+        <button type="button" class="sd-view" id="sd-tab-vendor" onclick="sdSwitchView('vendor')">Vendor portal</button>
+      </div>
+
+      <div class="sd-panel on" id="sd-panel-stock">
+        <div class="sd-kpis">
+          <div class="sd-kpi"><div class="n">434</div><div class="l">Ordered · May ’26</div></div>
+          <div class="sd-kpi"><div class="n bad">25</div><div class="l">Received in TN</div></div>
+          <div class="sd-kpi"><div class="n warn">409</div><div class="l">Still with vivo India</div></div>
+          <div class="sd-kpi"><div class="n bad">5.8%</div><div class="l">Fill rate</div></div>
+          <div class="sd-kpi"><div class="n">14</div><div class="l">Branches on the board</div></div>
+        </div>
+        <div class="sd-fill" aria-hidden="true"><i style="--pct:5.8%"></i></div>
+        <div class="sd-legend">409 still with vivo India · plus transit damage from HO warehouse. Click a branch to see stock mix, openings, and owing.</div>
+        <div class="sd-split" style="margin-top:0.85rem;">
+          <div class="sd-blist" id="sd-branch-list"></div>
+          <div class="sd-detail">
+            <div class="sd-dh">
+              <div>
+                <h3 id="sd-branch-name">South Chennai</h3>
+                <p id="sd-branch-zone">Grand Chennai · click any branch</p>
+              </div>
+              <span class="h2v-pill bad" id="sd-branch-fill">Need 28</span>
+            </div>
+            <div class="sd-mats" id="sd-mats"></div>
+            <div class="sd-meta" id="sd-meta"></div>
+            <div class="sd-loan" id="sd-loan"></div>
+            <table class="sd-table" id="sd-table"></table>
+          </div>
+        </div>
+      </div>
+
+      <div class="sd-panel" id="sd-panel-vendor">
+        <div class="sd-kpis">
+          <div class="sd-kpi"><div class="n">10</div><div class="l">Vendor types / branch</div></div>
+          <div class="sd-kpi"><div class="n">140</div><div class="l">Target roster</div></div>
+          <div class="sd-kpi"><div class="n" id="sd-v-reg">8</div><div class="l">Registered here</div></div>
+          <div class="sd-kpi"><div class="n" id="sd-v-jobs">41</div><div class="l">Jobs this FY</div></div>
+          <div class="sd-kpi"><div class="n" id="sd-v-spend">₹18.4L</div><div class="l">Spend this FY</div></div>
+        </div>
+        <div class="sd-split">
+          <div class="sd-blist" id="sd-v-branch-list"></div>
+          <div class="sd-detail">
+            <div class="sd-dh">
+              <div>
+                <h3 id="sd-v-branch-name">South Chennai</h3>
+                <p>Price card opens on the vendor. BM sees who can take the ticket today.</p>
+              </div>
+            </div>
+            <div class="sd-vcards" id="sd-vcards"></div>
+          </div>
+        </div>
+      </div>
+
+<div id="h2dir-p9-legacy" style="display:none;">
       <header>
         <div class="eyebrow">Supply · Service · Counter</div>
         <h1 class="title">Material is late. <span>Competition is not.</span></h1>
@@ -6765,6 +7300,7 @@ overflow-y:auto;">
           </div>
         </div>
       </div>
+    </div>
     </section>
 
 
@@ -8051,6 +8587,181 @@ function select(key){if(active===key){reset();return;}active=key;var d=DATA[key]
 function reset(){active=null;region.classList.remove('open');document.querySelectorAll('#h2plan .h2s-card').forEach(function(c){c.classList.remove('active');});}
 window.h2sReset=reset;
 })();
+
+function shToggleMonth(el){
+  var isOpen = el.classList.contains('open');
+  document.querySelectorAll('#strategy-house .sh-month').forEach(function(m){m.classList.remove('open');});
+  if(!isOpen) el.classList.add('open');
+}
+
+var SD_BRANCHES = [
+  {id:'sc', name:'South Chennai', zone:'Grand Chennai', ordered:42, recv:4, fyOpen:22, proj:28, ft4:6, ft6:11, ft8:4, stor:8, nostor:13, owe:'Borrowed 3× 6ft from North Chennai · owes 2× 4ft to MT Chennai'},
+  {id:'nc', name:'North Chennai', zone:'Grand Chennai', ordered:31, recv:3, fyOpen:14, proj:18, ft4:4, ft6:8, ft8:3, stor:5, nostor:10, owe:'Lent 3× 6ft to South Chennai · clear'},
+  {id:'mt', name:'MT Chennai', zone:'Grand Chennai', ordered:38, recv:2, fyOpen:9, proj:12, ft4:3, ft6:9, ft8:5, stor:7, nostor:10, owe:'Waiting 2× 4ft from South Chennai'},
+  {id:'pv', name:'Poorvika Chennai', zone:'Grand Chennai', ordered:48, recv:1, fyOpen:11, proj:16, ft4:5, ft6:12, ft8:6, stor:9, nostor:14, owe:'No loans · 11 NMT sites still pending material'},
+  {id:'cb', name:'Coimbatore', zone:'South TN', ordered:36, recv:3, fyOpen:18, proj:21, ft4:5, ft6:10, ft8:4, stor:6, nostor:13, owe:'Borrowed 1× 8ft from Madurai'},
+  {id:'md', name:'Madurai', zone:'South TN', ordered:28, recv:2, fyOpen:12, proj:15, ft4:4, ft6:7, ft8:3, stor:5, nostor:9, owe:'Lent 1× 8ft to Coimbatore'},
+  {id:'tv', name:'Tirunelveli', zone:'South TN', ordered:24, recv:1, fyOpen:10, proj:13, ft4:3, ft6:6, ft8:2, stor:3, nostor:8, owe:'Clear'},
+  {id:'vr', name:'Virudhunagar', zone:'South TN', ordered:18, recv:1, fyOpen:8, proj:10, ft4:2, ft6:4, ft8:1, stor:2, nostor:5, owe:'Clear'},
+  {id:'sl', name:'Salem', zone:'Central TN', ordered:33, recv:2, fyOpen:16, proj:19, ft4:5, ft6:8, ft8:3, stor:6, nostor:10, owe:'Lent 3× 4ft to Trichy'},
+  {id:'er', name:'Erode', zone:'Central TN', ordered:26, recv:1, fyOpen:13, proj:15, ft4:3, ft6:7, ft8:2, stor:4, nostor:8, owe:'Clear'},
+  {id:'tr', name:'Trichy', zone:'Central TN', ordered:41, recv:2, fyOpen:20, proj:24, ft4:6, ft6:11, ft8:4, stor:7, nostor:14, owe:'Owes Salem 3× 4ft · borrowed 2× 6ft from Thanjavur'},
+  {id:'tj', name:'Thanjavur', zone:'Central TN', ordered:22, recv:1, fyOpen:11, proj:13, ft4:3, ft6:5, ft8:2, stor:3, nostor:7, owe:'Lent 2× 6ft to Trichy'},
+  {id:'vl', name:'Vellore', zone:'Central TN', ordered:29, recv:1, fyOpen:15, proj:18, ft4:4, ft6:8, ft8:3, stor:5, nostor:10, owe:'Clear · 9 GT fixtures still unbuilt'},
+  {id:'pd', name:'Pondicherry', zone:'South TN', ordered:18, recv:1, fyOpen:7, proj:9, ft4:2, ft6:4, ft8:2, stor:3, nostor:5, owe:'Clear'}
+];
+
+var SD_VENDORS = {
+  sc:[
+    {name:'Sri Velan Electricals', type:'Electrician', jobs:9, spend:'₹2.4L', price:'Call-out ₹850 · wiring ₹45/point · TAT 24h'},
+    {name:'Anbu Carpentry', type:'Carpenter', jobs:7, spend:'₹1.8L', price:'Fixture repair ₹1,200 · backwall ₹3,800 · TAT 48h'},
+    {name:'Kaveri Painters', type:'Painter', jobs:6, spend:'₹1.1L', price:'Wall ₹18/sqft · fascia ₹22/sqft · TAT 36h'},
+    {name:'Chennai Wiring Co', type:'Full wiring', jobs:4, spend:'₹3.2L', price:'Full shop ₹28,000 · alarm kit extra ₹4,500'},
+    {name:'Nexus Projects', type:'Project vendor', jobs:3, spend:'₹4.6L', price:'X-Zone package ₹1.35L · 4.2 cabinet install ₹18,000'},
+    {name:'Studio Wall Interiors', type:'Interior', jobs:5, spend:'₹2.1L', price:'Experience corner ₹22,000 · lighting pack ₹6,400'},
+    {name:'MSB Craft TN', type:'MSB vendor', jobs:4, spend:'₹1.9L', price:'Old-to-new swap ₹7,500 · new MSB ₹14,800'},
+    {name:'BlueLine Transport', type:'Transport', jobs:8, spend:'₹0.9L', price:'Chennai metro ₹1,800/trip · outstation ₹4.2/km'},
+    {name:'Guindy Loadmen', type:'Load man', jobs:12, spend:'₹0.5L', price:'₹350/head/day · 4-man crew'},
+    {name:'OMR Maintenance Mart', type:'Materials supplier', jobs:5, spend:'₹1.3L', price:'Alarm kit ₹2,800 · fascia vinyl ₹190/sqft'}
+  ],
+  nc:[
+    {name:'North Arcot Electricals', type:'Electrician', jobs:6, spend:'₹1.6L', price:'Call-out ₹800 · TAT 24h'},
+    {name:'Tondiarpet Woodworks', type:'Carpenter', jobs:5, spend:'₹1.2L', price:'Repair ₹1,100 · TAT 48h'},
+    {name:'RedSun Painters', type:'Painter', jobs:4, spend:'₹0.8L', price:'Wall ₹16/sqft'},
+    {name:'HO Wiring Desk', type:'Full wiring', jobs:2, spend:'₹1.4L', price:'Full shop ₹26,000'},
+    {name:'Zone One Projects', type:'Project vendor', jobs:2, spend:'₹2.8L', price:'Cabinet install ₹17,500'},
+    {name:'Harbour Interiors', type:'Interior', jobs:3, spend:'₹1.1L', price:'Corner ₹20,000'},
+    {name:'MSB North', type:'MSB vendor', jobs:3, spend:'₹1.3L', price:'Swap ₹7,200'},
+    {name:'Anna Loadmen', type:'Load man', jobs:11, spend:'₹0.4L', price:'₹350/head/day'}
+  ],
+  mt:[
+    {name:'RKA Service Desk', type:'Electrician', jobs:5, spend:'₹1.5L', price:'Account SLA 12h'},
+    {name:'NKA Fixture Crew', type:'Carpenter', jobs:4, spend:'₹1.7L', price:'MT night slot ₹2,400'},
+    {name:'Mall Painters', type:'Painter', jobs:3, spend:'₹0.9L', price:'After-hours +30%'},
+    {name:'Chain Wiring', type:'Full wiring', jobs:2, spend:'₹2.2L', price:'Per-door ₹31,000'},
+    {name:'MT Project Cell', type:'Project vendor', jobs:4, spend:'₹5.1L', price:'X-Zone ₹1.4L'},
+    {name:'Facade OSB Co', type:'MSB vendor', jobs:3, spend:'₹2.4L', price:'OSB façade ₹22,000'},
+    {name:'Metro Transport', type:'Transport', jobs:6, spend:'₹1.1L', price:'Night delivery ₹2,600'},
+    {name:'Mall Loadmen', type:'Load man', jobs:8, spend:'₹0.5L', price:'₹400/head'}
+  ]
+};
+
+var SD_VTYPES = ['Electrician','Carpenter','Painter','Full wiring','Project vendor','Interior','MSB vendor','Transport','Load man','Materials supplier'];
+
+function sdNeed(b){return Math.max(0, b.ordered - b.recv);}
+function sdFillPct(b){return b.ordered ? Math.round((b.recv/b.ordered)*1000)/10 : 0;}
+
+function sdSwitchView(which){
+  document.getElementById('sd-panel-stock').classList.toggle('on', which==='stock');
+  document.getElementById('sd-panel-vendor').classList.toggle('on', which==='vendor');
+  var st=document.getElementById('sd-tab-stock');
+  var vd=document.getElementById('sd-tab-vendor');
+  if(st) st.classList.toggle('on', which==='stock');
+  if(vd) vd.classList.toggle('on', which==='vendor');
+}
+
+function sdSelectBranch(id){
+  var b = SD_BRANCHES.filter(function(x){return x.id===id;})[0] || SD_BRANCHES[0];
+  document.querySelectorAll('#sd-branch-list .sd-bitem').forEach(function(el){
+    el.classList.toggle('on', el.getAttribute('data-id')===b.id);
+  });
+  var name=document.getElementById('sd-branch-name');
+  var zone=document.getElementById('sd-branch-zone');
+  var fill=document.getElementById('sd-branch-fill');
+  if(name) name.textContent=b.name;
+  if(zone) zone.textContent=b.zone+' · last FY openings '+b.fyOpen+' · this year projection '+b.proj;
+  if(fill) fill.textContent='Need '+sdNeed(b)+' · '+sdFillPct(b)+'% in';
+  var mats=document.getElementById('sd-mats');
+  if(mats){
+    mats.innerHTML=
+      '<div class="sd-mat"><div class="n">'+b.ft4+'</div><div class="l">4 ft</div></div>'+
+      '<div class="sd-mat"><div class="n">'+b.ft6+'</div><div class="l">6 ft</div></div>'+
+      '<div class="sd-mat"><div class="n">'+b.ft8+'</div><div class="l">8 ft</div></div>'+
+      '<div class="sd-mat"><div class="n">'+b.stor+'</div><div class="l">With storage</div></div>'+
+      '<div class="sd-mat"><div class="n">'+b.nostor+'</div><div class="l">No storage</div></div>';
+  }
+  var meta=document.getElementById('sd-meta');
+  if(meta){
+    meta.innerHTML=
+      '<article><span>Open order</span><b>'+sdNeed(b)+' of '+b.ordered+'</b></article>'+
+      '<article><span>Current in branch</span><b>'+b.recv+' received</b></article>'+
+      '<article><span>Still to order vs projection</span><b>'+Math.max(0, b.proj - (b.ft4+b.ft6+b.ft8))+' assets</b></article>';
+  }
+  var loan=document.getElementById('sd-loan');
+  if(loan) loan.textContent=b.owe;
+  var table=document.getElementById('sd-table');
+  if(table){
+    var rows='<thead><tr><th>Branch</th><th>Zone</th><th>Recv</th><th>Open</th><th>FY open</th><th>FY proj</th></tr></thead><tbody>';
+    SD_BRANCHES.forEach(function(x){
+      rows+='<tr class="'+(x.id===b.id?'on':'')+'"><td class="b">'+x.name+'</td><td>'+x.zone+'</td><td>'+x.recv+'</td><td>'+sdNeed(x)+'</td><td>'+x.fyOpen+'</td><td>'+x.proj+'</td></tr>';
+    });
+    rows+='</tbody>';
+    table.innerHTML=rows;
+  }
+}
+
+function sdDefaultVendors(branchId, branchName){
+  var seed = SD_VENDORS[branchId];
+  if(seed) return seed;
+  return SD_VTYPES.map(function(t,i){
+    return {
+      name: branchName.split(' ')[0]+' '+t.split(' ')[0]+' #'+(i+1),
+      type: t,
+      jobs: (i%5)+2,
+      spend: '₹'+(0.6+(i*0.3)).toFixed(1)+'L',
+      price: 'Rate card on file · TAT 24–48h · '+t+' coverage for '+branchName
+    };
+  });
+}
+
+function sdSelectVendorBranch(id){
+  var b = SD_BRANCHES.filter(function(x){return x.id===id;})[0] || SD_BRANCHES[0];
+  document.querySelectorAll('#sd-v-branch-list .sd-bitem').forEach(function(el){
+    el.classList.toggle('on', el.getAttribute('data-id')===b.id);
+  });
+  var name=document.getElementById('sd-v-branch-name');
+  if(name) name.textContent=b.name;
+  var list=sdDefaultVendors(b.id, b.name);
+  var jobs=0, spend=0;
+  list.forEach(function(v){
+    jobs+=v.jobs;
+    var n=parseFloat(String(v.spend).replace(/[₹L]/g,''));
+    if(!isNaN(n)) spend+=n;
+  });
+  var rg=document.getElementById('sd-v-reg');
+  var jb=document.getElementById('sd-v-jobs');
+  var sp=document.getElementById('sd-v-spend');
+  if(rg) rg.textContent=String(list.length);
+  if(jb) jb.textContent=String(jobs);
+  if(sp) sp.textContent='₹'+spend.toFixed(1)+'L';
+  var mount=document.getElementById('sd-vcards');
+  if(!mount) return;
+  mount.innerHTML=list.map(function(v,i){
+    return '<article class="sd-vcard" onclick="this.classList.toggle(\'on\')">'+
+      '<div class="sd-vtop"><div class="sd-vname">'+v.name+'</div><div class="sd-vtype">'+v.type+'</div></div>'+
+      '<div class="sd-vmeta"><span>'+v.jobs+' jobs</span><span>'+v.spend+'</span></div>'+
+      '<div class="sd-vprice"><b>Price card.</b> '+v.price+'</div></article>';
+  }).join('');
+}
+
+function sdRenderLists(){
+  var bl=document.getElementById('sd-branch-list');
+  var vl=document.getElementById('sd-v-branch-list');
+  if(bl){
+    bl.innerHTML=SD_BRANCHES.map(function(b){
+      return '<button type="button" class="sd-bitem" data-id="'+b.id+'" onclick="sdSelectBranch(\''+b.id+'\')"><span class="bn">'+b.name+'</span><span class="bs">'+b.recv+'/'+b.ordered+'</span></button>';
+    }).join('');
+  }
+  if(vl){
+    vl.innerHTML=SD_BRANCHES.map(function(b){
+      return '<button type="button" class="sd-bitem" data-id="'+b.id+'" onclick="sdSelectVendorBranch(\''+b.id+'\')"><span class="bn">'+b.name+'</span><span class="bs">10 types</span></button>';
+    }).join('');
+  }
+  sdSelectBranch('sc');
+  sdSelectVendorBranch('sc');
+}
+document.addEventListener('DOMContentLoaded', sdRenderLists);
+
 </script>
 </body>
 </html>
