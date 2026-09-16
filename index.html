@@ -8864,7 +8864,7 @@ function openKM(m){var p=document.getElementById('km-'+m);if(p)p.classList.add('
 function closeKM(m){var p=document.getElementById('km-'+m);if(p)p.classList.remove('open');}
 function openFull(id){var p=document.getElementById(id);if(p){p.classList.add('open');p.scrollTop=0;}}
 function closeFull(id){var p=document.getElementById(id);if(p)p.classList.remove('open');}
-function enterProduct(m){document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('homebtn').classList.add('show');document.body.classList.add('in-deck');switchM(m);}
+function enterProduct(m){document.getElementById('page-vendor').style.display='none';document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('homebtn').classList.add('show');document.body.classList.add('in-deck');switchM(m);}
 function enterVendor(){document.getElementById('page-vendor').style.display='block';document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('homebtn').classList.add('show');openFull('page-vendor');}
 function enterVendorAlloc(){enterVendor();setTimeout(function(){var b=document.querySelector('#page-vendor .kt-tab[onclick*="alloc"]');if(b)b.click();},70);}
 function enterAndKM(m){enterProduct(m);setTimeout(function(){openKM(m);},70);}
