@@ -4762,7 +4762,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
     <div class="cc-tab-rail" id="h1-tab-rail">
       <button type="button" class="cc-tab-chev" data-rail="h1-tab-scroller" data-dir="-1" aria-label="Scroll tabs left">&#8249;</button>
       <div class="h1-tab-bar" id="h1-tab-scroller">
-      <button class="h1-tab active" id="h1-tab-1" onclick="switchH1Tab('page-1',this)">FY26-27 H1 — COST ANALYSIS</button>
+      <button class="h1-tab active" id="h1-tab-1" onclick="switchH1Tab('page-1',this)" style="display:none;">FY26-27 H1 — COST ANALYSIS</button>
       <button class="h1-tab" id="h1-tab-2" onclick="switchH1Tab('page-2',this)">H1 HIGHLIGHTS</button>
       <button class="h1-tab" id="h1-tab-bht" onclick="switchH1Tab('page-bht',this)">BRAND HEALTH</button>
       <button class="h1-tab" id="h1-tab-3" onclick="switchH1Tab('page-3',this)">KOL DATABASE</button>
@@ -4771,7 +4771,7 @@ img,video,iframe,canvas,svg{max-width:100%;}
       </div>
       <button type="button" class="cc-tab-chev" data-rail="h1-tab-scroller" data-dir="1" aria-label="Scroll tabs right">&#8250;</button>
     </div>
-<section class="page" id="page-1" style="display:flex;">
+<section class="page" id="page-1" style="display:none;">
 <header>
   <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#1565C0;display:flex;align-items:center;gap:0.5rem;"><span style="width:7px;height:7px;border-radius:50%;background:#1565C0;box-shadow:0 0 0 4px rgba(21,101,192,0.18);display:inline-block;"></span>vivo Tamil Nadu · Total Marketing Spend · H1 FY26-27</div>
   <h1 style="font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.04;letter-spacing:-0.02em;margin:0.6rem 0 0.3rem;color:#0B1730;">FY26-27 H1 — <span style="color:#1565C0;">Cost Analysis</span></h1>
@@ -8907,8 +8907,8 @@ function openH1Review(){
   var el=document.getElementById('h1review');
   el.classList.remove('hidden');
   el.style.display='flex';
-  var firstTab=document.getElementById('h1-tab-1');
-  switchH1Tab('page-1',firstTab);
+  var firstTab=document.getElementById('h1-tab-2');
+  switchH1Tab('page-2',firstTab);
   setTimeout(function(){syncTabRail(document.getElementById('h1-tab-scroller'));},40);
 }
 function closeH1Review(){
