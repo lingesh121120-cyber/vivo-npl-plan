@@ -9167,8 +9167,8 @@ function openLoyalty(){document.getElementById('uoriented').classList.add('hidde
 function closeLoyalty(){document.getElementById('loyalty').classList.add('hidden');document.getElementById('uoriented').classList.remove('hidden');setTimeout(fitLanding,20);}
 function openKOC(){document.getElementById('uoriented').classList.add('hidden');document.getElementById('koc').classList.remove('hidden');setTimeout(fitLanding,20);}
 function closeKOC(){document.getElementById('koc').classList.add('hidden');document.getElementById('uoriented').classList.remove('hidden');setTimeout(fitLanding,20);}
-function openDiwaliHO(){document.getElementById('diwali').classList.add('hidden');openFull('page-dho');}
-function openDiwaliJBP(){document.getElementById('diwali').classList.add('hidden');openFull('page-djbp');}
+function openDiwaliHO(){document.getElementById('diwali').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('landing').classList.add('hidden');openFull('page-dho');}
+function openDiwaliJBP(){document.getElementById('diwali').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('landing').classList.add('hidden');openFull('page-djbp');}
 function backToDiwali(){document.querySelectorAll('.kmpage.open').forEach(function(p){p.classList.remove('open');});document.getElementById('diwali').classList.remove('hidden');}
 function openEmoVid(){document.getElementById('page-dho').classList.remove('open');openFull('km-emo');}
 function openContest(){document.getElementById('page-dho').classList.remove('open');openFull('km-contest');}
