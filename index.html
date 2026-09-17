@@ -8997,7 +8997,7 @@ function switchNPLTab(tab){
     document.getElementById('npl-branding').classList.add('hidden');
   }
 }
-function openDiwali(){document.getElementById('entry').classList.add('hidden');document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('diwali').classList.remove('hidden');setTimeout(fitLanding,20);}
+function openDiwali(){document.querySelectorAll('.kmpage').forEach(p=>p.style.display='none');document.getElementById('entry').classList.add('hidden');document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('diwali').classList.remove('hidden');setTimeout(fitLanding,20);}
 function backToEntry(){closeModal();document.querySelectorAll('.kmpage.open').forEach(function(p){p.classList.remove('open');});document.getElementById('landing').classList.add('hidden');document.getElementById('diwali').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('homebtn').classList.remove('show');document.body.classList.remove('in-deck');document.getElementById('entry').classList.remove('hidden');setTimeout(fitLanding,20);}
 var h1I=0,h1N=0,h1obsDone=false;
 function h1build(){/* deprecated — H1 now native inline */}
