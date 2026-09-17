@@ -8965,7 +8965,7 @@ function initObs(m){var w=document.getElementById('wrap-'+m);if(!w)return;var o=
 
 function openKM(m){var p=document.getElementById('km-'+m);if(p)p.classList.add('open');}
 function closeKM(m){var p=document.getElementById('km-'+m);if(p)p.classList.remove('open');}
-function openFull(id){var p=document.getElementById(id);if(p){p.classList.add('open');p.scrollTop=0;}}
+function openFull(id){var p=document.getElementById(id);if(p){p.style.display='';p.classList.add('open');p.scrollTop=0;}}
 function closeFull(id){var p=document.getElementById(id);if(p)p.classList.remove('open');}
 function enterProduct(m){document.getElementById('page-vendor').style.display='none';document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('homebtn').classList.add('show');document.body.classList.add('in-deck');switchM(m);}
 function enterVendor(){document.getElementById('page-vendor').style.display='block';document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('homebtn').classList.add('show');openFull('page-vendor');}
@@ -8997,7 +8997,7 @@ function switchNPLTab(tab){
     document.getElementById('npl-branding').classList.add('hidden');
   }
 }
-function openDiwali(){document.querySelectorAll('.kmpage').forEach(p=>p.style.display='none');document.getElementById('entry').classList.add('hidden');document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('diwali').classList.remove('hidden');setTimeout(fitLanding,20);}
+function openDiwali(){document.querySelectorAll('.kmpage').forEach(p=>{p.style.display='none';p.classList.remove('open');});document.getElementById('entry').classList.add('hidden');document.getElementById('landing').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('diwali').classList.remove('hidden');setTimeout(fitLanding,20);}
 function backToEntry(){closeModal();document.querySelectorAll('.kmpage.open').forEach(function(p){p.classList.remove('open');});document.getElementById('landing').classList.add('hidden');document.getElementById('diwali').classList.add('hidden');document.getElementById('npl-container').classList.add('hidden');document.getElementById('homebtn').classList.remove('show');document.body.classList.remove('in-deck');document.getElementById('entry').classList.remove('hidden');setTimeout(fitLanding,20);}
 var h1I=0,h1N=0,h1obsDone=false;
 function h1build(){/* deprecated — H1 now native inline */}
